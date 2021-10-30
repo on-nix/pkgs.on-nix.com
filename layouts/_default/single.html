@@ -1,0 +1,30 @@
+{{ define "title" }}
+  Package {{ .Params.attr }} on Nix
+{{ end }}
+
+{{ define "nav-title"}}
+  Pkgs on Nix
+{{ end }}
+
+{{ define "nav-subtitle"}}
+  Curated information about every package on Nix!
+{{ end }}
+
+{{ define "main" }}
+  {{ $set := .Params.set }}
+  {{ $attr := .Params.attr }}
+  <p class="ma1">
+    <dfn class="b fs-normal">
+      {{ $set }}'s {{ $attr }}
+    </dfn>
+  </p>
+
+  {{ $data := index (index $.Site.Data $set) $attr }}
+    <hr/>
+    {{ range $version, $versionCommits := $data.versions }}
+      {{ range $versionCommit := $versionCommits }}
+        {{ $version }} @ {{ $versionCommit }}
+      {{ end }}
+    {{ end }}
+  </table>
+{{ end }}
