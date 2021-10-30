@@ -5,7 +5,7 @@ function main {
     && rm -rf data/* \
     && mkdir -p content/nixpkgs \
     && mkdir -p data/nixpkgs \
-    && cp -rT __argData__/nixpkgs data/nixpkgs \
+    && cp -rLT __argData__/nixpkgs data/nixpkgs \
     && :
 }
 
