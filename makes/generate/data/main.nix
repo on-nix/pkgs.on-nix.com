@@ -7,7 +7,7 @@
 , ...
 }:
 let
-  prod = false;
+  prod = true;
 
   attrsPath = /data/github/on-nix/pkgs/data/nixpkgs/attrs.json;
   attrs =

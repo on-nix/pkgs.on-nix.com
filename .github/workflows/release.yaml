@@ -5,19 +5,18 @@ jobs:
     steps:
       - name: clone
         uses: actions/checkout@v2
-      - name: clone
-        run: |
-          sudo mkdir -p /data
-          sudo chown $USER /data
-          mkdir -p /data/github/on-nix
-          git clone --depth 1 https://github.com/on-nix/pkgs /data/github/on-nix/pkgs
       - name: generate
-        uses: docker://ghcr.io/fluidattacks/makes:21.11
-        with:
-          args: m . /generate/data
-      - name: build
         run: |
-          sudo apt install hugo
+          curl -L https://nixos.org/nix/install | sh
+          source ~/.nix-profile/etc/profile.d/nix.sh
+          nix-env -iA nixpkgs.hugo
+          nix-env -if https://fluidattacks.com/makes/install/21.11
+
+          sudo rm -rf /data
+          sudo mkdir /data
+          sudo chown $USER /data
+          git clone --depth 1 https://github.com/on-nix/pkgs /data/github/on-nix/pkgs
+          m . /generate/data
           hugo
       - name: deploy
         uses: crazy-max/ghaction-github-pages@v2
