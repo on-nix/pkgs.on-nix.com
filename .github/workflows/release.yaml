@@ -5,6 +5,10 @@ jobs:
     steps:
       - name: clone
         uses: actions/checkout@v2
+      - name: generate
+        uses: docker://ghcr.io/fluidattacks/makes:21.11
+        with:
+          args: m . /generate/data
       - name: build
         run: |
           sudo apt install hugo
