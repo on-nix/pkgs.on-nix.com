@@ -5,6 +5,12 @@ jobs:
     steps:
       - name: clone
         uses: actions/checkout@v2
+      - name: clone
+        run: |
+          sudo mkdir -p /data
+          sudo chown $USER /data
+          mkdir -p /data/github/on-nix
+          git clone --depth 1 https://github.com/on-nix/pkgs /data/github/on-nix/pkgs
       - name: generate
         uses: docker://ghcr.io/fluidattacks/makes:21.11
         with:

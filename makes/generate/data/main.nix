@@ -7,9 +7,11 @@
 , ...
 }:
 let
-  attrsPath = "${inputs.pkgs}/data/nixpkgs/attrs.json";
+  prod = false;
+
+  attrsPath = /data/github/on-nix/pkgs/data/nixpkgs/attrs.json;
   attrs =
-    if inputs.prod
+    if prod
     then builtins.fromJSON (builtins.readFile attrsPath)
     else [ "nix" ];
 in
@@ -21,7 +23,7 @@ makeScript {
       (builtins.map
         (attr: {
           name = "nixpkgs/${attr}.json";
-          path = "${inputs.pkgs}/data/nixpkgs/attrs/${attr}.json";
+          path = "/data/github/on-nix/pkgs/data/nixpkgs/attrs/${attr}.json";
         })
         attrs)
     ]);

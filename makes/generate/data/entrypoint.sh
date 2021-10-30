@@ -15,7 +15,7 @@ function main {
         && echo "set: ${set}" >> "content/nixpkgs/${attr}.md" \
         && echo --- >> "content/nixpkgs/${attr}.md"
     done \
-    && cp -rLT __argData__/nixpkgs data/nixpkgs \
+    && cp -rT __argData__/nixpkgs data/nixpkgs \
     && :
 }
 
