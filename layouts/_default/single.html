@@ -13,18 +13,17 @@
 {{ define "main" }}
   {{ $set := .Params.set }}
   {{ $attr := .Params.attr }}
-  <p class="ma1">
+  <p>
     <dfn class="b fs-normal">
-      {{ $set }}'s {{ $attr }}
+      {{ $set }}/{{ $attr }}
     </dfn>
   </p>
 
-  {{ $data := index (index $.Site.Data $set) $attr }}
+  {{ $data := index $.Site.Data $set $attr }}
+  {{ range $version := $data.versions }}
     <hr/>
-    {{ range $version, $versionCommits := $data.versions }}
-      {{ range $versionCommit := $versionCommits }}
-        {{ $version }} @ {{ $versionCommit }}
-      {{ end }}
-    {{ end }}
-  </table>
+    Version: <b>{{ $version.name }}</b><br/>
+    Last seen: {{ $version.last }}<br/>
+    First seen: {{ $version.first }}<br/>
+  {{ end }}
 {{ end }}

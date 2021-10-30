@@ -7,7 +7,7 @@
 
     pkgs = builtins.fetchGit {
       ref = "main";
-      rev = "60c2334b35424f02d3a970cc049ebe5d45b00fe9";
+      rev = "1214d83d3677f9c5a755638721e99f784ce53f4c";
       url = "https://github.com/on-nix/pkgs";
     };
   };

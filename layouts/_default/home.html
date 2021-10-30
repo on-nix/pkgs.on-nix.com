@@ -11,28 +11,15 @@
 {{ end }}
 
 {{ define "main" }}
-  {{ range $project, $projectData := $.Site.Data.nixpkgs }}
-    <p class="ma1">
-      <dfn class="b fs-normal">
-        <a class="b blue" href="/nixpkgs/{{ $project }}">
-          {{ $project }}
-        </a>
-      </dfn>
-    </p>
-    <table>
-      <thead>
-        <tr>
-          <th class="bb fw4">Version</th>
-        </tr>
-      </thead>
-      {{ range $version, $versionCommits := $projectData.versions }}
-        <tbody>
-          <tr>
-            <td class="ph3">{{ $version }}</td>
-          </tr>
-        </tbody>
-      {{ end }}
-    </table>
-    <hr/>
+  {{ range $set, $_ := $.Site.Data }}
+    {{ range $attr, $_ := index $.Site.Data $set }}
+      <p class="ma1">
+        <dfn class="b fs-normal">
+          <a class="b blue" href="/nixpkgs/{{ $attr }}">
+            nixpkgs / {{ $attr }}
+          </a>
+        </dfn>
+      </p>
+    {{ end }}
   {{ end }}
 {{ end }}
