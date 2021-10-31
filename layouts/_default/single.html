@@ -26,10 +26,70 @@
     {{ end }}
   </p>
 
-  {{ range $version := $data.versions }}
-    <hr/>
-    Version: <b>{{ $version.name }}</b><br/>
-    Last seen: {{ $version.last }}<br/>
-    First seen: {{ $version.first }}<br/>
+  {{ if $data.meta.home }}
+    <p>
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="blue" href="{{ $data.meta.home }}" rel="noopener" target="_blank">
+        {{ $data.meta.home }}
+      </a>
+    </p>
   {{ end }}
+
+  {{ if reflect.IsMap $data.meta.license }}
+    {{ if $data.meta.license.spdxId }}
+      <p>
+        <dfn class="b fs-normal">License</dfn>
+        - {{ $data.meta.license.spdxId }}
+      </p>
+    {{ end }}
+  {{ end }}
+
+  {{ if reflect.IsSlice $data.meta.maintainers }}
+    <p>
+      <dfn class="b fs-normal">Maintainers</dfn>
+      {{ range $maintainer := $data.meta.maintainers }}
+        {{ if reflect.IsMap $maintainer }}
+          {{ if $maintainer.email }}
+            {{ if $maintainer.name }}
+              - <a class="blue" href="mailto:{{ $maintainer.email }}">
+                {{ $maintainer.name }}
+              </a>
+            {{ else if $maintainer.github }}
+              - <a class="blue" href="mailto:{{ $maintainer.github }}">
+                {{ $maintainer.name }}
+              </a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </p>
+  {{ end }}
+
+  <table>
+    <thead>
+      <tr>
+        <th class="bb fw4">Version</th>
+        <th class="bb fw4">From commit</th>
+        <th class="bb fw4">To commit</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $version := $data.versions }}
+        <tr>
+          <td class="ph3">{{ $version.name }}</td>
+          <td class="ph3">
+            <a class="blue" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
+              {{ substr $version.first 0 8 }}
+            </a>
+          </td>
+          <td class="ph3">
+            <a class="blue" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
+              {{ substr $version.last 0 8 }}
+            </a>
+          </td>
+        </tr>
+      {{ end }}
+    </tbody>
+  </table>
 {{ end }}
