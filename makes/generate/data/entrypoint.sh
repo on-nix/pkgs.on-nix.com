@@ -13,6 +13,7 @@ function main {
         && echo --- > "content/nixpkgs/${attr}.md" \
         && echo "attr: ${attr}" >> "content/nixpkgs/${attr}.md" \
         && echo "set: ${set}" >> "content/nixpkgs/${attr}.md" \
+        && echo "slug: ${attr}" >> "content/nixpkgs/${attr}.md" \
         && echo --- >> "content/nixpkgs/${attr}.md"
     done \
     && cp -rT __argData__/nixpkgs data/nixpkgs \

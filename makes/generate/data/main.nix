@@ -13,7 +13,7 @@ let
   attrs =
     if prod
     then builtins.fromJSON (builtins.readFile attrsPath)
-    else [ "nix" ];
+    else [ "_1password" "nix" ];
 in
 makeScript {
   name = "generate-data";
