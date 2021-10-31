@@ -28,7 +28,6 @@
       type="text"
     >
   </div>
-  <div class="pv1"></div>
   <div class="pa2" id="search-instructions">
     Some search examples:
 
@@ -42,12 +41,12 @@
 
     Search is case insensitive.
   </div>
-  <div id="search-results"></div>
+  <div class="pa2" id="search-results"></div>
 
   <div style="display: none">
     {{ range $set, $_ := $.Site.Data }}
       {{ range $attr, $_ := index $.Site.Data $set }}
-        <p class="ma1" id="{{ $set }}-{{ $attr }}">
+        <p class="ma0 pa0" id="{{ $set }}-{{ $attr }}">
           <dfn class="b fs-normal">
             <a class="b blue" href="/nixpkgs/{{ lower $attr }}/">
               nixpkgs / {{ $attr }}
