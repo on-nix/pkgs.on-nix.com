@@ -66,6 +66,19 @@
     </p>
   {{ end }}
 
+  {{ if $data.outputs }}
+    {{ range $output, $files := $data.outputs }}
+    <p>
+      <dfn class="b fs-normal">Outputs / {{ $output }}</dfn>
+      <ul>
+        {{ range $file := $files }}
+          <li>{{ $file }}</li>
+        {{ end }}
+      </ul>
+    </p>
+    {{ end }}
+  {{ end }}
+
   <table>
     <thead>
       <tr>
