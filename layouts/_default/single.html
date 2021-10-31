@@ -69,25 +69,23 @@
   <table>
     <thead>
       <tr>
+        <th class="bb fw4">Commit range</th>
         <th class="bb fw4">Version</th>
-        <th class="bb fw4">From commit</th>
-        <th class="bb fw4">To commit</th>
       </tr>
     </thead>
     <tbody>
       {{ range $version := $data.versions }}
         <tr>
-          <td class="ph3">{{ $version.name }}</td>
           <td class="ph3">
             <a class="blue" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
               {{ substr $version.first 0 8 }}
             </a>
-          </td>
-          <td class="ph3">
+            ->
             <a class="blue" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
               {{ substr $version.last 0 8 }}
             </a>
           </td>
+          <td class="ph3">{{ $version.name }}</td>
         </tr>
       {{ end }}
     </tbody>
