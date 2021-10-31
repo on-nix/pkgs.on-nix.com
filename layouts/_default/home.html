@@ -20,7 +20,9 @@
             nixpkgs / {{ $attr }}
           </a>
         </dfn>
-        - {{ $data.meta.desc }}
+        {{ if $data.meta.desc }}
+          - {{ $data.meta.desc }}
+        {{ end }}
       </p>
     {{ end }}
   {{ end }}
