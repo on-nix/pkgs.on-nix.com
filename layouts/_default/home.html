@@ -11,15 +11,25 @@
 {{ end }}
 
 {{ define "main" }}
-  {{ $count := 0 }}
+  {{ $countPkgs := 0 }}
+  {{ $countVersions := 0 }}
+  {{ $countOutputFiles := 0 }}
   {{ range $set, $_ := $.Site.Data }}
-    {{ range $attr, $_ := index $.Site.Data $set }}
-      {{ $count = add $count 1 }}
+    {{ range $attr, $attrData := index $.Site.Data $set }}
+      {{ $countPkgs = add $countPkgs 1 }}
+      {{ $countVersions = add $countVersions (len $attrData.versions) }}
+      {{ range $output, $output_files := $attrData.outputs }}
+        {{ $countOutputFiles = add $countOutputFiles (len $output_files)}}
+      {{ end }}
     {{ end }}
   {{ end }}
 
   <div class="pa2">
-    <span class="db pa2">🔎 Search from {{ $count }} packages available</span>
+    <span class="db pa2">
+      🔎 Search from {{ $countPkgs }} packages available
+      , {{ $countVersions }} versions
+      and {{ $countOutputFiles }} outputs files
+    </span>
     <input
       autofocus
       class="ba b--cyan ma0 pa2 outline-transparent w-100"
@@ -37,6 +47,8 @@
       <li><span class="blue">!windows</span>: Exclude windows from the results</li>
       <li><span class="blue">^python</span>: Search packages starting with Python</li>
       <li><span class="blue">rust$</span>: Search packages ending with Rust</li>
+      <li><span class="blue">/lib/libstdc++.so</span>: Search packages whose outputs contain /lib/libstdc++.so</li>
+      <li><span class="blue">/bin/nix-build</span>: Search packages whose outputs contain /bin/nix-build</li>
     </ul>
 
     Search is case insensitive.
@@ -65,13 +77,20 @@
   <script>
     const searchEngineIndex = [
       {{ range $set, $_ := $.Site.Data }}
-        {{ range $attr, $_ := index $.Site.Data $set }}
+        {{ range $attr, $attrData := index $.Site.Data $set }}
           {{ $data := index $.Site.Data $set $attr }}
-            {
-              "set": "{{ $set }}",
-              "attr": "{{ $attr }}",
-              "desc": "{{ $data.meta.desc }}",
-            },
+          {
+            "set": "{{ $set }}",
+            "attr": "{{ $attr }}",
+            "desc": "{{ $data.meta.desc }}",
+            "outputs": [
+              {{ range $_, $outputFiles := $attrData.outputs }}
+                {{ range $outputFile := $outputFiles }}
+                  "{{ $outputFile }}",
+                {{ end }}
+              {{ end }}
+            ],
+          },
         {{ end }}
       {{ end }}
     ];
@@ -85,6 +104,7 @@
         keys: [
           { name: 'attr', weight: 10},
           { name: 'desc', weight: 1},
+          { name: 'outputs', weight: 1},
         ],
         ignoreLocation: true,
         minMatchCharLength: 0,
