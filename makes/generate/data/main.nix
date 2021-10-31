@@ -16,7 +16,7 @@ let
   attrs =
     if prod
     then fromJSONFile attrsPath
-    else [ "nix" "nixUnstable" ];
+    else [ "firefox" "nix" ];
 in
 makeScript {
   name = "generate-data";

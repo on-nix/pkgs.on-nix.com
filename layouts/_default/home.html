@@ -11,71 +11,38 @@
 {{ end }}
 
 {{ define "main" }}
-  <div class="ba b--cyan flex mv3 pa1 relative w-100">
-    <span class="db pr2">🔎 Search: </span>
+  {{ $count := 0 }}
+  {{ range $set, $_ := $.Site.Data }}
+    {{ range $attr, $_ := index $.Site.Data $set }}
+      {{ $count = add $count 1 }}
+    {{ end }}
+  {{ end }}
+
+  <div class="pa2">
+    <span class="db pa2">🔎 Search from {{ $count }} packages available</span>
     <input
       autofocus
-      class="b bn ma0 pa0 outline-transparent"
+      class="ba b--cyan ma0 pa2 outline-transparent w-100"
       id="search-input"
-      placeholder="package name"
+      placeholder="Type something to get started"
       type="text"
-      value="=nix"
     >
   </div>
-  <hr/>
+  <div class="pv1"></div>
+  <div class="pa2" id="search-instructions">
+    Some search examples:
+
+    <ul>
+      <li><span class="blue">firefox</span>: Search packages similar to firefox</li>
+      <li><span class="blue">=docker</span>: Search for an exact match</li>
+      <li><span class="blue">!linux</span>: Exclude linux from the results</li>
+      <li><span class="blue">^python</span>: Search packages starting with Python</li>
+      <li><span class="blue">rust$</span>: Search packages ending with Rust</li>
+    </ul>
+
+    Search is case insensitive.
+  </div>
   <div id="search-results"></div>
-  <hr/>
-  <div class="pv2"></div>
-  <table>
-    <thead>
-      <tr>
-        <th class="bb fw4 ph4">Usage</th>
-        <th class="bb fw4 ph4">Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="tc">a b</td>
-        <td>Search both <b>a</b> and <b>b</b></td>
-      </tr>
-      <tr>
-        <td class="tc">a | b</td>
-        <td>Search either <b>a</b> or <b>b</b></td>
-      </tr>
-      <tr>
-        <td class="tc">a</td>
-        <td>Fuzzy match <b>a</b></td>
-      </tr>
-      <tr>
-        <td class="tc">=a</td>
-        <td>Exact match <b>a</b></td>
-      </tr>
-      <tr>
-        <td class="tc">'a</td>
-        <td>Including <b>a</b></td>
-      </tr>
-      <tr>
-        <td class="tc">!a</td>
-        <td>Not including <b>a</b></td>
-      </tr>
-      <tr>
-        <td class="tc">^a</td>
-        <td>Starting with <b>a</b></td>
-      </tr>
-      <tr>
-        <td class="tc">a$</td>
-        <td>Ending with <b>a</b></td>
-      </tr>
-      <tr>
-        <td class="tc">!^a</td>
-        <td>Not starting with <b>a</b></td>
-      </tr>
-      <tr>
-        <td class="tc">!a$</td>
-        <td>Not ending with <b>a</b></td>
-      </tr>
-    </tbody>
-  </table>
 
   <div style="display: none">
     {{ range $set, $_ := $.Site.Data }}
@@ -125,12 +92,21 @@
         useExtendedSearch: true,
       }).search(searchInput.value.toLowerCase()).slice(0, 100);
 
+      const searchInstructions = document.querySelector('#search-instructions');
       const searchResults = document.querySelector('#search-results');
-      searchResults.innerHTML = '';
-      results.map((result) => {
-        const element = document.querySelector(`p[id='${result.item.set}-${result.item.attr}']`);
-        searchResults.appendChild(element.cloneNode(true));
-      });
+
+      if (results.length == 0) {
+        searchInstructions.style.display = ""
+        searchResults.style.display = "none"
+      } else {
+        searchResults.innerHTML = '';
+        searchInstructions.style.display = "none"
+        searchResults.style.display = ""
+        results.map((result) => {
+          const element = document.querySelector(`p[id='${result.item.set}-${result.item.attr}']`);
+          searchResults.appendChild(element.cloneNode(true));
+        });
+      };
     };
 
     search();
