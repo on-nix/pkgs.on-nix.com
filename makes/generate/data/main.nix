@@ -9,10 +9,13 @@
 let
   prod = true;
 
+  fromJSONFile = path: builtins.fromJSON (builtins.readFile path);
+  toJsonFile = name: data: builtins.toFile name (builtins.toJSON data);
+
   attrsPath = /data/github/on-nix/pkgs/data/nixpkgs/attrs.json;
   attrs =
     if prod
-    then builtins.fromJSON (builtins.readFile attrsPath)
+    then fromJSONFile attrsPath
     else [ "_1password" "nix" ];
 in
 makeScript {

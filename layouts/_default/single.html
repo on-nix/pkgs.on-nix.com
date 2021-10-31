@@ -13,13 +13,19 @@
 {{ define "main" }}
   {{ $set := .Params.set }}
   {{ $attr := .Params.attr }}
+  {{ $data := index $.Site.Data $set $attr }}
   <p>
     <dfn class="b fs-normal">
       {{ $set }} / {{ $attr }}
     </dfn>
+    -
+    {{ if $data.meta.desc_long }}
+      {{ $data.meta.desc_long }}
+    {{ else }}
+      {{ $data.meta.desc }}
+    {{ end }}
   </p>
 
-  {{ $data := index $.Site.Data $set $attr }}
   {{ range $version := $data.versions }}
     <hr/>
     Version: <b>{{ $version.name }}</b><br/>

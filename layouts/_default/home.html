@@ -13,12 +13,14 @@
 {{ define "main" }}
   {{ range $set, $_ := $.Site.Data }}
     {{ range $attr, $_ := index $.Site.Data $set }}
+      {{ $data := index $.Site.Data $set $attr }}
       <p class="ma1">
         <dfn class="b fs-normal">
           <a class="b blue" href="/nixpkgs/{{ lower $attr }}">
             nixpkgs / {{ $attr }}
           </a>
         </dfn>
+        - {{ $data.meta.desc }}
       </p>
     {{ end }}
   {{ end }}
