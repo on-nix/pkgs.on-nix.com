@@ -11,19 +11,128 @@
 {{ end }}
 
 {{ define "main" }}
-  {{ range $set, $_ := $.Site.Data }}
-    {{ range $attr, $_ := index $.Site.Data $set }}
-      {{ $data := index $.Site.Data $set $attr }}
-      <p class="ma1">
-        <dfn class="b fs-normal">
-          <a class="b blue" href="/nixpkgs/{{ lower $attr }}/">
-            nixpkgs / {{ $attr }}
-          </a>
-        </dfn>
-        {{ if $data.meta.desc }}
-          - {{ $data.meta.desc }}
-        {{ end }}
-      </p>
+  <div class="ba b--cyan flex mv3 pa1 relative w-100">
+    <span class="db pr2">🔎 Search: </span>
+    <input
+      autofocus
+      class="b bn ma0 pa0 outline-transparent"
+      id="search-input"
+      placeholder="package name"
+      type="text"
+      value="=nix"
+    >
+  </div>
+  <hr/>
+  <div id="search-results"></div>
+  <hr/>
+  <div class="pv2"></div>
+  <table>
+    <thead>
+      <tr>
+        <th class="bb fw4 ph4">Usage</th>
+        <th class="bb fw4 ph4">Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="tc">a b</td>
+        <td>Search both <b>a</b> and <b>b</b></td>
+      </tr>
+      <tr>
+        <td class="tc">a | b</td>
+        <td>Search either <b>a</b> or <b>b</b></td>
+      </tr>
+      <tr>
+        <td class="tc">a</td>
+        <td>Fuzzy match <b>a</b></td>
+      </tr>
+      <tr>
+        <td class="tc">=a</td>
+        <td>Exact match <b>a</b></td>
+      </tr>
+      <tr>
+        <td class="tc">'a</td>
+        <td>Including <b>a</b></td>
+      </tr>
+      <tr>
+        <td class="tc">!a</td>
+        <td>Not including <b>a</b></td>
+      </tr>
+      <tr>
+        <td class="tc">^a</td>
+        <td>Starting with <b>a</b></td>
+      </tr>
+      <tr>
+        <td class="tc">a$</td>
+        <td>Ending with <b>a</b></td>
+      </tr>
+      <tr>
+        <td class="tc">!^a</td>
+        <td>Not starting with <b>a</b></td>
+      </tr>
+      <tr>
+        <td class="tc">!a$</td>
+        <td>Not ending with <b>a</b></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div style="display: none">
+    {{ range $set, $_ := $.Site.Data }}
+      {{ range $attr, $_ := index $.Site.Data $set }}
+        <p class="ma1" id="{{ $set }}-{{ $attr }}">
+          <dfn class="b fs-normal">
+            <a class="b blue" href="/nixpkgs/{{ lower $attr }}/">
+              nixpkgs / {{ $attr }}
+            </a>
+          </dfn>
+          {{ $data := index $.Site.Data $set $attr }}
+          {{ if $data.meta.desc }}
+            - {{ $data.meta.desc }}
+          {{ end }}
+        </p>
+      {{ end }}
     {{ end }}
-  {{ end }}
+  </div>
+
+  <script src="https://unpkg.com/fuse.js@6.4.6/dist/fuse.min.js"></script>
+  <script>
+    const searchEngineIndex = [
+      {{ range $set, $_ := $.Site.Data }}
+        {{ range $attr, $_ := index $.Site.Data $set }}
+          {{ $data := index $.Site.Data $set $attr }}
+            {
+              "set": "{{ $set }}",
+              "attr": "{{ $attr }}",
+              "desc": "{{ $data.meta.desc }}",
+            },
+        {{ end }}
+      {{ end }}
+    ];
+
+    const searchInput = document.querySelector("#search-input");
+
+    searchInput.addEventListener('input', search);
+
+    function search() {
+      const results = new Fuse(searchEngineIndex, {
+        keys: [
+          { name: 'attr', weight: 10},
+          { name: 'desc', weight: 1},
+        ],
+        ignoreLocation: true,
+        minMatchCharLength: 0,
+        useExtendedSearch: true,
+      }).search(searchInput.value.toLowerCase()).slice(0, 100);
+
+      const searchResults = document.querySelector('#search-results');
+      searchResults.innerHTML = '';
+      results.map((result) => {
+        const element = document.querySelector(`p[id='${result.item.set}-${result.item.attr}']`);
+        searchResults.appendChild(element.cloneNode(true));
+      });
+    };
+
+    search();
+  </script>
 {{ end }}

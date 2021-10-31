@@ -16,7 +16,7 @@ let
   attrs =
     if prod
     then fromJSONFile attrsPath
-    else [ "_1password" "nix" ];
+    else [ "nix" "nixUnstable" ];
 in
 makeScript {
   name = "generate-data";
