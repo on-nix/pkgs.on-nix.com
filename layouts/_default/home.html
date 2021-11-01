@@ -25,18 +25,39 @@
   {{ end }}
 
   <div class="pa2">
-    <span class="db pa2">
-      🔎 Search from {{ $countPkgs }} packages
-      , {{ $countVersions }} versions
-      and {{ $countOutputFiles }} outputs files
-    </span>
-    <input
-      autofocus
-      class="ba b--cyan ma0 pa2 outline-transparent w-100"
-      id="search-input"
-      placeholder="Type something to get started"
-      type="text"
-    >
+    <fieldset class="ba bw1 b--cyan ma0 ph2">
+      <legend class="db pa2">
+        🔎 Search from {{ $countPkgs }} packages
+        , {{ $countVersions }} versions
+        and {{ $countOutputFiles }} files
+      </legend>
+      <input
+        autofocus
+        class="bn ma0 pa2 outline-transparent w-100"
+        id="search-input"
+        placeholder="Type something to get started"
+        type="text"
+      >
+    </fieldset>
+    <fieldset class="ba bw1 b--cyan pv2">
+      <legend>Max results</legend>
+      <select id="search-max-results">
+        <option value="10" default>10</option>
+        <option value="100">100</option>
+        <option value="999999999">no limit</option>
+      </select>
+    </fieldset>
+    <fieldset class="ba bw1 b--cyan pv2">
+      <legend>Search in</legend>
+      <div>
+        <input type="checkbox" id="search-results-in-pkg-names" checked>
+        Package names<br/>
+        <input type="checkbox" id="search-results-in-pkg-descs" checked>
+        Package descriptions<br/>
+        <input type="checkbox" id="search-results-in-pkg-files">
+        Package files<br/>
+      </div>
+    </div>
   </div>
   <div class="pa2" id="search-instructions">
     Some search examples:
@@ -47,6 +68,11 @@
       <li><span class="blue">!windows</span>: Exclude windows from the results</li>
       <li><span class="blue">^python</span>: Search packages starting with Python</li>
       <li><span class="blue">rust$</span>: Search packages ending with Rust</li>
+    </ul>
+
+    If searching in <b>package files</b> is enabled:
+
+    <ul>
       <li><span class="blue">=/lib/libstdc++.so</span>: Search packages that contain /lib/libstdc++.so</li>
       <li><span class="blue">^/lib/ld-linux-x86-64</span>: Search packages that contain outputs starting with /lib/ld-linux-x86-64</li>
       <li><span class="blue">/bin/nix-build</span>: Search packages that contain something close to /bin/nix-build</li>
@@ -97,20 +123,29 @@
     ];
 
     const searchInput = document.querySelector("#search-input");
+    const searchMaxResults = document.querySelector("#search-max-results");
+    const searchInPkgNames = document.querySelector("#search-results-in-pkg-names");
+    const searchInPkgDescriptions = document.querySelector("#search-results-in-pkg-descs");
+    const searchInPkgFiles = document.querySelector("#search-results-in-pkg-files");
 
     searchInput.addEventListener('input', search);
+    searchMaxResults.addEventListener('change', search);
+    searchInPkgNames.addEventListener('change', search);
+    searchInPkgDescriptions.addEventListener('change', search);
+    searchInPkgFiles.addEventListener('change', search);
 
     function search() {
+      const keys = [];
+      if (searchInPkgNames.checked) keys.push({ name: 'attr', weight: 1});
+      if (searchInPkgDescriptions.checked) keys.push({ name: 'desc', weight: 1});
+      if (searchInPkgFiles.checked) keys.push({ name: 'outputs', weight: 1});
+
       const results = new Fuse(searchEngineIndex, {
-        keys: [
-          { name: 'attr', weight: 10},
-          { name: 'desc', weight: 1},
-          { name: 'outputs', weight: 1},
-        ],
+        keys,
         ignoreLocation: true,
         minMatchCharLength: 0,
         useExtendedSearch: true,
-      }).search(searchInput.value.toLowerCase()).slice(0, 100);
+      }).search(searchInput.value.toLowerCase()).slice(0, searchMaxResults.value);
 
       const searchInstructions = document.querySelector('#search-instructions');
       const searchResults = document.querySelector('#search-results');
