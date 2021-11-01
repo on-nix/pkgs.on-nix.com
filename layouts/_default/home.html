@@ -27,17 +27,20 @@
   <div class="pa2">
     <fieldset class="ba bw1 b--cyan ma0 ph2">
       <legend class="db pa2">
-        🔎 Search from {{ $countPkgs }} packages
+        Search from {{ $countPkgs }} packages
         , {{ $countVersions }} versions
         and {{ $countOutputFiles }} files
       </legend>
-      <input
-        autofocus
-        class="bn ma0 pa2 outline-transparent w-100"
-        id="search-input"
-        placeholder="Type something to get started"
-        type="text"
-      >
+      <div class="flex">
+        <button id="search-button" class="" type="button">🔎</button>
+        <input
+          autofocus
+          class="bn ma0 pa2 outline-transparent w-100"
+          id="search-input"
+          placeholder="Type something to get started"
+          type="text"
+        >
+      </div>
     </fieldset>
     <fieldset class="ba bw1 b--cyan pv2">
       <legend>Search in</legend>
@@ -122,19 +125,34 @@
       {{ end }}
     ];
 
+    const searchButton = document.querySelector("#search-button");
     const searchInput = document.querySelector("#search-input");
+    const searchInstructions = document.querySelector('#search-instructions');
+    const searchResults = document.querySelector('#search-results');
+
     const searchMaxResults = document.querySelector("#search-max-results");
     const searchInPkgNames = document.querySelector("#search-results-in-pkg-names");
     const searchInPkgDescriptions = document.querySelector("#search-results-in-pkg-descs");
     const searchInPkgFiles = document.querySelector("#search-results-in-pkg-files");
 
-    searchInput.addEventListener('input', search);
+    searchButton.addEventListener('click', search);
     searchMaxResults.addEventListener('change', search);
     searchInPkgNames.addEventListener('change', search);
     searchInPkgDescriptions.addEventListener('change', search);
     searchInPkgFiles.addEventListener('change', search);
+    searchInput.addEventListener('input', showInstructionsIfEmpty);
+    searchInput.addEventListener("keyup", searchOnEnter);
+
+    function searchOnEnter(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        searchButton.click();
+      };
+    };
 
     function search() {
+      if (searchInput.value.length == 0) return;
+
       const keys = [];
       if (searchInPkgNames.checked) keys.push({ name: 'attr', weight: 1});
       if (searchInPkgDescriptions.checked) keys.push({ name: 'desc', weight: 1});
@@ -147,23 +165,20 @@
         useExtendedSearch: true,
       }).search(searchInput.value.toLowerCase()).slice(0, searchMaxResults.value);
 
-      const searchInstructions = document.querySelector('#search-instructions');
-      const searchResults = document.querySelector('#search-results');
-
-      if (results.length == 0) {
-        searchInstructions.style.display = ""
-        searchResults.style.display = "none"
-      } else {
-        searchResults.innerHTML = '';
-        searchInstructions.style.display = "none"
-        searchResults.style.display = ""
-        results.map((result) => {
-          const element = document.querySelector(`p[id='${result.item.set}-${result.item.attr}']`);
-          searchResults.appendChild(element.cloneNode(true));
-        });
-      };
+      searchResults.innerHTML = '';
+      searchInstructions.style.display = "none"
+      searchResults.style.display = ""
+      results.map((result) => {
+        const element = document.querySelector(`p[id='${result.item.set}-${result.item.attr}']`);
+        searchResults.appendChild(element.cloneNode(true));
+      });
     };
 
-    search();
+    function showInstructionsIfEmpty() {
+      if (searchInput.value.length == 0) {
+        searchInstructions.style.display = ""
+        searchResults.style.display = "none"
+      };
+    };
   </script>
 {{ end }}
