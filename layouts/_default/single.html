@@ -30,7 +30,7 @@
     <p>
       <dfn class="b fs-normal">Homepage</dfn>
       -
-      <a class="blue" href="{{ $data.meta.home }}" rel="noopener" target="_blank">
+      <a class="sec-d" href="{{ $data.meta.home }}" rel="noopener" target="_blank">
         {{ $data.meta.home }}
       </a>
     </p>
@@ -52,11 +52,11 @@
         {{ if reflect.IsMap $maintainer }}
           {{ if $maintainer.email }}
             {{ if $maintainer.name }}
-              - <a class="blue" href="mailto:{{ $maintainer.email }}">
+              - <a class="sec-d" href="mailto:{{ $maintainer.email }}">
                 {{ $maintainer.name }}
               </a>
             {{ else if $maintainer.github }}
-              - <a class="blue" href="mailto:{{ $maintainer.github }}">
+              - <a class="sec-d" href="mailto:{{ $maintainer.github }}">
                 {{ $maintainer.name }}
               </a>
             {{ end }}
@@ -90,11 +90,11 @@
       {{ range $version := $data.versions }}
         <tr>
           <td class="ph3">
-            <a class="blue" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
+            <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
               {{ substr $version.first 0 8 }}
             </a>
             ->
-            <a class="blue" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
+            <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
               {{ substr $version.last 0 8 }}
             </a>
           </td>

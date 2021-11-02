@@ -25,14 +25,14 @@
   {{ end }}
 
   <div class="pa2">
-    <fieldset class="ba bw1 b--cyan ma0 ph2">
+    <fieldset class="ba b--prim ma0 ph2">
       <legend class="db pa2">
         Search from {{ $countPkgs }} packages
         , {{ $countVersions }} versions
         and {{ $countOutputFiles }} files
       </legend>
       <div class="flex">
-        <button id="search-button" class="" type="button">🔎</button>
+        <button id="search-button" type="button">🔎</button>
         <input
           autofocus
           class="bn ma0 pa2 outline-transparent w-100"
@@ -42,7 +42,7 @@
         >
       </div>
     </fieldset>
-    <fieldset class="ba bw1 b--cyan pv2">
+    <fieldset class="ba b--prim pv2">
       <legend>Search in</legend>
       <div>
         <input type="checkbox" id="search-results-in-pkg-names" checked>
@@ -53,7 +53,7 @@
         Package files<br/>
       </div>
     </fieldset>
-    <fieldset class="ba bw1 b--cyan pv2">
+    <fieldset class="ba b--prim pv2">
       <legend>Max results</legend>
       <select id="search-max-results">
         <option value="10" default>10</option>
@@ -66,19 +66,19 @@
     Some search examples:
 
     <ul>
-      <li><span class="blue">firefox</span>: Search packages similar to firefox</li>
-      <li><span class="blue">=docker</span>: Search for an exact match</li>
-      <li><span class="blue">!windows</span>: Exclude windows from the results</li>
-      <li><span class="blue">^python</span>: Search packages starting with Python</li>
-      <li><span class="blue">rust$</span>: Search packages ending with Rust</li>
+      <li><span class="sec-d">firefox</span>: Search packages similar to firefox</li>
+      <li><span class="sec-d">=docker</span>: Search for an exact match</li>
+      <li><span class="sec-d">!windows</span>: Exclude windows from the results</li>
+      <li><span class="sec-d">^python</span>: Search packages starting with Python</li>
+      <li><span class="sec-d">rust$</span>: Search packages ending with Rust</li>
     </ul>
 
     If searching in <b>package files</b> is enabled:
 
     <ul>
-      <li><span class="blue">=/lib/libstdc++.so</span>: Search packages that contain /lib/libstdc++.so</li>
-      <li><span class="blue">^/lib/ld-linux-x86-64</span>: Search packages that contain outputs starting with /lib/ld-linux-x86-64</li>
-      <li><span class="blue">/bin/nix-build</span>: Search packages that contain something close to /bin/nix-build</li>
+      <li><span class="sec-d">=/lib/libstdc++.so</span>: Search packages that contain /lib/libstdc++.so</li>
+      <li><span class="sec-d">^/lib/ld-linux-x86-64</span>: Search packages that contain outputs starting with /lib/ld-linux-x86-64</li>
+      <li><span class="sec-d">/bin/nix-build</span>: Search packages that contain something close to /bin/nix-build</li>
     </ul>
 
     Search is case insensitive.
@@ -90,7 +90,7 @@
       {{ range $attr, $_ := index $.Site.Data $set }}
         <p class="ma0 pa0" id="{{ $set }}-{{ $attr }}">
           <dfn class="b fs-normal">
-            <a class="b blue" href="/nixpkgs/{{ lower $attr }}/">
+            <a class="b sec-d" href="/nixpkgs/{{ lower $attr }}/">
               nixpkgs / {{ $attr }}
             </a>
           </dfn>
@@ -136,10 +136,6 @@
     const searchInPkgFiles = document.querySelector("#search-results-in-pkg-files");
 
     searchButton.addEventListener('click', search);
-    searchMaxResults.addEventListener('change', search);
-    searchInPkgNames.addEventListener('change', search);
-    searchInPkgDescriptions.addEventListener('change', search);
-    searchInPkgFiles.addEventListener('change', search);
     searchInput.addEventListener('input', showInstructionsIfEmpty);
     searchInput.addEventListener("keyup", searchOnEnter);
 
