@@ -14,7 +14,7 @@
   {{ $set := .Params.set }}
   {{ $attr := .Params.attr }}
   {{ $data := index $.Site.Data $set $attr }}
-  <p>
+  <p class="mv0 pv2">
     <dfn class="b fs-normal">
       {{ $set }} / {{ $attr }}
     </dfn>
@@ -27,7 +27,7 @@
   </p>
 
   {{ if $data.meta.home }}
-    <p>
+    <p class="mv0 pv2">
       <dfn class="b fs-normal">Homepage</dfn>
       -
       <a class="sec-d" href="{{ $data.meta.home }}" rel="noopener" target="_blank">
@@ -38,7 +38,7 @@
 
   {{ if reflect.IsMap $data.meta.license }}
     {{ if $data.meta.license.spdxId }}
-      <p>
+      <p class="mv0 pv2">
         <dfn class="b fs-normal">License</dfn>
         - {{ $data.meta.license.spdxId }}
       </p>
@@ -46,7 +46,7 @@
   {{ end }}
 
   {{ if reflect.IsSlice $data.meta.maintainers }}
-    <p>
+    <p class="mv0 pv2">
       <dfn class="b fs-normal">Maintainers</dfn>
       {{ range $maintainer := $data.meta.maintainers }}
         {{ if reflect.IsMap $maintainer }}
@@ -66,41 +66,54 @@
     </p>
   {{ end }}
 
-  {{ if $data.outputs }}
-    {{ range $output, $files := $data.outputs }}
-    <p>
-      <dfn class="b fs-normal">Outputs / {{ $output }}</dfn>
-      <ul>
-        {{ range $file := $files }}
-          <li>{{ $file }}</li>
+  <details class="mt0 pv2">
+    <summary style="list-style: none;">
+      <span class="b">Releases</span>
+      <span class="fs-normal sec-d"> (expand/collapse)</span>
+    </summary>
+    <table>
+      <thead>
+        <tr>
+          <th class="bb fw4">Version</th>
+          <th class="bb fw4">Commit range</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{ range $version := $data.versions }}
+          <tr>
+            <td class="ph3">{{ $version.name }}</td>
+            <td class="ph3">
+              <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
+                {{ substr $version.first 0 8 }}
+              </a>
+              ->
+              <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
+                {{ substr $version.last 0 8 }}
+              </a>
+            </td>
+          </tr>
         {{ end }}
-      </ul>
+      </tbody>
+    </table>
+  </details>
+
+  {{ if $data.outputs }}
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      {{ range $output, $files := $data.outputs }}
+        <details class="pl4">
+          <summary>
+            <span class="b">{{ $output }}</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul>
+            {{ range $file := $files }}
+              <li style="list-style: none;">{{ $file }}</li>
+            {{ end }}
+          </ul>
+        </details>
+      {{ end }}
     </p>
-    {{ end }}
   {{ end }}
 
-  <table>
-    <thead>
-      <tr>
-        <th class="bb fw4">Commit range</th>
-        <th class="bb fw4">Version</th>
-      </tr>
-    </thead>
-    <tbody>
-      {{ range $version := $data.versions }}
-        <tr>
-          <td class="ph3">
-            <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
-              {{ substr $version.first 0 8 }}
-            </a>
-            ->
-            <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
-              {{ substr $version.last 0 8 }}
-            </a>
-          </td>
-          <td class="ph3">{{ $version.name }}</td>
-        </tr>
-      {{ end }}
-    </tbody>
-  </table>
 {{ end }}
