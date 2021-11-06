@@ -1,0 +1,2408 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package omnisharp-roslyn on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / omnisharp-roslyn
+    </dfn>
+    -
+    
+      OmniSharp based on roslyn workspaces
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://github.com/OmniSharp/omnisharp-roslyn" rel="noopener" target="_blank">
+        https://github.com/OmniSharp/omnisharp-roslyn
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - MIT
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:mikolaj.galkowski@gmail.com">
+                Mikolaj Galkowski
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:ercdll1337@gmail.com">
+                Eric Dallo
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:corngood@gmail.com">
+                David McFarland
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/omnisharp</li>
+            
+              <li style="list-style: none;">/src/.msbuild/15.0</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/Bin</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/Microsoft.Common.props</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/Microsoft.Common.targets</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/Microsoft.VisualStudioVersion.v11.Common.props</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/Microsoft.VisualStudioVersion.v12.Common.props</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/Microsoft.VisualStudioVersion.v14.Common.props</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/Microsoft.VisualStudioVersion.v15.Common.props</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/Microsoft.VisualStudioVersion.v16.Common.props</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Current/SolutionFile</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Microsoft</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Mono.Build.Tasks.dll</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Mono.Build.Tasks.dll.config</li>
+            
+              <li style="list-style: none;">/src/.msbuild/Mono.Build.Tasks.pdb</li>
+            
+              <li style="list-style: none;">/src/Cake.Scripting.Abstractions.dll</li>
+            
+              <li style="list-style: none;">/src/Cake.Scripting.Transport.dll</li>
+            
+              <li style="list-style: none;">/src/Dotnet.Script.DependencyModel.NuGet.dll</li>
+            
+              <li style="list-style: none;">/src/Dotnet.Script.DependencyModel.dll</li>
+            
+              <li style="list-style: none;">/src/Humanizer.dll</li>
+            
+              <li style="list-style: none;">/src/ICSharpCode.Decompiler.dll</li>
+            
+              <li style="list-style: none;">/src/McMaster.Extensions.CommandLineUtils.dll</li>
+            
+              <li style="list-style: none;">/src/MediatR.dll</li>
+            
+              <li style="list-style: none;">/src/MessagePack.Annotations.dll</li>
+            
+              <li style="list-style: none;">/src/MessagePack.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Bcl.AsyncInterfaces.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Build.Locator.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.AnalyzerUtilities.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.CSharp.Features.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.CSharp.Scripting.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.CSharp.Workspaces.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.CSharp.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.ExternalAccess.OmniSharp.CSharp.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.ExternalAccess.OmniSharp.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.Features.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.Scripting.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.Workspaces.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.CodeAnalysis.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.DiaSymReader.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.DotNet.PlatformAbstractions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Caching.Abstractions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Caching.Memory.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Configuration.Abstractions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Configuration.Binder.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Configuration.CommandLine.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Configuration.EnvironmentVariables.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Configuration.FileExtensions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Configuration.Json.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Configuration.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.DependencyInjection.Abstractions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.DependencyInjection.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.DependencyModel.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.FileProviders.Abstractions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.FileProviders.Physical.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.FileSystemGlobbing.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Logging.Abstractions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Logging.Configuration.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Logging.Console.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Logging.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Options.ConfigurationExtensions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Options.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Extensions.Primitives.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.TestPlatform.CommunicationUtilities.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.TestPlatform.CoreUtilities.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.TestPlatform.PlatformAbstractions.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.VisualStudio.Debugger.Contracts.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.VisualStudio.TestPlatform.Common.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.VisualStudio.TestPlatform.ObjectModel.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.VisualStudio.Threading.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.VisualStudio.Validation.dll</li>
+            
+              <li style="list-style: none;">/src/Microsoft.Win32.Registry.dll</li>
+            
+              <li style="list-style: none;">/src/Nerdbank.Streams.dll</li>
+            
+              <li style="list-style: none;">/src/Newtonsoft.Json.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.Common.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.Configuration.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.DependencyResolver.Core.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.Frameworks.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.LibraryModel.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.Packaging.Core.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.Packaging.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.ProjectModel.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.Protocol.dll</li>
+            
+              <li style="list-style: none;">/src/NuGet.Versioning.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Abstractions.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Abstractions.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Cake.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Cake.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.DotNetTest.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.DotNetTest.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Extensions.JsonRpc.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Extensions.LanguageProtocol.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Extensions.LanguageServer.Shared.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Extensions.LanguageServer.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Host.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Host.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.LanguageServerProtocol.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.LanguageServerProtocol.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.MSBuild.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.MSBuild.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Roslyn.CSharp.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Roslyn.CSharp.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Roslyn.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Roslyn.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Script.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Script.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Shared.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Shared.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Stdio.dll</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.Stdio.pdb</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.deps.json</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.exe</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.exe.config</li>
+            
+              <li style="list-style: none;">/src/OmniSharp.pdb</li>
+            
+              <li style="list-style: none;">/src/SQLitePCLRaw.batteries_v2.dll</li>
+            
+              <li style="list-style: none;">/src/SQLitePCLRaw.core.dll</li>
+            
+              <li style="list-style: none;">/src/SQLitePCLRaw.nativelibrary.dll</li>
+            
+              <li style="list-style: none;">/src/SQLitePCLRaw.provider.dynamic_cdecl.dll</li>
+            
+              <li style="list-style: none;">/src/System.Buffers.dll</li>
+            
+              <li style="list-style: none;">/src/System.Collections.Immutable.dll</li>
+            
+              <li style="list-style: none;">/src/System.Composition.AttributedModel.dll</li>
+            
+              <li style="list-style: none;">/src/System.Composition.Convention.dll</li>
+            
+              <li style="list-style: none;">/src/System.Composition.Hosting.dll</li>
+            
+              <li style="list-style: none;">/src/System.Composition.Runtime.dll</li>
+            
+              <li style="list-style: none;">/src/System.Composition.TypedParts.dll</li>
+            
+              <li style="list-style: none;">/src/System.Diagnostics.DiagnosticSource.dll</li>
+            
+              <li style="list-style: none;">/src/System.IO.Pipelines.dll</li>
+            
+              <li style="list-style: none;">/src/System.Memory.dll</li>
+            
+              <li style="list-style: none;">/src/System.Numerics.Vectors.dll</li>
+            
+              <li style="list-style: none;">/src/System.Reactive.dll</li>
+            
+              <li style="list-style: none;">/src/System.Reflection.DispatchProxy.dll</li>
+            
+              <li style="list-style: none;">/src/System.Reflection.Metadata.dll</li>
+            
+              <li style="list-style: none;">/src/System.Runtime.CompilerServices.Unsafe.dll</li>
+            
+              <li style="list-style: none;">/src/System.Security.AccessControl.dll</li>
+            
+              <li style="list-style: none;">/src/System.Security.Principal.Windows.dll</li>
+            
+              <li style="list-style: none;">/src/System.Text.Encoding.CodePages.dll</li>
+            
+              <li style="list-style: none;">/src/System.Text.Encodings.Web.dll</li>
+            
+              <li style="list-style: none;">/src/System.Text.Json.dll</li>
+            
+              <li style="list-style: none;">/src/System.Threading.Tasks.Dataflow.dll</li>
+            
+              <li style="list-style: none;">/src/System.Threading.Tasks.Extensions.dll</li>
+            
+              <li style="list-style: none;">/src/System.ValueTuple.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/cs/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/de/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/es/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/fr/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/it/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ja/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ko/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pl/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/pt-BR/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/ru/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/runtimes/linux-arm/native/libe_sqlite3.so</li>
+            
+              <li style="list-style: none;">/src/runtimes/linux-arm64/native/libe_sqlite3.so</li>
+            
+              <li style="list-style: none;">/src/runtimes/linux-armel/native/libe_sqlite3.so</li>
+            
+              <li style="list-style: none;">/src/runtimes/linux-mips64/native/libe_sqlite3.so</li>
+            
+              <li style="list-style: none;">/src/runtimes/linux-x64/native/libe_sqlite3.so</li>
+            
+              <li style="list-style: none;">/src/runtimes/linux-x86/native/libe_sqlite3.so</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/tr/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hans/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.CodeAnalysis.CSharp.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.CodeAnalysis.CSharp.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.CodeAnalysis.Features.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.CodeAnalysis.Scripting.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.CodeAnalysis.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.TestPlatform.CommunicationUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.TestPlatform.CoreUtilities.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.TestPlatform.VsTestConsole.TranslationLayer.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.VisualStudio.TestPlatform.Common.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.VisualStudio.Threading.resources.dll</li>
+            
+              <li style="list-style: none;">/src/zh-Hant/Microsoft.VisualStudio.Validation.resources.dll</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0649d2c8a1a4cc1bb1145c77b805cf456f2ce514">
+            0649d2c8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f7d4c1d084691fa61fe6028809929763dfd1b0">
+            06f7d4c1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/005c8088e1c8af388d20f5abc21f227cd621825a">
+            005c8088
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04855119e9a334cdae57e9c7708d566cf4f0f6b9">
+            04855119
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/035dcc0e7ea6a59990fe9bc350115df94aa61564">
+            035dcc0e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04de1306ba22e1b2147c4a8028e9209ffcd8884c">
+            04de1306
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04de1306ba22e1b2147c4a8028e9209ffcd8884c">
+            04de1306
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07811f56c5b4bd6981ed8f632e5445a8552b518f">
+            07811f56
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07811f56c5b4bd6981ed8f632e5445a8552b518f">
+            07811f56
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01fa1637a0dcfd7fdbfae5068beb348aedeb28ad">
+            01fa1637
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03507abd3d3f0896a23fb01b7159e1d2427c0cd0">
+            03507abd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e50cf1392623f410a5e8847500d78ec8a5ef5d">
+            03e50cf1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0637e4c7c665ed148632e561dbf861f75304bae9">
+            0637e4c7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064e0af80b574bfe96540f17ddd35d6e0b1d5c71">
+            064e0af8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064e0af80b574bfe96540f17ddd35d6e0b1d5c71">
+            064e0af8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06dee38345cbad53ddfa7616a962be49777b1a72">
+            06dee383
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0139874db9bca4be6f54c52f2da40e8ac7c5237b">
+            0139874d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064b446fc0c7b79f05c6fac6b8da23eb18340d50">
+            064b446f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064b446fc0c7b79f05c6fac6b8da23eb18340d50">
+            064b446f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06514288d613a9f769618b278a811e03a9420997">
+            06514288
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031da799889d0037e480a6171ba221fa79c9ddfd">
+            031da799
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0603c25738ab744f1ff61392bcea46055fb3b1b2">
+            0603c257
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0603c25738ab744f1ff61392bcea46055fb3b1b2">
+            0603c257
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/027c28b18a2a3a7fc2f92a2a7a6b0eb1e226f17c">
+            027c28b1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/027c28b18a2a3a7fc2f92a2a7a6b0eb1e226f17c">
+            027c28b1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b1ddfa701914e7eb8a2cba1fcc084cc7aa1404">
+            01b1ddfa
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b1ddfa701914e7eb8a2cba1fcc084cc7aa1404">
+            01b1ddfa
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0625b9a7af1507ff3c75e5d72be54fd36cd26d58">
+            0625b9a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0625b9a7af1507ff3c75e5d72be54fd36cd26d58">
+            0625b9a7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767374c40a7179322f14ca40822b96d248fa686">
+            0767374c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767374c40a7179322f14ca40822b96d248fa686">
+            0767374c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0222121978a40ce4fee946402681e40b863919d1">
+            02221219
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01af3003e4a9a8d38cb09f1ed3ee12d744c873af">
+            01af3003
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0745b524b2ba65b7445db71448ae64a00dfda9b4">
+            0745b524
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00815c91035a72dac7433ec5435f93f02ecce2c0">
+            00815c91
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063074d82477c124dcf9402f0d7c5319fd6d76d1">
+            063074d8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063074d82477c124dcf9402f0d7c5319fd6d76d1">
+            063074d8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ca995e31230a28306bf7d2f33ece4e538e7ca7">
+            05ca995e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06926a4294dd5982683aa9c1918e8323632bd27f">
+            06926a42
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c0f165556950665b83e41209f611ddeed4de26">
+            06c0f165
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c0f165556950665b83e41209f611ddeed4de26">
+            06c0f165
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06749ba321ee3f284df74ab848985106eea52c13">
+            06749ba3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075da3928b5eee0c672c60e9e5ba81d3a3c90766">
+            075da392
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07ae57e2b1ccb9db63dbfe1944602e10b23f1acf">
+            07ae57e2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0096eb9274b430c8cf1a699c68054972c1845291">
+            0096eb92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f2fd5fb9f7def14154a7b80e7676e641dd56f9">
+            06f2fd5f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0229bebd37caf01cad975090895a5ba2c5973226">
+            0229bebd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afc85506c30cd901509aa825e6abf9ed702401">
+            00afc855
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afc85506c30cd901509aa825e6abf9ed702401">
+            00afc855
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02885ae8e207c5c4c1d2f3e7ac02f7e72c99d13e">
+            02885ae8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e49512aa1bea7730ebca10aa4a50a33cae34cd">
+            07e49512
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07dfadc89c47b6de05f8cd8d9a659b47f635f571">
+            07dfadc8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07dfadc89c47b6de05f8cd8d9a659b47f635f571">
+            07dfadc8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/040f04d39b8673f0bf598273a999c19ebbe65741">
+            040f04d3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05440fda6f0d922b9084b1f2a64cbc256e7e5ffb">
+            05440fda
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0722158dba9c401354a53bb618e6e2b1903c7ea7">
+            0722158d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0722158dba9c401354a53bb618e6e2b1903c7ea7">
+            0722158d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05d4955a96608ce8309124140360cee4c9a1390c">
+            05d4955a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03df9f54fc54a29d14a614bd29323076b5259588">
+            03df9f54
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00251c0689046f194551ba509ef4249f8e1f50d3">
+            00251c06
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00251c0689046f194551ba509ef4249f8e1f50d3">
+            00251c06
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045c2abdfafaab8b7e080439cbd6c50c9c74bd49">
+            045c2abd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06d328c3460bc07db4271bc3e63481c5ec1b45cf">
+            06d328c3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fa0f1a2ec5ad455e16a72bdb304f7c0e098b76">
+            05fa0f1a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fa0f1a2ec5ad455e16a72bdb304f7c0e098b76">
+            05fa0f1a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00213ef17f8bc35aae3227012256713d17b1d0d8">
+            00213ef1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00213ef17f8bc35aae3227012256713d17b1d0d8">
+            00213ef1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050aad187bc99f45328b2c5abf3c0ab29cbbe254">
+            050aad18
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050aad187bc99f45328b2c5abf3c0ab29cbbe254">
+            050aad18
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/079523587df0c1c03f6d484c37ab6ed3883785ce">
+            07952358
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/038497d3b3fee1121c155c2787830e55c8559847">
+            038497d3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015c5a2be650acf9db46c3c25012e5023319625b">
+            015c5a2b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036cec187c1f079566c456d390c97c1deb412b42">
+            036cec18
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00347e9537d6e6ddef599094429a1ac5392d6f28">
+            00347e95
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00347e9537d6e6ddef599094429a1ac5392d6f28">
+            00347e95
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063c756b33f69a787d6fda77bb293ca022d5d922">
+            063c756b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00946dc283ad0b3018490331802b77e16731a1f1">
+            00946dc2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069757550ed82784f70b8d15fb709c0d08286e70">
+            06975755
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03197f94ce2d4b0feb673840d30f602e93357040">
+            03197f94
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b9d5371c5ce1f8d622ff00bd67c9defb656c79">
+            01b9d537
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03860e0118f396ef64f68d536c8498061d4f9fc4">
+            03860e01
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/040059b5d5b6db5def40be2d797188c89bd585b6">
+            040059b5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044533c99be5fd12c50354056422e0685f37228f">
+            044533c9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074e05c6d8be92dca22a9096890bdb89cedbc6e8">
+            074e05c6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074e05c6d8be92dca22a9096890bdb89cedbc6e8">
+            074e05c6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05104cc10467442362a824dcb1aa9e532211a469">
+            05104cc1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05104cc10467442362a824dcb1aa9e532211a469">
+            05104cc1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0366a7f2b7a0a332861aa3cb8255b535832d9b6a">
+            0366a7f2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05e4d371ef5c3819b969d34eb76ed7e4b3c99027">
+            05e4d371
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.37.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f16b7e0c7f4330567e781df17bbd48abf23c1b">
+            00f16b7e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0561fdef057c93767d680a338bbf7f94064af9fe">
+            0561fdef
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/003fa57c6484a63af1e72470fa2b101f4de7a79e">
+            003fa57c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0051c0a4a506f5b21e5923a873fbc91a107e1300">
+            0051c0a4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020a2121277f775bfc14c60b2ea3ac98fa5bd6be">
+            020a2121
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020a2121277f775bfc14c60b2ea3ac98fa5bd6be">
+            020a2121
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ff24f1b5d7b6b8f0ede14c40f2f6a913ff29ee">
+            01ff24f1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/041f70f62f38de7bc77eeea725fda313cfe71fcd">
+            041f70f6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/021bde52922528196ec4eebd620062d092de7ee0">
+            021bde52
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03b9e49447d850390dee6727d207afaadc13f7f4">
+            03b9e494
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/066544a7eb38a4886a619a9a6dfd26e474c7f7a6">
+            066544a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0301d1d8943e5e7edad6e1e55140b521a2ae9844">
+            0301d1d8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049b68becfcc04fadb846c07f42306692fb0ddb3">
+            049b68be
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0456d939a1ba4ae7df54c84cf873086d32679839">
+            0456d939
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b3cac1090c3925096e7ff1c58cb0b41c233f09">
+            02b3cac1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b3cac1090c3925096e7ff1c58cb0b41c233f09">
+            02b3cac1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/023e11ae3407c184eff3463eccc4460d5682a9d1">
+            023e11ae
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/008e7e3244ebc374d8f8df9632de0e821619319d">
+            008e7e32
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0367fa630d59673624d6742e2758b87eb12fff4c">
+            0367fa63
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0367fa630d59673624d6742e2758b87eb12fff4c">
+            0367fa63
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01c937fd4784f7b17bf1ffb8ede1e6c27a81d38d">
+            01c937fd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03cd92fe70a6a7bdcfc958bcdba58d0664ff19c4">
+            03cd92fe
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07178d7972e87b632ca4a1266c45b5dc746b639a">
+            07178d79
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/009284cd4cc1ee62b45d13f9c67e7a5549024102">
+            009284cd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0476b979c44edb39815c3e45cdf10f9e4426fc07">
+            0476b979
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0476b979c44edb39815c3e45cdf10f9e4426fc07">
+            0476b979
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f116eaa037ce30670da482f12006d24c49206e">
+            03f116ea
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0674b0d411d872cb05d84c380dbb1ddf7b1f8fd8">
+            0674b0d4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06ac702738a704d519b92abf7cd8df5bb4723fb0">
+            06ac7027
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06ac702738a704d519b92abf7cd8df5bb4723fb0">
+            06ac7027
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0010ae4960d35243e7abb046cd26ddda904a4c63">
+            0010ae49
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0045730c57d7d705dcc568c6e420dc6a226d1266">
+            0045730c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b645e872107806e61cf54cc1415a843f3af795">
+            01b645e8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b645e872107806e61cf54cc1415a843f3af795">
+            01b645e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a7b69509f78b4ae9d04fcdf8f57ceb435572fc">
+            05a7b695
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01bc332108d70c7dbe927bc78e82c4e35bf24274">
+            01bc3321
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06b89b345f18c87d8011e51e8bd51aafcc15d995">
+            06b89b34
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/077c3c1944e666fb5cc6863f20a18eb6b9a26265">
+            077c3c19
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01539e6f9a7d61b33ad04cc0a03acda736684379">
+            01539e6f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f66e1bf418429637047bea73d023be4185830f">
+            00f66e1b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04248f606f4ebfe298bfbfed3680a2fd5dacf796">
+            04248f60
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04248f606f4ebfe298bfbfed3680a2fd5dacf796">
+            04248f60
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.35.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026073e57ebcc3d9b314339bd8b5a847013f795c">
+            026073e5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0663a984e75e38f953825b282cbe8dd11cbabb9d">
+            0663a984
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076f221a0bce289985f8b8b08f85932aff7c44b5">
+            076f221a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/004443143fb020a01f1c734bff59bb8815ac183c">
+            00444314
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/054c2113c6a762a6277c4f04ca2dec45bff1268a">
+            054c2113
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/054c2113c6a762a6277c4f04ca2dec45bff1268a">
+            054c2113
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bc7b971dc34b97a27ca9675a19f525a7d3616e">
+            07bc7b97
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05f3d961a986569f462d7e9989e8ac5c223c35aa">
+            05f3d961
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0669cd72aecd9ef5431e15fd5810b3d4dfe26e99">
+            0669cd72
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0669cd72aecd9ef5431e15fd5810b3d4dfe26e99">
+            0669cd72
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e003deb10dcc21205c7897102e8aca25978828">
+            07e003de
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e003deb10dcc21205c7897102e8aca25978828">
+            07e003de
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0195347f5f645fff577a486f8d3ae25a87f6996f">
+            0195347f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0195347f5f645fff577a486f8d3ae25a87f6996f">
+            0195347f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0594a76774e4cad3e011fd7f7baee07d5f91e11b">
+            0594a767
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0261e874d6f5c510b1dc63d450fe64ac3cbedcc6">
+            0261e874
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0288741d260de7aa521bc7d8eac5b8cfb175d5e1">
+            0288741d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024877e7b2ae4aca95c6867313414bdf6460b4f1">
+            024877e7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.32.19</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f3d67e94d11e58204178f04b46478277c2432f">
+            03f3d67e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f3d67e94d11e58204178f04b46478277c2432f">
+            03f3d67e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01740090598b8b89ffb5854ebab2159b14242d41">
+            01740090
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01c9c9b119b21404767b4de3e851ec5417be152d">
+            01c9c9b1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.32.19</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bd8938f320bff12d1b9fe67aedc7ca8dd64d30">
+            07bd8938
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bd8938f320bff12d1b9fe67aedc7ca8dd64d30">
+            07bd8938
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.34.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/001be890f78f04df86938f44c0761676e299ceac">
+            001be890
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037c91b193eee5ab5088d25bd25aeab5ac2bce56">
+            037c91b1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.32.19</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06ffd2b2b73ed61a5526cae7de77abc9e01e20af">
+            06ffd2b2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01f03f30db5755349b857b6939100bbb4c32303e">
+            01f03f30
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.32.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/056ba630ddf8a0005c9342baded9499906e0de21">
+            056ba630
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/056ba630ddf8a0005c9342baded9499906e0de21">
+            056ba630
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.32.19</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0687a9d8db00c73a2345a1a78273075d0e640ad1">
+            0687a9d8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0687a9d8db00c73a2345a1a78273075d0e640ad1">
+            0687a9d8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.32.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/028119189dbebef0563afa73352ac96e75232c3b">
+            02811918
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0678da02bf29d961795239f6d731a8ffc7e3fafb">
+            0678da02
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

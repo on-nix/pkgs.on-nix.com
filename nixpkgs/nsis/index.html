@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package nsis on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / nsis
+    </dfn>
+    -
+    
+      A free scriptable win32 installer/uninstaller system that doesn&#39;t suck and isn&#39;t huge
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://nsis.sourceforge.io/" rel="noopener" target="_blank">
+        https://nsis.sourceforge.io/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - Zlib
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:nix@endgr.33mail.com">
+                Pedro Pombeiro
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/makensis</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/big.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/classic-cross.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/classic.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/colorful.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/grey-cross.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/grey.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/modern.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/red-round.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/red.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/simple-round.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/simple-round2.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Checks/simple.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis-r.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis3-branding-r.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis3-branding.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis3-grey-right.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis3-grey.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis3-metro-right.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis3-metro.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis3-vintage-right.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/nsis3-vintage.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/orange-nsis.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/orange-r-nsis.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/orange-r.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/orange-uninstall-nsis.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/orange-uninstall-r-nsis.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/orange-uninstall-r.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/orange-uninstall.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/orange.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Header/win.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/arrow-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/arrow-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/arrow2-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/arrow2-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/box-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/box-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/classic-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/classic-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/llama-blue.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/llama-grey.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-install-blue-full.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-install-blue.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-install-colorful.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-install-full.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-uninstall-blue-full.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-uninstall-blue.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-uninstall-colorful.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-uninstall-full.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/modern-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/nsis-menu.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/nsis1-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/nsis1-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/nsis3-install-alt.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/nsis3-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/nsis3-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/orange-install-nsis.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/orange-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/orange-uninstall-nsis.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/orange-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/pixel-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/pixel-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/win-install.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Icons/win-uninstall.ico</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/arrow.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/llama.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/nsis.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/nsis3-branding.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/nsis3-grey.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/nsis3-metro.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/nsis3-vintage.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/nullsoft.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/orange-nsis.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/orange-uninstall-nsis.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/orange-uninstall.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/orange.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Graphics/Wizard/win.bmp</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Afrikaans.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Afrikaans.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Albanian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Albanian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Arabic.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Arabic.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Armenian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Armenian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Asturian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Asturian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Basque.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Basque.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Belarusian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Belarusian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Bosnian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Bosnian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Breton.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Breton.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Bulgarian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Bulgarian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Catalan.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Catalan.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Corsican.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Corsican.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Croatian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Croatian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Czech.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Czech.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Danish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Danish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Dutch.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Dutch.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/English.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/English.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Esperanto.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Esperanto.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Estonian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Estonian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Farsi.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Farsi.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Finnish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Finnish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/French.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/French.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Galician.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Galician.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Georgian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Georgian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/German.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/German.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Greek.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Greek.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Hebrew.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Hebrew.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Hindi.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Hindi.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Hungarian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Hungarian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Icelandic.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Icelandic.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Indonesian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Indonesian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Irish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Irish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Italian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Italian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Japanese.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Japanese.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Korean.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Korean.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Kurdish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Kurdish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Latvian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Latvian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Lithuanian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Lithuanian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Luxembourgish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Luxembourgish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Macedonian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Macedonian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Malay.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Malay.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Mongolian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Mongolian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Norwegian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Norwegian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/NorwegianNynorsk.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/NorwegianNynorsk.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Pashto.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Pashto.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Polish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Polish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Portuguese.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Portuguese.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/PortugueseBR.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/PortugueseBR.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Romanian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Romanian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Russian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Russian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/ScotsGaelic.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/ScotsGaelic.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Serbian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Serbian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/SerbianLatin.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/SerbianLatin.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/SimpChinese.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/SimpChinese.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Slovak.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Slovak.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Slovenian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Slovenian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Spanish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Spanish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/SpanishInternational.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/SpanishInternational.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Swedish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Swedish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Tatar.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Tatar.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Thai.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Thai.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/TradChinese.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/TradChinese.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Turkish.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Turkish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Ukrainian.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Ukrainian.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Uzbek.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Uzbek.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Vietnamese.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Vietnamese.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Welsh.nlf</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Language files/Welsh.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI/System.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI/ioSpecial.ini</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Deprecated.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Interface.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Localization.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/MUI2.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages/Components.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages/Directory.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages/Finish.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages/InstallFiles.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages/License.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages/StartMenu.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages/UninstallConfirm.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages/Welcome.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/Modern UI 2/Pages.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/UIs/default.exe</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/UIs/modern.exe</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/UIs/modern_headerbmp.exe</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/UIs/modern_headerbmpr.exe</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/UIs/modern_nodesc.exe</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/UIs/modern_smalldesc.exe</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/UIs/sdbarker_tiny.exe</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/zip2exe/Base.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/zip2exe/Classic.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Contrib/zip2exe/Modern.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Colors.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/FileFunc.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/InstallOptions.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Integration.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/LangFile.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Library.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/LogicLib.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/MUI.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/MUI2.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Memento.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/MultiUser.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Sections.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/StrFunc.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/TextFunc.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/UpgradeDLL.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Util.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/VB6RunTime.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/VPatchLib.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Win/COM.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Win/Propkey.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Win/WinDef.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Win/WinError.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Win/WinNT.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/Win/WinUser.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/WinCore.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/WinMessages.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/WinVer.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/WordFunc.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/nsDialogs.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Include/x64.nsh</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/AdvSplash.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/Banner.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/BgImage.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/Dialer.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/InstallOptions.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/LangDLL.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/Math.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/NSISdl.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/Splash.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/StartMenu.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/System.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/TypeLib.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/UserInfo.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/VPatch.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/nsDialogs.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-ansi/nsExec.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/AdvSplash.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/Banner.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/BgImage.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/Dialer.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/InstallOptions.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/LangDLL.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/Math.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/NSISdl.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/Splash.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/StartMenu.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/System.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/TypeLib.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/UserInfo.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/VPatch.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/nsDialogs.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Plugins/x86-unicode/nsExec.dll</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/bzip2-x86-ansi</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/bzip2-x86-unicode</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/bzip2_solid-x86-ansi</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/bzip2_solid-x86-unicode</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/lzma-x86-ansi</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/lzma-x86-unicode</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/lzma_solid-x86-ansi</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/lzma_solid-x86-unicode</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/uninst</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/zlib-x86-ansi</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/zlib-x86-unicode</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/zlib_solid-x86-ansi</li>
+            
+              <li style="list-style: none;">/share/nsis/Stubs/zlib_solid-x86-unicode</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.06.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06749ba321ee3f284df74ab848985106eea52c13">
+            06749ba3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.06.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015c5a2be650acf9db46c3c25012e5023319625b">
+            015c5a2b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0096eb9274b430c8cf1a699c68054972c1845291">
+            0096eb92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00347e9537d6e6ddef599094429a1ac5392d6f28">
+            00347e95
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00347e9537d6e6ddef599094429a1ac5392d6f28">
+            00347e95
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.06.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063c756b33f69a787d6fda77bb293ca022d5d922">
+            063c756b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00946dc283ad0b3018490331802b77e16731a1f1">
+            00946dc2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.06.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0620184f3f94f1bf8de014ab1688cd2624c17556">
+            0620184f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03197f94ce2d4b0feb673840d30f602e93357040">
+            03197f94
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026269906fe4efa84e7d6b54c63fc69c6abff92b">
+            02626990
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026269906fe4efa84e7d6b54c63fc69c6abff92b">
+            02626990
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.06.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049c0c526e5dfd5e5ae9367bbc0e3fccf933870b">
+            049c0c52
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02ee8250186f0489bf86b036581a63c38afd54db">
+            02ee8250
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04eb318ad16c2eaaff65ec487bb7b6beb276d7f2">
+            04eb318a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/016dad9debb804f82f3da5d939d486c80a54dad8">
+            016dad9d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.06.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a4dc3ce99b46e9a8bf72aebdc19e94d8f38b46">
+            05a4dc3c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026b4765bada7437c679693491ca2c6b6a1cc35c">
+            026b4765
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07ca64c4dd7f93e5027ea2d369c14e13d5c1fc74">
+            07ca64c4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07ca64c4dd7f93e5027ea2d369c14e13d5c1fc74">
+            07ca64c4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.06.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0466ae30ea68617641a2cb0d0a35bb2b3f5f7921">
+            0466ae30
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02d852fd40a47363e7df73d17c435d43f8268507">
+            02d852fd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f08005af7d0c5140777d28bb6e3f8b41792d1e">
+            00f08005
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06d17caf9251136b6e795c8729e70286efe1cd70">
+            06d17caf
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.06.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bfff3c1c9bfedab486db865e31f3ca3de3b8c9">
+            07bfff3c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0447711c07e5a55400aaacc03b39e7a1eeaf8dd7">
+            0447711c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01740090598b8b89ffb5854ebab2159b14242d41">
+            01740090
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ec46b114f789500feb8b730246fc44a9ef44e1">
+            05ec46b1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.04</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bd8938f320bff12d1b9fe67aedc7ca8dd64d30">
+            07bd8938
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bd8938f320bff12d1b9fe67aedc7ca8dd64d30">
+            07bd8938
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0521dc3f1933f8820b2a62f6e51a0aa6d6673e64">
+            0521dc3f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037c91b193eee5ab5088d25bd25aeab5ac2bce56">
+            037c91b1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.04</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afca09295db93bf8bffe3f6f2d92a74eb97b38">
+            00afca09
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afca09295db93bf8bffe3f6f2d92a74eb97b38">
+            00afca09
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04037d1e03b9ee08f1b56ab3480e1ffdafd88155">
+            04037d1e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03fb78e80e8d56a2b90d328a7f54ab1c8f586fb8">
+            03fb78e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.04</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/017926a8b3e8a3daa49313ec5520cce7fc20569e">
+            017926a8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/017926a8b3e8a3daa49313ec5520cce7fc20569e">
+            017926a8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03fbecff083adf7bf2063b5e46b9ef251aec60be">
+            03fbecff
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01e352ac449d51480ca4750f5637bc7ad156ceb4">
+            01e352ac
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.04</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a9b7fe2a695c39118230df3ce8dfa2b1364c36">
+            05a9b7fe
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a9b7fe2a695c39118230df3ce8dfa2b1364c36">
+            05a9b7fe
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04fb02a944ea7289663d0c596d2d1b0cc113fb45">
+            04fb02a9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05b6836816aef6aea9e0bac2d4f9ba5d711bc274">
+            05b68368
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.04</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05928690e18573e91f9c1845a87e82ba2a4aee48">
+            05928690
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05928690e18573e91f9c1845a87e82ba2a4aee48">
+            05928690
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05b407ac81bae73c6c070218f3a053e6723f3fd0">
+            05b407ac
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036a1b2755369fd4b1931c49a73958a69cc8f58f">
+            036a1b27
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.04</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065175540bd82747a822467c05971e519ade46ce">
+            06517554
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065175540bd82747a822467c05971e519ade46ce">
+            06517554
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.05</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/047095f89f741dd934ebfd64e816672279ba51d6">
+            047095f8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/047095f89f741dd934ebfd64e816672279ba51d6">
+            047095f8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.04</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01a7acf382e5fccbb849188d1268400da296afbd">
+            01a7acf3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07655cd7244cb1219a626b43eda18e8562ae38ba">
+            07655cd7
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

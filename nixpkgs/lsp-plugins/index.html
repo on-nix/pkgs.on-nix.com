@@ -1,0 +1,2951 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package lsp-plugins on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / lsp-plugins
+    </dfn>
+    -
+    
+      Compatible with follwing formats:
+
+- LADSPA - set of plugins for Linux Audio Developer&#39;s Simple Plugin API
+- LV2 - set of plugins and UIs for Linux Audio Developer&#39;s Simple Plugin API (LADSPA) version 2
+- LinuxVST - set of plugins and UIs for Steinberg&#39;s VST 2.4 format ported on GNU/Linux Platform
+- JACK - Standalone versions for JACK Audio connection Kit with UI
+
+Contains the following plugins:
+
+- Limiter Mono - Begrenzer Mono
+- Limiter Stereo - Begrenzer Stereo
+- Dynamic Processor LeftRight - Dynamikprozessor LeftRight
+- Dynamic Processor MidSide - Dynamikprozessor MidSide
+- Dynamic Processor Mono - Dynamikprozessor Mono
+- Dynamic Processor Stereo - Dynamikprozessor Stereo
+- Expander LeftRight - Expander LeftRight
+- Expander MidSide - Expander MidSide
+- Expander Mono - Expander Mono
+- Expander Stereo - Expander Stereo
+- Crossover LeftRight x8 - Frequenzweiche LeftRight x8
+- Crossover MidSide x8 - Frequenzweiche MidSide x8
+- Crossover Mono x8 - Frequenzweiche Mono x8
+- Crossover Stereo x8 - Frequenzweiche Stereo x8
+- Gate LeftRight - Gate LeftRight
+- Gate MidSide - Gate MidSide
+- Gate Mono - Gate Mono
+- Gate Stereo - Gate Stereo
+- Graphic Equalizer x16 LeftRight - Grafischer Entzerrer x16 LeftRight
+- Graphic Equalizer x16 MidSide - Grafischer Entzerrer x16 MidSide
+- Graphic Equalizer x16 Mono - Grafischer Entzerrer x16 Mono
+- Graphic Equalizer x16 Stereo - Grafischer Entzerrer x16 Stereo
+- Graphic Equalizer x32 LeftRight - Grafischer Entzerrer x32 LeftRight
+- Graphic Equalizer x32 MidSide - Grafischer Entzerrer x32 MidSide
+- Graphic Equalizer x32 Mono - Grafischer Entzerrer x32 Mono
+- Graphic Equalizer x32 Stereo - Grafischer Entzerrer x32 Stereo
+- Impulse Responses Mono - Impulsantworten Mono
+- Impulse Responses Stereo - Impulsantworten Stereo
+- Impulse Reverb Mono - Impulsnachhall Mono
+- Impulse Reverb Stereo - Impulsnachhall Stereo
+- Sampler Mono - Klangerzeuger Mono
+- Sampler Stereo - Klangerzeuger Stereo
+- Compressor LeftRight - Kompressor LeftRight
+- Compressor MidSide - Kompressor MidSide
+- Compressor Mono - Kompressor Mono
+- Compressor Stereo - Kompressor Stereo
+- Artistic Delay Mono - Künstlerische Verzögerung
+- Artistic Delay Stereo - Künstlerische Verzögerung
+- Latency Meter - Latenzmessgerät
+- Loudness Compensator Mono - Lautstärke Kompensator Mono
+- Loudness Compensator Stereo - Lautstärke Kompensator Stereo
+- Multiband Expander LeftRight x8 - Multi-band Expander LeftRight x8
+- Multiband Expander MidSide x8 - Multi-band Expander MidSide x8
+- Multiband Expander Mono x8 - Multi-band Expander Mono x8
+- Multiband Expander Stereo x8 - Multi-band Expander Stereo x8
+- Multiband Gate LeftRight x8 - Multi-band Gate LeftRight x8
+- Multiband Gate MidSide x8 - Multi-band Gate MidSide x8
+- Multiband Gate Mono x8 - Multi-band Gate Mono x8
+- Multiband Gate Stereo x8 - Multi-band Gate Stereo x8
+- Multiband Compressor LeftRight x8 - Multi-band Kompressor LeftRight x8
+- Multiband Compressor MidSide x8 - Multi-band Kompressor MidSide x8
+- Multiband Compressor Mono x8 - Multi-band Kompressor Mono x8
+- Multiband Compressor Stereo x8 - Multi-band Kompressor Stereo x8
+- Oscilloscope x1 - Oscilloscope x1
+- Oscilloscope x2 - Oscilloscope x2
+- Oscilloscope x4 - Oscilloscope x4
+- Oscillator Mono - Oszillator Mono
+- Parametric Equalizer x16 LeftRight - Parametrischer Entzerrer x16 LeftRight
+- Parametric Equalizer x16 MidSide - Parametrischer Entzerrer x16 MidSide
+- Parametric Equalizer x16 Mono - Parametrischer Entzerrer x16 Mono
+- Parametric Equalizer x16 Stereo - Parametrischer Entzerrer x16 Stereo
+- Parametric Equalizer x32 LeftRight - Parametrischer Entzerrer x32 LeftRight
+- Parametric Equalizer x32 MidSide - Parametrischer Entzerrer x32 MidSide
+- Parametric Equalizer x32 Mono - Parametrischer Entzerrer x32 Mono
+- Parametric Equalizer x32 Stereo - Parametrischer Entzerrer x32 Stereo
+- Phase Detector - Phasendetektor
+- Profiler Mono - Profiler Mono
+- Profiler Stereo - Profiler Stereo
+- Room Builder Mono - Raumbaumeister Mono
+- Room Builder Stereo - Raumbaumeister Stereo
+- Multi-Sampler x12 DirectOut - Schlagzeug x12 Direktausgabe
+- Multi-Sampler x12 Stereo - Schlagzeug x12 Stereo
+- Multi-Sampler x24 DirectOut - Schlagzeug x24 Direktausgabe
+- Multi-Sampler x24 Stereo - Schlagzeug x24 Stereo
+- Multi-Sampler x48 DirectOut - Schlagzeug x48 Direktausgabe
+- Multi-Sampler x48 Stereo - Schlagzeug x48 Stereo
+- Sidechain Multiband Expander LeftRight x8 - Sidechain Multi-band Expander LeftRight x8
+- Sidechain Multiband Expander MidSide x8 - Sidechain Multi-band Expander MidSide x8
+- Sidechain Multiband Expander Mono x8 - Sidechain Multi-band Expander Mono x8
+- Sidechain Multiband Expander Stereo x8 - Sidechain Multi-band Expander Stereo x8
+- Sidechain Multiband Gate LeftRight x8 - Sidechain Multi-band Gate LeftRight x8
+- Sidechain Multiband Gate MidSide x8 - Sidechain Multi-band Gate MidSide x8
+- Sidechain Multiband Gate Mono x8 - Sidechain Multi-band Gate Mono x8
+- Sidechain Multiband Gate Stereo x8 - Sidechain Multi-band Gate Stereo x8
+- Sidechain Multiband Compressor LeftRight x8 - Sidechain Multi-band Kompressor LeftRight x8
+- Sidechain Multiband Compressor MidSide x8 - Sidechain Multi-band Kompressor MidSide x8
+- Sidechain Multiband Compressor Mono x8 - Sidechain Multi-band Kompressor Mono x8
+- Sidechain Multiband Compressor Stereo x8 - Sidechain Multi-band Kompressor Stereo x8
+- Sidechain Limiter Mono - Sidechain-Begrenzer Mono
+- Sidechain Limiter Stereo - Sidechain-Begrenzer Stereo
+- Sidechain Dynamic Processor LeftRight - Sidechain-Dynamikprozessor LeftRight
+- Sidechain Dynamic Processor MidSide - Sidechain-Dynamikprozessor MidSide
+- Sidechain Dynamic Processor Mono - Sidechain-Dynamikprozessor Mono
+- Sidechain Dynamic Processor Stereo - Sidechain-Dynamikprozessor Stereo
+- Sidechain Expander LeftRight - Sidechain-Expander LeftRight
+- Sidechain Expander MidSide - Sidechain-Expander MidSide
+- Sidechain Expander Mono - Sidechain-Expander Mono
+- Sidechain Expander Stereo - Sidechain-Expander Stereo
+- Sidechain Gate LeftRight - Sidechain-Gate LeftRight
+- Sidechain Gate MidSide - Sidechain-Gate MidSide
+- Sidechain Gate Mono - Sidechain-Gate Mono
+- Sidechain Gate Stereo - Sidechain-Gate Stereo
+- Sidechain Compressor LeftRight - Sidechain-Kompressor LeftRight
+- Sidechain Compressor MidSide - Sidechain-Kompressor MidSide
+- Sidechain Compressor Mono - Sidechain-Kompressor Mono
+- Sidechain Compressor Stereo - Sidechain-Kompressor Stereo
+- Slapback Delay Mono - Slapback-Delay Mono
+- Slapback Delay Stereo - Slapback-Delay Stereo
+- Spectrum Analyzer x1 - Spektrumanalysator x1
+- Spectrum Analyzer x12 - Spektrumanalysator x12
+- Spectrum Analyzer x16 - Spektrumanalysator x16
+- Spectrum Analyzer x2 - Spektrumanalysator x2
+- Spectrum Analyzer x4 - Spektrumanalysator x4
+- Spectrum Analyzer x8 - Spektrumanalysator x8
+- Surge Filter Mono - Sprungfilter Mono
+- Surge Filter Stereo - Sprungfilter Stereo
+- Trigger MIDI Mono - Triggersensor MIDI Mono
+- Trigger MIDI Stereo - Triggersensor MIDI Stereo
+- Trigger Mono - Triggersensor Mono
+- Trigger Stereo - Triggersensor Stereo
+- Delay Compensator Mono - Verzögerungsausgleicher Mono
+- Delay Compensator Stereo - Verzögerungsausgleicher Stereo
+- Delay Compensator x2 Stereo - Verzögerungsausgleicher x2 Stereo
+
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://lsp-plug.in" rel="noopener" target="_blank">
+        https://lsp-plug.in
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-2.0
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:bart@magnetophon.nl">
+                Bart Brouns
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/lsp-plugins-art-delay-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-art-delay-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-comp-delay-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-comp-delay-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-comp-delay-x2-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-compressor-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-compressor-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-compressor-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-compressor-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-crossover-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-crossover-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-crossover-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-crossover-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-dyna-processor-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-dyna-processor-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-dyna-processor-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-dyna-processor-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-expander-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-expander-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-expander-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-expander-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-gate-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-gate-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-gate-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-gate-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-graph-equalizer-x16-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-graph-equalizer-x16-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-graph-equalizer-x16-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-graph-equalizer-x16-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-graph-equalizer-x32-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-graph-equalizer-x32-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-graph-equalizer-x32-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-graph-equalizer-x32-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-impulse-responses-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-impulse-responses-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-impulse-reverb-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-impulse-reverb-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-latency-meter</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-limiter-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-limiter-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-loud-comp-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-loud-comp-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-compressor-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-compressor-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-compressor-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-compressor-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-expander-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-expander-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-expander-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-expander-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-gate-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-gate-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-gate-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-mb-gate-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-multisampler-x12</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-multisampler-x12-do</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-multisampler-x24</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-multisampler-x24-do</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-multisampler-x48</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-multisampler-x48-do</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-oscillator-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-oscilloscope-x1</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-oscilloscope-x2</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-oscilloscope-x4</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-para-equalizer-x16-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-para-equalizer-x16-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-para-equalizer-x16-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-para-equalizer-x16-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-para-equalizer-x32-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-para-equalizer-x32-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-para-equalizer-x32-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-para-equalizer-x32-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-phase-detector</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-profiler-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-profiler-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-room-builder-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-room-builder-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sampler-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sampler-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-compressor-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-compressor-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-compressor-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-compressor-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-dyna-processor-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-dyna-processor-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-dyna-processor-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-dyna-processor-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-expander-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-expander-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-expander-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-expander-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-gate-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-gate-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-gate-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-gate-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-limiter-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-limiter-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-compressor-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-compressor-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-compressor-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-compressor-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-expander-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-expander-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-expander-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-expander-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-gate-lr</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-gate-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-gate-ms</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-sc-mb-gate-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-slap-delay-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-slap-delay-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-spectrum-analyzer-x1</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-spectrum-analyzer-x12</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-spectrum-analyzer-x16</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-spectrum-analyzer-x2</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-spectrum-analyzer-x4</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-spectrum-analyzer-x8</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-surge-filter-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-surge-filter-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-trigger-midi-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-trigger-midi-stereo</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-trigger-mono</li>
+            
+              <li style="list-style: none;">/bin/lsp-plugins-trigger-stereo</li>
+            
+              <li style="list-style: none;">/lib/ladspa/lsp-plugins-ladspa.so</li>
+            
+              <li style="list-style: none;">/lib/lsp-plugins/lsp-plugins-jack-core-1.1.30.so</li>
+            
+              <li style="list-style: none;">/lib/lsp-plugins/lsp-plugins-r3d-glx.so</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/art_delay_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/art_delay_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/comp_delay_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/comp_delay_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/comp_delay_x2_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/compressor_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/compressor_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/compressor_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/compressor_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/crossover_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/crossover_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/crossover_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/crossover_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/dyna_processor_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/dyna_processor_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/dyna_processor_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/dyna_processor_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/expander_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/expander_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/expander_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/expander_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/gate_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/gate_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/gate_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/gate_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/graph_equalizer_x16_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/graph_equalizer_x16_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/graph_equalizer_x16_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/graph_equalizer_x16_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/graph_equalizer_x32_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/graph_equalizer_x32_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/graph_equalizer_x32_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/graph_equalizer_x32_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/impulse_responses_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/impulse_responses_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/impulse_reverb_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/impulse_reverb_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/latency_meter.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/limiter_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/limiter_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/loud_comp_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/loud_comp_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/lsp-plugins-lv2.so</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/lsp-plugins-r3d-glx.so</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/manifest.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_compressor_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_compressor_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_compressor_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_compressor_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_expander_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_expander_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_expander_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_expander_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_gate_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_gate_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_gate_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/mb_gate_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/multisampler_x12.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/multisampler_x12_do.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/multisampler_x24.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/multisampler_x24_do.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/multisampler_x48.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/multisampler_x48_do.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/oscillator_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/oscilloscope_x1.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/oscilloscope_x2.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/oscilloscope_x4.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/para_equalizer_x16_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/para_equalizer_x16_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/para_equalizer_x16_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/para_equalizer_x16_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/para_equalizer_x32_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/para_equalizer_x32_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/para_equalizer_x32_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/para_equalizer_x32_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/phase_detector.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/profiler_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/profiler_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/room_builder_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/room_builder_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sampler_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sampler_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_compressor_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_compressor_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_compressor_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_compressor_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_dyna_processor_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_dyna_processor_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_dyna_processor_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_dyna_processor_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_expander_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_expander_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_expander_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_expander_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_gate_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_gate_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_gate_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_gate_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_limiter_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_limiter_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_compressor_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_compressor_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_compressor_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_compressor_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_expander_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_expander_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_expander_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_expander_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_gate_lr.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_gate_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_gate_ms.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/sc_mb_gate_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/slap_delay_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/slap_delay_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/spectrum_analyzer_x1.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/spectrum_analyzer_x12.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/spectrum_analyzer_x16.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/spectrum_analyzer_x2.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/spectrum_analyzer_x4.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/spectrum_analyzer_x8.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/surge_filter_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/surge_filter_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/trigger_midi_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/trigger_midi_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/trigger_mono.ttl</li>
+            
+              <li style="list-style: none;">/lib/lv2/lsp-plugins.lv2/trigger_stereo.ttl</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-r3d-glx.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-art-delay-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-art-delay-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-comp-delay-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-comp-delay-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-comp-delay-x2-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-compressor-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-compressor-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-compressor-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-compressor-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-core-1.1.30.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-crossover-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-crossover-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-crossover-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-crossover-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-dyna-processor-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-dyna-processor-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-dyna-processor-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-dyna-processor-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-expander-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-expander-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-expander-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-expander-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-gate-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-gate-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-gate-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-gate-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-graph-equalizer-x16-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-graph-equalizer-x16-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-graph-equalizer-x16-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-graph-equalizer-x16-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-graph-equalizer-x32-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-graph-equalizer-x32-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-graph-equalizer-x32-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-graph-equalizer-x32-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-impulse-responses-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-impulse-responses-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-impulse-reverb-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-impulse-reverb-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-latency-meter.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-limiter-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-limiter-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-loud-comp-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-loud-comp-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-compressor-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-compressor-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-compressor-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-compressor-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-expander-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-expander-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-expander-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-expander-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-gate-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-gate-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-gate-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-mb-gate-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-multisampler-x12-do.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-multisampler-x12.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-multisampler-x24-do.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-multisampler-x24.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-multisampler-x48-do.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-multisampler-x48.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-oscillator-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-oscilloscope-x1.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-oscilloscope-x2.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-oscilloscope-x4.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-para-equalizer-x16-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-para-equalizer-x16-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-para-equalizer-x16-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-para-equalizer-x16-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-para-equalizer-x32-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-para-equalizer-x32-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-para-equalizer-x32-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-para-equalizer-x32-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-phase-detector.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-profiler-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-profiler-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-room-builder-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-room-builder-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sampler-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sampler-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-compressor-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-compressor-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-compressor-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-compressor-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-dyna-processor-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-dyna-processor-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-dyna-processor-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-dyna-processor-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-expander-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-expander-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-expander-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-expander-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-gate-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-gate-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-gate-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-gate-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-limiter-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-limiter-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-compressor-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-compressor-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-compressor-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-compressor-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-expander-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-expander-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-expander-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-expander-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-gate-lr.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-gate-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-gate-ms.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-sc-mb-gate-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-slap-delay-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-slap-delay-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-spectrum-analyzer-x1.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-spectrum-analyzer-x12.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-spectrum-analyzer-x16.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-spectrum-analyzer-x2.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-spectrum-analyzer-x4.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-spectrum-analyzer-x8.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-surge-filter-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-surge-filter-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-trigger-midi-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-trigger-midi-stereo.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-trigger-mono.so</li>
+            
+              <li style="list-style: none;">/lib/vst/lsp-plugins-lxvst-1.1.30/lsp-plugins-vst-trigger-stereo.so</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/css/style.css</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/controls.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/development/building.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/development/debug.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/development/eclipse.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/development/testing.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/development/versioning.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/installation.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/licensing.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/overview.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/art_delay_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/art_delay_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/comp_delay_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/comp_delay_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/comp_delay_x2_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/compressor_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/compressor_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/compressor_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/compressor_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/crossover_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/crossover_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/crossover_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/crossover_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/dyna_processor_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/dyna_processor_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/dyna_processor_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/dyna_processor_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/expander_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/expander_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/expander_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/expander_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/gate_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/gate_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/gate_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/gate_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/graph_equalizer_x16_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/graph_equalizer_x16_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/graph_equalizer_x16_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/graph_equalizer_x16_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/graph_equalizer_x32_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/graph_equalizer_x32_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/graph_equalizer_x32_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/graph_equalizer_x32_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/impulse_responses_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/impulse_responses_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/impulse_reverb_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/impulse_reverb_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/latency_meter.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/limiter_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/limiter_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/loud_comp_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/loud_comp_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_compressor_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_compressor_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_compressor_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_compressor_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_expander_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_expander_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_expander_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_expander_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_gate_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_gate_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_gate_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/mb_gate_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/multisampler_x12.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/multisampler_x12_do.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/multisampler_x24.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/multisampler_x24_do.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/multisampler_x48.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/multisampler_x48_do.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/oscillator_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/oscilloscope_x1.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/oscilloscope_x2.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/oscilloscope_x4.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/para_equalizer_x16_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/para_equalizer_x16_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/para_equalizer_x16_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/para_equalizer_x16_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/para_equalizer_x32_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/para_equalizer_x32_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/para_equalizer_x32_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/para_equalizer_x32_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/phase_detector.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/profiler_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/profiler_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/room_builder_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/room_builder_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sampler_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sampler_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_compressor_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_compressor_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_compressor_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_compressor_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_dyna_processor_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_dyna_processor_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_dyna_processor_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_dyna_processor_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_expander_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_expander_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_expander_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_expander_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_gate_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_gate_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_gate_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_gate_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_limiter_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_limiter_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_compressor_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_compressor_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_compressor_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_compressor_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_expander_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_expander_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_expander_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_expander_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_gate_lr.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_gate_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_gate_ms.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/sc_mb_gate_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/slap_delay_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/slap_delay_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/spectrum_analyzer_x1.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/spectrum_analyzer_x12.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/spectrum_analyzer_x16.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/spectrum_analyzer_x2.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/spectrum_analyzer_x4.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/spectrum_analyzer_x8.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/surge_filter_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/surge_filter_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/trigger_midi_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/trigger_midi_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/trigger_mono.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/plugins/trigger_stereo.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/requirements.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/troubleshooting.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/tutorials/sampler_import_hydrogen_kit.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/html/video.html</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/button.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/button_led_blue.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/button_led_green.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/button_led_yellow.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/button_pressed.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/combo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/combo_group.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/combo_group_select.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/context_menu.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/dots.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/fader.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/file_error.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/file_loaded.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/file_unloaded.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/fraction.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/graph.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/group.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/indicator.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/inline_display1.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/inline_display2.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/knob_blue.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/knob_green.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/labels.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/led_bright.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/led_dark.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/param_enter.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/params.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/progress_bar.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/rack_left.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/rack_right.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/rack_top.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/sample_editor.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/save_v1.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/save_v2.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/save_v3.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/switch.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/vu_meters.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/controls/vu_meters_red.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/cover.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-cpp-debug.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-cpp-perspective.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-cpp-template.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-mtest-plugin.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-new-project.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-preprocessor-setup.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-build.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-exlude-resource.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-explorer.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-includes.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-lang-std.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-linker-general.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-linker-libraries.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-linker-misc.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-misc.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/devel/eclipse-project-properties.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/graph/equal-loudness-contours.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/graph/limiter-envelope.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/graph/limiter-patches.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/graph/limiter-reduction.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/graph/roombuilder-equations.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/graph/roombuilder-model.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/header.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/logo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/art_delay_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/art_delay_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/comp_delay_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/comp_delay_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/comp_delay_x2_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/compressor_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/compressor_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/compressor_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/compressor_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/crossover_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/crossover_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/crossover_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/crossover_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/dyna_processor_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/dyna_processor_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/dyna_processor_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/dyna_processor_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/expander_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/expander_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/expander_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/expander_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/gate_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/gate_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/gate_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/gate_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/graph_equalizer_x16_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/graph_equalizer_x16_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/graph_equalizer_x16_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/graph_equalizer_x16_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/graph_equalizer_x32_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/graph_equalizer_x32_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/graph_equalizer_x32_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/graph_equalizer_x32_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/impulse_responses_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/impulse_responses_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/impulse_reverb_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/impulse_reverb_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/latency_meter.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/limiter_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/limiter_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/loud_comp_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/loud_comp_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_compressor_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_compressor_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_compressor_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_compressor_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_expander_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_expander_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_expander_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_expander_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_gate_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_gate_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_gate_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/mb_gate_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/multisampler_x12.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/multisampler_x12_do.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/multisampler_x24.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/multisampler_x24_do.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/multisampler_x48.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/multisampler_x48_do.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/oscillator_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/oscilloscope_x1.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/oscilloscope_x2.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/oscilloscope_x4.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/para_equalizer_x16_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/para_equalizer_x16_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/para_equalizer_x16_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/para_equalizer_x16_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/para_equalizer_x32_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/para_equalizer_x32_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/para_equalizer_x32_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/para_equalizer_x32_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/phase_detector.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/profiler_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/profiler_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/room_builder_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/room_builder_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sampler_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sampler_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_compressor_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_compressor_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_compressor_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_compressor_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_dyna_processor_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_dyna_processor_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_dyna_processor_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_dyna_processor_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_expander_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_expander_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_expander_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_expander_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_gate_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_gate_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_gate_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_gate_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_limiter_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_limiter_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_compressor_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_compressor_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_compressor_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_compressor_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_expander_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_expander_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_expander_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_expander_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_gate_lr.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_gate_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_gate_ms.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/sc_mb_gate_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/slap_delay_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/slap_delay_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/spectrum_analyzer_x1.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/spectrum_analyzer_x12.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/spectrum_analyzer_x16.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/spectrum_analyzer_x2.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/spectrum_analyzer_x4.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/spectrum_analyzer_x8.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/surge_filter_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/surge_filter_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/trigger_midi_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/trigger_midi_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/trigger_mono.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/plugins/trigger_stereo.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/img/tutorials/lsp-sampler-hydrogen-kit.png</li>
+            
+              <li style="list-style: none;">/share/doc/lsp-plugins/index.html</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.30</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.30</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04855119e9a334cdae57e9c7708d566cf4f0f6b9">
+            04855119
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.30</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0107218ee68d1b35f8f60efdaffe56a386d6e5d8">
+            0107218e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04de1306ba22e1b2147c4a8028e9209ffcd8884c">
+            04de1306
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/000056c533fc8a8a8d8162b0bb5e1625e22e615a">
+            000056c5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/000056c533fc8a8a8d8162b0bb5e1625e22e615a">
+            000056c5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.30</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0319f3a97b3ec32fe91ffc8c134814ce8b069545">
+            0319f3a9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/073f462987bfde91ecf90c7cc7b99afe60728e62">
+            073f4629
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b42cf7b4fb914e40980bddc013964b23baacb3">
+            02b42cf7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b42cf7b4fb914e40980bddc013964b23baacb3">
+            02b42cf7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.30</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0432fe1034f8780170157e86b0383f68cb4e2c5e">
+            0432fe10
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0432fe1034f8780170157e86b0383f68cb4e2c5e">
+            0432fe10
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06749ba321ee3f284df74ab848985106eea52c13">
+            06749ba3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/034fdf336f3c4c5bea7cd1c3201da47835502f6f">
+            034fdf33
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.22</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f2fd5fb9f7def14154a7b80e7676e641dd56f9">
+            06f2fd5f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0096eb9274b430c8cf1a699c68054972c1845291">
+            0096eb92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afc85506c30cd901509aa825e6abf9ed702401">
+            00afc855
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afc85506c30cd901509aa825e6abf9ed702401">
+            00afc855
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0722158dba9c401354a53bb618e6e2b1903c7ea7">
+            0722158d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e49512aa1bea7730ebca10aa4a50a33cae34cd">
+            07e49512
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05d4955a96608ce8309124140360cee4c9a1390c">
+            05d4955a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03df9f54fc54a29d14a614bd29323076b5259588">
+            03df9f54
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00251c0689046f194551ba509ef4249f8e1f50d3">
+            00251c06
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00251c0689046f194551ba509ef4249f8e1f50d3">
+            00251c06
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05659a44ceb009f9c0c7060c3c1456276a2b3472">
+            05659a44
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06d328c3460bc07db4271bc3e63481c5ec1b45cf">
+            06d328c3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e485c189e4815fbb463c7dc0dfbfa7b1e4686">
+            069e485c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e485c189e4815fbb463c7dc0dfbfa7b1e4686">
+            069e485c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015c5a2be650acf9db46c3c25012e5023319625b">
+            015c5a2b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/019fa5f6086b2744c5c0f3ce6a756f9a8aa70e74">
+            019fa5f6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00946dc283ad0b3018490331802b77e16731a1f1">
+            00946dc2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00347e9537d6e6ddef599094429a1ac5392d6f28">
+            00347e95
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063c756b33f69a787d6fda77bb293ca022d5d922">
+            063c756b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015d4e2e98368b44cdf3a6d424ef35f0fed5072e">
+            015d4e2e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024f5b30e0a3231dbe99c30192f92ba0058d95f5">
+            024f5b30
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03197f94ce2d4b0feb673840d30f602e93357040">
+            03197f94
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0724d7ef5919798596f7c3ffea032b643c4c9841">
+            0724d7ef
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02594b3aed2d0cbdeb81bb48902d411f05244a61">
+            02594b3a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.26</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07988a0f8823177d24bc3b0b36233d9ef614cf91">
+            07988a0f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07988a0f8823177d24bc3b0b36233d9ef614cf91">
+            07988a0f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/066544a7eb38a4886a619a9a6dfd26e474c7f7a6">
+            066544a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036ef044fd5b7a604990e8fa76ff8a918fa786f4">
+            036ef044
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.24</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/017c7a4940a3c62002d725ae848b16793922eac9">
+            017c7a49
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0456d939a1ba4ae7df54c84cf873086d32679839">
+            0456d939
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.22</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049b68becfcc04fadb846c07f42306692fb0ddb3">
+            049b68be
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0684065e76f57fe41439043971faec9e8a22b8fa">
+            0684065e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.19</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b3cac1090c3925096e7ff1c58cb0b41c233f09">
+            02b3cac1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b3cac1090c3925096e7ff1c58cb0b41c233f09">
+            02b3cac1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.22</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03690ba290ef3f4612d022d3651bbaa6d6879621">
+            03690ba2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/008e7e3244ebc374d8f8df9632de0e821619319d">
+            008e7e32
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.19</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ee5c9271052fda43eadc702198cb980e073f53">
+            01ee5c92
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ee5c9271052fda43eadc702198cb980e073f53">
+            01ee5c92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.22</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01d4e2fe332420684803170597d1b88e9f826303">
+            01d4e2fe
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0697ad33c0bb50f010d209e13baab4e86ab52763">
+            0697ad33
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.19</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031ef5f64ed5d2e8c8d5fdc36b9082a0edd4dea7">
+            031ef5f6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031ef5f64ed5d2e8c8d5fdc36b9082a0edd4dea7">
+            031ef5f6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.22</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/002e3cfbce62a8b55eba52af9c72d770e5b31547">
+            002e3cfb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0693bed8eea074db1a052bbebe14e71b4994d774">
+            0693bed8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.19</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f4e69de0a26143f3e4bf7f58815627a4e193e4">
+            06f4e69d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06ef649346b99be954f4ee8d130ddd3eae41c9a4">
+            06ef6493
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024877e7b2ae4aca95c6867313414bdf6460b4f1">
+            024877e7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00222dbb0efd3234b471207aa329025cf38d7d8b">
+            00222dbb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04a5e5ab7c77361a9891fcc3bc0e32748b43d05f">
+            04a5e5ab
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04a5e5ab7c77361a9891fcc3bc0e32748b43d05f">
+            04a5e5ab
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0288741d260de7aa521bc7d8eac5b8cfb175d5e1">
+            0288741d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0288741d260de7aa521bc7d8eac5b8cfb175d5e1">
+            0288741d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f3d67e94d11e58204178f04b46478277c2432f">
+            03f3d67e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f3d67e94d11e58204178f04b46478277c2432f">
+            03f3d67e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03ccfe23f71704813b1ebc37f97ffd56f7fe5c29">
+            03ccfe23
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01c9c9b119b21404767b4de3e851ec5417be152d">
+            01c9c9b1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0218f30af58b9081f477504edd2b3ae19d3da9b5">
+            0218f30a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05195040c0006c0601075ee092031f2c2d2d04e0">
+            05195040
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0634484a53b548d4fc109a9f5e400e1d8fb2f55f">
+            0634484a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00610756df9a235f2de907a18cd8fded638d24e0">
+            00610756
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036cef94733d2af03f3732eb8673cf0744303972">
+            036cef94
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/010d2f4aa29448b1908b954006484cfbbf7e7d50">
+            010d2f4a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03a4369379e0fb5b0ecdeff2c508be49de460fd4">
+            03a43693
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/016111e839ec15e23c080da8ff955a548155202c">
+            016111e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/054214057ac0736b3169f729d990a2e12e3180d4">
+            05421405
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/054214057ac0736b3169f729d990a2e12e3180d4">
+            05421405
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0787a562c462d39b4bd6aa4ca3b30fc20db6a2bc">
+            0787a562
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01e8c649889a0a9493a38505023f7e33d98d8446">
+            01e8c649
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00875c07354b19d82a07d21806bb28cd808a9297">
+            00875c07
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/057840da6e144f9b8444a57788f48bbcc277bf96">
+            057840da
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/072cdcb265123b40e507c427ba99f907929c6f79">
+            072cdcb2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/072cdcb265123b40e507c427ba99f907929c6f79">
+            072cdcb2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02f869ff30a3d0f3a431b49a3e0e0469cf7e50cd">
+            02f869ff
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0101712a5b46746882578865630fa5ccc9f9946d">
+            0101712a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f3bc518e8fc12946e1a54aaa33c4e5d58519d3">
+            04f3bc51
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f3bc518e8fc12946e1a54aaa33c4e5d58519d3">
+            04f3bc51
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0646b9f7c39776a3ec8e4f3f6c60bd6e735d5b88">
+            0646b9f7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069364f34897be82c193dcd3501ab99f4e46cdc0">
+            069364f3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e9fd44928de4235b0a01dd0207fdd9b5b5359">
+            069e9fd4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e9fd44928de4235b0a01dd0207fdd9b5b5359">
+            069e9fd4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/053168d47004e9a29d4c3fbb6b905a320a0edb1b">
+            053168d4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03941c1e673289dbc732da059d6edd7b61b8fde0">
+            03941c1e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cb05d20c780f0cbe76eca6dfc2f08e741a1660">
+            04cb05d2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cb05d20c780f0cbe76eca6dfc2f08e741a1660">
+            04cb05d2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e78496b6ff3dd0524422de0fe8864fb22896e2">
+            03e78496
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e6ca15e205bf892eac08a5f561c3a16284c90a">
+            03e6ca15
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c5e811e6e0244a8e5a9645fd8347c719aab228">
+            06c5e811
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c5e811e6e0244a8e5a9645fd8347c719aab228">
+            06c5e811
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/054ceb826e2aedd849be741a0ae1888eb87cd569">
+            054ceb82
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b407743de858d8b0b4be1ce23ae2fa018f8d89">
+            07b40774
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e55536c325339d3cddb5215e678cb40e96ec9b">
+            03e55536
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e55536c325339d3cddb5215e678cb40e96ec9b">
+            03e55536
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/028f7e0e74b9f2305a362629947421b73633b9b6">
+            028f7e0e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0361ae22304698390acf0202f2e85034f4268c4a">
+            0361ae22
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0281599ad26471b328fe98c3f8d202d97a3f9544">
+            0281599a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/061c6b80240e1ff4157e8964154e45c7258cf057">
+            061c6b80
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/071a4db33e46766f8d7dd9243f44cc33256ab04f">
+            071a4db3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/071a4db33e46766f8d7dd9243f44cc33256ab04f">
+            071a4db3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/046390bf97cd52b28b96b476688ff97e1cf9e5c4">
+            046390bf
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0732203c3b63c95d80a1d23f40363e804e05662a">
+            0732203c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02d79ced9016ec67f3bfd3928a5c2969b25e2188">
+            02d79ced
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02d79ced9016ec67f3bfd3928a5c2969b25e2188">
+            02d79ced
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ee2ee2ba5b1d4763c77a6ed46523c17df97167">
+            01ee2ee2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03d3ed3eb089f83286b72465fa2a4fe23867eb70">
+            03d3ed3e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076c10183622115c38936382f41a9d2ec865e71f">
+            076c1018
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076c10183622115c38936382f41a9d2ec865e71f">
+            076c1018
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044bf77593eebd2384bf323909950f74c24f5012">
+            044bf775
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044bf77593eebd2384bf323909950f74c24f5012">
+            044bf775
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/012b43dfbb63ce3f453a726cfbd6226a25ed283a">
+            012b43df
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031c6151dd282572bdf3fb3a8c2a5af677c83d7b">
+            031c6151
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01cd6cda25bf8bf3c2fcc6b1f3a6056e7d43282a">
+            01cd6cda
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/016c4c9c8284691e922148b60787581f0e61edfd">
+            016c4c9c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04551d263c8b22a07e5c82ee2982ba3caf2fffd8">
+            04551d26
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04551d263c8b22a07e5c82ee2982ba3caf2fffd8">
+            04551d26
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/071d72a72287cc3ed39a8bcea478d9858529555f">
+            071d72a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/038b89819b94e509d5ba32707406e6b8df6802ee">
+            038b8981
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

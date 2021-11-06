@@ -1,0 +1,2544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package calc on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / calc
+    </dfn>
+    -
+    
+      C-style arbitrary precision calculator
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="http://www.isthe.com/chongo/tech/comp/calc/" rel="noopener" target="_blank">
+        http://www.isthe.com/chongo/tech/comp/calc/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-2.0-only
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:mjbauer95@gmail.com">
+                Matthew Bauer
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/calc</li>
+            
+              <li style="list-style: none;">/bin/cscript/4dsphere</li>
+            
+              <li style="list-style: none;">/bin/cscript/fproduct</li>
+            
+              <li style="list-style: none;">/bin/cscript/mersenne</li>
+            
+              <li style="list-style: none;">/bin/cscript/piforever</li>
+            
+              <li style="list-style: none;">/bin/cscript/plus</li>
+            
+              <li style="list-style: none;">/bin/cscript/powerterm</li>
+            
+              <li style="list-style: none;">/bin/cscript/simple</li>
+            
+              <li style="list-style: none;">/bin/cscript/square</li>
+            
+              <li style="list-style: none;">/include/alloc.h</li>
+            
+              <li style="list-style: none;">/include/banned.h</li>
+            
+              <li style="list-style: none;">/include/blkcpy.h</li>
+            
+              <li style="list-style: none;">/include/block.h</li>
+            
+              <li style="list-style: none;">/include/byteswap.h</li>
+            
+              <li style="list-style: none;">/include/calc.h</li>
+            
+              <li style="list-style: none;">/include/cmath.h</li>
+            
+              <li style="list-style: none;">/include/config.h</li>
+            
+              <li style="list-style: none;">/include/custom.h</li>
+            
+              <li style="list-style: none;">/include/decl.h</li>
+            
+              <li style="list-style: none;">/include/file.h</li>
+            
+              <li style="list-style: none;">/include/func.h</li>
+            
+              <li style="list-style: none;">/include/hash.h</li>
+            
+              <li style="list-style: none;">/include/hist.h</li>
+            
+              <li style="list-style: none;">/include/jump.h</li>
+            
+              <li style="list-style: none;">/include/label.h</li>
+            
+              <li style="list-style: none;">/include/lib_calc.h</li>
+            
+              <li style="list-style: none;">/include/lib_util.h</li>
+            
+              <li style="list-style: none;">/include/nametype.h</li>
+            
+              <li style="list-style: none;">/include/opcodes.h</li>
+            
+              <li style="list-style: none;">/include/prime.h</li>
+            
+              <li style="list-style: none;">/include/qmath.h</li>
+            
+              <li style="list-style: none;">/include/sha1.h</li>
+            
+              <li style="list-style: none;">/include/str.h</li>
+            
+              <li style="list-style: none;">/include/strl.h</li>
+            
+              <li style="list-style: none;">/include/symbol.h</li>
+            
+              <li style="list-style: none;">/include/token.h</li>
+            
+              <li style="list-style: none;">/include/value.h</li>
+            
+              <li style="list-style: none;">/include/zmath.h</li>
+            
+              <li style="list-style: none;">/include/zrand.h</li>
+            
+              <li style="list-style: none;">/include/zrandom.h</li>
+            
+              <li style="list-style: none;">/lib/libcalc.so</li>
+            
+              <li style="list-style: none;">/lib/libcalc.so.2.13.0.1</li>
+            
+              <li style="list-style: none;">/lib/libcustcalc.so</li>
+            
+              <li style="list-style: none;">/lib/libcustcalc.so.2.13.0.1</li>
+            
+              <li style="list-style: none;">/share/calc/README</li>
+            
+              <li style="list-style: none;">/share/calc/alg_config.cal</li>
+            
+              <li style="list-style: none;">/share/calc/beer.cal</li>
+            
+              <li style="list-style: none;">/share/calc/bernoulli.cal</li>
+            
+              <li style="list-style: none;">/share/calc/bernpoly.cal</li>
+            
+              <li style="list-style: none;">/share/calc/bigprime.cal</li>
+            
+              <li style="list-style: none;">/share/calc/bindings</li>
+            
+              <li style="list-style: none;">/share/calc/brentsolve.cal</li>
+            
+              <li style="list-style: none;">/share/calc/chi.cal</li>
+            
+              <li style="list-style: none;">/share/calc/chrem.cal</li>
+            
+              <li style="list-style: none;">/share/calc/constants.cal</li>
+            
+              <li style="list-style: none;">/share/calc/custhelp/argv</li>
+            
+              <li style="list-style: none;">/share/calc/custhelp/devnull</li>
+            
+              <li style="list-style: none;">/share/calc/custhelp/help</li>
+            
+              <li style="list-style: none;">/share/calc/custhelp/pmodm127</li>
+            
+              <li style="list-style: none;">/share/calc/custhelp/pzasusb8</li>
+            
+              <li style="list-style: none;">/share/calc/custhelp/register</li>
+            
+              <li style="list-style: none;">/share/calc/custhelp/sysinfo</li>
+            
+              <li style="list-style: none;">/share/calc/custom/argv.cal</li>
+            
+              <li style="list-style: none;">/share/calc/custom/halflen.cal</li>
+            
+              <li style="list-style: none;">/share/calc/custom/pmodm127.cal</li>
+            
+              <li style="list-style: none;">/share/calc/custom/pzasusb8.cal</li>
+            
+              <li style="list-style: none;">/share/calc/custom/register.cal</li>
+            
+              <li style="list-style: none;">/share/calc/deg.cal</li>
+            
+              <li style="list-style: none;">/share/calc/dms.cal</li>
+            
+              <li style="list-style: none;">/share/calc/dotest.cal</li>
+            
+              <li style="list-style: none;">/share/calc/ellip.cal</li>
+            
+              <li style="list-style: none;">/share/calc/factorial.cal</li>
+            
+              <li style="list-style: none;">/share/calc/factorial2.cal</li>
+            
+              <li style="list-style: none;">/share/calc/gvec.cal</li>
+            
+              <li style="list-style: none;">/share/calc/hello.cal</li>
+            
+              <li style="list-style: none;">/share/calc/help/COPYING</li>
+            
+              <li style="list-style: none;">/share/calc/help/COPYING-LGPL</li>
+            
+              <li style="list-style: none;">/share/calc/help/abs</li>
+            
+              <li style="list-style: none;">/share/calc/help/access</li>
+            
+              <li style="list-style: none;">/share/calc/help/acos</li>
+            
+              <li style="list-style: none;">/share/calc/help/acosh</li>
+            
+              <li style="list-style: none;">/share/calc/help/acot</li>
+            
+              <li style="list-style: none;">/share/calc/help/acoth</li>
+            
+              <li style="list-style: none;">/share/calc/help/acsc</li>
+            
+              <li style="list-style: none;">/share/calc/help/acsch</li>
+            
+              <li style="list-style: none;">/share/calc/help/address</li>
+            
+              <li style="list-style: none;">/share/calc/help/agd</li>
+            
+              <li style="list-style: none;">/share/calc/help/append</li>
+            
+              <li style="list-style: none;">/share/calc/help/appr</li>
+            
+              <li style="list-style: none;">/share/calc/help/archive</li>
+            
+              <li style="list-style: none;">/share/calc/help/arg</li>
+            
+              <li style="list-style: none;">/share/calc/help/argv</li>
+            
+              <li style="list-style: none;">/share/calc/help/arrow</li>
+            
+              <li style="list-style: none;">/share/calc/help/asec</li>
+            
+              <li style="list-style: none;">/share/calc/help/asech</li>
+            
+              <li style="list-style: none;">/share/calc/help/asin</li>
+            
+              <li style="list-style: none;">/share/calc/help/asinh</li>
+            
+              <li style="list-style: none;">/share/calc/help/assign</li>
+            
+              <li style="list-style: none;">/share/calc/help/assoc</li>
+            
+              <li style="list-style: none;">/share/calc/help/atan</li>
+            
+              <li style="list-style: none;">/share/calc/help/atan2</li>
+            
+              <li style="list-style: none;">/share/calc/help/atanh</li>
+            
+              <li style="list-style: none;">/share/calc/help/avg</li>
+            
+              <li style="list-style: none;">/share/calc/help/base</li>
+            
+              <li style="list-style: none;">/share/calc/help/base2</li>
+            
+              <li style="list-style: none;">/share/calc/help/bernoulli</li>
+            
+              <li style="list-style: none;">/share/calc/help/binding</li>
+            
+              <li style="list-style: none;">/share/calc/help/bindings</li>
+            
+              <li style="list-style: none;">/share/calc/help/bit</li>
+            
+              <li style="list-style: none;">/share/calc/help/blk</li>
+            
+              <li style="list-style: none;">/share/calc/help/blkcpy</li>
+            
+              <li style="list-style: none;">/share/calc/help/blkfree</li>
+            
+              <li style="list-style: none;">/share/calc/help/blocks</li>
+            
+              <li style="list-style: none;">/share/calc/help/bround</li>
+            
+              <li style="list-style: none;">/share/calc/help/btrunc</li>
+            
+              <li style="list-style: none;">/share/calc/help/bug</li>
+            
+              <li style="list-style: none;">/share/calc/help/bugs</li>
+            
+              <li style="list-style: none;">/share/calc/help/builtin</li>
+            
+              <li style="list-style: none;">/share/calc/help/calc_tty</li>
+            
+              <li style="list-style: none;">/share/calc/help/calclevel</li>
+            
+              <li style="list-style: none;">/share/calc/help/calcpath</li>
+            
+              <li style="list-style: none;">/share/calc/help/catalan</li>
+            
+              <li style="list-style: none;">/share/calc/help/ceil</li>
+            
+              <li style="list-style: none;">/share/calc/help/cfappr</li>
+            
+              <li style="list-style: none;">/share/calc/help/cfsim</li>
+            
+              <li style="list-style: none;">/share/calc/help/change</li>
+            
+              <li style="list-style: none;">/share/calc/help/changes</li>
+            
+              <li style="list-style: none;">/share/calc/help/char</li>
+            
+              <li style="list-style: none;">/share/calc/help/cmdbuf</li>
+            
+              <li style="list-style: none;">/share/calc/help/cmp</li>
+            
+              <li style="list-style: none;">/share/calc/help/comb</li>
+            
+              <li style="list-style: none;">/share/calc/help/command</li>
+            
+              <li style="list-style: none;">/share/calc/help/config</li>
+            
+              <li style="list-style: none;">/share/calc/help/conj</li>
+            
+              <li style="list-style: none;">/share/calc/help/contrib</li>
+            
+              <li style="list-style: none;">/share/calc/help/cos</li>
+            
+              <li style="list-style: none;">/share/calc/help/cosh</li>
+            
+              <li style="list-style: none;">/share/calc/help/cot</li>
+            
+              <li style="list-style: none;">/share/calc/help/coth</li>
+            
+              <li style="list-style: none;">/share/calc/help/count</li>
+            
+              <li style="list-style: none;">/share/calc/help/cp</li>
+            
+              <li style="list-style: none;">/share/calc/help/credit</li>
+            
+              <li style="list-style: none;">/share/calc/help/csc</li>
+            
+              <li style="list-style: none;">/share/calc/help/csch</li>
+            
+              <li style="list-style: none;">/share/calc/help/cscript</li>
+            
+              <li style="list-style: none;">/share/calc/help/ctime</li>
+            
+              <li style="list-style: none;">/share/calc/help/custom</li>
+            
+              <li style="list-style: none;">/share/calc/help/custom_cal</li>
+            
+              <li style="list-style: none;">/share/calc/help/define</li>
+            
+              <li style="list-style: none;">/share/calc/help/delete</li>
+            
+              <li style="list-style: none;">/share/calc/help/den</li>
+            
+              <li style="list-style: none;">/share/calc/help/dereference</li>
+            
+              <li style="list-style: none;">/share/calc/help/det</li>
+            
+              <li style="list-style: none;">/share/calc/help/digit</li>
+            
+              <li style="list-style: none;">/share/calc/help/digits</li>
+            
+              <li style="list-style: none;">/share/calc/help/display</li>
+            
+              <li style="list-style: none;">/share/calc/help/dp</li>
+            
+              <li style="list-style: none;">/share/calc/help/environment</li>
+            
+              <li style="list-style: none;">/share/calc/help/epsilon</li>
+            
+              <li style="list-style: none;">/share/calc/help/errcount</li>
+            
+              <li style="list-style: none;">/share/calc/help/errmax</li>
+            
+              <li style="list-style: none;">/share/calc/help/errno</li>
+            
+              <li style="list-style: none;">/share/calc/help/error</li>
+            
+              <li style="list-style: none;">/share/calc/help/errorcode</li>
+            
+              <li style="list-style: none;">/share/calc/help/errorcodes</li>
+            
+              <li style="list-style: none;">/share/calc/help/estr</li>
+            
+              <li style="list-style: none;">/share/calc/help/euler</li>
+            
+              <li style="list-style: none;">/share/calc/help/eval</li>
+            
+              <li style="list-style: none;">/share/calc/help/exp</li>
+            
+              <li style="list-style: none;">/share/calc/help/expression</li>
+            
+              <li style="list-style: none;">/share/calc/help/fact</li>
+            
+              <li style="list-style: none;">/share/calc/help/factor</li>
+            
+              <li style="list-style: none;">/share/calc/help/fclose</li>
+            
+              <li style="list-style: none;">/share/calc/help/fcnt</li>
+            
+              <li style="list-style: none;">/share/calc/help/feof</li>
+            
+              <li style="list-style: none;">/share/calc/help/ferror</li>
+            
+              <li style="list-style: none;">/share/calc/help/fflush</li>
+            
+              <li style="list-style: none;">/share/calc/help/fgetc</li>
+            
+              <li style="list-style: none;">/share/calc/help/fgetfield</li>
+            
+              <li style="list-style: none;">/share/calc/help/fgetfile</li>
+            
+              <li style="list-style: none;">/share/calc/help/fgetline</li>
+            
+              <li style="list-style: none;">/share/calc/help/fgets</li>
+            
+              <li style="list-style: none;">/share/calc/help/fgetstr</li>
+            
+              <li style="list-style: none;">/share/calc/help/fib</li>
+            
+              <li style="list-style: none;">/share/calc/help/file</li>
+            
+              <li style="list-style: none;">/share/calc/help/files</li>
+            
+              <li style="list-style: none;">/share/calc/help/floor</li>
+            
+              <li style="list-style: none;">/share/calc/help/fopen</li>
+            
+              <li style="list-style: none;">/share/calc/help/forall</li>
+            
+              <li style="list-style: none;">/share/calc/help/fpathopen</li>
+            
+              <li style="list-style: none;">/share/calc/help/fprintf</li>
+            
+              <li style="list-style: none;">/share/calc/help/fputc</li>
+            
+              <li style="list-style: none;">/share/calc/help/fputs</li>
+            
+              <li style="list-style: none;">/share/calc/help/fputstr</li>
+            
+              <li style="list-style: none;">/share/calc/help/frac</li>
+            
+              <li style="list-style: none;">/share/calc/help/free</li>
+            
+              <li style="list-style: none;">/share/calc/help/freebernoulli</li>
+            
+              <li style="list-style: none;">/share/calc/help/freeeuler</li>
+            
+              <li style="list-style: none;">/share/calc/help/freeglobals</li>
+            
+              <li style="list-style: none;">/share/calc/help/freeredc</li>
+            
+              <li style="list-style: none;">/share/calc/help/freestatics</li>
+            
+              <li style="list-style: none;">/share/calc/help/frem</li>
+            
+              <li style="list-style: none;">/share/calc/help/freopen</li>
+            
+              <li style="list-style: none;">/share/calc/help/fscan</li>
+            
+              <li style="list-style: none;">/share/calc/help/fscanf</li>
+            
+              <li style="list-style: none;">/share/calc/help/fseek</li>
+            
+              <li style="list-style: none;">/share/calc/help/fsize</li>
+            
+              <li style="list-style: none;">/share/calc/help/ftell</li>
+            
+              <li style="list-style: none;">/share/calc/help/full</li>
+            
+              <li style="list-style: none;">/share/calc/help/gcd</li>
+            
+              <li style="list-style: none;">/share/calc/help/gcdrem</li>
+            
+              <li style="list-style: none;">/share/calc/help/gd</li>
+            
+              <li style="list-style: none;">/share/calc/help/getenv</li>
+            
+              <li style="list-style: none;">/share/calc/help/hash</li>
+            
+              <li style="list-style: none;">/share/calc/help/head</li>
+            
+              <li style="list-style: none;">/share/calc/help/help</li>
+            
+              <li style="list-style: none;">/share/calc/help/highbit</li>
+            
+              <li style="list-style: none;">/share/calc/help/history</li>
+            
+              <li style="list-style: none;">/share/calc/help/hmean</li>
+            
+              <li style="list-style: none;">/share/calc/help/hnrmod</li>
+            
+              <li style="list-style: none;">/share/calc/help/hypot</li>
+            
+              <li style="list-style: none;">/share/calc/help/ilog</li>
+            
+              <li style="list-style: none;">/share/calc/help/ilog10</li>
+            
+              <li style="list-style: none;">/share/calc/help/ilog2</li>
+            
+              <li style="list-style: none;">/share/calc/help/im</li>
+            
+              <li style="list-style: none;">/share/calc/help/indices</li>
+            
+              <li style="list-style: none;">/share/calc/help/inputlevel</li>
+            
+              <li style="list-style: none;">/share/calc/help/insert</li>
+            
+              <li style="list-style: none;">/share/calc/help/int</li>
+            
+              <li style="list-style: none;">/share/calc/help/interrupt</li>
+            
+              <li style="list-style: none;">/share/calc/help/intro</li>
+            
+              <li style="list-style: none;">/share/calc/help/inverse</li>
+            
+              <li style="list-style: none;">/share/calc/help/iroot</li>
+            
+              <li style="list-style: none;">/share/calc/help/isalnum</li>
+            
+              <li style="list-style: none;">/share/calc/help/isalpha</li>
+            
+              <li style="list-style: none;">/share/calc/help/isassoc</li>
+            
+              <li style="list-style: none;">/share/calc/help/isatty</li>
+            
+              <li style="list-style: none;">/share/calc/help/isblk</li>
+            
+              <li style="list-style: none;">/share/calc/help/iscntrl</li>
+            
+              <li style="list-style: none;">/share/calc/help/isconfig</li>
+            
+              <li style="list-style: none;">/share/calc/help/isdefined</li>
+            
+              <li style="list-style: none;">/share/calc/help/isdigit</li>
+            
+              <li style="list-style: none;">/share/calc/help/iserror</li>
+            
+              <li style="list-style: none;">/share/calc/help/iseven</li>
+            
+              <li style="list-style: none;">/share/calc/help/isfile</li>
+            
+              <li style="list-style: none;">/share/calc/help/isgraph</li>
+            
+              <li style="list-style: none;">/share/calc/help/ishash</li>
+            
+              <li style="list-style: none;">/share/calc/help/isident</li>
+            
+              <li style="list-style: none;">/share/calc/help/isint</li>
+            
+              <li style="list-style: none;">/share/calc/help/islist</li>
+            
+              <li style="list-style: none;">/share/calc/help/islower</li>
+            
+              <li style="list-style: none;">/share/calc/help/ismat</li>
+            
+              <li style="list-style: none;">/share/calc/help/ismult</li>
+            
+              <li style="list-style: none;">/share/calc/help/isnull</li>
+            
+              <li style="list-style: none;">/share/calc/help/isnum</li>
+            
+              <li style="list-style: none;">/share/calc/help/isobj</li>
+            
+              <li style="list-style: none;">/share/calc/help/isobjtype</li>
+            
+              <li style="list-style: none;">/share/calc/help/isodd</li>
+            
+              <li style="list-style: none;">/share/calc/help/isprime</li>
+            
+              <li style="list-style: none;">/share/calc/help/isprint</li>
+            
+              <li style="list-style: none;">/share/calc/help/isptr</li>
+            
+              <li style="list-style: none;">/share/calc/help/ispunct</li>
+            
+              <li style="list-style: none;">/share/calc/help/isqrt</li>
+            
+              <li style="list-style: none;">/share/calc/help/isrand</li>
+            
+              <li style="list-style: none;">/share/calc/help/israndom</li>
+            
+              <li style="list-style: none;">/share/calc/help/isreal</li>
+            
+              <li style="list-style: none;">/share/calc/help/isrel</li>
+            
+              <li style="list-style: none;">/share/calc/help/issimple</li>
+            
+              <li style="list-style: none;">/share/calc/help/isspace</li>
+            
+              <li style="list-style: none;">/share/calc/help/issq</li>
+            
+              <li style="list-style: none;">/share/calc/help/isstr</li>
+            
+              <li style="list-style: none;">/share/calc/help/istype</li>
+            
+              <li style="list-style: none;">/share/calc/help/isupper</li>
+            
+              <li style="list-style: none;">/share/calc/help/isxdigit</li>
+            
+              <li style="list-style: none;">/share/calc/help/jacobi</li>
+            
+              <li style="list-style: none;">/share/calc/help/join</li>
+            
+              <li style="list-style: none;">/share/calc/help/lcm</li>
+            
+              <li style="list-style: none;">/share/calc/help/lcmfact</li>
+            
+              <li style="list-style: none;">/share/calc/help/lfactor</li>
+            
+              <li style="list-style: none;">/share/calc/help/libcalc</li>
+            
+              <li style="list-style: none;">/share/calc/help/list</li>
+            
+              <li style="list-style: none;">/share/calc/help/ln</li>
+            
+              <li style="list-style: none;">/share/calc/help/log</li>
+            
+              <li style="list-style: none;">/share/calc/help/lowbit</li>
+            
+              <li style="list-style: none;">/share/calc/help/ltol</li>
+            
+              <li style="list-style: none;">/share/calc/help/makelist</li>
+            
+              <li style="list-style: none;">/share/calc/help/man</li>
+            
+              <li style="list-style: none;">/share/calc/help/mat</li>
+            
+              <li style="list-style: none;">/share/calc/help/matdim</li>
+            
+              <li style="list-style: none;">/share/calc/help/matfill</li>
+            
+              <li style="list-style: none;">/share/calc/help/matmax</li>
+            
+              <li style="list-style: none;">/share/calc/help/matmin</li>
+            
+              <li style="list-style: none;">/share/calc/help/matsum</li>
+            
+              <li style="list-style: none;">/share/calc/help/mattrace</li>
+            
+              <li style="list-style: none;">/share/calc/help/mattrans</li>
+            
+              <li style="list-style: none;">/share/calc/help/max</li>
+            
+              <li style="list-style: none;">/share/calc/help/memsize</li>
+            
+              <li style="list-style: none;">/share/calc/help/meq</li>
+            
+              <li style="list-style: none;">/share/calc/help/min</li>
+            
+              <li style="list-style: none;">/share/calc/help/minv</li>
+            
+              <li style="list-style: none;">/share/calc/help/mmin</li>
+            
+              <li style="list-style: none;">/share/calc/help/mne</li>
+            
+              <li style="list-style: none;">/share/calc/help/mod</li>
+            
+              <li style="list-style: none;">/share/calc/help/modify</li>
+            
+              <li style="list-style: none;">/share/calc/help/name</li>
+            
+              <li style="list-style: none;">/share/calc/help/near</li>
+            
+              <li style="list-style: none;">/share/calc/help/new_custom</li>
+            
+              <li style="list-style: none;">/share/calc/help/newerror</li>
+            
+              <li style="list-style: none;">/share/calc/help/nextcand</li>
+            
+              <li style="list-style: none;">/share/calc/help/nextprime</li>
+            
+              <li style="list-style: none;">/share/calc/help/norm</li>
+            
+              <li style="list-style: none;">/share/calc/help/null</li>
+            
+              <li style="list-style: none;">/share/calc/help/num</li>
+            
+              <li style="list-style: none;">/share/calc/help/obj</li>
+            
+              <li style="list-style: none;">/share/calc/help/oldvalue</li>
+            
+              <li style="list-style: none;">/share/calc/help/operator</li>
+            
+              <li style="list-style: none;">/share/calc/help/ord</li>
+            
+              <li style="list-style: none;">/share/calc/help/overview</li>
+            
+              <li style="list-style: none;">/share/calc/help/param</li>
+            
+              <li style="list-style: none;">/share/calc/help/perm</li>
+            
+              <li style="list-style: none;">/share/calc/help/pfact</li>
+            
+              <li style="list-style: none;">/share/calc/help/pi</li>
+            
+              <li style="list-style: none;">/share/calc/help/pix</li>
+            
+              <li style="list-style: none;">/share/calc/help/places</li>
+            
+              <li style="list-style: none;">/share/calc/help/pmod</li>
+            
+              <li style="list-style: none;">/share/calc/help/polar</li>
+            
+              <li style="list-style: none;">/share/calc/help/poly</li>
+            
+              <li style="list-style: none;">/share/calc/help/pop</li>
+            
+              <li style="list-style: none;">/share/calc/help/popcnt</li>
+            
+              <li style="list-style: none;">/share/calc/help/pound</li>
+            
+              <li style="list-style: none;">/share/calc/help/power</li>
+            
+              <li style="list-style: none;">/share/calc/help/prevcand</li>
+            
+              <li style="list-style: none;">/share/calc/help/prevprime</li>
+            
+              <li style="list-style: none;">/share/calc/help/printf</li>
+            
+              <li style="list-style: none;">/share/calc/help/prompt</li>
+            
+              <li style="list-style: none;">/share/calc/help/protect</li>
+            
+              <li style="list-style: none;">/share/calc/help/ptest</li>
+            
+              <li style="list-style: none;">/share/calc/help/push</li>
+            
+              <li style="list-style: none;">/share/calc/help/putenv</li>
+            
+              <li style="list-style: none;">/share/calc/help/questions</li>
+            
+              <li style="list-style: none;">/share/calc/help/quo</li>
+            
+              <li style="list-style: none;">/share/calc/help/quomod</li>
+            
+              <li style="list-style: none;">/share/calc/help/rand</li>
+            
+              <li style="list-style: none;">/share/calc/help/randbit</li>
+            
+              <li style="list-style: none;">/share/calc/help/random</li>
+            
+              <li style="list-style: none;">/share/calc/help/randombit</li>
+            
+              <li style="list-style: none;">/share/calc/help/randperm</li>
+            
+              <li style="list-style: none;">/share/calc/help/rcin</li>
+            
+              <li style="list-style: none;">/share/calc/help/rcmul</li>
+            
+              <li style="list-style: none;">/share/calc/help/rcout</li>
+            
+              <li style="list-style: none;">/share/calc/help/rcpow</li>
+            
+              <li style="list-style: none;">/share/calc/help/rcsq</li>
+            
+              <li style="list-style: none;">/share/calc/help/re</li>
+            
+              <li style="list-style: none;">/share/calc/help/remove</li>
+            
+              <li style="list-style: none;">/share/calc/help/resource</li>
+            
+              <li style="list-style: none;">/share/calc/help/reverse</li>
+            
+              <li style="list-style: none;">/share/calc/help/rewind</li>
+            
+              <li style="list-style: none;">/share/calc/help/rm</li>
+            
+              <li style="list-style: none;">/share/calc/help/root</li>
+            
+              <li style="list-style: none;">/share/calc/help/round</li>
+            
+              <li style="list-style: none;">/share/calc/help/rsearch</li>
+            
+              <li style="list-style: none;">/share/calc/help/runtime</li>
+            
+              <li style="list-style: none;">/share/calc/help/saveval</li>
+            
+              <li style="list-style: none;">/share/calc/help/scale</li>
+            
+              <li style="list-style: none;">/share/calc/help/scan</li>
+            
+              <li style="list-style: none;">/share/calc/help/scanf</li>
+            
+              <li style="list-style: none;">/share/calc/help/script</li>
+            
+              <li style="list-style: none;">/share/calc/help/search</li>
+            
+              <li style="list-style: none;">/share/calc/help/sec</li>
+            
+              <li style="list-style: none;">/share/calc/help/sech</li>
+            
+              <li style="list-style: none;">/share/calc/help/seed</li>
+            
+              <li style="list-style: none;">/share/calc/help/segment</li>
+            
+              <li style="list-style: none;">/share/calc/help/select</li>
+            
+              <li style="list-style: none;">/share/calc/help/sgn</li>
+            
+              <li style="list-style: none;">/share/calc/help/sha1</li>
+            
+              <li style="list-style: none;">/share/calc/help/sin</li>
+            
+              <li style="list-style: none;">/share/calc/help/sinh</li>
+            
+              <li style="list-style: none;">/share/calc/help/size</li>
+            
+              <li style="list-style: none;">/share/calc/help/sizeof</li>
+            
+              <li style="list-style: none;">/share/calc/help/sleep</li>
+            
+              <li style="list-style: none;">/share/calc/help/sort</li>
+            
+              <li style="list-style: none;">/share/calc/help/sqrt</li>
+            
+              <li style="list-style: none;">/share/calc/help/srand</li>
+            
+              <li style="list-style: none;">/share/calc/help/srandom</li>
+            
+              <li style="list-style: none;">/share/calc/help/ssq</li>
+            
+              <li style="list-style: none;">/share/calc/help/statement</li>
+            
+              <li style="list-style: none;">/share/calc/help/stoponerror</li>
+            
+              <li style="list-style: none;">/share/calc/help/str</li>
+            
+              <li style="list-style: none;">/share/calc/help/strcasecmp</li>
+            
+              <li style="list-style: none;">/share/calc/help/strcat</li>
+            
+              <li style="list-style: none;">/share/calc/help/strcmp</li>
+            
+              <li style="list-style: none;">/share/calc/help/strcpy</li>
+            
+              <li style="list-style: none;">/share/calc/help/strerror</li>
+            
+              <li style="list-style: none;">/share/calc/help/strlen</li>
+            
+              <li style="list-style: none;">/share/calc/help/strncasecmp</li>
+            
+              <li style="list-style: none;">/share/calc/help/strncmp</li>
+            
+              <li style="list-style: none;">/share/calc/help/strncpy</li>
+            
+              <li style="list-style: none;">/share/calc/help/strpos</li>
+            
+              <li style="list-style: none;">/share/calc/help/strprintf</li>
+            
+              <li style="list-style: none;">/share/calc/help/strscan</li>
+            
+              <li style="list-style: none;">/share/calc/help/strscanf</li>
+            
+              <li style="list-style: none;">/share/calc/help/strtolower</li>
+            
+              <li style="list-style: none;">/share/calc/help/strtoupper</li>
+            
+              <li style="list-style: none;">/share/calc/help/substr</li>
+            
+              <li style="list-style: none;">/share/calc/help/sum</li>
+            
+              <li style="list-style: none;">/share/calc/help/swap</li>
+            
+              <li style="list-style: none;">/share/calc/help/system</li>
+            
+              <li style="list-style: none;">/share/calc/help/systime</li>
+            
+              <li style="list-style: none;">/share/calc/help/tail</li>
+            
+              <li style="list-style: none;">/share/calc/help/tan</li>
+            
+              <li style="list-style: none;">/share/calc/help/tanh</li>
+            
+              <li style="list-style: none;">/share/calc/help/test</li>
+            
+              <li style="list-style: none;">/share/calc/help/time</li>
+            
+              <li style="list-style: none;">/share/calc/help/todo</li>
+            
+              <li style="list-style: none;">/share/calc/help/trunc</li>
+            
+              <li style="list-style: none;">/share/calc/help/type</li>
+            
+              <li style="list-style: none;">/share/calc/help/types</li>
+            
+              <li style="list-style: none;">/share/calc/help/unexpected</li>
+            
+              <li style="list-style: none;">/share/calc/help/usage</li>
+            
+              <li style="list-style: none;">/share/calc/help/usertime</li>
+            
+              <li style="list-style: none;">/share/calc/help/variable</li>
+            
+              <li style="list-style: none;">/share/calc/help/version</li>
+            
+              <li style="list-style: none;">/share/calc/help/wishlist</li>
+            
+              <li style="list-style: none;">/share/calc/help/xor</li>
+            
+              <li style="list-style: none;">/share/calc/hms.cal</li>
+            
+              <li style="list-style: none;">/share/calc/infinities.cal</li>
+            
+              <li style="list-style: none;">/share/calc/intfile.cal</li>
+            
+              <li style="list-style: none;">/share/calc/intnum.cal</li>
+            
+              <li style="list-style: none;">/share/calc/lambertw.cal</li>
+            
+              <li style="list-style: none;">/share/calc/linear.cal</li>
+            
+              <li style="list-style: none;">/share/calc/lnseries.cal</li>
+            
+              <li style="list-style: none;">/share/calc/lucas.cal</li>
+            
+              <li style="list-style: none;">/share/calc/lucas_chk.cal</li>
+            
+              <li style="list-style: none;">/share/calc/mersenne.cal</li>
+            
+              <li style="list-style: none;">/share/calc/mfactor.cal</li>
+            
+              <li style="list-style: none;">/share/calc/mod.cal</li>
+            
+              <li style="list-style: none;">/share/calc/natnumset.cal</li>
+            
+              <li style="list-style: none;">/share/calc/pell.cal</li>
+            
+              <li style="list-style: none;">/share/calc/pi.cal</li>
+            
+              <li style="list-style: none;">/share/calc/pix.cal</li>
+            
+              <li style="list-style: none;">/share/calc/pollard.cal</li>
+            
+              <li style="list-style: none;">/share/calc/poly.cal</li>
+            
+              <li style="list-style: none;">/share/calc/prompt.cal</li>
+            
+              <li style="list-style: none;">/share/calc/psqrt.cal</li>
+            
+              <li style="list-style: none;">/share/calc/qtime.cal</li>
+            
+              <li style="list-style: none;">/share/calc/quat.cal</li>
+            
+              <li style="list-style: none;">/share/calc/randbitrun.cal</li>
+            
+              <li style="list-style: none;">/share/calc/randmprime.cal</li>
+            
+              <li style="list-style: none;">/share/calc/randombitrun.cal</li>
+            
+              <li style="list-style: none;">/share/calc/randomrun.cal</li>
+            
+              <li style="list-style: none;">/share/calc/randrun.cal</li>
+            
+              <li style="list-style: none;">/share/calc/regress.cal</li>
+            
+              <li style="list-style: none;">/share/calc/repeat.cal</li>
+            
+              <li style="list-style: none;">/share/calc/screen.cal</li>
+            
+              <li style="list-style: none;">/share/calc/seedrandom.cal</li>
+            
+              <li style="list-style: none;">/share/calc/set8700.cal</li>
+            
+              <li style="list-style: none;">/share/calc/set8700.line</li>
+            
+              <li style="list-style: none;">/share/calc/smallfactors.cal</li>
+            
+              <li style="list-style: none;">/share/calc/solve.cal</li>
+            
+              <li style="list-style: none;">/share/calc/specialfunctions.cal</li>
+            
+              <li style="list-style: none;">/share/calc/statistics.cal</li>
+            
+              <li style="list-style: none;">/share/calc/strings.cal</li>
+            
+              <li style="list-style: none;">/share/calc/sumsq.cal</li>
+            
+              <li style="list-style: none;">/share/calc/sumtimes.cal</li>
+            
+              <li style="list-style: none;">/share/calc/surd.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test1700.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test2300.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test2600.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test2700.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test3100.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test3300.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test3400.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test3500.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test4000.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test4100.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test4600.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test5100.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test5200.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test8400.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test8500.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test8600.cal</li>
+            
+              <li style="list-style: none;">/share/calc/test8900.cal</li>
+            
+              <li style="list-style: none;">/share/calc/toomcook.cal</li>
+            
+              <li style="list-style: none;">/share/calc/unitfrac.cal</li>
+            
+              <li style="list-style: none;">/share/calc/varargs.cal</li>
+            
+              <li style="list-style: none;">/share/calc/xx_print.cal</li>
+            
+              <li style="list-style: none;">/share/calc/zeta2.cal</li>
+            
+              <li style="list-style: none;">/share/man/man1/calc.1.gz</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.13.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.8.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.13.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044053e28c51b0284d1ace43655f8292ad543167">
+            044053e2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03582eb6e3c6124a74604c96029f085839022989">
+            03582eb6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03582eb6e3c6124a74604c96029f085839022989">
+            03582eb6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.13.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037e51702ec8e52c375f5af013d31e267675c3ac">
+            037e5170
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/062e1e595fe8bde889c73c2954fb2c5617dcf42c">
+            062e1e59
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05065605f6f3406bdba7cf15dd380f597ac2a18f">
+            05065605
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05065605f6f3406bdba7cf15dd380f597ac2a18f">
+            05065605
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.13.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0080a5869066969e9cd8eebf7fe2f19ded637ff5">
+            0080a586
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01dc2d9c4cbab9b07438fac306b0275381727f77">
+            01dc2d9c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024b4917eb9cd8ac094a365e724a7e83ea2584bd">
+            024b4917
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024b4917eb9cd8ac094a365e724a7e83ea2584bd">
+            024b4917
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.13.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ea399625058f55e5bac354a4edc8411851f0f7">
+            01ea3996
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05c13a03e2fb27186d8d1f2825807bf156512111">
+            05c13a03
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063e5abdd268cf993df7b8bda1d8dda2676ca345">
+            063e5abd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063e5abdd268cf993df7b8bda1d8dda2676ca345">
+            063e5abd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.13.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05017741d77d3fbbd7bb23a44b4992888dfe9bac">
+            05017741
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03b2156d269ed9d50b359b4362a094725b275f2d">
+            03b2156d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e50cf1392623f410a5e8847500d78ec8a5ef5d">
+            03e50cf1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0575e44c82b105058afacafffb3fc00807b64edb">
+            0575e44c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064e0af80b574bfe96540f17ddd35d6e0b1d5c71">
+            064e0af8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064e0af80b574bfe96540f17ddd35d6e0b1d5c71">
+            064e0af8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06dee38345cbad53ddfa7616a962be49777b1a72">
+            06dee383
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0139874db9bca4be6f54c52f2da40e8ac7c5237b">
+            0139874d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064b446fc0c7b79f05c6fac6b8da23eb18340d50">
+            064b446f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064b446fc0c7b79f05c6fac6b8da23eb18340d50">
+            064b446f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/027c28b18a2a3a7fc2f92a2a7a6b0eb1e226f17c">
+            027c28b1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031da799889d0037e480a6171ba221fa79c9ddfd">
+            031da799
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b1ddfa701914e7eb8a2cba1fcc084cc7aa1404">
+            01b1ddfa
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b1ddfa701914e7eb8a2cba1fcc084cc7aa1404">
+            01b1ddfa
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ea2748858c1d678c49e41cbba83d2102fbc68b">
+            01ea2748
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0625b9a7af1507ff3c75e5d72be54fd36cd26d58">
+            0625b9a7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/038d5eb819cdc89ab185a1aa315268d59006e442">
+            038d5eb8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/038d5eb819cdc89ab185a1aa315268d59006e442">
+            038d5eb8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03a351da00dd9ae2093be0d1112a2a789de0ca5e">
+            03a351da
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03a351da00dd9ae2093be0d1112a2a789de0ca5e">
+            03a351da
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0221bcf5a477b56fc6ff36548f1ec5065489b530">
+            0221bcf5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0221bcf5a477b56fc6ff36548f1ec5065489b530">
+            0221bcf5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/010677db15aaaccbce4d07054bb7f1f652900d98">
+            010677db
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/011f0b78973b7f48f5b743fa86fe76fb43c32e53">
+            011f0b78
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e70c2769f3729452e8ecb1cb448573d4192a11">
+            07e70c27
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e70c2769f3729452e8ecb1cb448573d4192a11">
+            07e70c27
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063074d82477c124dcf9402f0d7c5319fd6d76d1">
+            063074d8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0745b524b2ba65b7445db71448ae64a00dfda9b4">
+            0745b524
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06926a4294dd5982683aa9c1918e8323632bd27f">
+            06926a42
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06926a4294dd5982683aa9c1918e8323632bd27f">
+            06926a42
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0279db70edbdcde9d252fb796172955f8173eef9">
+            0279db70
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0414c39fc7b146643fadaec4611c49b3120e6d14">
+            0414c39f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036646460b4729e3e5293ef4e992fe320c29cebb">
+            03664646
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e41e37e885b7d45733cffea2c1d4e4141a3fdc">
+            07e41e37
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.8.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0661cf48823bc0ec6aa8aecfef5debfb8b2d4dd4">
+            0661cf48
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0661cf48823bc0ec6aa8aecfef5debfb8b2d4dd4">
+            0661cf48
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/021d18ee39fcc2872bb3dcd4abc47ea158364144">
+            021d18ee
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0253164612f7f83e45cbda92ab69bfca038ce8bf">
+            02531646
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.8.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0745ed2b73e9d740fd508f8132d1f9d772c57926">
+            0745ed2b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0745ed2b73e9d740fd508f8132d1f9d772c57926">
+            0745ed2b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/078c2a734110b80195781442b2c227b3027a734f">
+            078c2a73
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0285851c4e7fe57ebe71181d93afee6c44fcd47c">
+            0285851c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045e01aae6adaf512b370bd046c5f1ae7ba8909a">
+            045e01aa
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045e01aae6adaf512b370bd046c5f1ae7ba8909a">
+            045e01aa
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03d9f48fc2b18ca208274f8b389bb0120c635963">
+            03d9f48f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/062e1ffa1ba918c2c94a5988c60765247c0aa95c">
+            062e1ffa
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.8.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/028f2426320065a4e51004aa3d771df440217b4f">
+            028f2426
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0149eb8a42c29b20b4969de8aaa85e44bb335a9e">
+            0149eb8a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.9.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03bc13f68ccde33c6b6f6e3b49c55d20ac80b27c">
+            03bc13f6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03bc13f68ccde33c6b6f6e3b49c55d20ac80b27c">
+            03bc13f6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.8.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03831816d88c7c6dbe25b762493765f5ee77a148">
+            03831816
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03c98972ccb194111a2a21e34822cedabbec12fa">
+            03c98972
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/002fe4f19dcf14993dd850be100865b63bc97b80">
+            002fe4f1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/002fe4f19dcf14993dd850be100865b63bc97b80">
+            002fe4f1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.8.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0090fbbda5a546b67d1917288f2e533f15198e36">
+            0090fbbd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0090fbbda5a546b67d1917288f2e533f15198e36">
+            0090fbbd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.8.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0263ae262acb431e701afaa95f5c10b196419496">
+            0263ae26
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f27fd63bcb16e5d01e6a574c57dac434a571bf">
+            03f27fd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.8.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ba4b06b7e700f0519d21cbc65569b102492f52">
+            05ba4b06
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05c41cd7b83fa90ec676858365757e0d500df923">
+            05c41cd7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0388fd959ea440f644291a752b70823938bccad4">
+            0388fd95
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0172521d63ac0de2f6d21b4b891b8892b480ee2b">
+            0172521d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b872310d6a6503639f5a71a14f00441f961bc9">
+            02b87231
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b872310d6a6503639f5a71a14f00441f961bc9">
+            02b87231
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b50561d60fa4aad7d295bf6e58e4cd7a77e0bc">
+            07b50561
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b50561d60fa4aad7d295bf6e58e4cd7a77e0bc">
+            07b50561
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07a6bc6ab21a9708ff6bd684aa9f9a0375d32f6b">
+            07a6bc6a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bbbc64ee49842250cff4451ea9bcacc68afb19">
+            07bbbc64
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0289f4adf032d402d95a438ed18a966eeffda5cd">
+            0289f4ad
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0289f4adf032d402d95a438ed18a966eeffda5cd">
+            0289f4ad
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050dad2901375c1d6a21d7c8c019ce47fd1a4edf">
+            050dad29
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00005ce0bdbc3c13804adc9a7fd71a02cc0b8db2">
+            00005ce0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024ad6c4d5899bbbd2841a7b41e9c2f81719badf">
+            024ad6c4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024ad6c4d5899bbbd2841a7b41e9c2f81719badf">
+            024ad6c4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03fddb139eff8d83ad279c073029872ecf4cede4">
+            03fddb13
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/059920226802cc771fa1461286d6825fabc140dd">
+            05992022
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/032d610aedca15e8790ed20d3fd01a9dee6d4b8e">
+            032d610a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0134db94d9e5623125d6e049c9c3da3c63e154e8">
+            0134db94
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04fe84d2393027256dde64c9683deda527470142">
+            04fe84d2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0217c2980d9eb5859fa6098f06ed5faa1e1d755c">
+            0217c298
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02bf0e589653d34dc919b32a1d3c67b0d0bb2335">
+            02bf0e58
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02bf0e589653d34dc919b32a1d3c67b0d0bb2335">
+            02bf0e58
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02fdfdda9de4293ea61bf2f660dc132932016685">
+            02fdfdda
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f36767709f64792175cf6b8d2a0c0cd3026f61">
+            06f36767
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.7.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0270dda6b4fdc15d9cdc83cf74b91adb3e7c6e5f">
+            0270dda6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0270dda6b4fdc15d9cdc83cf74b91adb3e7c6e5f">
+            0270dda6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0607adde1a5d4c933986c6a7a169c44ee9ef3469">
+            0607adde
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02931474a71ba779d374e7e8682fa4f21ff27892">
+            02931474
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a3726a1256fa0e144c302537c8b0876bfee77f">
+            02a3726a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a3726a1256fa0e144c302537c8b0876bfee77f">
+            02a3726a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075e4883e0abea400aecb886e6244a6c2acf7bd8">
+            075e4883
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0111c7d8515d229cc19b487bb0c2e62571413e3c">
+            0111c7d8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.5.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044ceae2806480555a44c91c386546cffb46ba74">
+            044ceae2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044ceae2806480555a44c91c386546cffb46ba74">
+            044ceae2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07a3f3fbb79bf06b3fae5d45ceba35c84a8a494b">
+            07a3f3fb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0560caa57893a3c8dd11aeece110672c720c9496">
+            0560caa5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/028164ef057119ee37c99bcb98224672441d2d81">
+            028164ef
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/028164ef057119ee37c99bcb98224672441d2d81">
+            028164ef
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/056c03aeb38cf474240d8b10fcb00a4c84d20695">
+            056c03ae
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02602b2c15eaccf80490168591cf289ac81cc9d5">
+            02602b2c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0329e26f895aeb6bf405014b70c96a582f861eaf">
+            0329e26f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0329e26f895aeb6bf405014b70c96a582f861eaf">
+            0329e26f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/071d72a72287cc3ed39a8bcea478d9858529555f">
+            071d72a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/011f1c739647c0b6947d028c217e4a98466c26d2">
+            011f1c73
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00528006cfc998db81abb77d5aebe7115bbd664f">
+            00528006
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07ace1d24e42fae33fa76ff135072f7c5989ab8d">
+            07ace1d2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/077811ebe37fd1c5ff75fec40f89111db15214c4">
+            077811eb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/077811ebe37fd1c5ff75fec40f89111db15214c4">
+            077811eb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04113fb8647c526101cb8685f9adedd79dec154c">
+            04113fb8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04e13de94f1909afc4711a92cf83d5969afa0981">
+            04e13de9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01e1722e8fe932106d65bc87b83e5684534fa6e6">
+            01e1722e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01e1722e8fe932106d65bc87b83e5684534fa6e6">
+            01e1722e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/011e70155b2b1b41655966bc8a9e0aae41e3432b">
+            011e7015
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03cf4bf6d0a7d3e9ec8428357685140f74a291c0">
+            03cf4bf6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/068d792fedbfb6f14b9f7bb52179a392e6886e52">
+            068d792f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/068d792fedbfb6f14b9f7bb52179a392e6886e52">
+            068d792f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/059f33c6dec158d3c0aec6f00f741fafad94b50f">
+            059f33c6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07be047a91d0dfeef49f026ecbb882e2211daa60">
+            07be047a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04c3713755379ee4b8e020881adf5e5eae4c01f5">
+            04c37137
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04c3713755379ee4b8e020881adf5e5eae4c01f5">
+            04c37137
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03efbb01c622a4a17f0faba357a74b07ead537c3">
+            03efbb01
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02e269d0ea2a14f7aa3aef7d81514dea3508c49f">
+            02e269d0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00269f660c4da075bd931555845161cafc5d6758">
+            00269f66
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04436f2c6617210d3bcf952c42773a9e064b23c1">
+            04436f2c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.5.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e2460afd4b2de598cebd4c7466e63e0a28d872">
+            07e2460a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e2460afd4b2de598cebd4c7466e63e0a28d872">
+            07e2460a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00422b227968b698c3f109c46b8cd1a4c8590b4e">
+            00422b22
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0094ca20cc224085d9479c614bfed52172c93b4b">
+            0094ca20
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02d9d40d99d5a47e5e252dfe51451fe445cd2459">
+            02d9d40d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02d9d40d99d5a47e5e252dfe51451fe445cd2459">
+            02d9d40d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00b4e2646cb07611944645d219bfe1202d34e20c">
+            00b4e264
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00b4e2646cb07611944645d219bfe1202d34e20c">
+            00b4e264
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/078f1dde724456eeacaf83c9931c34c09b35d0bb">
+            078f1dde
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00bdbcd99e5d38c681dc6595db92903a5a7c38b7">
+            00bdbcd9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.5.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01fbf30041d1ee0c3ad819fe59389eadc92d9ac4">
+            01fbf300
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01fbf30041d1ee0c3ad819fe59389eadc92d9ac4">
+            01fbf300
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0053bf6d472475cdd924e1edc606639472bc34f4">
+            0053bf6d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031eb79a0b99b75577b375a503368a680f7389c1">
+            031eb79a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.5.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05b88794640acfaad132cdca767152155e725a99">
+            05b88794
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05b88794640acfaad132cdca767152155e725a99">
+            05b88794
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0396ca6150b26a95d733f38ea59b4535b206fba7">
+            0396ca61
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07796ccb578e44b8545133bb7dc2a73537d94c59">
+            07796ccb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.12.5.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b1f78b948e3a3504ea8ac4107a8490d8ff97df">
+            07b1f78b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07674788d6932fe702117649b4cd16512d2da8a9">
+            07674788
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

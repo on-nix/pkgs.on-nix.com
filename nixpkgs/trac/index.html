@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package trac on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / trac
+    </dfn>
+    -
+    
+      Integrated SCM, wiki, issue tracker and project environment
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://trac.edgewall.org/" rel="noopener" target="_blank">
+        https://trac.edgewall.org/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - BSD-3-Clause
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:marek.mahut@gmail.com">
+                Marek Mahut
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/.trac-admin-wrapped</li>
+            
+              <li style="list-style: none;">/bin/.tracd-wrapped</li>
+            
+              <li style="list-style: none;">/bin/trac-admin</li>
+            
+              <li style="list-style: none;">/bin/tracd</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/AUTHORS</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/COPYING</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/INSTALLER</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/METADATA</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/RECORD</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/REQUESTED</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/WHEEL</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/direct_url.json</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/entry_points.txt</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/top_level.txt</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/Trac-1.4.1.dist-info/zip-safe</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/about.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/about.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/console.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/console.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/templates/admin.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/templates/admin_basics.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/templates/admin_logging.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/templates/admin_perms.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/templates/admin_plugins.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/test.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/test.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/web_ui.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/admin/web_ui.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/attachment.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/attachment.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/cache.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/cache.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/config.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/config.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/core.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/core.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/convert.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/convert.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/mysql_backend.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/mysql_backend.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/pool.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/pool.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/postgres_backend.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/postgres_backend.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/schema.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/schema.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/sqlite_backend.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/sqlite_backend.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/util.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db/util.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db_default.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/db_default.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/dist.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/dist.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/env.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/env.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/README</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/asc.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/attachment.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/batchmodify.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/changeset.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/closedticket.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/collapsed.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/admin.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/browser.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/changeset.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/code.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/diff.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-bg_diagonals-thick_18_ffddcc_40x40.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-bg_diagonals-thick_20_666666_40x40.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_30_303030_1x100.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_75_c0f0c0_1x100.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-bg_highlight-soft_80_ffffdd_1x100.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-icons_222222_256x240.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-icons_4b954f_256x240.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-icons_505050_256x240.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-icons_707070_256x240.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-icons_9b081d_256x240.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-icons_b00000_256x240.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/images/ui-icons_d7d7d7_256x240.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui/jquery-ui.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/jquery-ui-addons.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/prefs.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/report.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/roadmap.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/search.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/ticket.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/timeline.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/trac.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/css/wiki.css</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/desc.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/dots.gif</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/download.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/draft.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/edit_toolbar.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/editedticket.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/envelope.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/expanded.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/expander_normal.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/expander_normal_hover.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/expander_open.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/expander_open_hover.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/extlink.gif</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/feed.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/file.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/folder.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/grip.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/guide/admin-permissions-TICKET_ADMIN.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/guide/admin-permissions.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/guide/admin.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/guide/basic-workflow.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/guide/original-workflow.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/ics.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/imggrid.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/inreply.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/admin_enums.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/auto_preview.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/babel.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/blame.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/diff.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/excanvas.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/expand_dir.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/folding.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/jquery-ui-addons.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/jquery-ui-i18n.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/jquery-ui.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/jquery.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/keyboard_nav.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/log_graph.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/ca.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/da.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/de.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/en_GB.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/en_US.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/eo.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/es.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/es_AR.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/es_MX.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/et.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/fi.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/fr.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/he.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/hu.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/hy.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/it.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/ja.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/ko.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/nb.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/nl.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/pt_BR.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/ru.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/sl.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/sq.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/sv.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/tr.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/uk.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/zh_CN.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/messages/zh_TW.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/noconflict.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/query.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/resizer.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/search.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/threaded_comments.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/timeline_multirepos.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/trac.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/wiki.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/wikitoolbar.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/js/workflow_graph.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/loading.gif</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/lock-locked.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/milestone.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/newticket.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/parent.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/python.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/topbar_gradient.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/topbar_gradient2.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/trac.ico</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/trac_banner.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/trac_logo_mini.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/vgradient.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/htdocs/wiki.png</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/loader.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/loader.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ca/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ca/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/cs/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/cs/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/da/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/de/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/de/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/el/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/el/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/en_GB/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/en_GB/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/en_US/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/en_US/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/eo/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/eo/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/es/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/es/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/es_AR/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/es_AR/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/es_MX/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/et/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/fa/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/fi/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/fi/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/fr/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/fr/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/gl/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/gl/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/he/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/he/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/hu/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/hu/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/hy/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/hy/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/it/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/it/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ja/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ja/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ko/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ko/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/nb/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/nb/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/nl/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/nl/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/pl/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/pl/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/pt/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/pt/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/pt_BR/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/pt_BR/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ro/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ro/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ru/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/ru/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/sl/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/sl/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/sq/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/sq/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/sv/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/sv/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/tr/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/tr/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/uk/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/vi/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/zh_CN/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/zh_CN/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/zh_TW/LC_MESSAGES/messages.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/locale/zh_TW/LC_MESSAGES/tracini.mo</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/log.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/log.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/patch.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/patch.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/pygments.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/pygments.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/rst.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/rst.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/templates/prefs_pygments.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/txtl.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/mimeview/txtl.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/mail.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/mail.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/model.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/model.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/prefs.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/prefs.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/notification/templates/prefs_notification.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/perm.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/perm.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/templates/prefs.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/templates/prefs_advanced.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/templates/prefs_general.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/templates/prefs_localization.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/templates/prefs_userinterface.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/web_ui.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/prefs/web_ui.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/resource.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/resource.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/search/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/search/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/search/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/search/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/search/templates/opensearch.xml</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/search/templates/search.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/search/web_ui.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/search/web_ui.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/about.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/attach_file_form.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/attachment.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/author_or_creator.rss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/diff_div.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/diff_options.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/diff_view.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/environment_info.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/error.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/about.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/admin.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/attach_file_form.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/attachment.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/author_or_creator.rss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/diff_div.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/diff_options.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/diff_view.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/environment_info.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/error.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/history_view.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/index.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/layout.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/list_of_attachments.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/page_index.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/prefs.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/preview_file.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/progress_bar.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/progress_bar_grouped.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/genshi/theme.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/history_view.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/index.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/layout.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/list_of_attachments.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/macros.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/page_index.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/preview_file.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/progress_bar.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/progress_bar_grouped.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/templates/theme.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/test.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/test.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/admin.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/admin.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/batch.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/batch.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/default_workflow.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/default_workflow.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/model.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/model.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/notification.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/notification.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/query.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/query.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/report.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/report.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/roadmap.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/roadmap.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/admin_components.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/admin_enums.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/admin_milestones.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/admin_versions.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/batch_modify.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/batch_ticket_notify_email.txt</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/milestone_delete.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/milestone_edit.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/milestone_edit_form.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/milestone_view.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/query.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/query.rss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/query_results.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/report.rss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/report_delete.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/report_edit.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/report_list.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/report_list.rss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/report_view.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/roadmap.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/ticket.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/ticket.rss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/ticket_box.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/ticket_change.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/ticket_notify_email.txt</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/ticket_preview.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/templates/ticket_workflow.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/test.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/test.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/web_ui.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/web_ui.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/workflows/basic-workflow.ini</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/ticket/workflows/original-workflow.ini</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/timeline/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/timeline/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/timeline/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/timeline/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/timeline/templates/timeline.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/timeline/templates/timeline.rss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/timeline/web_ui.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/timeline/web_ui.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db10.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db10.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db11.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db11.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db12.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db12.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db13.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db13.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db14.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db14.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db15.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db15.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db16.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db16.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db17.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db17.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db18.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db18.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db19.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db19.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db20.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db20.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db21.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db21.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db22.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db22.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db23.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db23.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db24.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db24.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db25.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db25.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db26.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db26.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db27.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db27.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db28.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db28.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db29.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db29.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db3.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db3.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db30.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db30.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db31.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db31.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db32.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db32.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db33.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db33.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db34.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db34.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db35.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db35.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db36.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db36.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db37.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db37.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db38.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db38.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db39.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db4.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db4.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db40.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db40.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db41.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db41.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db42.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db42.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db43.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db43.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db44.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db44.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db45.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db45.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db5.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db5.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db6.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db6.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db7.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db7.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db8.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db8.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db9.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/upgrades/db9.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/autoreload.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/autoreload.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/compat.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/compat.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/concurrency.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/concurrency.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/daemon.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/daemon.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/datefmt.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/datefmt.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/dist.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/dist.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/html.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/html.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/presentation.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/presentation.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/text.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/text.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/translation.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/util/translation.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/admin.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/admin.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/cache.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/cache.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/diff.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/diff.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/svn_authz.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/svn_authz.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/admin_repositories.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/browser.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/changeset.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/changeset_content.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/diff_form.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/dir_entries.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/dirlist_thead.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/path_links.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/repository_index.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/revisionlog.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/revisionlog.rss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/revisionlog.txt</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/templates/sortable_th.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/browser.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/browser.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/changeset.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/changeset.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/log.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/log.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/util.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/versioncontrol/web_ui/util.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/_fcgi.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/_fcgi.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/auth.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/auth.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/cgi_frontend.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/cgi_frontend.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/chrome.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/chrome.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/fcgi_frontend.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/fcgi_frontend.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/href.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/href.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/main.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/main.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/modpython_frontend.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/modpython_frontend.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/session.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/session.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/standalone.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/standalone.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/templates/deploy_trac.cgi</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/templates/deploy_trac.fcgi</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/templates/deploy_trac.wsgi</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/wsgi.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/web/wsgi.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/admin.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/admin.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/CamelCase</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/InterMapTxt</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/InterTrac</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/InterWiki</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/PageTemplates</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/RecentChanges</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/SandBox</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TicketQuery</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TitleIndex</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracAccessibility</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracAdmin</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracBackup</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracBatchModify</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracBrowser</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracCgi</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracChangeLog</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracChangeset</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracEnvironment</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracFastCgi</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracFineGrainedPermissions</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracGuide</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracImport</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracIni</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracInstall</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracInterfaceCustomization</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracLinks</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracLogging</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracModPython</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracModWSGI</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracNavigation</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracNotification</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracPermissions</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracPlugins</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracQuery</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracReports</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracRepositoryAdmin</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracRevisionLog</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracRoadmap</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracRss</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracSearch</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracStandalone</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracSupport</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracSyntaxColoring</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracTickets</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracTicketsCustomFields</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracTimeline</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracUnicode</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracUpgrade</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracWiki</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/TracWorkflow</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiDeletePage</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiFormatting</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiHtml</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiMacros</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiNewPage</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiPageNames</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiProcessors</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiRestructuredText</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiRestructuredTextLinks</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/default-pages/WikiStart</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/formatter.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/formatter.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/intertrac.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/intertrac.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/interwiki.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/interwiki.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/macros.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/macros.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/model.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/model.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/parser.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/parser.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/templates/wiki_delete.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/templates/wiki_diff.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/templates/wiki_edit.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/templates/wiki_edit_comment.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/templates/wiki_edit_form.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/templates/wiki_page_path.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/templates/wiki_rename.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/templates/wiki_view.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/test.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/test.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/web_api.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/web_api.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/web_ui.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/trac/wiki/web_ui.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/perm/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/perm/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/perm/authz_policy.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/perm/authz_policy.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/perm/config_perm_provider.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/perm/config_perm_provider.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/clone.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/clone.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/commit_updater.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/commit_updater.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/deleter.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/deleter.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/htdocs/ticketclone.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/htdocs/ticketdeleter.js</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/ticket/templates/ticket_delete.html</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/git/PyGIT.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/git/PyGIT.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/git/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/git/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/git/git_fs.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/git/git_fs.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/svn/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/svn/__init__.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/svn/svn_fs.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/svn/svn_fs.pyc</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/svn/svn_prop.py</li>
+            
+              <li style="list-style: none;">/lib/python2.7/site-packages/tracopt/versioncontrol/svn/svn_prop.pyc</li>
+            
+              <li style="list-style: none;">/nix-support/propagated-build-inputs</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01740090598b8b89ffb5854ebab2159b14242d41">
+            01740090
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bd8938f320bff12d1b9fe67aedc7ca8dd64d30">
+            07bd8938
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bd8938f320bff12d1b9fe67aedc7ca8dd64d30">
+            07bd8938
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0521dc3f1933f8820b2a62f6e51a0aa6d6673e64">
+            0521dc3f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037c91b193eee5ab5088d25bd25aeab5ac2bce56">
+            037c91b1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afca09295db93bf8bffe3f6f2d92a74eb97b38">
+            00afca09
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afca09295db93bf8bffe3f6f2d92a74eb97b38">
+            00afca09
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04037d1e03b9ee08f1b56ab3480e1ffdafd88155">
+            04037d1e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03fb78e80e8d56a2b90d328a7f54ab1c8f586fb8">
+            03fb78e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/017926a8b3e8a3daa49313ec5520cce7fc20569e">
+            017926a8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/017926a8b3e8a3daa49313ec5520cce7fc20569e">
+            017926a8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03fbecff083adf7bf2063b5e46b9ef251aec60be">
+            03fbecff
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01e352ac449d51480ca4750f5637bc7ad156ceb4">
+            01e352ac
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a9b7fe2a695c39118230df3ce8dfa2b1364c36">
+            05a9b7fe
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a9b7fe2a695c39118230df3ce8dfa2b1364c36">
+            05a9b7fe
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/059ee2a8b1c526acc216c2f3cfc7f3de345041bc">
+            059ee2a8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05b6836816aef6aea9e0bac2d4f9ba5d711bc274">
+            05b68368
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04742d003e7eb413e85a58c83a922df4270c5984">
+            04742d00
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/006aeb5704123f259d5cda435a991b3d72225b32">
+            006aeb57
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package hinit on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / hinit
+    </dfn>
+    -
+    
+      Generic project initialization tool
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://hackage.haskell.org/package/hinit" rel="noopener" target="_blank">
+        https://hackage.haskell.org/package/hinit
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - BSD-3-Clause
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:poscat@mail.poscat.moe">
+                Poscat Tarski
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">data</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/doc/x86_64-linux-ghc-8.10.7/hinit-0.2.2/LICENSE</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/0BSD.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/389-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AAL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ADSL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AFL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AFL-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AFL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AFL-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AFL-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AGPL-1.0-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AGPL-1.0-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AGPL-3.0-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AGPL-3.0-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AMDPLPA.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AML.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/AMPAS.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ANTLR-PD-fallback.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ANTLR-PD.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/APAFML.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/APL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/APSL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/APSL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/APSL-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/APSL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Abstyles.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Adobe-2006.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Adobe-Glyph.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Afmparse.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Aladdin.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Apache-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Apache-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Apache-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Artistic-1.0-Perl.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Artistic-1.0-cl8.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Artistic-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Artistic-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Autoconf-exception-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Autoconf-exception-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-1-Clause.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-2-Clause-Patent.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-2-Clause-Views.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-2-Clause.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-3-Clause-Attribution.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-3-Clause-Clear.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-3-Clause-LBNL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-3-Clause-No-Nuclear-License-2014.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-3-Clause-No-Nuclear-License.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-3-Clause-No-Nuclear-Warranty.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-3-Clause-Open-MPI.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-3-Clause.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-4-Clause-UC.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-4-Clause.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-Protection.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSD-Source-Code.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BSL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BUSL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Bahyph.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Barr.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Beerware.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Bison-exception-2.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BitTorrent-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BitTorrent-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/BlueOak-1.0.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Bootloader-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Borceux.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CAL-1.0-Combined-Work-Exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CAL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CATOSL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-2.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-3.0-AT.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-3.0-US.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-4.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-2.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-4.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-ND-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-ND-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-ND-2.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-ND-3.0-IGO.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-ND-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-ND-4.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-SA-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-SA-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-SA-2.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-SA-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-NC-SA-4.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-ND-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-ND-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-ND-2.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-ND-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-ND-4.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-SA-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-SA-2.0-UK.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-SA-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-SA-2.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-SA-3.0-AT.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-SA-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-BY-SA-4.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC-PDDC.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CC0-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CDDL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CDDL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CDLA-Permissive-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CDLA-Sharing-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CECILL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CECILL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CECILL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CECILL-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CECILL-B.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CECILL-C.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CERN-OHL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CERN-OHL-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CERN-OHL-P-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CERN-OHL-S-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CERN-OHL-W-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CLISP-exception-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CNRI-Jython.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CNRI-Python-GPL-Compatible.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CNRI-Python.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CPAL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CPOL-1.02.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CUA-OPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Caldera.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ClArtistic.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Classpath-exception-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Condor-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Crossword.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/CrystalStacker.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Cube.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/D-FSL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/DOC.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/DSDP.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/DigiRule-FOSS-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Dotseqn.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ECL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ECL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EFL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EFL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EPICS.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EPL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EUDatagrid.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EUPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EUPL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/EUPL-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Entessa.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ErlPL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Eurosym.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/FLTK-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/FSFAP.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/FSFUL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/FSFULLR.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/FTL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Fair.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Fawkes-Runtime-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Font-exception-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Frameworx-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/FreeImage.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GCC-exception-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GCC-exception-3.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.1-invariants-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.1-invariants-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.1-no-invariants-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.1-no-invariants-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.1-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.1-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.2-invariants-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.2-invariants-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.2-no-invariants-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.2-no-invariants-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.2-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.2-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.3-invariants-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.3-invariants-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.3-no-invariants-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.3-no-invariants-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.3-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GFDL-1.3-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GL2PS.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GLWTPL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-1.0-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-1.0-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-2.0-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-2.0-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-3.0-linking-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-3.0-linking-source-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-3.0-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-3.0-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/GPL-CC-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Giftware.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Glide.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Glulxe.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/HPND-sell-variant.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/HPND.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/HTMLTIDY.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/HaskellReport.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Hippocratic-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/IBM-pibs.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ICU.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/IJG.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/IPA.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/IPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ISC.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ImageMagick.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Imlib2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Info-ZIP.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Intel-ACPI.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Intel.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Interbase-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/JPNIC.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/JSON.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/JasPer-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LAL-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LAL-1.3.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LGPL-2.0-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LGPL-2.0-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LGPL-2.1-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LGPL-2.1-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LGPL-3.0-linking-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LGPL-3.0-only.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LGPL-3.0-or-later.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LGPLLR.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LLVM-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LPL-1.02.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LPPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LPPL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LPPL-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LPPL-1.3a.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LPPL-1.3c.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LZMA-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Latex2e.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Leptonica.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LiLiQ-P-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LiLiQ-R-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/LiLiQ-Rplus-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Libpng.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Libtool-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Linux-OpenIB.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Linux-syscall-note.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MIT-0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MIT-CMU.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MIT-advertising.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MIT-enna.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MIT-feh.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MIT-open-group.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MIT.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MITNFA.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MPL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MPL-2.0-no-copyleft-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MPL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MS-PL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MS-RL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MTLL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MakeIndex.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MirOS.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Motosoto.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MulanPSL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/MulanPSL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Multics.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Mup.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NASA-1.3.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NBPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NCGL-UK-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NCSA.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NGPL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NIST-PD-fallback.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NIST-PD.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NLOD-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NLPL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NOSL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NPL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NPOSL-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NRL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NTP-0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NTP.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Naumen.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Net-SNMP.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/NetCDF.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Newsletr.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Nokia.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Noweb.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/O-UDA-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OCCT-PL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OCCT-exception-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OCLC-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OCaml-LGPL-linking-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ODC-By-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ODbL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OFL-1.0-RFN.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OFL-1.0-no-RFN.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OFL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OFL-1.1-RFN.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OFL-1.1-no-RFN.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OFL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OGC-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OGL-Canada-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OGL-UK-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OGL-UK-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OGL-UK-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OGTSL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-1.3.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-1.4.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.0.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.2.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.3.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.4.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.6.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.7.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OLDAP-2.8.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OML.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OSET-PL-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OSL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OSL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OSL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OSL-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OSL-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OpenJDK-assembly-exception-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/OpenSSL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/PDDL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/PHP-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/PHP-3.01.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/PS-or-PDF-font-exception-20170817.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/PSF-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Parity-6.0.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Parity-7.0.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Plexus.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/PolyForm-Noncommercial-1.0.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/PolyForm-Small-Business-1.0.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/PostgreSQL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Python-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/QPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Qhull.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Qt-GPL-exception-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Qt-LGPL-exception-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Qwt-exception-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/RHeCos-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/RPL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/RPL-1.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/RPSL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/RSA-MD.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/RSCPL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Rdisc.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Ruby.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SAX-PD.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SCEA.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SGI-B-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SGI-B-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SGI-B-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SHL-0.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SHL-0.51.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SHL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SHL-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SISSL-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SISSL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SMLNJ.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SMPPL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SNIA.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SSH-OpenSSH.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SSH-short.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SSPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SWL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Saxpath.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Sendmail-8.23.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Sendmail.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SimPL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Sleepycat.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Spencer-86.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Spencer-94.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Spencer-99.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/SugarCRM-1.1.3.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Swift-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/TAPR-OHL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/TCL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/TCP-wrappers.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/TMate.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/TORQUE-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/TOSL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/TU-Berlin-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/TU-Berlin-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/UCL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/UPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Unicode-DFS-2015.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Unicode-DFS-2016.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Unicode-TOU.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Universal-FOSS-exception-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Unlicense.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/VOSTROM.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/VSL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Vim.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/W3C-19980720.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/W3C-20150513.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/W3C.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/WTFPL.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Watcom-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Wsuipa.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/WxWindows-exception-3.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/X11.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/XFree86-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/XSkat.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Xerox.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Xnet.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/YPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/YPL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ZPL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ZPL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/ZPL-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Zed.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Zend-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Zimbra-1.3.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Zimbra-1.4.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/Zlib.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/blessing.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/bzip2-1.0.5.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/bzip2-1.0.6.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/copyleft-next-0.3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/copyleft-next-0.3.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/curl.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_AGPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_AGPL-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_BSD-2-Clause-FreeBSD.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_BSD-2-Clause-NetBSD.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GFDL-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GFDL-1.2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GFDL-1.3.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-1.0&#43;.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-2.0&#43;.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-2.0-with-GCC-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-2.0-with-autoconf-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-2.0-with-bison-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-2.0-with-classpath-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-2.0-with-font-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-3.0&#43;.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-3.0-with-GCC-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-3.0-with-autoconf-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_GPL-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_LGPL-2.0&#43;.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_LGPL-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_LGPL-2.1&#43;.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_LGPL-2.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_LGPL-3.0&#43;.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_LGPL-3.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_Nokia-Qt-exception-1.1.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_Nunit.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_StandardML-NJ.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_eCos-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/deprecated_wxWindows.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/diffmark.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/dvipdfm.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/eCos-exception-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/eGenix.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/etalab-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/freertos-exception-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/gSOAP-1.3b.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/gnu-javamail-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/gnuplot.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/i2p-gpl-java-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/iMatix.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/libpng-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/libselinux-1.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/libtiff.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/mif-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/mpich2.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/openvpn-openssl-exception.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/psfrag.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/psutils.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/u-boot-exception-2.0.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/xinetd.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/xpp.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/licenses/zlib-acknowledgement.template.txt</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/.gitignore</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/CHANGELOG.md</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/README.md</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/app/Main.hs</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/benchmark/Bench.hs</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/cabal.project</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/flake.nix</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/hie.yaml</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/src/.gitkeep</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/template.toml</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/test/Spec.hs</li>
+            
+              <li style="list-style: none;">/share/ghc-8.10.7/x86_64-linux-ghc-8.10.7/hinit-0.2.2/templates/haskell/{{ project }}.cabal</li>
+            
+          </ul>
+        </details>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/hi</li>
+            
+              <li style="list-style: none;">/share/bash-completion/completions/hi</li>
+            
+              <li style="list-style: none;">/share/fish/vendor_completions.d/hi.fish</li>
+            
+              <li style="list-style: none;">/share/zsh/vendor-completions/_hi</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f7e1e88a995ef7dc83c80b531ea1b4eba2b621">
+            00f7e1e8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/021410c0021749930a91278156057c0b2e8c2b77">
+            021410c0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0757207f330252d2882934d0ecb0fb65a399eafd">
+            0757207f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0757207f330252d2882934d0ecb0fb65a399eafd">
+            0757207f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0719e92d1b84200d990ace44c039b3f001997c7d">
+            0719e92d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0615bf0751f32449b7f7060cae4371d542cd6800">
+            0615bf07
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04af89173e47902e853e42d616bbe5c8b70f2941">
+            04af8917
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04af89173e47902e853e42d616bbe5c8b70f2941">
+            04af8917
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0335855bc62d1b8007fd0d700373f153fbbec092">
+            0335855b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0335855bc62d1b8007fd0d700373f153fbbec092">
+            0335855b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050c5948fcc15a71eef5e591624c1ee3196651c4">
+            050c5948
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050c5948fcc15a71eef5e591624c1ee3196651c4">
+            050c5948
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050ec589879272d055acd25462f3b8d6aa8f7d54">
+            050ec589
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050114362fdaf5b4fdb075aa09952bfa028c9970">
+            05011436
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020ed23391bcd63668f785733eeaf98694497aad">
+            020ed233
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02bce71cab92f5d95734599d65837cb2fbcfa373">
+            02bce71c
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

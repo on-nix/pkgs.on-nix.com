@@ -1,0 +1,3424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package dolphinEmu on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / dolphinEmu
+    </dfn>
+    -
+    
+      Gamecube/Wii/Triforce emulator for x86_64 and ARMv8
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://dolphin-emu.org/" rel="noopener" target="_blank">
+        https://dolphin-emu.org/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-2.0-or-later
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:MP2E@archlinux.us">
+                Cray Elliott
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:ashlea@protonmail.com">
+                ash lea
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/dolphin-emu</li>
+            
+              <li style="list-style: none;">/bin/dolphin-emu-nogui</li>
+            
+              <li style="list-style: none;">/etc/udev/rules.d/51-usb-device.rules</li>
+            
+              <li style="list-style: none;">/share/applications/dolphin-emu.desktop</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GC/dsp_coef.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GC/dsp_rom.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GC/font-licenses.txt</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GC/font_ansi.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GC/font_sjis.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/010.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/301.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/C.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/D43.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/D43E01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/D43J01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/D85.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/DD2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/DLS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/DTL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E52.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E53.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E54.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E55.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E56.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E57.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E5W.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E5Z.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E62.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E63.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E6M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E6N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E6Q.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E6V.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E6W.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E6X.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E73.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E79.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/E7Z.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EA2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EA3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EA4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EA5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EA6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EA7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EA8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EA9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EAZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EB2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EB3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EB4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EB5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EB6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EB7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EB8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EB9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/EBZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ECN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAAE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FABE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FABP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FACE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FACP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAFE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAGE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAHE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAIE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAJE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAJP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAKE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAKP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FALE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAME01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FANE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FAOE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FARE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/FASE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2B.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2C.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2FE78.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2G.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2ME01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2MEAB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2MP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2O.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2R.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2T.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2V.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G2X.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3A.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3B.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3D.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3E.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3J.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3L.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3Q.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3R.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3S.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3V.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G3X.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4A.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4B.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4C.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4G.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4GEE9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4NJDA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4O.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4Q.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4QE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4S.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4SP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G4Z.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G5D.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G5N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G5S.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G5T.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G63.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G6F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G6M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G6N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G6Q.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G6T.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G6W.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G89.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G8F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G8M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G8ME01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G8O.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G8S.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G8W.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G8WP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G9B.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G9R.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G9S.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/G9T.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GA2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GA3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GA4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GA7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAFE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GALE01r0.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GALE01r1.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GALE01r2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GALP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAUE08.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GAZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GB3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GB4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GB4E51.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBHEC8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBLPGL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBOP51.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GBZP08.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GC2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GC3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GC4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GC5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GC6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GC7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GC9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCCE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCOPDV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCVEEB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GCZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GD4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GD6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GD7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GD9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDDE41.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDEE71.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDJEB2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDTE69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GDX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GE3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GE4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GE5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GE5EA4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GE9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GED.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GES.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GEZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF7E01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF7P01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GF8E69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFEE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFEJ01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFYE69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFZE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFZJ01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFZJ8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GFZP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GG4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GG4P08.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GG5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGCOSD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGPE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGPE02.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGSEA4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGSPA4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGTE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GGZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GH2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GH4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GH5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GH6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GH7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GH9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHME4F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHRE78.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GHZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GICE78.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIGJ8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GINE69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GINX69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIQE78.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GIZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJ3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJCE8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJUE78.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJWE78.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GJZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GK2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GK4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GK4E01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GK5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GK6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GK7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GK9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKNEB2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GKZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GL5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GL7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GL8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLME01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLMP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLNE69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GLZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM4E01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM4P01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GM8E01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GML.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMPE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMSE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMSP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GMXE70.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GN4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GN5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GN6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GN7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GN8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GND.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNHE5d.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNWE69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GNZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GO2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GO2E4F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GO7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GO7E69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GO7F69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GO7P69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOME01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GON.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GOYE69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GP2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GP4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GP5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GP5E01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GP6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GP7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GP7E01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GP8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPIE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPIP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPNP08.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPOE8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPOP8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPSP8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPVE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GPZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQ8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQSEAF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GQX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GR2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GR6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GR8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GREE08.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRNE52.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRSPAF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRUE78.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GRY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GS2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GS2E78.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GS8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSAP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSNE8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSNP8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSSE8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GST.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GSZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GT3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GT4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GT6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GT6E70.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GT7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GT8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTEE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTEP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTKE51.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTSE4F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GTZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUNE5D.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GUZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GV3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GV4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVS46E.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GVS46J.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GW2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GW3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GW5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GW7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GW8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GW9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWQE52.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWRE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWRP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWWP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GWZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GX2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GX3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXSP8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GXX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GY2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GYA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GYB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GYF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GYK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GYQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GYR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GYT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GYW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZ2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZ2E01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZ2J01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZ2P01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZ3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZ3E70.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZLE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZLJ01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZLP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/GZW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HAA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HAB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HAC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HAD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HAT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HAW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HAX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HAY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HCD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HCF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HCL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HCQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/HCS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/J.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JA7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JAE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JAL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JBA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JBC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JBK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JBQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JBS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JBU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JC8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JCD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JCL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JCT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JCX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JCY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JDV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JEC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/JOD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/L.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MAK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MB3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MBA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MCD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MCS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MCV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MCW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MCY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/MCZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/NAR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/PC6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/PM4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/PRJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/PZL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/PZLE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/Q.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R22.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R25.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R29.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R2D.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R2G.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R2J.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R2K.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R2T.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R2U.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R2V.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3A.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3B.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3C.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3D.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3G.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3O.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3R.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3S.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R3T.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R44.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R46.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R49.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R4B.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R4E.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R4F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R4Q.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R4R.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R4Z.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R5D.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R5I.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R5V.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R5W.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R64.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R6B.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R6N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R6Q.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R6T.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R6Y.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R7E.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R7F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R7G.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R7P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R7PE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R7PP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R7X.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R84.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R8A.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R8D.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R8J.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R8L.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R8X.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R92.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R96.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R9D.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R9F.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/R9I.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RB4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RB7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RBZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RCC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RCJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RCJE8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RCK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RCL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RCP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RD2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RDZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RE4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RED.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RELJAB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/REN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/REX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RF4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RF7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RFB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RFC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RFE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RFF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RFQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RFS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RG2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RG5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RG6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGQE70.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RGW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RH2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RH8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RHA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RHD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RHM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RHO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RHT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RHU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RI3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RIB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RIH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RIJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RIN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RIP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RIU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RIV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RIZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RJ2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RJ3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RJA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RJC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RJS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RK2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RK5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RKD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RKI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RKM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RKS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RLB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RLE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RLG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RLJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RLS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RLT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RLX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RM2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RM3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RM3P01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RM6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RM8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMHE08.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMHJ08.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMHP08.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RML.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RMS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RNE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RNH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RNHE41.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RNJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RNM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RNO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RNX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RO2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RO2P7N.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RO3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RO7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RO8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RO9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ROA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ROC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ROD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ROL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RON.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ROU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/ROW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RP7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RPB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RPD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RPG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RPJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RPO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RPP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RPW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RPY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RQ6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RQB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RQL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RQO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RQR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RQW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RR2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RR5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RRA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RRB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RRK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RRM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RRX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RRY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RRZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RS5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RS8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RS9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSBE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSBP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RST.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RSZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RT3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RT4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RT5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RT8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RT9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RTB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RTC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RTH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RTM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RTN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RTR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RTU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RTZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RUC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RUU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RUY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RVK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RVO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RVQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RVS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RVU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RVV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RVZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RW9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RWB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RWE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RWL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RWO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RWR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RWS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RWU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RX3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RX9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RXX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RYB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RYO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RYQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RYX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZ9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZDE01r0.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZDE01r2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZDJ01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZDP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZJP69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/RZZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S2E.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S2I.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S2L.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S2T.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S2W.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S3B.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S59.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S72.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/S75.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SAK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SAW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SB3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SB4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SBD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SBL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SBN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SBV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SBX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SC2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SC2E8P.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SC4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SC7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SC8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SCA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SCY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SD2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SD2J01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SDA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SDB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SDF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SDM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SDN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SDW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SE2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SE3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SEA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SEM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SER.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SF8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SFI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SFP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SFW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SG8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SGA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SH6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SHD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SHL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SHW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SIL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SJB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SJD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SJDJ01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SJE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SJO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SJX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SK3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SK4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SKC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SKJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SKV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SL2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SLS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SLW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SMB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SMF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SMN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SMNE01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SMNP01.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SMO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SN4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SNC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SND.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SNG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SNJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SNJE69.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SNY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SO3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SOJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SOM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SOS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SOU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SPD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SPP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SPR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SPT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SPV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SQD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SQM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SR5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SRO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SRQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SS3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SSQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SSR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SST.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SSZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/STE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/STH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/STK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/STS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SU7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SUK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SVB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SVM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SVT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SVV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SVX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SVZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SWA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SX3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SX4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SX7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SX8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SXB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SXC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SXD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SXE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SXEE52.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SZA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/SZB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/UGP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/W24.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/W2G.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/W2M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/W3G.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/W3M.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/W8C.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WA2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WA4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WAI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WAL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WAY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WB2.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WB3.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WB4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WB6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WB7.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WBL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WBM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WBQ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WBX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WBY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WBZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WC6.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WCH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WCV.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WCZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WD9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WDM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WDO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WER.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WF4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WFH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WFL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WFU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WGD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WGG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WGL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WGO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WGS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WGY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WHF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WHP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WHU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WHW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WIB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WIC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WID.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WIL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WIY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WJA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WJE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WKD.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WKT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WLE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WLN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WLO.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WLW.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WLZ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WM8.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WMA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WMB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WMG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WMJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WMM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WOT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WOY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WP4.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPC.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPF.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPH.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPJ.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPS.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WPY.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WR5.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WR9.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WRG.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WRI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WRU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WRX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WSL.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WSN.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WSR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WTE.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WTK.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WTR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WTT.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WTU.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WTX.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WWA.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WWR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WXB.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WXP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WXR.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WYM.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WZI.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/GameSettings/WZP.ini</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Maps/GFZE01.map</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Maps/GMBE8P.map</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Dolphin.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Australia.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Australia@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Australia@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Europe.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Europe@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Europe@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_France.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_France@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_France@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Germany.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Germany@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Germany@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_International.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_International@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_International@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Italy.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Italy@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Italy@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Japan.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Japan@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Japan@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Korea.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Korea@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Korea@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Netherlands.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Netherlands@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Netherlands@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Russia.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Russia@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Russia@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Spain.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Spain@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Spain@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Taiwan.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Taiwan@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Taiwan@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_USA.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_USA@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_USA@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Unknown.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Unknown@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Flag_Unknown@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_File.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_File@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_File@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Gamecube.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Gamecube@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Gamecube@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Wad.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Wad@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Wad@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Wii.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Wii@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/Platform_Wii@4x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/dolphin_logo.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/dolphin_logo@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/isoproperties_disc.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/isoproperties_file.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/isoproperties_folder.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/nobanner.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/nobanner@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/rating0.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/rating1.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/rating2.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/rating3.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/rating4.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/rating5.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_add_breakpoint.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_add_memorycheck.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_debugger_delete.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_debugger_goto_pc.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_debugger_set_pc.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_debugger_skip.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_debugger_step.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_debugger_step_out.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Resources/toolbar_debugger_step_over.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/16bit.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/32bit.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/Anaglyph/dubois-LCD-Amber-Blue.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/Anaglyph/dubois-LCD-Green-Magenta.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/Anaglyph/dubois.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/Anaglyph/fullcolor.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/Anaglyph/grayscale.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/Anaglyph/grayscale2.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/FXAA.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/acidmetal.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/acidtrip.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/acidtrip2.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/asciiart.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/auto_toon.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/auto_toon2.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/bad_bloom.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/brighten.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/chrismas.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/cool1.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/darkerbrighter.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/emboss.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/fire.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/fire2.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/firewater.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/grayscale.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/grayscale2.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/invert.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/invert_blue.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/invertedoutline.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/mad_world.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/nightvision.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/nightvision2.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/nightvision2scanlines.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/posterize.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/posterize2.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/primarycolors.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/sepia.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/sketchy.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/spookey1.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/spookey2.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/sunset.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/swap_RGB_BGR.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/swap_RGB_BRG.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/swap_RGB_GBR.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/swap_RGB_GRB.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/swap_RGB_RBG.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Shaders/toxic.glsl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/README.txt</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/browse.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/classic.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/config.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/fullscreen.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/gcpad.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/graphics.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/help.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/open.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/pause.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/play.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/refresh.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/screenshot.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/stop.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Boomy/wiimote.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/browse.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/browse@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/classic.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/classic@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/config.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/config@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/fullscreen.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/fullscreen@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/gcpad.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/gcpad@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/graphics.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/graphics@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/open.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/open@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/pause.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/pause@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/play.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/play@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/refresh.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/refresh@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/screenshot.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/screenshot@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/stop.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/stop@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/wiimote.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean/wiimote@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/browse.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/browse@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/classic.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/classic@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/config.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/config@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/fullscreen.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/fullscreen@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/gcpad.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/gcpad@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/graphics.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/graphics@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/open.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/open@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/pause.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/pause@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/play.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/play@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/refresh.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/refresh@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/screenshot.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/screenshot@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/stop.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/stop@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/wiimote.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Blue/wiimote@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/browse.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/browse@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/classic.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/classic@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/config.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/config@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/fullscreen.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/fullscreen@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/gcpad.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/gcpad@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/graphics.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/graphics@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/open.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/open@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/pause.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/pause@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/play.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/play@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/refresh.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/refresh@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/screenshot.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/screenshot@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/stop.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/stop@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/wiimote.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Lite/wiimote@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/browse.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/browse@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/classic.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/classic@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/config.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/config@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/fullscreen.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/fullscreen@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/gcpad.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/gcpad@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/graphics.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/graphics@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/open.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/open@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/pause.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/pause@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/play.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/play@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/refresh.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/refresh@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/screenshot.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/screenshot@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/stop.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/stop@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/wiimote.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Themes/Clean Pink/wiimote@2x.png</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/ec/shopsetu.log</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/succession/shop.log</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/sys/SYSCONF</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/mbox/Readme.txt</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/mbox/wc24recv.ctl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/mbox/wc24recv.mbx</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/mbox/wc24send.ctl</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/mbox/wc24send.mbx</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/misc.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/nwc24dl.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/nwc24fl.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/nwc24fls.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/nwc24msg.cbk</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/Wii/shared2/wc24/nwc24msg.cfg</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/codehandler.bin</li>
+            
+              <li style="list-style: none;">/share/dolphin-emu/sys/totaldb.dsy</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/48x48/apps/dolphin-emu.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/scalable/apps/dolphin-emu.svg</li>
+            
+              <li style="list-style: none;">/share/locale/ar/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ca/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/cs/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/da_DK/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/de/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/el/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/en/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/es/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fa/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fr/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hr/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hu/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/it/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ja/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ko/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ms_MY/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nb/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nl/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pl/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pt/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pt_BR/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ro_RO/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ru/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sr/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sv/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/tr/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_CN/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_TW/LC_MESSAGES/dolphin-emu.mo</li>
+            
+              <li style="list-style: none;">/share/man/man6/dolphin-emu-nogui.6.gz</li>
+            
+              <li style="list-style: none;">/share/man/man6/dolphin-emu.6.gz</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04eb7492dccb3d314911666fea15a67602c1e422">
+            04eb7492
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ab1d57a3e02d388a8e1903031b273b47c6bb94">
+            01ab1d57
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024b0414abc66e44603d16b269ca258d013a17d0">
+            024b0414
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

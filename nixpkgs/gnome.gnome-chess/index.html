@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package gnome.gnome-chess on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / gnome.gnome-chess
+    </dfn>
+    -
+    
+      Play the classic two-player boardgame of chess
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://wiki.gnome.org/Apps/Chess" rel="noopener" target="_blank">
+        https://wiki.gnome.org/Apps/Chess
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-3.0-or-later
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:torhedinbronner@gmail.com">
+                Tor Hedin Brønner
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:jtojnar@gmail.com">
+                Jan Tojnar
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:daniel@serbanescu.dk">
+                Daniel Șerbănescu
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:maxeaubrey@gmail.com">
+                Maxine Aubrey
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/.gnome-chess-wrapped</li>
+            
+              <li style="list-style: none;">/bin/gnome-chess</li>
+            
+              <li style="list-style: none;">/etc/gnome-chess/engines.conf</li>
+            
+              <li style="list-style: none;">/share/applications/org.gnome.Chess.desktop</li>
+            
+              <li style="list-style: none;">/share/dbus-1/services/org.gnome.Chess.service</li>
+            
+              <li style="list-style: none;">/share/gsettings-schemas/gnome-chess-41.1/glib-2.0/schemas/gschemas.compiled</li>
+            
+              <li style="list-style: none;">/share/gsettings-schemas/gnome-chess-41.1/glib-2.0/schemas/org.gnome.Chess.gschema.xml</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/C/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/da/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/de/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/es/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/ko/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/bug-filing.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/change-board-orientation.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/change-look-feel.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/chess-engines.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/develop.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/documentation.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/figures/gnome-chess-40.png</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/figures/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/index.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/license.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/play.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/rules.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/save-resume.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/timer.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/gnome-chess/translate.page</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/scalable/apps/org.gnome.Chess.svg</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/symbolic/apps/org.gnome.Chess-symbolic.svg</li>
+            
+              <li style="list-style: none;">/share/locale/af/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/am/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ar/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/as/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ast/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/az/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/be/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bg/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bn/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bn_IN/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/br/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bs/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ca/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ca@valencia/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/cs/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/cy/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/da/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/de/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/dz/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/el/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/en@shaw/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/en_CA/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/en_GB/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/eo/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/es/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/et/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/eu/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fa/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fi/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fr/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fur/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ga/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/gl/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/gu/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/he/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hi/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hr/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hu/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/id/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/is/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/it/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ja/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ka/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/kk/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/km/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/kn/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ko/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ku/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/lt/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/lv/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/mai/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/mk/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ml/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/mn/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/mr/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ms/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nb/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ne/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nl/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nn/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/oc/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/or/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pa/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pl/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pt/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pt_BR/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ro/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ru/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/rw/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/si/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sk/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sl/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sq/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sr/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sr@latin/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sv/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ta/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/te/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/tg/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/th/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/tr/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ug/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/uk/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/vi/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/wa/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/xh/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_CN/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_HK/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_TW/LC_MESSAGES/gnome-chess.mo</li>
+            
+              <li style="list-style: none;">/share/man/man6/gnome-chess.6.gz</li>
+            
+              <li style="list-style: none;">/share/metainfo/org.gnome.Chess.appdata.xml</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">40.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b54fd95d8751a9701b0586ecc8135d4a968373">
+            07b54fd9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/021410c0021749930a91278156057c0b2e8c2b77">
+            021410c0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f7e1e88a995ef7dc83c80b531ea1b4eba2b621">
+            00f7e1e8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020738a1fb53c0123a9a4ebd578106aa04d3ac21">
+            020738a1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">40.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0757207f330252d2882934d0ecb0fb65a399eafd">
+            0757207f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0757207f330252d2882934d0ecb0fb65a399eafd">
+            0757207f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/016b0a423aea9a789d1327dff3fd10b908bd1e91">
+            016b0a42
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0615bf0751f32449b7f7060cae4371d542cd6800">
+            0615bf07
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">40.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c691cf3f066da10ad4222c5f55f9976ae0a0ce">
+            06c691cf
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c691cf3f066da10ad4222c5f55f9976ae0a0ce">
+            06c691cf
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00caba5a1f5b7f3c2dba38eb379fd9835bf72b61">
+            00caba5a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04e1d2483b15a79937e50cafcc92e2278887c3a7">
+            04e1d248
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">40.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/052b553a7959007ff41a81ce48e4d7bb9ede4103">
+            052b553a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a1a2b3c81a8a93bbc75046804cfe4e90f1bced">
+            02a1a2b3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03ad4cb367e6045a76587d22516c418426440898">
+            03ad4cb3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01d15b12ec666cad5b5eba5443b8b6389b3dbead">
+            01d15b12
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">40.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06efb08ec4377a9b6ecd0e22ba7b4b929fbcb533">
+            06efb08e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0438f3d8c520e390c832a8a733413f73ebf6e49e">
+            0438f3d8
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

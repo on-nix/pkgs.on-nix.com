@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package tpm2-tss on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / tpm2-tss
+    </dfn>
+    -
+    
+      OSS implementation of the TCG TPM2 Software Stack (TSS2)
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://github.com/tpm2-software/tpm2-tss" rel="noopener" target="_blank">
+        https://github.com/tpm2-software/tpm2-tss
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - BSD-2-Clause
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:delroth@gmail.com">
+                Pierre Bourdon
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/etc/sysusers.d/tpm2-tss.conf</li>
+            
+              <li style="list-style: none;">/etc/tmpfiles.d/tpm2-tss-fapi.conf</li>
+            
+              <li style="list-style: none;">/etc/tpm2-tss/fapi-config.json</li>
+            
+              <li style="list-style: none;">/etc/tpm2-tss/fapi-profiles/P_ECCP256SHA256.json</li>
+            
+              <li style="list-style: none;">/etc/tpm2-tss/fapi-profiles/P_RSA2048SHA256.json</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_common.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_esys.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_fapi.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_mu.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_rc.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_sys.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_tcti.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_tcti_cmd.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_tcti_device.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_tcti_mssim.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_tcti_swtpm.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_tctildr.h</li>
+            
+              <li style="list-style: none;">/include/tss2/tss2_tpm2_types.h</li>
+            
+              <li style="list-style: none;">/lib/libtss2-esys.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-esys.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-esys.so.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-esys.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-fapi.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-fapi.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-fapi.so.1</li>
+            
+              <li style="list-style: none;">/lib/libtss2-fapi.so.1.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-mu.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-mu.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-mu.so.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-mu.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-rc.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-rc.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-rc.so.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-rc.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-sys.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-sys.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-sys.so.1</li>
+            
+              <li style="list-style: none;">/lib/libtss2-sys.so.1.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-cmd.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-cmd.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-cmd.so.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-cmd.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-device.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-device.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-device.so.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-device.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-mssim.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-mssim.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-mssim.so.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-mssim.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-swtpm.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-swtpm.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-swtpm.so.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tcti-swtpm.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tctildr.la</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tctildr.so</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tctildr.so.0</li>
+            
+              <li style="list-style: none;">/lib/libtss2-tctildr.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-esys.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-fapi.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-mu.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-rc.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-sys.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-tcti-cmd.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-tcti-device.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-tcti-mssim.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-tcti-swtpm.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/tss2-tctildr.pc</li>
+            
+              <li style="list-style: none;">/share/man/man3/ESYS_CONTEXT.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/ESYS_TR.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/ESYS_TR_defines.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ActivateCredential.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Certify.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_CertifyCreation.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ChangeEPS.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ChangePPS.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Clear.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ClearControl.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ClockRateAdjust.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ClockSet.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Commit.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ContextLoad.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ContextSave.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Create.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_CreatePrimary.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_DictionaryAttackLockReset.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_DictionaryAttackParameters.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Duplicate.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ECC_Parameters.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ECDH_KeyGen.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ECDH_ZGen.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_EC_Ephemeral.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_EncryptDecrypt.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_EventSequenceComplete.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_EvictControl.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_FlushContext.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_GetCapability.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_GetCommandAuditDigest.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_GetRandom.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_GetSessionAuditDigest.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_GetTestResult.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_GetTime.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_HMAC.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_HMAC_Start.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Hash.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_HashSequenceStart.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_HierarchyChangeAuth.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_HierarchyControl.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Import.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_IncrementalSelfTest.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Load.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_LoadExternal.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_MakeCredential.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_Certify.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_ChangeAuth.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_DefineSpace.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_Extend.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_GlobalWriteLock.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_Increment.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_Read.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_ReadLock.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_ReadPublic.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_SetBits.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_UndefineSpace.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_UndefineSpaceSpecial.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_Write.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_NV_WriteLock.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ObjectChangeAuth.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PCR_Allocate.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PCR_Event.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PCR_Extend.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PCR_Read.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PCR_Reset.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PCR_SetAuthPolicy.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PCR_SetAuthValue.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PP_Commands.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyAuthValue.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyAuthorize.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyCommandCode.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyCounterTimer.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyCpHash.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyDuplicationSelect.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyGetDigest.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyLocality.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyNV.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyNameHash.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyNvWritten.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyOR.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyPCR.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyPassword.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyPhysicalPresence.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyRestart.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicySecret.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicySigned.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_PolicyTicket.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Quote.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_RSA_Decrypt.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_RSA_Encrypt.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ReadClock.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ReadPublic.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Rewrap.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_SelfTest.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_SequenceComplete.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_SequenceUpdate.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_SetAlgorithmSet.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_SetCommandCodeAuditStatus.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_SetPrimaryPolicy.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Shutdown.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Sign.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_StartAuthSession.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Startup.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_StirRandom.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_TestParms.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Unseal.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_Vendor_TCG_Test.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_VerifySignature.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Esys_ZGen_2Phase.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/FapiTestgroup.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_AuthorizePolicy.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_ChangeAuth.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_CreateKey.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_CreateNv.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_CreateSeal.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Decrypt.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Delete.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Encrypt.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_ExportKey.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_ExportPolicy.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Finalize.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Free.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetAppData.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetCertificate.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetDescription.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetInfo.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetPlatformCertificates.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetPollHandles.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetRandom.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetTcti.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_GetTpmBlobs.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Import.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Initialize.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_List.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_NvExtend.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_NvIncrement.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_NvRead.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_NvSetBits.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_NvWrite.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_PcrExtend.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_PcrRead.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Provision.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Quote.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_SetAppData.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_SetAuthCB.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_SetBranchCB.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_SetCertificate.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_SetDescription.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_SetSignCB.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Sign.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_Unseal.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_VerifyQuote.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_VerifySignature.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Fapi_WriteAuthorizeNv.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Tss2_TctiLdr_Finalize.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Tss2_TctiLdr_FreeInfo.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Tss2_TctiLdr_GetInfo.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Tss2_TctiLdr_Initialize.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Tss2_Tcti_Cmd_Init.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Tss2_Tcti_Device_Init.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/Tss2_Tcti_Mssim_Init.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/fapi-config.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/fapi-profile.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man7/tss2-tcti-cmd.7.gz</li>
+            
+              <li style="list-style: none;">/share/man/man7/tss2-tcti-device.7.gz</li>
+            
+              <li style="list-style: none;">/share/man/man7/tss2-tcti-mssim.7.gz</li>
+            
+              <li style="list-style: none;">/share/man/man7/tss2-tcti-swtpm.7.gz</li>
+            
+              <li style="list-style: none;">/share/man/man7/tss2-tctildr.7.gz</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ca995e31230a28306bf7d2f33ece4e538e7ca7">
+            05ca995e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c0f165556950665b83e41209f611ddeed4de26">
+            06c0f165
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c0f165556950665b83e41209f611ddeed4de26">
+            06c0f165
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06749ba321ee3f284df74ab848985106eea52c13">
+            06749ba3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075da3928b5eee0c672c60e9e5ba81d3a3c90766">
+            075da392
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0156a8304ee08b933fc2d4d417c4bee51400fb93">
+            0156a830
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0096eb9274b430c8cf1a699c68054972c1845291">
+            0096eb92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0229bebd37caf01cad975090895a5ba2c5973226">
+            0229bebd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f6973200954f9ecd0f2fbc1d6ae029cd7ed857">
+            04f69732
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f2fd5fb9f7def14154a7b80e7676e641dd56f9">
+            06f2fd5f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f2fd5fb9f7def14154a7b80e7676e641dd56f9">
+            06f2fd5f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02885ae8e207c5c4c1d2f3e7ac02f7e72c99d13e">
+            02885ae8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afc85506c30cd901509aa825e6abf9ed702401">
+            00afc855
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0722158dba9c401354a53bb618e6e2b1903c7ea7">
+            0722158d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07dfadc89c47b6de05f8cd8d9a659b47f635f571">
+            07dfadc8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00401a2f75e6286c9db6018748f1734485660d3c">
+            00401a2f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03df9f54fc54a29d14a614bd29323076b5259588">
+            03df9f54
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05d4955a96608ce8309124140360cee4c9a1390c">
+            05d4955a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02ac13b563c082eaa51e8acdbe492a7961231836">
+            02ac13b5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00251c0689046f194551ba509ef4249f8e1f50d3">
+            00251c06
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00251c0689046f194551ba509ef4249f8e1f50d3">
+            00251c06
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045c2abdfafaab8b7e080439cbd6c50c9c74bd49">
+            045c2abd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06d328c3460bc07db4271bc3e63481c5ec1b45cf">
+            06d328c3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fa0f1a2ec5ad455e16a72bdb304f7c0e098b76">
+            05fa0f1a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fa0f1a2ec5ad455e16a72bdb304f7c0e098b76">
+            05fa0f1a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00213ef17f8bc35aae3227012256713d17b1d0d8">
+            00213ef1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00213ef17f8bc35aae3227012256713d17b1d0d8">
+            00213ef1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050aad187bc99f45328b2c5abf3c0ab29cbbe254">
+            050aad18
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050aad187bc99f45328b2c5abf3c0ab29cbbe254">
+            050aad18
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/079523587df0c1c03f6d484c37ab6ed3883785ce">
+            07952358
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/038497d3b3fee1121c155c2787830e55c8559847">
+            038497d3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/066544a7eb38a4886a619a9a6dfd26e474c7f7a6">
+            066544a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036cec187c1f079566c456d390c97c1deb412b42">
+            036cec18
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049b68becfcc04fadb846c07f42306692fb0ddb3">
+            049b68be
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0456d939a1ba4ae7df54c84cf873086d32679839">
+            0456d939
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b3cac1090c3925096e7ff1c58cb0b41c233f09">
+            02b3cac1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b3cac1090c3925096e7ff1c58cb0b41c233f09">
+            02b3cac1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00e3f026f3b1ef61452432566001842ca439073f">
+            00e3f026
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/008e7e3244ebc374d8f8df9632de0e821619319d">
+            008e7e32
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05c4c9e72931e25ba8615c6377f718680c470b87">
+            05c4c9e7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/030fd3ca0cbb8463e5dc1ebd57bb1867f5fbe91c">
+            030fd3ca
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0505a47c8e6177196600bbb327c68e3fd8bd0c9b">
+            0505a47c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01fd63bee2191e6fbcb6b1017419c7ebbf1793bd">
+            01fd63be
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0218f30af58b9081f477504edd2b3ae19d3da9b5">
+            0218f30a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06aec4278173e26e7871b5fa515f6ecff961d5bc">
+            06aec427
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0634484a53b548d4fc109a9f5e400e1d8fb2f55f">
+            0634484a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00610756df9a235f2de907a18cd8fded638d24e0">
+            00610756
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036cef94733d2af03f3732eb8673cf0744303972">
+            036cef94
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/010d2f4aa29448b1908b954006484cfbbf7e7d50">
+            010d2f4a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03a4369379e0fb5b0ecdeff2c508be49de460fd4">
+            03a43693
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/016111e839ec15e23c080da8ff955a548155202c">
+            016111e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/054214057ac0736b3169f729d990a2e12e3180d4">
+            05421405
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/054214057ac0736b3169f729d990a2e12e3180d4">
+            05421405
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0787a562c462d39b4bd6aa4ca3b30fc20db6a2bc">
+            0787a562
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01e8c649889a0a9493a38505023f7e33d98d8446">
+            01e8c649
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00875c07354b19d82a07d21806bb28cd808a9297">
+            00875c07
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/057840da6e144f9b8444a57788f48bbcc277bf96">
+            057840da
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/072cdcb265123b40e507c427ba99f907929c6f79">
+            072cdcb2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/072cdcb265123b40e507c427ba99f907929c6f79">
+            072cdcb2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02f869ff30a3d0f3a431b49a3e0e0469cf7e50cd">
+            02f869ff
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0101712a5b46746882578865630fa5ccc9f9946d">
+            0101712a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f3bc518e8fc12946e1a54aaa33c4e5d58519d3">
+            04f3bc51
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f3bc518e8fc12946e1a54aaa33c4e5d58519d3">
+            04f3bc51
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0646b9f7c39776a3ec8e4f3f6c60bd6e735d5b88">
+            0646b9f7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069364f34897be82c193dcd3501ab99f4e46cdc0">
+            069364f3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e9fd44928de4235b0a01dd0207fdd9b5b5359">
+            069e9fd4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e9fd44928de4235b0a01dd0207fdd9b5b5359">
+            069e9fd4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/053168d47004e9a29d4c3fbb6b905a320a0edb1b">
+            053168d4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03941c1e673289dbc732da059d6edd7b61b8fde0">
+            03941c1e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cb05d20c780f0cbe76eca6dfc2f08e741a1660">
+            04cb05d2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cb05d20c780f0cbe76eca6dfc2f08e741a1660">
+            04cb05d2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e78496b6ff3dd0524422de0fe8864fb22896e2">
+            03e78496
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e6ca15e205bf892eac08a5f561c3a16284c90a">
+            03e6ca15
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c5e811e6e0244a8e5a9645fd8347c719aab228">
+            06c5e811
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c5e811e6e0244a8e5a9645fd8347c719aab228">
+            06c5e811
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/061838aa44e2b4ff5c3d3a5acea132dcfe1e85a0">
+            061838aa
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b407743de858d8b0b4be1ce23ae2fa018f8d89">
+            07b40774
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00633a3e1399674083e1cf6d96ed52340dd462d0">
+            00633a3e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00633a3e1399674083e1cf6d96ed52340dd462d0">
+            00633a3e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0002a7d9ee08b26c0f6ff267d8f024cc4aee9a5c">
+            0002a7d9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04d5ccc234a709b1147483f597fb9f7af63f44fe">
+            04d5ccc2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06b4f4d46f849b533f5171222814b90b8533b9e6">
+            06b4f4d4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06b4f4d46f849b533f5171222814b90b8533b9e6">
+            06b4f4d4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/006330bce48e8c7574468a6dcfe7db42380d7598">
+            006330bc
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f71c2f8ff6d594d34cf147153e7a5226eb1ff3">
+            04f71c2f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00a54207e01a27c60814828ac8f464f1d2c80c58">
+            00a54207
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00a54207e01a27c60814828ac8f464f1d2c80c58">
+            00a54207
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0309903c799a7445a2acddc63f3948a75e58f46d">
+            0309903c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01aa4bb7cb1ec6dba14ce9df17215f7f0fc07418">
+            01aa4bb7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b6eb696285159a79d797c397b44710a208a331">
+            07b6eb69
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02648a6cc1816b7f0156a5a2b9dcee2c0fbd37cc">
+            02648a6c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0073c1fb0b4d230a305f703f2e2056b432c64cf6">
+            0073c1fb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0073c1fb0b4d230a305f703f2e2056b432c64cf6">
+            0073c1fb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/003b42f33241229dc9094d713f4e88bff9d72d14">
+            003b42f3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02ea0d3959ba5a8f2108d3bc8f5a57635d758713">
+            02ea0d39
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/057016a2c569b2a15980664e13a286f93b6b0da0">
+            057016a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/057016a2c569b2a15980664e13a286f93b6b0da0">
+            057016a2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02e6a5fd123f53d856b7e403c286f30df95ccba7">
+            02e6a5fd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0512f90e7e333eef1e73cbc3516798253e565c97">
+            0512f90e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04c9866b6e29428ca3710523e04b420a72eea192">
+            04c9866b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04c9866b6e29428ca3710523e04b420a72eea192">
+            04c9866b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03d6c406fc6ac48a04cb6d290eca7ea7136cbdc4">
+            03d6c406
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03d6c406fc6ac48a04cb6d290eca7ea7136cbdc4">
+            03d6c406
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0412ee2a6d9f7d9c68f4dcd9768cf594d2136eb5">
+            0412ee2a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0412ee2a6d9f7d9c68f4dcd9768cf594d2136eb5">
+            0412ee2a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0636bebbdf3f68642519d68aa29bc0f44830ee59">
+            0636bebb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05c1addde35d178638936d68c51e26b9cf335e89">
+            05c1addd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01c37106097a465d6257d01db494ce0df96d7a02">
+            01c37106
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00932b9d08983847214b811a6673130bf6646d81">
+            00932b9d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/048e0b6331cd1dd4e89388f9de55330ea717e569">
+            048e0b63
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0121da2af1220a059732f00606d778339caf3e6b">
+            0121da2a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00263c9306107f3ff79ecd185d7e0712fb0560d8">
+            00263c93
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01d06dc35f836cce945f522913f2a00a61b29c2d">
+            01d06dc3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00a52224997a32cd95a43c40e94e20d53bb52628">
+            00a52224
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00a52224997a32cd95a43c40e94e20d53bb52628">
+            00a52224
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0754f1b37116156d940c7c24fe8d176979dfa303">
+            0754f1b3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02ea1812c85033386f06ddac2796e75cdb608281">
+            02ea1812
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/051c9ccf469374b0100159f03a9b181542883c63">
+            051c9ccf
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/051c9ccf469374b0100159f03a9b181542883c63">
+            051c9ccf
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037e1e8ea8ea233108f75996e19f5485166e4a52">
+            037e1e8e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/027e6dd510f8b5f0e3113a52bf04fd90c2ffe51e">
+            027e6dd5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03bbab8540a2f9ca8a125015494c16538195f8fa">
+            03bbab85
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01bca861c2f5741de50f8ec966167101e957b5d4">
+            01bca861
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.2.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04551d263c8b22a07e5c82ee2982ba3caf2fffd8">
+            04551d26
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/071ee21f97cf8667702fae4757bbb20e5c6ceecf">
+            071ee21f
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package cuneiform on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / cuneiform
+    </dfn>
+    -
+    
+      Multi-language OCR system
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://launchpad.net/cuneiform-linux" rel="noopener" target="_blank">
+        https://launchpad.net/cuneiform-linux
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - BSD-3-Clause
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:7c6f434c@mail.ru">
+                Michael Raskin
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/cuneiform</li>
+            
+              <li style="list-style: none;">/include/cuneiform.h</li>
+            
+              <li style="list-style: none;">/lib/libccom.so</li>
+            
+              <li style="list-style: none;">/lib/libccom.so.0</li>
+            
+              <li style="list-style: none;">/lib/libccom.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libced.so</li>
+            
+              <li style="list-style: none;">/lib/libced.so.0</li>
+            
+              <li style="list-style: none;">/lib/libced.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libcfcompat.so</li>
+            
+              <li style="list-style: none;">/lib/libcfcompat.so.0</li>
+            
+              <li style="list-style: none;">/lib/libcfcompat.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libcfio.so</li>
+            
+              <li style="list-style: none;">/lib/libcfio.so.0</li>
+            
+              <li style="list-style: none;">/lib/libcfio.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libcimage.so</li>
+            
+              <li style="list-style: none;">/lib/libcimage.so.0</li>
+            
+              <li style="list-style: none;">/lib/libcimage.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libcline.so</li>
+            
+              <li style="list-style: none;">/lib/libcline.so.0</li>
+            
+              <li style="list-style: none;">/lib/libcline.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libcpage.so</li>
+            
+              <li style="list-style: none;">/lib/libcpage.so.0</li>
+            
+              <li style="list-style: none;">/lib/libcpage.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libcpu32.so</li>
+            
+              <li style="list-style: none;">/lib/libcpu32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libcpu32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libcstr.so</li>
+            
+              <li style="list-style: none;">/lib/libcstr.so.0</li>
+            
+              <li style="list-style: none;">/lib/libcstr.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libctb32.so</li>
+            
+              <li style="list-style: none;">/lib/libctb32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libctb32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libcuneiform.so</li>
+            
+              <li style="list-style: none;">/lib/libcuneiform.so.0</li>
+            
+              <li style="list-style: none;">/lib/libcuneiform.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libdif32.so</li>
+            
+              <li style="list-style: none;">/lib/libdif32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libdif32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libevn32.so</li>
+            
+              <li style="list-style: none;">/lib/libevn32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libevn32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libexc.so</li>
+            
+              <li style="list-style: none;">/lib/libexc.so.0</li>
+            
+              <li style="list-style: none;">/lib/libexc.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libfon32.so</li>
+            
+              <li style="list-style: none;">/lib/libfon32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libfon32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libleo32.so</li>
+            
+              <li style="list-style: none;">/lib/libleo32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libleo32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/liblns32.so</li>
+            
+              <li style="list-style: none;">/lib/liblns32.so.0</li>
+            
+              <li style="list-style: none;">/lib/liblns32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libloc32.so</li>
+            
+              <li style="list-style: none;">/lib/libloc32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libloc32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libmmx32.so</li>
+            
+              <li style="list-style: none;">/lib/libmmx32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libmmx32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libmsk32.so</li>
+            
+              <li style="list-style: none;">/lib/libmsk32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libmsk32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libpass2.so</li>
+            
+              <li style="list-style: none;">/lib/libpass2.so.0</li>
+            
+              <li style="list-style: none;">/lib/libpass2.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libr3532.so</li>
+            
+              <li style="list-style: none;">/lib/libr3532.so.0</li>
+            
+              <li style="list-style: none;">/lib/libr3532.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librbal.so</li>
+            
+              <li style="list-style: none;">/lib/librbal.so.0</li>
+            
+              <li style="list-style: none;">/lib/librbal.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librblock.so</li>
+            
+              <li style="list-style: none;">/lib/librblock.so.0</li>
+            
+              <li style="list-style: none;">/lib/librblock.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librcorrkegl.so</li>
+            
+              <li style="list-style: none;">/lib/librcorrkegl.so.0</li>
+            
+              <li style="list-style: none;">/lib/librcorrkegl.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librcutp.so</li>
+            
+              <li style="list-style: none;">/lib/librcutp.so.0</li>
+            
+              <li style="list-style: none;">/lib/librcutp.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librdib.so</li>
+            
+              <li style="list-style: none;">/lib/librdib.so.0</li>
+            
+              <li style="list-style: none;">/lib/librdib.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librfrmt.so</li>
+            
+              <li style="list-style: none;">/lib/librfrmt.so.0</li>
+            
+              <li style="list-style: none;">/lib/librfrmt.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librimage.so</li>
+            
+              <li style="list-style: none;">/lib/librimage.so.0</li>
+            
+              <li style="list-style: none;">/lib/librimage.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librline.so</li>
+            
+              <li style="list-style: none;">/lib/librline.so.0</li>
+            
+              <li style="list-style: none;">/lib/librline.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librling.so</li>
+            
+              <li style="list-style: none;">/lib/librling.so.0</li>
+            
+              <li style="list-style: none;">/lib/librling.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librlings.so</li>
+            
+              <li style="list-style: none;">/lib/librlings.so.0</li>
+            
+              <li style="list-style: none;">/lib/librlings.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librmarker.so</li>
+            
+              <li style="list-style: none;">/lib/librmarker.so.0</li>
+            
+              <li style="list-style: none;">/lib/librmarker.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librneg.so</li>
+            
+              <li style="list-style: none;">/lib/librneg.so.0</li>
+            
+              <li style="list-style: none;">/lib/librneg.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librout.so</li>
+            
+              <li style="list-style: none;">/lib/librout.so.0</li>
+            
+              <li style="list-style: none;">/lib/librout.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librpic.so</li>
+            
+              <li style="list-style: none;">/lib/librpic.so.0</li>
+            
+              <li style="list-style: none;">/lib/librpic.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librpstr.so</li>
+            
+              <li style="list-style: none;">/lib/librpstr.so.0</li>
+            
+              <li style="list-style: none;">/lib/librpstr.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librreccom.so</li>
+            
+              <li style="list-style: none;">/lib/librreccom.so.0</li>
+            
+              <li style="list-style: none;">/lib/librreccom.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librsadd.so</li>
+            
+              <li style="list-style: none;">/lib/librsadd.so.0</li>
+            
+              <li style="list-style: none;">/lib/librsadd.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librselstr.so</li>
+            
+              <li style="list-style: none;">/lib/librselstr.so.0</li>
+            
+              <li style="list-style: none;">/lib/librselstr.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librshelllines.so</li>
+            
+              <li style="list-style: none;">/lib/librshelllines.so.0</li>
+            
+              <li style="list-style: none;">/lib/librshelllines.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librstr.so</li>
+            
+              <li style="list-style: none;">/lib/librstr.so.0</li>
+            
+              <li style="list-style: none;">/lib/librstr.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librstuff.so</li>
+            
+              <li style="list-style: none;">/lib/librstuff.so.0</li>
+            
+              <li style="list-style: none;">/lib/librstuff.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/librverline.so</li>
+            
+              <li style="list-style: none;">/lib/librverline.so.0</li>
+            
+              <li style="list-style: none;">/lib/librverline.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libsmetric.so</li>
+            
+              <li style="list-style: none;">/lib/libsmetric.so.0</li>
+            
+              <li style="list-style: none;">/lib/libsmetric.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib/libstd32.so</li>
+            
+              <li style="list-style: none;">/lib/libstd32.so.0</li>
+            
+              <li style="list-style: none;">/lib/libstd32.so.1.1.0</li>
+            
+              <li style="list-style: none;">/lib64</li>
+            
+              <li style="list-style: none;">/share/cuneiform/cube16pd.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/cube16pl.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/cube16pr.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/cube16ps.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/cube16pt.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/cubeabde.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc010101.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc0201.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc0202.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc0203.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc0204.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc0205.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc0206.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc1201.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc1203.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc1204.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc2201.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc2203.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc2204.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc_agr.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc_etrd.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/dc_rtrd.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/pln_hpd.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/pln_prc.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec1.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec1blt.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec1cen.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec1n.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec1r&amp;e.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec1rus.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec1tur.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec2.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec2blt.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec2cen.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec2n.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec2r&amp;e.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec2rus.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec2tur.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec3.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec3blt.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec3cen.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec3n.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec3r&amp;e.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec3rus.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec3tur.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec4cour.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec4inc.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec4mtr.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec4r&amp;e.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6all.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6bul.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6cro.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6cze.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6dan.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6dut.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6est.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6frn.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6grm.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6hun.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6ita.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6lat.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6lit.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6pol.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6por.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6rom.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6rus.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6ser.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6slo.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6spa.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6swe.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6tur.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec6ukr.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7bul.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7cro.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7cze.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7dan.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7dut.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7est.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7frn.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7grm.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7hun.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7ita.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7lat.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7lit.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7pol.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7por.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7rom.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7rus.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7ser.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7slo.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7spa.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7swe.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7tur.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec7ukr.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8bul.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8cro.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8cze.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8dan.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8dut.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8est.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8frn.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8grm.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8hun.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8ita.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8lat.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8lit.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8pol.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8por.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8rom.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8rus.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8ser.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8slo.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8spa.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8swe.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8tur.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec8ukr.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9bul.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9cro.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9cze.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9dan.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9dut.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9est.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9frn.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9grm.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9hun.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9ita.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9lat.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9lit.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9pol.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9por.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9rom.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9rus.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9ser.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9slo.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9spa.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9swe.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9tur.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/rec9ukr.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/vital.dat</li>
+            
+              <li style="list-style: none;">/share/cuneiform/viteng.dat</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069c587237b0abfdf2e38ad6b034da9ae2c04db1">
+            069c5872
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/058ccd771406751beba4fd4da6da8e1a3b780abe">
+            058ccd77
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0731cd042cba0a3176e52f5c0453e79a70338009">
+            0731cd04
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05eb6625ed653a832a087caaddcb5a228dfeba3d">
+            05eb6625
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06664135a4588c21375a2e08f4eeda8cfb99e7e2">
+            06664135
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

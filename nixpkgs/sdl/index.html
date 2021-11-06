@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package SDL on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / SDL
+    </dfn>
+    -
+    
+      A cross-platform multimedia library
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="http://www.libsdl.org/" rel="noopener" target="_blank">
+        http://www.libsdl.org/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - LGPL-2.1
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:jason@oconal.id.au">
+                Jason O&#39;Conal
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">dev</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/sdl-config</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_active.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_audio.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_byteorder.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_cdrom.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_config.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_cpuinfo.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_endian.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_error.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_events.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_getenv.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_joystick.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_keyboard.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_keysym.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_loadso.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_main.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_mouse.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_mutex.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_name.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_opengl.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_platform.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_quit.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_rwops.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_stdinc.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_syswm.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_thread.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_timer.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_types.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_version.h</li>
+            
+              <li style="list-style: none;">/include/SDL/SDL_video.h</li>
+            
+              <li style="list-style: none;">/include/SDL/begin_code.h</li>
+            
+              <li style="list-style: none;">/include/SDL/close_code.h</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/sdl.pc</li>
+            
+              <li style="list-style: none;">/nix-support/propagated-build-inputs</li>
+            
+              <li style="list-style: none;">/nix-support/setup-hook</li>
+            
+              <li style="list-style: none;">/share/aclocal/sdl.m4</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDLKey.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_ActiveEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_AddTimer.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_AudioCVT.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_AudioSpec.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_BlitSurface.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_BuildAudioCVT.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CD.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDClose.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDEject.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDName.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDNumDrives.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDOpen.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDPause.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDPlay.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDPlayTracks.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDResume.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDStatus.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDStop.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CDtrack.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CloseAudio.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Color.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CondBroadcast.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CondSignal.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CondWait.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CondWaitTimeout.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_ConvertAudio.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_ConvertSurface.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CreateCond.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CreateCursor.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CreateMutex.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CreateRGBSurface.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CreateRGBSurfaceFrom.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CreateSemaphore.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CreateThread.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_CreateYUVOverlay.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Delay.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_DestroyCond.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_DestroyMutex.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_DestroySemaphore.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_DisplayFormat.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_DisplayFormatAlpha.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_DisplayYUVOverlay.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_EnableKeyRepeat.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_EnableUNICODE.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Event.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_EventState.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_ExposeEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_FillRect.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Flip.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_FreeCursor.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_FreeSurface.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_FreeWAV.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_FreeYUVOverlay.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GL_GetAttribute.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GL_GetProcAddress.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GL_LoadLibrary.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GL_SetAttribute.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GL_SwapBuffers.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GLattr.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetAppState.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetAudioStatus.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetClipRect.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetCursor.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetError.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetEventFilter.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetGamma.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetGammaRamp.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetKeyName.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetKeyState.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetModState.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetMouseState.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetRGB.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetRGBA.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetRelativeMouseState.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetThreadID.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetTicks.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetVideoInfo.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_GetVideoSurface.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Init.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_InitSubSystem.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoyAxisEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoyBallEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoyButtonEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoyHatEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickClose.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickEventState.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickGetAxis.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickGetBall.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickGetButton.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickGetHat.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickIndex.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickName.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickNumAxes.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickNumBalls.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickNumButtons.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickNumHats.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickOpen.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickOpened.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_JoystickUpdate.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_KeyboardEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_KillThread.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_ListModes.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_LoadBMP.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_LoadWAV.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_LockAudio.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_LockSurface.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_LockYUVOverlay.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_MapRGB.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_MapRGBA.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_MixAudio.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_MouseButtonEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_MouseMotionEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_NumJoysticks.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_OpenAudio.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Overlay.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Palette.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_PauseAudio.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_PeepEvents.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_PixelFormat.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_PollEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_PumpEvents.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_PushEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Quit.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_QuitEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_QuitSubSystem.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_RWFromFile.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Rect.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_RemoveTimer.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_ResizeEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SaveBMP.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SemPost.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SemTryWait.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SemValue.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SemWait.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SemWaitTimeout.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetAlpha.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetClipRect.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetColorKey.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetColors.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetCursor.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetEventFilter.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetGamma.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetGammaRamp.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetModState.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetPalette.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetTimer.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SetVideoMode.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_ShowCursor.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_Surface.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_SysWMEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_ThreadID.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_UnlockAudio.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_UnlockSurface.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_UnlockYUVOverlay.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_UpdateRect.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_UpdateRects.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_UserEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_VideoDriverName.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_VideoInfo.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_VideoModeOK.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WM_GetCaption.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WM_GrabInput.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WM_IconifyWindow.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WM_SetCaption.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WM_SetIcon.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WM_ToggleFullScreen.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WaitEvent.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WaitThread.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WarpMouse.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_WasInit.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_keysym.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_mutexP.3.gz</li>
+            
+              <li style="list-style: none;">/share/man/man3/SDL_mutexV.3.gz</li>
+            
+          </ul>
+        </details>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/lib/libSDL-1.2.so.0</li>
+            
+              <li style="list-style: none;">/lib/libSDL-1.2.so.0.11.4</li>
+            
+              <li style="list-style: none;">/lib/libSDL.la</li>
+            
+              <li style="list-style: none;">/lib/libSDL.so</li>
+            
+              <li style="list-style: none;">/lib/libSDLmain.a</li>
+            
+              <li style="list-style: none;">/lib/libSDLmain.la</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02eef5b0f45c614dd30ac515a7ffc16c550e17eb">
+            02eef5b0
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.14</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0667548598eb395545654f7d3e4d30e6d347710e">
+            06675485
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01c57234dbd1c48ba91cbb84e0b5d2c043a640f2">
+            01c57234
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0223566f6ee116168818bd3c8d1dfd604991f703">
+            0223566f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0223566f6ee116168818bd3c8d1dfd604991f703">
+            0223566f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.14</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074955e2bdb316d55c128be20239b947b5325bfc">
+            074955e2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026b9971f56f349e3cd2b5dd1ef3e80c8c25d1f3">
+            026b9971
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f5775f87ce4a385b9c3fee0e04f87025a0f6e2">
+            03f5775f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f5775f87ce4a385b9c3fee0e04f87025a0f6e2">
+            03f5775f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.14</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ff927d83bd01eee88ff8645a8d0808bcd6565a">
+            05ff927d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00101b66fed722abeda8af0a4f15383115df30c9">
+            00101b66
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0686eecf4f27f578b510374833625db6a0a51ef5">
+            0686eecf
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0055275945f6c3b83a06bec853bf26cc264f5961">
+            00552759
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/062308aabfe3d46aaa2bd7a3ff474f4d51851ddf">
+            062308aa
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05cbfdc0bc8797a4537c84b5bd95783ee9659d48">
+            05cbfdc0
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

@@ -1,0 +1,2064 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package awstats on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / awstats
+    </dfn>
+    -
+    
+      Real-time logfile analyzer to get advanced statistics
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://awstats.org" rel="noopener" target="_blank">
+        https://awstats.org
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-3.0-or-later
+      </p>
+    
+  
+
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">bin</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/awstats</li>
+            
+          </ul>
+        </details>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">doc</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/share/doc/awstats/COPYING.TXT</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/LICENSE.TXT</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/README.md</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats.pdf</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_benchmark.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_changelog.txt</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_compare.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_config.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_contrib.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_dev_plugins.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_dev_plugins_graphs.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_dev_plugins_hooks.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_dolibarr.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_extra.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_faq.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_glossary.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_license.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_security.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_setup.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_tools.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_upgrade.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_webmin.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/awstats_what.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats.gif</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats.ico</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats.svg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_250x250.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_ban_460x270.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_ban_460x270.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_ban_800x160.svg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_ban_960x540.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_ban_960x540.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_ban_960x540.svg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo1.gif</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo1.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo2.gif</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo2.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo3.gif</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo3.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo5.gif</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo5.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo6.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo7.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo7.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/awstats_logo7.svg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/license_chart.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_1.gif</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_1.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_1.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_2.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_3.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_4.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_5.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_960x540.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_large_1.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_large_2.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_large_3.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_large_4.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/screen_shot_large_5.jpg</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/images/star.png</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/index.html</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/pad_awstats.xml</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-apollo.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-css.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-hs.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-lisp.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-lua.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-ml.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-proto.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-sql.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-vb.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/lang-wiki.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/prettify.css</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/scripts/prettify.js</li>
+            
+              <li style="list-style: none;">/share/doc/awstats/styles.css</li>
+            
+          </ul>
+        </details>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/share/awstats/tools/awstats_buildstaticpages.pl</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/awstats_configure.pl</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/awstats_exportlib.pl</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/awstats_updateall.pl</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/dolibarr/README.md</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/geoip_generator.pl</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/httpd_conf</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/logresolvemerge.pl</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/maillogconvert.pl</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/nginx/README.txt</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/nginx/awstats-fcgi.php</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/nginx/awstats-nginx.conf</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/urlaliasbuilder.pl</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/webmin/.gitignore</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/webmin/README.md</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/webmin/awstats-2.0.wbm</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/xslt/README.txt</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/xslt/awstats.datademo1.xml</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/xslt/awstats.datademo1.xslt</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/xslt/awstats.datademo2.xml</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/xslt/awstats.datademo2.xslt</li>
+            
+              <li style="list-style: none;">/share/awstats/tools/xslt/awstats.xsd</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/awdownloadcsv.pl</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/awredir.pl</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/awstats.model.conf</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/awstats.pl</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-al.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-ar.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-ba.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-be.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-bg.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-br.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-bzg.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-ca.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-cn.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-cy.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-cz.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-de.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-dk.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-en.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-es.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-et.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-eu.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-fi.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-fr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-gl.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-gr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-he.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-hr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-hu.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-id.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-is.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-it.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-jp.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-ko.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-lt.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-lv.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-mk.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-nb.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-nl.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-nn.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-pl.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-pt.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-ro.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-ru.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-se.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-si.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-sk.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-sr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-th.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-tr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-tw.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/awstats-ua.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_f/awstats-tt-br.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_f/awstats-tt-cz.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_f/awstats-tt-en.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_f/awstats-tt-gl.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_f/awstats-tt-gr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_f/awstats-tt-is.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_f/awstats-tt-it.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_f/awstats-tt-ru.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-br.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-cz.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-en.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-fr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-gl.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-gr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-is.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-it.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_m/awstats-tt-ru.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-al.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-ba.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-bg.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-br.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-ca.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-cn.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-cz.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-de.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-dk.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-en.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-es.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-fi.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-fr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-gl.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-gr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-hu.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-is.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-it.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-jp.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-kr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-nb.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-nl.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-nn.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-pl.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-ro.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-ru.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-se.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-sk.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-sr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-tr.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-tw.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lang/tooltips_w/awstats-tt-ua.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/blacklist.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/browsers.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/browsers_phone.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/domains.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/mime.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/operating_systems.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/referer_spam.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/robots.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/search_engines.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/status_http.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/status_smtp.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/lib/worms.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/clusterinfo.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/decodeutfkeys.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/example/example.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/export_to_csv.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip2_city.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip2_country.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip6.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip_asn_maxmind.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip_city_maxmind.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip_isp_maxmind.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip_org_maxmind.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoip_region_maxmind.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/geoipfree.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/graphapplet.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/graphgooglechartapi.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/hashfiles.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/hostinfo.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/ipv6.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/rawlog.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/timehires.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/timezone.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/tooltips.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/urlalias.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/cgi-bin/plugins/userinfo.pm</li>
+            
+              <li style="list-style: none;">/wwwroot/classes/awgraphapplet.jar</li>
+            
+              <li style="list-style: none;">/wwwroot/css/awstats_bw.css</li>
+            
+              <li style="list-style: none;">/wwwroot/css/awstats_default.css</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/abilon.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/adobe.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/akregator.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/alcatel.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/amaya.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/amigavoyager.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/analogx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/android.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/apt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/avant.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/aweb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/bpftp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/bytel.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/chimera.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/chrome.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/cyberdog.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/da.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/dillo.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/doris.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/dreamcast.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/ecatch.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/edge.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/encompass.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/epiphany.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/ericsson.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/feeddemon.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/feedreader.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/firefox.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/flashget.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/flock.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/fpexpress.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/fresco.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/freshdownload.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/frontpage.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/galeon.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/getright.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/gnome.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/gnus.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/gozilla.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/hotjava.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/httrack.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/ibrowse.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/icab.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/icecat.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/iceweasel.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/java.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/jetbrains_omea.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/kmeleon.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/konqueror.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/leechget.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/lg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/lotusnotes.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/lynx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/macweb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/mediaplayer.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/motorola.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/mozilla.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/mplayer.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/msie.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/msie_large.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/multizilla.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/ncsa_mosaic.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/neon.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/netnewswire.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/netpositive.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/netscape.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/netscape_large.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/netshow.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/newsfire.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/newsgator.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/newzcrawler.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/nokia.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/notavailable.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/omniweb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/opera.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/panasonic.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/pdaphone.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/philips.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/phoenix.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/pluck.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/pulpfiction.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/real.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/rss.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/rssbandit.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/rssowl.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/rssreader.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/rssxpress.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/safari.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/sagem.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/samsung.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/seamonkey.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/sharp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/sharpreader.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/shrook.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/siemens.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/sony.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/staroffice.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/subversion.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/teleport.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/trium.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/unknown.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/w3c.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/webcopier.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/webreaper.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/webtv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/webzip.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/winxbox.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/browser/wizz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr1.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr10.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr11.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr12.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr2.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr3.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr4.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr5.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr6.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr7.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr8.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/clock/hr9.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/digital.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/hp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/ibm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/intel.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/java.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/mips.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/motorola.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/sun.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/cpu/unknown.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/a2.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ac.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ad.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ae.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/aero.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/af.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ag.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ai.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/al.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/am.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/an.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ao.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/aq.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ar.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/arpa.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/as.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/at.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/au.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/aw.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ax.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/az.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ba.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/be.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bh.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bi.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/biz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bj.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bo.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/br.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bs.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bw.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/by.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/bz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ca.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cc.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ch.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ci.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ck.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cl.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/co.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/com.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/coop.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cs.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cy.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/cz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/de.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/dj.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/dk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/dm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/do.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/dz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ec.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/edu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ee.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/eg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/eh.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/el.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/en.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/er.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/es.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/es_cat.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/es_eu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/et.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/eu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/fi.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/fj.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/fk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/fm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/fo.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/fr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/fx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ga.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ge.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gh.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gi.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gl.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/glg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gov.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gq.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gs.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gw.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/gy.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/hk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/hm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/hn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/hr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ht.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/hu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/i0.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/id.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ie.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/il.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/im.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/in.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/info.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/int.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/io.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ip.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/iq.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ir.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/is.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/it.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/jm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/jo.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/jp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ke.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/kg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/kh.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ki.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/km.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/kn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/kp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/kr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/kw.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ky.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/kz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/la.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/lb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/lc.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/li.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/lk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/lr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ls.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/lt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/lu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/lv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ly.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ma.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mc.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/md.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/me.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mil.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ml.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mo.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mq.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ms.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/museum.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mw.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/my.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/mz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/na.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/name.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nato.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nc.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ne.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/net.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ng.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ni.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nl.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/no.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/np.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/nz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/om.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/org.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pa.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pe.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ph.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pl.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pro.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ps.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/pt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/py.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/qa.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/re.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ro.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/rs.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ru.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/rw.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sa.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sc.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/se.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/si.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sl.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/st.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/su.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sy.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/sz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tc.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/td.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/th.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/to.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tw.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/tz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ua.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ug.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/uk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/um.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/unknown.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/us.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/uy.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/uz.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/va.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/vc.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ve.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/vg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/vi.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/vn.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/vu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/wf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/wlk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ws.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ye.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/yt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/yu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/za.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/ze.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/zm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/flags/zw.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/ai.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/archive.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/audio.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/crystal.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/css.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/csv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/doc.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/document.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/dotnet.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/encrypt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/flash.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/fon.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/glasses.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/gpx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/html.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/image.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/jnlp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/jscript.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/json.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/library.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/lit.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/mdb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/notavailable.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/ooffice.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/other.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/package.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/page.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/pdf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/php.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/phshop.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/pl.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/ppt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/quicktime.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/rar.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/readme.txt</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/real.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/rss.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/runtime.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/script.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/svg.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/text.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/ttf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/unknown.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/video.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/wmv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/xls.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/mime/xsl.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/aix.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/amigaos.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/android.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/android10.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidcupcake.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androiddonut.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androideclair.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidfroyo.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidgingerbread.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidhoneycomb.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidics.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidjellybean.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidkitkat.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidlollipop.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidmarshmallow.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidnougat.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidoreo.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/androidpie.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/apple.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/atari.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/beos.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/blackberry.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/bsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/bsddflybsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/bsdfreebsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/bsdi.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/bsdkfreebsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/bsdnetbsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/bsdopenbsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/commodore.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/cpm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/debian.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/digital.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/dos.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/dreamcast.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/freebsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/gnu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/hpux.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/ibm.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/imode.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/inferno.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/ios.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/ios_ipad.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/ios_iphone.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/iphone.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/irix.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/j2me.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/java.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/kfreebsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linux.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxandroid.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxasplinux.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxcentos.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxdebian.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxfedora.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxgentoo.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxmandr.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxpclinuxos.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxredhat.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxsuse.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxubuntu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxvine.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/linuxzenwalk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/mac.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macintosh.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx10.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx11.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx12.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx13.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx14.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx15.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx4.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx5.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx6.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx7.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx8.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/macosx9.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/netbsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/netware.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/next.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/openbsd.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/os2.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/osf.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/palmos.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/psp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/qnx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/riscos.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/sco.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/sunos.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/syllable.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/symbian.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/unix.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/unknown.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/vms.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/webtv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/wii.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win10.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win16.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win2000.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win2003.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win2008.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win7.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win8.1.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win8.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win80.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win81.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win95.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/win98.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/wince.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/winlong.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/winme.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/winnt.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/winphone.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/winunknown.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/winvista.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/winxbox.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/os/winxp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/awstats_logo1.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/awstats_logo5.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/awstats_logo6.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/backleft.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/button.gif</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/he.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/hh.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/hk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/hp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/ht.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/hx.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/menu1.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/menu2.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/menu3.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/menu4.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/menu5.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/menu6.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/menu7.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/menu8.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/page.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/vh.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/vk.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/vp.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/vu.png</li>
+            
+              <li style="list-style: none;">/wwwroot/icon/other/vv.png</li>
+            
+              <li style="list-style: none;">/wwwroot/js/awstats_misc_tracker.js</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044053e28c51b0284d1ace43655f8292ad543167">
+            044053e2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03582eb6e3c6124a74604c96029f085839022989">
+            03582eb6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03582eb6e3c6124a74604c96029f085839022989">
+            03582eb6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037e51702ec8e52c375f5af013d31e267675c3ac">
+            037e5170
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/062e1e595fe8bde889c73c2954fb2c5617dcf42c">
+            062e1e59
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05065605f6f3406bdba7cf15dd380f597ac2a18f">
+            05065605
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05065605f6f3406bdba7cf15dd380f597ac2a18f">
+            05065605
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04991f2ec8d0dc467faf3e7636664c716ba8a035">
+            04991f2e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01dc2d9c4cbab9b07438fac306b0275381727f77">
+            01dc2d9c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045a4797bd94af988dace97529f1ba5078ce5c71">
+            045a4797
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045a4797bd94af988dace97529f1ba5078ce5c71">
+            045a4797
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0036ccebc2dbe99778d344fce73cff74d20eba33">
+            0036cceb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00fe26700397b46a33ffbcb36e5297cf31b57faa">
+            00fe2670
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075e4883e0abea400aecb886e6244a6c2acf7bd8">
+            075e4883
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05987f952f86f94c5c7201a0c0e251098a6758ab">
+            05987f95
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044ceae2806480555a44c91c386546cffb46ba74">
+            044ceae2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044ceae2806480555a44c91c386546cffb46ba74">
+            044ceae2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0578f07b91f8761baec98a7920928da062c1f4a7">
+            0578f07b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0560caa57893a3c8dd11aeece110672c720c9496">
+            0560caa5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00078e317e63d1d934806efd62f56e48150a4f64">
+            00078e31
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01bf384409618a6ece3d507c7222106657328c03">
+            01bf3844
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

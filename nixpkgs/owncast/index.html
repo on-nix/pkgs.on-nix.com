@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package owncast on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / owncast
+    </dfn>
+    -
+    
+      self-hosted video live streaming solution
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://owncast.online" rel="noopener" target="_blank">
+        https://owncast.online
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - MIT
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:info@niklas-steffen.de">
+                Niklas Steffen
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:wael.nasreddine@gmail.com">
+                Wael Nasreddine
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/.owncast-wrapped</li>
+            
+              <li style="list-style: none;">/bin/owncast</li>
+            
+              <li style="list-style: none;">/nix-support/propagated-build-inputs</li>
+            
+              <li style="list-style: none;">/static/logo.png</li>
+            
+              <li style="list-style: none;">/static/metadata.html</li>
+            
+              <li style="list-style: none;">/static/offline.ts</li>
+            
+              <li style="list-style: none;">/webroot/favicon.ico</li>
+            
+              <li style="list-style: none;">/webroot/img/airplay.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/Reaper-gg.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/Reaper-hi.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/Reaper-hype.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/Reaper-lol.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/Reaper-love.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/Reaper-rage.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/Reaper-rip.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/Reaper-wtf.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-box.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-construction.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-fossil.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-item-leaf.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-kkslider.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-moneytree.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-mosquito.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-shirt.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-song.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-tree.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-turnip.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ac-weeds.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/alert.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/bananadance.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/bb8.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/beerparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/bells.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/birthdaypartyparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/blacklightsaber.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/bluelightsaber.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/bluntparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/bobaparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/cakeparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/chewbacca.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/chillparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/christmasparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/coffeeparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/confusedparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/copparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/coronavirus.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/covid19parrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/cryptoparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/dabparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/dadparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/daftpunkparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/darkbeerparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/darkmodeparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/darth_vader.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/dealwithitparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/death_star.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/discoparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/division-gg.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/division-hi.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/division-hype.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/division-lol.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/division-omg.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/division-rage.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/division-rip.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/division-wtf.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/docparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/donutparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/doom_mad.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/empire.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/everythingsfineparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/evilparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/explodyparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/fixparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/flyingmoneyparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/footballparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/gabe1.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/gabe2.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/gentlemanparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/githubparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/goomba.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/gothparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/hamburgerparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/harrypotterparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/headbangingparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/headingparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/headsetparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/hmmparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/hypnoparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/icecreamparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/illuminatiparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/jediparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/keanu_thanks.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/laptop_parrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/loveparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/mandalorian.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/margaritaparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/mario.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/matrixparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/meldparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/metalparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/michaeljacksonparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/moonparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/moonwalkingparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/mustacheparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/nicolas_cage_party.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/nodeparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/norwegianblueparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/opensourceparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/originalparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/owncast.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/palpatine.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/papalparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/parrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/parrotnotfound.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/partyparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/phparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/pirateparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/pizzaparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/pokeparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/popcornparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/porg.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/portalparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/pumpkinparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/quadparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/r2d2.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/redenvelopeparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ripparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/rotatingparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/ryangoslingparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/rythmicalparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/sadparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/schnitzelparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/scienceparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/shipitparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/shufflepartyparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/sintparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/sithparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/skiparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/sleepingparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/sonic.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/spyparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/stalkerparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/starwars.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/stayhomeparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/storm_trooper.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/stormtrooper.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/sushiparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/tacoparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/tennisparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/thanks.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/thumbsupparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/tiedyeparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/tpparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/transparront.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/twinsparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/upvoteparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/vikingparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/wesmart.png</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/wfhparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/wineparrot.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/emoji/yoda.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/android-icon-144x144.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/android-icon-192x192.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/android-icon-36x36.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/android-icon-48x48.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/android-icon-72x72.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/android-icon-96x96.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-114x114.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-120x120.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-144x144.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-152x152.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-180x180.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-57x57.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-60x60.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-72x72.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-76x76.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon-precomposed.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/apple-icon.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/browserconfig.xml</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/favicon-16x16.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/favicon-32x32.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/favicon-96x96.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/ms-icon-144x144.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/ms-icon-150x150.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/ms-icon-310x310.png</li>
+            
+              <li style="list-style: none;">/webroot/img/favicon/ms-icon-70x70.png</li>
+            
+              <li style="list-style: none;">/webroot/img/loading.gif</li>
+            
+              <li style="list-style: none;">/webroot/img/logo.png</li>
+            
+              <li style="list-style: none;">/webroot/img/logo.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/bandcamp.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/default.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/discord.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/donate.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/facebook.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/follow.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/github.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/gitlab.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/google.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/instagram.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/keyoxide.png</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/ko-fi.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/lbry.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/liberapay.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/link.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/linkedin.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/mastodon.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/odysee.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/patreon.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/paypal.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/snapchat.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/soundcloud.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/spotify.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/tiktok.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/twitch.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/twitter.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/platformlogos/youtube.svg</li>
+            
+              <li style="list-style: none;">/webroot/img/smiley.png</li>
+            
+              <li style="list-style: none;">/webroot/index-standalone-chat-readonly.html</li>
+            
+              <li style="list-style: none;">/webroot/index-standalone-chat-readwrite.html</li>
+            
+              <li style="list-style: none;">/webroot/index-standalone-chat.html</li>
+            
+              <li style="list-style: none;">/webroot/index-video-only.html</li>
+            
+              <li style="list-style: none;">/webroot/index.html</li>
+            
+              <li style="list-style: none;">/webroot/js/app-standalone-chat.js</li>
+            
+              <li style="list-style: none;">/webroot/js/app-video-only.js</li>
+            
+              <li style="list-style: none;">/webroot/js/app.js</li>
+            
+              <li style="list-style: none;">/webroot/js/chat/register.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/chat/chat-input.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/chat/chat-message-view.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/chat/chat.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/chat/content-editable.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/chat/message.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/chat/username.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/external-action-modal.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/platform-logos-list.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/player.js</li>
+            
+              <li style="list-style: none;">/webroot/js/components/video-poster.js</li>
+            
+              <li style="list-style: none;">/webroot/js/utils/chat.js</li>
+            
+              <li style="list-style: none;">/webroot/js/utils/constants.js</li>
+            
+              <li style="list-style: none;">/webroot/js/utils/helpers.js</li>
+            
+              <li style="list-style: none;">/webroot/js/utils/user-colors.js</li>
+            
+              <li style="list-style: none;">/webroot/js/utils/websocket.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/@joeattardi/emoji-button.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/@videojs/http-streaming/dist/videojs-http-streaming.min.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/@videojs/themes/fantasy/index.css</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/_commonjsHelpers-37fa8da4.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/core-1966f6d4.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/core-2e4eb0d6.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/core-70b06e3b.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/core-a6c34bea.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/core-d14f1e1c.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/core-d20ff47c.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/core-f87370e0.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/common/core-fed3ccd8.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/htm.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/import-map.json</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/markjs/dist/mark.es6.min.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/micromodal/dist/micromodal.min.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/preact.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/tailwindcss/dist/tailwind.min.css</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/videojs/core.js</li>
+            
+              <li style="list-style: none;">/webroot/js/web_modules/videojs/video-js.min.css</li>
+            
+              <li style="list-style: none;">/webroot/manifest.json</li>
+            
+              <li style="list-style: none;">/webroot/styles/app.css</li>
+            
+              <li style="list-style: none;">/webroot/styles/chat.css</li>
+            
+              <li style="list-style: none;">/webroot/styles/standalone-chat-readonly.css</li>
+            
+              <li style="list-style: none;">/webroot/styles/standalone-chat-readwrite.css</li>
+            
+              <li style="list-style: none;">/webroot/styles/user-content.css</li>
+            
+              <li style="list-style: none;">/webroot/styles/video-only.css</li>
+            
+              <li style="list-style: none;">/webroot/styles/video.css</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.0.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0543f2d2f62dcc3d5e917f34d3c0526d0548473f">
+            0543f2d2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.0.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01cc988d9669f29855d82175a4614d90aa4bfe75">
+            01cc988d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01cc988d9669f29855d82175a4614d90aa4bfe75">
+            01cc988d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.0.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0280f0990add14411bf9f9b722727f2c8b6fdce7">
+            0280f099
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03171ae31abf0427467fea968c3fa465338535f3">
+            03171ae3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.0.8</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049ca38a0c84f7c41467b006712340fd52f00043">
+            049ca38a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020e88bf7a46a089b94cc6ae962d5bada7233341">
+            020e88bf
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

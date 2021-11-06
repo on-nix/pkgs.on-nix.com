@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package gitolite on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / gitolite
+    </dfn>
+    -
+    
+      Finely-grained git repository hosting
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://gitolite.com/gitolite/index.html" rel="noopener" target="_blank">
+        https://gitolite.com/gitolite/index.html
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-2.0
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:aseipp@pobox.com">
+                Austin Seipp
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:lassulus@gmail.com">
+                Lassulus
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:tomberek@gmail.com">
+                Thomas Bereknyei
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/.gitolite-shell-wrapped</li>
+            
+              <li style="list-style: none;">/bin/VERSION</li>
+            
+              <li style="list-style: none;">/bin/VREF/COUNT</li>
+            
+              <li style="list-style: none;">/bin/VREF/EMAIL-CHECK</li>
+            
+              <li style="list-style: none;">/bin/VREF/FILETYPE</li>
+            
+              <li style="list-style: none;">/bin/VREF/MAX_NEWBIN_SIZE</li>
+            
+              <li style="list-style: none;">/bin/VREF/MERGE-CHECK</li>
+            
+              <li style="list-style: none;">/bin/VREF/NAME_NC</li>
+            
+              <li style="list-style: none;">/bin/VREF/VOTES</li>
+            
+              <li style="list-style: none;">/bin/VREF/lock</li>
+            
+              <li style="list-style: none;">/bin/VREF/partial-copy</li>
+            
+              <li style="list-style: none;">/bin/VREF/refex-expr</li>
+            
+              <li style="list-style: none;">/bin/commands/1plus1</li>
+            
+              <li style="list-style: none;">/bin/commands/D</li>
+            
+              <li style="list-style: none;">/bin/commands/access</li>
+            
+              <li style="list-style: none;">/bin/commands/compile-template-data</li>
+            
+              <li style="list-style: none;">/bin/commands/config</li>
+            
+              <li style="list-style: none;">/bin/commands/create</li>
+            
+              <li style="list-style: none;">/bin/commands/creator</li>
+            
+              <li style="list-style: none;">/bin/commands/desc</li>
+            
+              <li style="list-style: none;">/bin/commands/fork</li>
+            
+              <li style="list-style: none;">/bin/commands/git-annex-shell</li>
+            
+              <li style="list-style: none;">/bin/commands/git-config</li>
+            
+              <li style="list-style: none;">/bin/commands/help</li>
+            
+              <li style="list-style: none;">/bin/commands/htpasswd</li>
+            
+              <li style="list-style: none;">/bin/commands/info</li>
+            
+              <li style="list-style: none;">/bin/commands/list-dangling-repos</li>
+            
+              <li style="list-style: none;">/bin/commands/lock</li>
+            
+              <li style="list-style: none;">/bin/commands/mirror</li>
+            
+              <li style="list-style: none;">/bin/commands/motd</li>
+            
+              <li style="list-style: none;">/bin/commands/newbranch</li>
+            
+              <li style="list-style: none;">/bin/commands/option</li>
+            
+              <li style="list-style: none;">/bin/commands/owns</li>
+            
+              <li style="list-style: none;">/bin/commands/perms</li>
+            
+              <li style="list-style: none;">/bin/commands/print-default-rc</li>
+            
+              <li style="list-style: none;">/bin/commands/push</li>
+            
+              <li style="list-style: none;">/bin/commands/readme</li>
+            
+              <li style="list-style: none;">/bin/commands/rsync</li>
+            
+              <li style="list-style: none;">/bin/commands/sshkeys-lint</li>
+            
+              <li style="list-style: none;">/bin/commands/sskm</li>
+            
+              <li style="list-style: none;">/bin/commands/sudo</li>
+            
+              <li style="list-style: none;">/bin/commands/svnserve</li>
+            
+              <li style="list-style: none;">/bin/commands/symbolic-ref</li>
+            
+              <li style="list-style: none;">/bin/commands/who-pushed</li>
+            
+              <li style="list-style: none;">/bin/commands/writable</li>
+            
+              <li style="list-style: none;">/bin/gitolite</li>
+            
+              <li style="list-style: none;">/bin/gitolite-shell</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Cache.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Common.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Conf/Explode.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Conf/Load.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Conf/Store.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Conf/Sugar.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Conf.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Easy.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Hooks/PostUpdate.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Hooks/Update.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Rc.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Setup.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Test/Tsh.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Test.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/Alias.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/AutoCreate.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/CpuTime.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/Kindergarten.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/Mirroring.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/Motd.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/RefexExpr.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/RepoUmask.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/Shell.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/TProxy.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers/Writable.pm</li>
+            
+              <li style="list-style: none;">/bin/lib/Gitolite/Triggers.pm</li>
+            
+              <li style="list-style: none;">/bin/syntactic-sugar/continuation-lines</li>
+            
+              <li style="list-style: none;">/bin/syntactic-sugar/keysubdirs-as-groups</li>
+            
+              <li style="list-style: none;">/bin/syntactic-sugar/macros</li>
+            
+              <li style="list-style: none;">/bin/syntactic-sugar/refex-expr</li>
+            
+              <li style="list-style: none;">/bin/triggers/bg</li>
+            
+              <li style="list-style: none;">/bin/triggers/expand-deny-messages</li>
+            
+              <li style="list-style: none;">/bin/triggers/partial-copy</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/create-with-reference</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/ssh-authkeys</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/ssh-authkeys-shell-users</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/ssh-authkeys-split</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/update-description-file</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/update-git-configs</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/update-git-daemon-access-list</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/update-gitweb-access-list</li>
+            
+              <li style="list-style: none;">/bin/triggers/post-compile/update-gitweb-daemon-from-options</li>
+            
+              <li style="list-style: none;">/bin/triggers/renice</li>
+            
+              <li style="list-style: none;">/bin/triggers/repo-specific-hooks</li>
+            
+              <li style="list-style: none;">/bin/triggers/set-default-roles</li>
+            
+              <li style="list-style: none;">/bin/triggers/upstream</li>
+            
+              <li style="list-style: none;">/nix-support/propagated-build-inputs</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06749ba321ee3f284df74ab848985106eea52c13">
+            06749ba3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063c756b33f69a787d6fda77bb293ca022d5d922">
+            063c756b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0096eb9274b430c8cf1a699c68054972c1845291">
+            0096eb92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/003fa57c6484a63af1e72470fa2b101f4de7a79e">
+            003fa57c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03197f94ce2d4b0feb673840d30f602e93357040">
+            03197f94
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020a2121277f775bfc14c60b2ea3ac98fa5bd6be">
+            020a2121
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020a2121277f775bfc14c60b2ea3ac98fa5bd6be">
+            020a2121
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/066544a7eb38a4886a619a9a6dfd26e474c7f7a6">
+            066544a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/041f70f62f38de7bc77eeea725fda313cfe71fcd">
+            041f70f6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01684d6e9b0cd12c6758aba59fa9527c76f282ab">
+            01684d6e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0456d939a1ba4ae7df54c84cf873086d32679839">
+            0456d939
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0249afb0e7765ee7d71a80abc50697a81cd8d8cd">
+            0249afb0
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0249afb0e7765ee7d71a80abc50697a81cd8d8cd">
+            0249afb0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04bbc4e4819ab27c634eac05907db27701805b8a">
+            04bbc4e4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06fba2072c8f8eafcc98fbbdd419fe578a6674a6">
+            06fba207
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04469284cefc648b9e8e818e1a4ee656ec519fe0">
+            04469284
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a5afc979da46fc45fd8aedfa32be8590079367">
+            05a5afc9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0590170c799d5f2b67d674c64dc48052f1bcd882">
+            0590170c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0590170c799d5f2b67d674c64dc48052f1bcd882">
+            0590170c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0474b6b381b882fb0e761c9ca072a9b13aece37b">
+            0474b6b3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026ec75df522411cf963ba56d619d0072c645557">
+            026ec75d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0607adde1a5d4c933986c6a7a169c44ee9ef3469">
+            0607adde
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07adecff7fbe4b50e5f03a09f59d867b097647be">
+            07adecff
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a3726a1256fa0e144c302537c8b0876bfee77f">
+            02a3726a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a3726a1256fa0e144c302537c8b0876bfee77f">
+            02a3726a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075e4883e0abea400aecb886e6244a6c2acf7bd8">
+            075e4883
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0111c7d8515d229cc19b487bb0c2e62571413e3c">
+            0111c7d8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044ceae2806480555a44c91c386546cffb46ba74">
+            044ceae2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044ceae2806480555a44c91c386546cffb46ba74">
+            044ceae2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0560caa57893a3c8dd11aeece110672c720c9496">
+            0560caa5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0560caa57893a3c8dd11aeece110672c720c9496">
+            0560caa5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0779d71915e65d10f10b5e220a80d6cedb2cd17c">
+            0779d719
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0325373b56b0fea9df4cddd427cc35196b78dde8">
+            0325373b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031083b564d2c11cb87630e0be1a7ca1f2d6e349">
+            031083b5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031083b564d2c11cb87630e0be1a7ca1f2d6e349">
+            031083b5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06cb58fba77beab5d3ba396af779afb888ea791d">
+            06cb58fb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b14d21ecfeadd5193551f75b0af8bafce4e6fd">
+            07b14d21
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05cb4dca11cd3971c0a2a33ac90fd0f871a24a39">
+            05cb4dca
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04169f4c3cb27c82997c451ee03704e2ec8a4771">
+            04169f4c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036f11f323e1fb1cf5bca63ba3778efd3b8a0355">
+            036f11f3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/056e74dd78baa8c259e9c8b22257058f8b1ce265">
+            056e74dd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01dc343c2c613c263a2180d1850847f33653f94f">
+            01dc343c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01dc343c2c613c263a2180d1850847f33653f94f">
+            01dc343c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0761f81da71fc6a940c7f51129b6c7717db78e87">
+            0761f81d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/013f88ac7e4c679868bfac5c6d9b896c9b13fd99">
+            013f88ac
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045e93e0a660e2db58403ee3bf40ada2d351971e">
+            045e93e0
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045e93e0a660e2db58403ee3bf40ada2d351971e">
+            045e93e0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02e693e1b93427aa4208efc86d5f50f75de9d0ed">
+            02e693e1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/002c687edf9a7aca64660f3ef67db88b0ad46c85">
+            002c687e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0394ce7627fe1cd820a6620fc18c2245f453c5c6">
+            0394ce76
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06ff4af597a75a0854cbcb9c822b1fe38a466a98">
+            06ff4af5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02fdd3840081ffa9f3178a8ddd7ce72d505d3851">
+            02fdd384
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02fdd3840081ffa9f3178a8ddd7ce72d505d3851">
+            02fdd384
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05b97395ae05b4b89538998333cef8e7c2abb5c6">
+            05b97395
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00fb3c0b7ee3ea1082cf82ae1bf7a691f0d69874">
+            00fb3c0b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0738edc1fd8c0ed48ca67c5a69f545b5570d1206">
+            0738edc1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0738edc1fd8c0ed48ca67c5a69f545b5570d1206">
+            0738edc1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f12cc838e1b832c6edfa5a6b45e1922038c271">
+            04f12cc8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/025f87f79a086d8e00eb1470ffd355012cfe4d0f">
+            025f87f7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05335620418f7c075868e56a4b36bb91de5cf339">
+            05335620
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06068c779803d46e625fb61c217b5a50b8f63643">
+            06068c77
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

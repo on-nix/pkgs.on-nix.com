@@ -1,0 +1,2769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package opencv on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / opencv
+    </dfn>
+    -
+    
+      Open Computer Vision Library with more than 500 algorithms
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://opencv.org/" rel="noopener" target="_blank">
+        https://opencv.org/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - BSD-3-Clause
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:mdaiter8121@gmail.com">
+                Matthew S. Daiter
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:v.dijk.bas@gmail.com">
+                Bas van Dijk
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/opencv_annotation</li>
+            
+              <li style="list-style: none;">/bin/opencv_interactive-calibration</li>
+            
+              <li style="list-style: none;">/bin/opencv_model_diagnostics</li>
+            
+              <li style="list-style: none;">/bin/opencv_version</li>
+            
+              <li style="list-style: none;">/bin/opencv_visualisation</li>
+            
+              <li style="list-style: none;">/bin/opencv_waldboost_detector</li>
+            
+              <li style="list-style: none;">/bin/setup_vars_opencv4.sh</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/alphamat.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/aruco/charuco.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/aruco/dictionary.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/aruco.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/barcode.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/bgsegm.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/bioinspired/bioinspired.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/bioinspired/retina.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/bioinspired/retinafasttonemapping.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/bioinspired/transientareassegmentationmodule.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/bioinspired.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/calib3d/calib3d.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/calib3d/calib3d_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/calib3d.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ccalib/multicalib.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ccalib/omnidir.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ccalib/randpattern.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ccalib.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/affine.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/async.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/base.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/bindings_utils.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/bufferpool.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/check.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/core_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/block.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/border_interpolate.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/color.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/common.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/datamov_utils.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/detail/color_detail.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/detail/reduce.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/detail/reduce_key_val.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/detail/transform_detail.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/detail/type_traits_detail.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/detail/vec_distance_detail.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/dynamic_smem.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/emulation.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/filters.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/funcattrib.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/functional.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/limits.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/reduce.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/saturate_cast.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/scan.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/simd_functions.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/transform.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/type_traits.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/utility.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/vec_distance.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/vec_math.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/vec_traits.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/warp.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/warp_reduce.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda/warp_shuffle.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda.inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda_stream_accessor.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cuda_types.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cv_cpu_dispatch.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cv_cpu_helper.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cvdef.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cvstd.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cvstd.inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/cvstd_wrapper.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/detail/async_promise.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/detail/exception_ptr.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/directx.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/dualquaternion.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/dualquaternion.inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/eigen.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/fast_math.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/hal.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/interface.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_avx.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_avx512.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_cpp.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_forward.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_msa.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_neon.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_rvv.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_rvv071.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_sse.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_sse_em.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_vsx.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/intrin_wasm.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/msa_macros.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/hal/simd_utils.impl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/mat.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/mat.inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/matx.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/neon_utils.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/ocl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/ocl_genbase.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/ocl_defs.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/opencl_info.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/opencl_svm.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/autogenerated/opencl_clblas.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/autogenerated/opencl_clfft.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/autogenerated/opencl_core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/autogenerated/opencl_core_wrappers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/autogenerated/opencl_gl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/autogenerated/opencl_gl_wrappers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_clblas.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_clfft.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_core_wrappers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_gl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_gl_wrappers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_svm_20.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_svm_definitions.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opencl/runtime/opencl_svm_hsa_extension.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/opengl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/operations.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/optim.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/ovx.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/parallel/backend/parallel_for.openmp.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/parallel/backend/parallel_for.tbb.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/parallel/parallel_backend.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/persistence.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/quaternion.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/quaternion.inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/saturate.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/simd_intrinsics.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/softfloat.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/sse_utils.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/traits.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/types.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/types_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utility.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/allocator_stats.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/allocator_stats.impl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/filesystem.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/instrumentation.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/logger.defines.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/logger.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/logtag.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/tls.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/utils/trace.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/va_intel.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/version.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core/vsx_utils.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/core_detect.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/cvconfig.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/ar_hmdb.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/ar_sports.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/dataset.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/fr_adience.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/fr_lfw.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/gr_chalearn.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/gr_skig.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/hpe_humaneva.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/hpe_parse.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/ir_affine.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/ir_robot.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/is_bsds.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/is_weizmann.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/msm_epfl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/msm_middlebury.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/or_imagenet.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/or_mnist.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/or_pascal.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/or_sun.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/pd_caltech.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/pd_inria.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/slam_kitti.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/slam_tumindoor.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/sr_bsds.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/sr_div2k.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/sr_general100.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/tr_chars.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/tr_icdar.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/tr_svt.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/track_alov.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/track_vot.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/datasets/util.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/all_layers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/dict.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/dnn.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/dnn.inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/layer.details.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/layer.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/shape_utils.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/utils/debug_utils.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/utils/inference_engine.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn/version.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dnn_superres.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/dpm.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/bif.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/face_alignment.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/facemark.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/facemarkAAM.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/facemarkLBF.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/facemark_train.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/facerec.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/mace.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face/predict_collector.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/face.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/features2d/features2d.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/features2d/hal/interface.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/features2d.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/all_indices.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/allocator.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/any.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/autotuned_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/composite_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/config.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/defines.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/dist.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/dummy.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/dynamic_bitset.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/flann.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/flann_base.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/general.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/ground_truth.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/hdf5.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/heap.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/hierarchical_clustering_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/index_testing.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/kdtree_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/kdtree_single_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/kmeans_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/linear_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/logger.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/lsh_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/lsh_table.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/matrix.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/miniflann.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/nn_index.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/object_factory.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/params.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/random.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/result_set.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/sampling.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/saving.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/simplex_downhill.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann/timer.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/flann.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/fuzzy/fuzzy_F0_math.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/fuzzy/fuzzy_F1_math.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/fuzzy/fuzzy_image.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/fuzzy/types.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/fuzzy.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/cpu/core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/cpu/gcpukernel.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/cpu/imgproc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/cpu/stereo.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/cpu/video.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/fluid/core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/fluid/gfluidbuffer.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/fluid/gfluidkernel.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/fluid/imgproc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/garg.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/garray.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gasync_context.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gcall.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gcommon.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gcompiled.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gcompiled_async.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gcompoundkernel.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gcomputation.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gcomputation_async.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gframe.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gkernel.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gmat.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gmetaarg.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gopaque.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gproto.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gpu/core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gpu/ggpukernel.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gpu/imgproc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gscalar.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gstreaming.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gtransform.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gtype_traits.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/gtyped.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/imgproc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/infer/bindings_ie.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/infer/ie.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/infer/onnx.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/infer/parsers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/infer.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/media.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/ocl/core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/ocl/goclkernel.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/ocl/imgproc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/opencv_includes.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/operators.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/own/assert.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/own/convert.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/own/cvdefs.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/own/exports.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/own/mat.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/own/saturate.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/own/scalar.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/own/types.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/plaidml/core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/plaidml/gplaidmlkernel.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/plaidml/plaidml.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/python/python.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/render/render.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/render/render_types.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/render.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/rmat.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/s11n/base.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/s11n.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/stereo.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/streaming/cap.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/streaming/desync.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/streaming/format.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/streaming/meta.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/streaming/source.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/streaming/sync.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/util/any.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/util/compiler_hints.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/util/copy_through_move.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/util/optional.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/util/throw.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/util/type_traits.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/util/util.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/util/variant.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi/video.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/gapi.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/hdf/hdf5.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/hdf.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/hfs.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/highgui/highgui.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/highgui/highgui_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/highgui.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/img_hash/average_hash.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/img_hash/block_mean_hash.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/img_hash/color_moment_hash.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/img_hash/img_hash_base.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/img_hash/marr_hildreth_hash.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/img_hash/phash.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/img_hash/radial_variance_hash.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/img_hash.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgcodecs/imgcodecs.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgcodecs/imgcodecs_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgcodecs/ios.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgcodecs/legacy/constants_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgcodecs/macosx.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgcodecs.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc/bindings.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc/detail/gcgraph.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc/hal/hal.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc/hal/interface.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc/imgproc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc/imgproc_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc/segmentation.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc/types_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/imgproc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/intensity_transform.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/line_descriptor/descriptor.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/line_descriptor.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/mcc/ccm.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/mcc/checker_detector.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/mcc/checker_model.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/mcc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ml/ml.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ml/ml.inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ml.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/objdetect/detection_based_tracker.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/objdetect/face.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/objdetect/objdetect.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/objdetect.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/opencv.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/opencv_modules.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/optflow/motempl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/optflow/pcaflow.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/optflow/rlofflow.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/optflow/sparse_matching_gpc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/optflow.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/phase_unwrapping/histogramphaseunwrapping.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/phase_unwrapping/phase_unwrapping.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/phase_unwrapping.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/photo/cuda.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/photo/legacy/constants_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/photo/photo.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/photo.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/plot.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/quality/quality_utils.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/quality/qualitybase.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/quality/qualitybrisque.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/quality/qualitygmsd.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/quality/qualitymse.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/quality/qualitypsnr.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/quality/qualityssim.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/quality.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rapid.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/map.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mapaffine.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mapper.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mappergradaffine.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mappergradeuclid.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mappergradproj.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mappergradshift.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mappergradsimilar.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mapperpyramid.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mapprojec.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/reg/mapshift.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/colored_kinfu.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/depth.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/detail/pose_graph.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/dynafu.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/intrinsics.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/kinfu.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/large_kinfu.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/linemod.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd/volume.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/rgbd.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/saliency/saliencyBaseClasses.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/saliency/saliencySpecializedClasses.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/saliency.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/shape/emdL1.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/shape/hist_cost.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/shape/shape.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/shape/shape_distance.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/shape/shape_transformer.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/shape.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stereo/descriptor.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stereo/quasi_dense_stereo.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stereo/stereo.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stereo.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/autocalib.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/blenders.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/camera.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/exposure_compensate.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/matchers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/motion_estimators.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/seam_finders.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/timelapsers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/util.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/util_inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/warpers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/detail/warpers_inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching/warpers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/stitching.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/structured_light/graycodepattern.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/structured_light/sinusoidalpattern.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/structured_light/structured_light.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/structured_light.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/superres/optical_flow.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/superres.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/surface_matching/icp.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/surface_matching/pose_3d.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/surface_matching/ppf_helpers.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/surface_matching/ppf_match_3d.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/surface_matching/t_hash_int.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/surface_matching.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/text/erfilter.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/text/ocr.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/text/swt_text_detection.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/text/textDetector.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/text.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking/feature.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking/kalman_filters.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking/onlineBoosting.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking/tldDataset.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking/tracking.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking/tracking_by_matching.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking/tracking_internals.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking/tracking_legacy.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/tracking.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/video/background_segm.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/video/detail/tracking.detail.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/video/legacy/constants_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/video/tracking.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/video/video.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/video.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videoio/cap_ios.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videoio/legacy/constants_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videoio/registry.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videoio/videoio.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videoio/videoio_c.h</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videoio.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/deblurring.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/fast_marching.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/fast_marching_inl.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/frame_source.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/global_motion.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/inpainting.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/log.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/motion_core.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/motion_stabilizing.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/optical_flow.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/outlier_rejection.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/ring_buffer.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/stabilizer.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab/wobble_suppression.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/videostab.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/wechat_qrcode.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xfeatures2d/cuda.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xfeatures2d/nonfree.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xfeatures2d.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/brightedges.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/color_match.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/deriche_filter.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/disparity_filter.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/edge_drawing.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/edge_filter.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/edgeboxes.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/edgepreserving_filter.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/estimated_covariance.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/fast_hough_transform.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/fast_line_detector.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/fourier_descriptors.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/lsc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/paillou_filter.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/peilin.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/ridgefilter.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/run_length_morphology.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/seeds.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/segmentation.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/slic.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/sparse_match_interpolator.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/structured_edge_detection.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc/weighted_median_filter.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/ximgproc.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xobjdetect.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xphoto/bm3d_image_denoising.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xphoto/dct_image_denoising.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xphoto/inpainting.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xphoto/oilpainting.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xphoto/tonemap.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xphoto/white_balance.hpp</li>
+            
+              <li style="list-style: none;">/include/opencv4/opencv2/xphoto.hpp</li>
+            
+              <li style="list-style: none;">/lib/cmake/opencv4/OpenCVConfig-version.cmake</li>
+            
+              <li style="list-style: none;">/lib/cmake/opencv4/OpenCVConfig.cmake</li>
+            
+              <li style="list-style: none;">/lib/cmake/opencv4/OpenCVModules-release.cmake</li>
+            
+              <li style="list-style: none;">/lib/cmake/opencv4/OpenCVModules.cmake</li>
+            
+              <li style="list-style: none;">/lib/libopencv_alphamat.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_alphamat.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_alphamat.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_aruco.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_aruco.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_aruco.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_barcode.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_barcode.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_barcode.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_bgsegm.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_bgsegm.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_bgsegm.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_bioinspired.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_bioinspired.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_bioinspired.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_calib3d.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_calib3d.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_calib3d.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ccalib.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ccalib.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ccalib.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_core.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_core.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_core.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_datasets.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_datasets.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_datasets.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn_objdetect.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn_objdetect.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn_objdetect.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn_superres.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn_superres.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dnn_superres.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dpm.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dpm.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_dpm.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_face.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_face.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_face.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_features2d.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_features2d.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_features2d.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_flann.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_flann.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_flann.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_fuzzy.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_fuzzy.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_fuzzy.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_gapi.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_gapi.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_gapi.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_hdf.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_hdf.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_hdf.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_hfs.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_hfs.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_hfs.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_highgui.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_highgui.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_highgui.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_img_hash.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_img_hash.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_img_hash.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_imgcodecs.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_imgcodecs.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_imgcodecs.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_imgproc.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_imgproc.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_imgproc.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_intensity_transform.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_intensity_transform.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_intensity_transform.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_line_descriptor.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_line_descriptor.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_line_descriptor.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_mcc.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_mcc.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_mcc.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ml.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ml.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ml.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_objdetect.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_objdetect.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_objdetect.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_optflow.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_optflow.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_optflow.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_phase_unwrapping.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_phase_unwrapping.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_phase_unwrapping.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_photo.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_photo.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_photo.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_plot.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_plot.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_plot.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_quality.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_quality.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_quality.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_rapid.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_rapid.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_rapid.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_reg.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_reg.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_reg.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_rgbd.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_rgbd.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_rgbd.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_saliency.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_saliency.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_saliency.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_shape.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_shape.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_shape.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_stereo.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_stereo.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_stereo.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_stitching.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_stitching.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_stitching.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_structured_light.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_structured_light.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_structured_light.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_superres.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_superres.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_superres.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_surface_matching.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_surface_matching.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_surface_matching.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_text.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_text.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_text.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_tracking.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_tracking.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_tracking.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_video.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_video.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_video.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_videoio.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_videoio.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_videoio.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_videostab.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_videostab.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_videostab.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_wechat_qrcode.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_wechat_qrcode.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_wechat_qrcode.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xfeatures2d.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xfeatures2d.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xfeatures2d.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ximgproc.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ximgproc.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_ximgproc.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xobjdetect.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xobjdetect.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xobjdetect.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xphoto.so</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xphoto.so.4.5</li>
+            
+              <li style="list-style: none;">/lib/libopencv_xphoto.so.4.5.4</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/opencv4.pc</li>
+            
+              <li style="list-style: none;">/share/licenses/opencv4/SoftFloat-COPYING.txt</li>
+            
+              <li style="list-style: none;">/share/licenses/opencv4/ade-LICENSE</li>
+            
+              <li style="list-style: none;">/share/licenses/opencv4/ittnotify-LICENSE.BSD</li>
+            
+              <li style="list-style: none;">/share/licenses/opencv4/ittnotify-LICENSE.GPL</li>
+            
+              <li style="list-style: none;">/share/licenses/opencv4/libopenjp2-LICENSE</li>
+            
+              <li style="list-style: none;">/share/licenses/opencv4/libopenjp2-README.md</li>
+            
+              <li style="list-style: none;">/share/licenses/opencv4/opencl-headers-LICENSE.txt</li>
+            
+              <li style="list-style: none;">/share/licenses/opencv4/quirc-LICENSE</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_eye.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_eye_tree_eyeglasses.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_frontalcatface.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_frontalcatface_extended.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_frontalface_alt.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_frontalface_alt2.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_frontalface_alt_tree.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_frontalface_default.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_fullbody.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_lefteye_2splits.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_licence_plate_rus_16stages.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_lowerbody.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_profileface.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_righteye_2splits.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_russian_plate_number.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_smile.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/haarcascades/haarcascade_upperbody.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/lbpcascades/lbpcascade_frontalcatface.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/lbpcascades/lbpcascade_frontalface.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/lbpcascades/lbpcascade_frontalface_improved.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/lbpcascades/lbpcascade_profileface.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/lbpcascades/lbpcascade_silverware.xml</li>
+            
+              <li style="list-style: none;">/share/opencv4/quality/brisque_model_live.yml</li>
+            
+              <li style="list-style: none;">/share/opencv4/quality/brisque_range_live.yml</li>
+            
+              <li style="list-style: none;">/share/opencv4/valgrind.supp</li>
+            
+              <li style="list-style: none;">/share/opencv4/valgrind_3rdparty.supp</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f7e1e88a995ef7dc83c80b531ea1b4eba2b621">
+            00f7e1e8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/021410c0021749930a91278156057c0b2e8c2b77">
+            021410c0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0757207f330252d2882934d0ecb0fb65a399eafd">
+            0757207f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0757207f330252d2882934d0ecb0fb65a399eafd">
+            0757207f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0615bf0751f32449b7f7060cae4371d542cd6800">
+            0615bf07
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0615bf0751f32449b7f7060cae4371d542cd6800">
+            0615bf07
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/072b07330975ba8e147baef49719861adb669b4e">
+            072b0733
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/072b07330975ba8e147baef49719861adb669b4e">
+            072b0733
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00334d352f2948ab5bcb28ba674d9c55e1b5f2ec">
+            00334d35
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01d7e7114569a6d50070e400ff648beecbc89375">
+            01d7e711
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0342aee96979e8109d7647a41b1c05768e4c801d">
+            0342aee9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0342aee96979e8109d7647a41b1c05768e4c801d">
+            0342aee9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049264c39b153a59c0bc01ed33e788ad0a3cf393">
+            049264c3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02facd2d449a58968969323622cb4d12c55df132">
+            02facd2d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/040b4a51e125e75d4221d292e198cb03ac8c3713">
+            040b4a51
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0582654eb22c99cdd3c1ced4624888eb2244679a">
+            0582654e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/066018f6e1483995c4510fced3a01566370e3fdb">
+            066018f6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0208a915c8c25725523a561db593d767a5a74d3d">
+            0208a915
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03fcc07ad5b9c70b86de57f9e1848081b9735774">
+            03fcc07a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03fcc07ad5b9c70b86de57f9e1848081b9735774">
+            03fcc07a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076a4b662cd7369d1732ad58f69d97ddf44b532d">
+            076a4b66
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076a4b662cd7369d1732ad58f69d97ddf44b532d">
+            076a4b66
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04fdff2517e398cfad4b951dfb8b7ffb02c81b78">
+            04fdff25
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04fdff2517e398cfad4b951dfb8b7ffb02c81b78">
+            04fdff25
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0719e92d1b84200d990ace44c039b3f001997c7d">
+            0719e92d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0719e92d1b84200d990ace44c039b3f001997c7d">
+            0719e92d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04af89173e47902e853e42d616bbe5c8b70f2941">
+            04af8917
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044053e28c51b0284d1ace43655f8292ad543167">
+            044053e2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03582eb6e3c6124a74604c96029f085839022989">
+            03582eb6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03582eb6e3c6124a74604c96029f085839022989">
+            03582eb6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037e51702ec8e52c375f5af013d31e267675c3ac">
+            037e5170
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/062e1e595fe8bde889c73c2954fb2c5617dcf42c">
+            062e1e59
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05065605f6f3406bdba7cf15dd380f597ac2a18f">
+            05065605
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05065605f6f3406bdba7cf15dd380f597ac2a18f">
+            05065605
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0080a5869066969e9cd8eebf7fe2f19ded637ff5">
+            0080a586
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01dc2d9c4cbab9b07438fac306b0275381727f77">
+            01dc2d9c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024b4917eb9cd8ac094a365e724a7e83ea2584bd">
+            024b4917
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024b4917eb9cd8ac094a365e724a7e83ea2584bd">
+            024b4917
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ea399625058f55e5bac354a4edc8411851f0f7">
+            01ea3996
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05c13a03e2fb27186d8d1f2825807bf156512111">
+            05c13a03
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063e5abdd268cf993df7b8bda1d8dda2676ca345">
+            063e5abd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063e5abdd268cf993df7b8bda1d8dda2676ca345">
+            063e5abd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05054fb1da2a5843e7f77f14b3e0c699aecd8d79">
+            05054fb1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03b2156d269ed9d50b359b4362a094725b275f2d">
+            03b2156d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/066544a7eb38a4886a619a9a6dfd26e474c7f7a6">
+            066544a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02e5286a663142e67e0f586d80a9cf848d0aae8e">
+            02e5286a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049b68becfcc04fadb846c07f42306692fb0ddb3">
+            049b68be
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0456d939a1ba4ae7df54c84cf873086d32679839">
+            0456d939
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b3cac1090c3925096e7ff1c58cb0b41c233f09">
+            02b3cac1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02b3cac1090c3925096e7ff1c58cb0b41c233f09">
+            02b3cac1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f116eaa037ce30670da482f12006d24c49206e">
+            03f116ea
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/008e7e3244ebc374d8f8df9632de0e821619319d">
+            008e7e32
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06ac702738a704d519b92abf7cd8df5bb4723fb0">
+            06ac7027
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06ac702738a704d519b92abf7cd8df5bb4723fb0">
+            06ac7027
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0010ae4960d35243e7abb046cd26ddda904a4c63">
+            0010ae49
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0045730c57d7d705dcc568c6e420dc6a226d1266">
+            0045730c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b645e872107806e61cf54cc1415a843f3af795">
+            01b645e8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b645e872107806e61cf54cc1415a843f3af795">
+            01b645e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a7b69509f78b4ae9d04fcdf8f57ceb435572fc">
+            05a7b695
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01bc332108d70c7dbe927bc78e82c4e35bf24274">
+            01bc3321
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06b89b345f18c87d8011e51e8bd51aafcc15d995">
+            06b89b34
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/077c3c1944e666fb5cc6863f20a18eb6b9a26265">
+            077c3c19
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01539e6f9a7d61b33ad04cc0a03acda736684379">
+            01539e6f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f66e1bf418429637047bea73d023be4185830f">
+            00f66e1b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04248f606f4ebfe298bfbfed3680a2fd5dacf796">
+            04248f60
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04248f606f4ebfe298bfbfed3680a2fd5dacf796">
+            04248f60
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026073e57ebcc3d9b314339bd8b5a847013f795c">
+            026073e5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0663a984e75e38f953825b282cbe8dd11cbabb9d">
+            0663a984
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.1.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/004443143fb020a01f1c734bff59bb8815ac183c">
+            00444314
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/004443143fb020a01f1c734bff59bb8815ac183c">
+            00444314
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/071b57ba79b6629e701740ccea2ebd61e888ff30">
+            071b57ba
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03425b00332ed2c025df74ebc945dc9a62e708a4">
+            03425b00
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04403e4c67fb89dd12b93902c3cbd37171d6690b">
+            04403e4c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04403e4c67fb89dd12b93902c3cbd37171d6690b">
+            04403e4c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.13</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0158d124bd32346c43e1aab6777b94ca82325db4">
+            0158d124
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00b05d47d30fff2ca1925ec38078907b95c6cb69">
+            00b05d47
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0777c4439db9b0edf0eb9d3ffd43461bf699ba43">
+            0777c443
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/027ca71156bc3ca5a9fbdab2f831f936305522dd">
+            027ca711
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0669f7c97bd8a35d91d8f3f11620ab13766581b0">
+            0669f7c9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00caa18b2fa9bacfa1c50c8497571d7bb5bfd753">
+            00caa18b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01910e84f9d16e1bff765d4dffb0defb4039bad6">
+            01910e84
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01910e84f9d16e1bff765d4dffb0defb4039bad6">
+            01910e84
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.10</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05e40cb1f25481cc24cd2a0242494e5259b09771">
+            05e40cb1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05e40cb1f25481cc24cd2a0242494e5259b09771">
+            05e40cb1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.9</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05e2859ab60dfd604a1ad26d92c5cb4e3de0191a">
+            05e2859a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06e6d7def2b50e55d14a35277612749f88ab3559">
+            06e6d7de
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/048029493750a9f8d253054f10fe6158f59835b3">
+            04802949
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0511d49f2e2a977dff0fa3e4e4ea070a1b5d9065">
+            0511d49f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b0d1c926472449474bf3486792bb5eb2c75b41">
+            01b0d1c9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b0d1c926472449474bf3486792bb5eb2c75b41">
+            01b0d1c9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.7</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01a051292f718bd387f0644efdafbb28a3895a2a">
+            01a05129
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00eaf038ac41fb12771ad7639855de8dd3776f30">
+            00eaf038
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05369891a9d34a846567049ac1623d2f152debda">
+            05369891
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01fb1ca1b89c6e1f1089258bc6a0969007ed67f3">
+            01fb1ca1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/023f5a098b836b964d4df48b58b22c3a19559490">
+            023f5a09
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026700b5272d2b6c579a2aa94e46918d6e04288a">
+            026700b5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/019fc2d03d36c4190a25fa259b03736ec344b4f9">
+            019fc2d0
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031a864f66539e028668f53e8e56e7d6600caa3b">
+            031a864f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049c38a9a292376d9c99628015d1adc609ac347e">
+            049c38a9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049c38a9a292376d9c99628015d1adc609ac347e">
+            049c38a9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076d0635b3e20d6c2fcae1f94d7f4bf0f2e895e9">
+            076d0635
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03228d60fe25ad7110b55eb2ab01231d57d06631">
+            03228d60
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02cafefac47181ad7c5994a68a19f84434a9a4af">
+            02cafefa
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/053f641d16ace8a67c2a668651b13757153f983f">
+            053f641d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.1a</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03aae985bc8430e06c0d41d055fab359a689bfca">
+            03aae985
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063a627493c3e5134e356fbd6a8ad0487952fdfa">
+            063a6274
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01d9831f4b0f49fb8bb0ec49b91ba47c2f7eda4e">
+            01d9831f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03deb613305bc7498f2578ae3289b378ae3c25aa">
+            03deb613
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a530fd10d7b846a47e8bc4b9a4d21fef20e3e8">
+            05a530fd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a530fd10d7b846a47e8bc4b9a4d21fef20e3e8">
+            05a530fd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0026458089ed4a754f75b182b5e903f2242127cc">
+            00264580
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06a34e58252de1bf6617be87f1d918379b808d48">
+            06a34e58
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/012e221de9c6033fe4287ba8094c8384c36e0430">
+            012e221d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/012e221de9c6033fe4287ba8094c8384c36e0430">
+            012e221d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01fc263ff29bee96af63c9bc051470f3339d856a">
+            01fc263f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01fc263ff29bee96af63c9bc051470f3339d856a">
+            01fc263f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0089b865e9979a1c50a606d065364c45fd783780">
+            0089b865
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05e489b24f1ef319dbee19f045294c3b61d8a9cf">
+            05e489b2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.0.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07cdd0fbb182915c4a86fa46ede479c4bb55e44b">
+            07cdd0fb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0526f2fb2ceeaa4f84bd73870f5fd89fcf0cf84b">
+            0526f2fb
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

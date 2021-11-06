@@ -1,0 +1,1726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package rizin on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / rizin
+    </dfn>
+    -
+    
+      UNIX-like reverse engineering framework and command-line toolset.
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://rizin.re/" rel="noopener" target="_blank">
+        https://rizin.re/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-3.0-or-later
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:7c6f434c@mail.ru">
+                Michael Raskin
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:makefu@syntax-fehler.de">
+                Felix Richter
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:joerg@thalheim.io">
+                Jörg Thalheim
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/rizin</li>
+            
+              <li style="list-style: none;">/bin/rz-agent</li>
+            
+              <li style="list-style: none;">/bin/rz-asm</li>
+            
+              <li style="list-style: none;">/bin/rz-ax</li>
+            
+              <li style="list-style: none;">/bin/rz-bin</li>
+            
+              <li style="list-style: none;">/bin/rz-diff</li>
+            
+              <li style="list-style: none;">/bin/rz-find</li>
+            
+              <li style="list-style: none;">/bin/rz-gg</li>
+            
+              <li style="list-style: none;">/bin/rz-hash</li>
+            
+              <li style="list-style: none;">/bin/rz-pm</li>
+            
+              <li style="list-style: none;">/bin/rz-run</li>
+            
+              <li style="list-style: none;">/bin/rz-sign</li>
+            
+              <li style="list-style: none;">/bin/rz-test</li>
+            
+              <li style="list-style: none;">/include/librz/rz_agraph.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_analysis.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_arch.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_asm.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_bin.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_bin_dwarf.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_bind.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_binheap.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_bp.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_cmd.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_config.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_cons.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_core.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_crypto/rz_des.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_crypto.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_debug.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_diff.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_egg.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_endian.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_flag.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_flist.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_getopt.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_heap_glibc.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_heap_jemalloc.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_io.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_lang.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_lib.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_list.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_magic.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_main.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_msg_digest.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_parse.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_pdb.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_project.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_qrcode.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_reg.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_regex.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_search.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_sign.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_skiplist.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_skyline.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_socket.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_syscall.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_th.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_type.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_types.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_types_base.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_types_overflow.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_userconf.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/pj.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_alloc.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_annotated_code.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_ascii_table.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_asn1.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_assert.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_base64.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_base91.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_big.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_bitmap.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_buf.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_cache.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_debruijn.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_event.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_file.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_graph.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_graph_drawable.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_hex.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_idpool.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_intervaltree.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_itv.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_json.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_log.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_luhn.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_mem.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_name.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_num.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_panels.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_pkcs7.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_pool.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_print.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_protobuf.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_punycode.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_queue.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_range.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_rbtree.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_serialize.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_signal.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_spaces.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_stack.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_str.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_str_constpool.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_str_search.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_str_util.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_strbuf.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_strpool.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_subprocess.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_sys.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_table.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_time.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_tree.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_uleb128.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_utf16.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_utf32.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_utf8.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util/rz_x509.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_util.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_vector.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_version.h</li>
+            
+              <li style="list-style: none;">/include/librz/rz_windows_heap.h</li>
+            
+              <li style="list-style: none;">/include/librz/rznaked.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/buffer.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/cdb.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/cdb_make.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/config.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/ht_inc.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/ht_pp.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/ht_pu.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/ht_up.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/ht_uu.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/ls.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/sdb.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/sdb_userconf.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/sdb_version.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/sdbht.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/set.h</li>
+            
+              <li style="list-style: none;">/include/librz/sdb/types.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/common/sfsocketcall.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/common/sftypes.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-arm-64/sflib.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-arm-64/sfsyscall.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-arm-64/sfsysnr.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-x86-32/sflib.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-x86-32/sfsyscall.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-x86-32/sfsysnr.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-x86-64/sflib.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-x86-64/sfsyscall.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/darwin-x86-64/sfsysnr.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-arm-32/sflib.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-arm-32/sfsyscall.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-arm-32/sfsysnr.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-arm-64/sflib.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-arm-64/sfsyscall.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-arm-64/sfsysnr.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-x86-32/sflib.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-x86-32/sfsyscall.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-x86-32/sfsysnr.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-x86-64/sflib.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-x86-64/sfsyscall.h</li>
+            
+              <li style="list-style: none;">/include/librz/sflib/linux-x86-64/sfsysnr.h</li>
+            
+              <li style="list-style: none;">/lib/librz_analysis.so</li>
+            
+              <li style="list-style: none;">/lib/librz_analysis.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_asm.so</li>
+            
+              <li style="list-style: none;">/lib/librz_asm.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_bin.so</li>
+            
+              <li style="list-style: none;">/lib/librz_bin.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_bp.so</li>
+            
+              <li style="list-style: none;">/lib/librz_bp.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_config.so</li>
+            
+              <li style="list-style: none;">/lib/librz_config.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_cons.so</li>
+            
+              <li style="list-style: none;">/lib/librz_cons.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_core.so</li>
+            
+              <li style="list-style: none;">/lib/librz_core.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_crypto.so</li>
+            
+              <li style="list-style: none;">/lib/librz_crypto.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_debug.so</li>
+            
+              <li style="list-style: none;">/lib/librz_debug.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_diff.so</li>
+            
+              <li style="list-style: none;">/lib/librz_diff.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_egg.so</li>
+            
+              <li style="list-style: none;">/lib/librz_egg.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_flag.so</li>
+            
+              <li style="list-style: none;">/lib/librz_flag.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_hash.so</li>
+            
+              <li style="list-style: none;">/lib/librz_hash.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_io.so</li>
+            
+              <li style="list-style: none;">/lib/librz_io.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_lang.so</li>
+            
+              <li style="list-style: none;">/lib/librz_lang.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_magic.so</li>
+            
+              <li style="list-style: none;">/lib/librz_magic.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_main.so</li>
+            
+              <li style="list-style: none;">/lib/librz_main.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_parse.so</li>
+            
+              <li style="list-style: none;">/lib/librz_parse.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_reg.so</li>
+            
+              <li style="list-style: none;">/lib/librz_reg.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_search.so</li>
+            
+              <li style="list-style: none;">/lib/librz_search.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_socket.so</li>
+            
+              <li style="list-style: none;">/lib/librz_socket.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_syscall.so</li>
+            
+              <li style="list-style: none;">/lib/librz_syscall.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_type.so</li>
+            
+              <li style="list-style: none;">/lib/librz_type.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/librz_util.so</li>
+            
+              <li style="list-style: none;">/lib/librz_util.so.0.3.0</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/librz.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_analysis.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_asm.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_bin.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_bp.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_config.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_cons.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_core.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_crypto.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_debug.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_diff.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_egg.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_flag.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_hash.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_io.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_lang.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_magic.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_main.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_parse.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_reg.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_search.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_socket.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_syscall.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_type.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/rz_util.pc</li>
+            
+              <li style="list-style: none;">/share/man/man1/rizin.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-agent.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-asm.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-ax.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-bin.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-diff.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-find.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-gg.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-hash.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-pm.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-run.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/rz-sign.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man7/rz-esil.7.gz</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATTiny48.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATTiny88.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega1280.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega1281.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega168.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega2560.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega2561.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega640.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega8.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATmega88.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/cpus/avr-ATxmega128a4u.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/platforms/arm-arm1176-bcm2835.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/platforms/arm-cortexA72-bcm2711.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/platforms/arm-cortexA8-omap3430.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/asm/platforms/x86-generic-generic.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/ayu</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/basic</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/behelit</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/bold</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/bright</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/cga</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/consonance</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/cutter</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/dark</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/darkda</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/defragger</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/focus</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/gb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/gentoo</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/lima</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/matrix</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/monokai</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/ogray</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/onedark</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/pink</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/rasta</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/sepia</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/smyck</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/solarized</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/tango</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/twilight</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/white</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/white2</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/xvilka</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/cons/zenburn</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/flag/tags.rz</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/AVICAP.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/AVIFILE.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/AWDEVL16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/CARDS.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/CMC.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/COMM.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/COMMCTRL.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/COMMDLG.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/COMPOBJ.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/CSPMAN.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/DCIMAN.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/DDEML.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/DESKCP16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/DIBENG.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/DISPDIB.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/DISPLAY.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/DSKMAINT.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/ENABLE3.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/FAXCODEC.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/GDI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/INET16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/IOSCLASS.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/KERNEL.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/KEYBOARD.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/LZEXPAND.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MAINCP16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MAPI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MAPIU.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MAPIX.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MCIAVI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MCICDA.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MCIMIDI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MCIOLE.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MCIWAVE.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MIDIMAP.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/ML3XEC16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MMCI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MMSYSTEM.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MODEM.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MODEMUI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MOUSE.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSACM.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSACMMAP.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSDOS.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSDOSD.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSJSTICK.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSMIXMGR.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSPCIC.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSPRINT.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSTCP.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/MSVIDEO.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/NETAPI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/NETCPL.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/NETDI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/NETOS.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/NETWARE.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/NW16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/OLE2.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/OLE2CONV.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/OLE2DISP.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/OLE2NLS.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/OLECLI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/OLESVR.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/PIFMGR.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/PKPD.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/PMSPL.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/POWER.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/RASAPI16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/RNASETUP.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/RSRC16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SB16SND.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SBFM.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SETUP4.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SETUPX.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SHELL.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SOUND.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SPOOLER.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/STORAGE.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SYSCLASS.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SYSDETMG.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SYSDM.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SYSEDIT.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SYSTEM.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/SYSTHUNK.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/TAPI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/TAPIADDR.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/TOOLHELP.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/TYPELIB.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/UMDM16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/USER.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/VER.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WHLP16T.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WIN32S16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WIN87EM.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WINASPI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WINNET16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WINOLDAP.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WINSOCK.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WINSPL16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WPSAPD.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WPSUNI.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WPSUNIRE.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/WSASRV.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/aclui.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/activeds.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/atl.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/borlndmm.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/browseui.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/cabinet.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/comctl32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/csmfpapi.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/csmtpapi.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/csncdapi.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/dsound.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/gsprop32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/iertutil.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/kernel32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mfc120.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mfc30.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mfc40.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mfc42.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mfc42u.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mfc71.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mfc71u.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mfc90u.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/msi.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/mstlsapi.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/msvbvm50.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/msvbvm60.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/odbc32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/oleaut32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/olecli32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/oledlg.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/olepro32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/olesvr32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/shdocvw.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/shell32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/shlwapi.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/spr32d70.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/urlmon.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/uxtheme.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/vb40032.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/vssapi.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/winmm.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/wldap32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/ws2_32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/wsnmp32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/dll/wsock32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/elf32</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/elf64</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/elf_enums</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/mz</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/pe32</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/trx</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/format/zip</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/fortunes/fortunes.fun</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/fortunes/fortunes.tips</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/hud/main</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/apple</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/archive</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/cafebabe</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/code</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/compressed</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/database</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/elf</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/filesystems</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/firmware</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/flash</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/freebsd</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/gimp</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/gpg</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/html</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/images</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/java</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/jpeg</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/linux</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/mach</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/mail.news</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/microsoft</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/mime</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/netbsd</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/network</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/openbsd</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/pdf</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/perl</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/python</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/riff</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/sniffer</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/sql</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/ssh</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/uuencode</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/video</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/vim</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/vorbis</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/magic/zfs</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/6502.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/8051.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/LH5801.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/arc.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/arm.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/avr.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/dalvik.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/i4004.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/i8080.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/java.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/lm32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/m68k.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/malbolge.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/mips.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/msp430.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/pic18c.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/ppc.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/propeller.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/riscv.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/sh.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/sparc.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/sysz.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/tms320.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/tricore.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/v810.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/v850.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/x86.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/xtensa.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/opcodes/z80.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/reg/avr-ATmega8-8.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/darwin-arm-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/darwin-arm-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/darwin-x86-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/darwin-x86-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/dos-x86-16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/freebsd-x86-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/ios-arm-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/ios-arm-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/ios-x86-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/linux-arm-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/linux-arm-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/linux-mips-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/linux-sparc-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/linux-x86-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/linux-x86-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/netbsd-x86-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/openbsd-x86-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/openbsd-x86-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/s110-arm-16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/windows-x86-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/syscall/windows-x86-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-arm-16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-arm-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-arm-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-avr-8.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-m68k-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-mips-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-mips-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-ppc-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-ppc-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-riscv-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-sparc-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-spc700-16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-sysz-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-x86-16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-x86-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-x86-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/cc-xtensa-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/functions-android.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/functions-libc.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/functions-linux.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/functions-macos.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/functions-windows.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/spec.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-android.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-arm-ios-16.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-arm-ios-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-arm-ios-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-atomic.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-libc.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-linux.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-macos.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-windows.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-x86-macos-64.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-x86-windows-32.sdb</li>
+            
+              <li style="list-style: none;">/share/rizin/0.3.0/types/types-x86-windows-64.sdb</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01d12be5e9fccbff5336954690efa604471d6fd3">
+            01d12be5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/042fc8dbb2f63848a8ba085d0621efba53c35407">
+            042fc8db
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/042fc8dbb2f63848a8ba085d0621efba53c35407">
+            042fc8db
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05bdbc55ffb15fbbf92a487664f1d4421542cb90">
+            05bdbc55
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04e470ae05c1444456fdbda2857e96a158c3cf5c">
+            04e470ae
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/042eebd8d91c16fbe44186bbf33b478c9edb780b">
+            042eebd8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/042eebd8d91c16fbe44186bbf33b478c9edb780b">
+            042eebd8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049ca38a0c84f7c41467b006712340fd52f00043">
+            049ca38a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049ca38a0c84f7c41467b006712340fd52f00043">
+            049ca38a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04855119e9a334cdae57e9c7708d566cf4f0f6b9">
+            04855119
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03ad3e810cbcd33d4095d5f4af88383fb87f9995">
+            03ad3e81
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044053e28c51b0284d1ace43655f8292ad543167">
+            044053e2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04de1306ba22e1b2147c4a8028e9209ffcd8884c">
+            04de1306
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.1.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03582eb6e3c6124a74604c96029f085839022989">
+            03582eb6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03582eb6e3c6124a74604c96029f085839022989">
+            03582eb6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/035434d8d519bfb7cefdf717a04750f65600eb7c">
+            035434d8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/062e1e595fe8bde889c73c2954fb2c5617dcf42c">
+            062e1e59
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03c092579a32d05de1ecc46b8307e5da06ed57b6">
+            03c09257
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03c092579a32d05de1ecc46b8307e5da06ed57b6">
+            03c09257
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037e51702ec8e52c375f5af013d31e267675c3ac">
+            037e5170
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075953b7905a20832ac3316f5fb28d406c3b23b8">
+            075953b7
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.1.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05065605f6f3406bdba7cf15dd380f597ac2a18f">
+            05065605
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05065605f6f3406bdba7cf15dd380f597ac2a18f">
+            05065605
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/022c5b0922b393cf9784d2d8d76e065b5de607c5">
+            022c5b09
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01dc2d9c4cbab9b07438fac306b0275381727f77">
+            01dc2d9c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0253c5c241e9d85e9e1ac7e797ed1c7365279c2a">
+            0253c5c2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0253c5c241e9d85e9e1ac7e797ed1c7365279c2a">
+            0253c5c2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0123d8c4c29fc807d5c877537d1947da6e57e2bf">
+            0123d8c4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0716841463629a08ac69fca4a8645b3eede030a6">
+            07168414
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04e9977b41b789949761c1d4a9656f5cf6f3838b">
+            04e9977b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04e9977b41b789949761c1d4a9656f5cf6f3838b">
+            04e9977b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0463f91e04abbe37e7a7ea46e970357529aba324">
+            0463f91e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0463f91e04abbe37e7a7ea46e970357529aba324">
+            0463f91e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04991f2ec8d0dc467faf3e7636664c716ba8a035">
+            04991f2e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/013e24518899be0bdbca50ef3a650e69385f7643">
+            013e2451
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.1.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045a4797bd94af988dace97529f1ba5078ce5c71">
+            045a4797
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045a4797bd94af988dace97529f1ba5078ce5c71">
+            045a4797
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.2.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03a196c26ae898cc8c8fb739e435c86b1c88173e">
+            03a196c2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00fe26700397b46a33ffbcb36e5297cf31b57faa">
+            00fe2670
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.1.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/060e94136f637f084e3b6b3985b9366cf918d2c0">
+            060e9413
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/004cbe406ac739b9f1a743d79ec577d7ac893da7">
+            004cbe40
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

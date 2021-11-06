@@ -1,0 +1,1993 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package sourcetrail on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / sourcetrail
+    </dfn>
+    -
+    
+      A cross-platform source explorer for C/C&#43;&#43; and Java
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://www.sourcetrail.com" rel="noopener" target="_blank">
+        https://www.sourcetrail.com
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-3.0-or-later
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:git@midchildan.org">
+                midchildan
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/sourcetrail</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/bin/.sourcetrail-wrapped</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/bin/sourcetrail</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/bin/sourcetrail_indexer</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/color_schemes/bad_rainbow.xml</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/color_schemes/bright.xml</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/color_schemes/dark.xml</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__clang_cuda_builtin_vars.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__clang_cuda_cmath.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__clang_cuda_complex_builtins.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__clang_cuda_device_functions.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__clang_cuda_intrinsics.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__clang_cuda_libdevice_declares.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__clang_cuda_math_forward_declares.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__clang_cuda_runtime_wrapper.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__stddef_max_align_t.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__wmmintrin_aes.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/__wmmintrin_pclmul.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/adxintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/altivec.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ammintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/arm64intr.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/arm_acle.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/arm_cmse.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/arm_fp16.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/arm_mve.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/arm_neon.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/armintr.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx2intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512bf16intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512bitalgintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512bwintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512cdintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512dqintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512erintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512fintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512ifmaintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512ifmavlintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512pfintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vbmi2intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vbmiintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vbmivlintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vlbf16intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vlbitalgintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vlbwintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vlcdintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vldqintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vlintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vlvbmi2intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vlvnniintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vlvp2intersectintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vnniintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vp2intersectintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vpopcntdqintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avx512vpopcntdqvlintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/avxintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/bmi2intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/bmiintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/cetintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/cldemoteintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/clflushoptintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/clwbintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/clzerointrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/cpuid.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/cuda_wrappers/algorithm</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/cuda_wrappers/complex</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/cuda_wrappers/new</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/emmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/enqcmdintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/f16cintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/float.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/fma4intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/fmaintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/fxsrintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/gfniintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/htmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/htmxlintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ia32intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/immintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/inttypes.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/invpcidintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/iso646.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/limits.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/lwpintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/lzcntintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/mm3dnow.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/mm_malloc.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/mmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/module.modulemap</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/movdirintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/msa.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/mwaitxintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/nmmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/opencl-c-base.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/opencl-c.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/openmp_wrappers/__clang_openmp_math.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/openmp_wrappers/__clang_openmp_math_declares.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/openmp_wrappers/cmath</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/openmp_wrappers/math.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/pconfigintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/pkuintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/pmmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/popcntintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ppc_wrappers/emmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ppc_wrappers/mm_malloc.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ppc_wrappers/mmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ppc_wrappers/pmmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ppc_wrappers/smmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ppc_wrappers/tmmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ppc_wrappers/xmmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/prfchwintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/ptwriteintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/rdseedintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/rtmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/s390intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/sgxintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/shaintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/smmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/stdalign.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/stdarg.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/stdatomic.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/stdbool.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/stddef.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/stdint.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/stdnoreturn.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/tbmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/tgmath.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/tmmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/unwind.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/vadefs.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/vaesintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/varargs.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/vecintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/vpclmulqdqintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/waitpkgintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/wbnoinvdintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/wmmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/x86intrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/xmmintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/xopintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/xsavecintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/xsaveintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/xsaveoptintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/xsavesintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/cxx/include/xtestintrin.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/ApplicationSettings.xml</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/javaparser.srctrlprj</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/CommentsInserter.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/JavaParser.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/Position.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/Range.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/AccessSpecifier.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/CompilationUnit.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/ImportDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/Modifier.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/Node.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/PackageDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/TypeArguments.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/TypeParameter.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/AnnotationDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/AnnotationMemberDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/BaseParameter.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/BodyDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/ClassOrInterfaceDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/ConstructorDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/EmptyMemberDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/EmptyTypeDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/EnumConstantDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/EnumDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/FieldDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/InitializerDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/MethodDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/MultiTypeParameter.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/Parameter.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/TypeDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/VariableDeclarator.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/body/VariableDeclaratorId.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/comments/BlockComment.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/comments/Comment.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/comments/CommentsCollection.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/comments/CommentsParser.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/comments/JavadocComment.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/comments/LineComment.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/AnnotationExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/ArrayAccessExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/ArrayCreationExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/ArrayInitializerExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/AssignExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/BinaryExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/BooleanLiteralExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/CastExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/CharLiteralExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/ClassExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/ConditionalExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/DoubleLiteralExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/EnclosedExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/Expression.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/FieldAccessExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/InstanceOfExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/IntegerLiteralExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/IntegerLiteralMinValueExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/LambdaExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/LiteralExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/LongLiteralExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/LongLiteralMinValueExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/MarkerAnnotationExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/MemberValuePair.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/MethodCallExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/MethodReferenceExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/NameExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/NormalAnnotationExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/NullLiteralExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/ObjectCreationExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/QualifiedNameExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/SingleMemberAnnotationExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/StringLiteralExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/SuperExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/ThisExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/TypeExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/UnaryExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/expr/VariableDeclarationExpr.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithAnnotations.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithArrays.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithBlockStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithDeclaration.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithJavaDoc.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithMembers.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithModifiers.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithName.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithParameters.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithThrowable.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/nodeTypes/NodeWithType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/AssertStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/BlockStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/BreakStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/CatchClause.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/ContinueStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/DoStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/EmptyStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/ExplicitConstructorInvocationStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/ExpressionStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/ForStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/ForeachStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/IfStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/LabeledStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/ReturnStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/Statement.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/SwitchEntryStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/SwitchStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/SynchronizedStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/ThrowStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/TryStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/TypeDeclarationStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/stmt/WhileStmt.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/ClassOrInterfaceType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/IntersectionType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/PrimitiveType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/ReferenceType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/Type.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/UnionType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/UnknownType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/VoidType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/type/WildcardType.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/CloneVisitor.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/DumpVisitor.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/EqualsVisitor.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/GenericVisitor.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/GenericVisitorAdapter.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/ModifierVisitorAdapter.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/TreeVisitor.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/VoidVisitor.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/ast/visitor/VoidVisitorAdapter.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/utils/ClassUtils.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/utils/PositionUtils.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/java/com/github/javaparser/utils/Utils.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/src/main/javacc/java_1_8.jj</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/ASTParser.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/ASTParserConstants.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/ASTParserTokenManager.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/JavaCharStream.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/ParseException.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/Provider.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/StreamProvider.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/StringProvider.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/Token.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/javaparser/target/generated-sources/javacc/com/github/javaparser/TokenMgrException.java</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/artificial_player.cpp</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/artificial_player.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/field.cpp</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/field.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/game_object.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/human_player.cpp</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/human_player.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/io.cpp</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/io.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/main.cpp</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/player.cpp</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/player.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/tictactoe.cpp</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/src/tictactoe.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_cpp/tictactoe_cpp.srctrlprj</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_py/src/tictactoe.py</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tictactoe_py/tictactoe_py.srctrlprj</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/code_tutorial_1.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/code_tutorial_2.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/code_tutorial_3.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/graph_tutorial_1.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/graph_tutorial_2.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/graph_tutorial_3.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/graph_tutorial_4.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/graph_tutorial_5.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/graph_tutorial_6.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/main.cpp</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/my_first_step.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/my_next_step.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/search_tutorial_1.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/search_tutorial_2.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/search_tutorial_3.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/search_tutorial_4.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/search_tutorial_5.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/start_exploring.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/string.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/the_central_hub.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/src/utility.h</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/projects/tutorial/tutorial.srctrlprj</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fallback/window_settings.ini</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/FiraSans-Regular.otf</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/FiraSans-SemiBold.otf</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/FiraSans_License.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/Roboto-Bold.ttf</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/Roboto-Regular.ttf</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/Roboto_License.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/SourceCodePro-Bold.otf</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/SourceCodePro-Medium.otf</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/SourceCodePro-Regular.otf</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/fonts/SourceCodePro_License.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/about/about.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/about/logo_sourcetrail.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/bookmark_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/arrow_down.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/arrow_line_down.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/arrow_line_up.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/arrow_right.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/bookmark_active.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/bookmark_delete_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/bookmark_edit_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/bookmark_list_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/bookmark_view/images/edit_bookmark_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/code_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/arrow_down.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/arrow_left.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/arrow_right.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/arrow_up.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/button_background.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/edit.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/file.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/list.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/maximize_active.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/maximize_inactive.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/pattern_bright.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/pattern_dark.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/pattern_grey.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/snippet_active.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/snippet_arrow_down.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/snippet_arrow_right.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/code_view/images/snippet_inactive.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/custom_trail_view/custom_trail_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/custom_trail_view/images/circle.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/graph_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/annotation.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/arrow.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/bundle.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/default.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/enum.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/file.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/file_incomplete.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/graph.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/graph_arrow.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/graph_custom.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/graph_down.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/graph_left.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/graph_right.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/graph_up.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/group_namespace.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/legend.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/macro.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/namespace.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/pattern.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/private.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/protected.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/public.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/template.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/typedef.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/zoom_in.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/graph_view/images/zoom_out.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/history_list/history_list.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/history_list/images/arrow.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/c_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/cbp_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/cdb_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/cpp_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/empty_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/gradle_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/java_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/logo_1024_1024.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/mvn_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/project.ico</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/project_256_256.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/python_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/sourcetrail.ico</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/icon/vs_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/indexing_dialog/error.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/indexing_dialog/flag.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/indexing_dialog/indexing_dialog.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/indexing_dialog/progress_bar_element.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/installer/windows_installer_banner.jpg</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/keyboard_shortcuts/keyboard_shortcuts.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/main/images/close_black.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/main/images/close_grey.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/main/images/close_white.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/main/images/float_black.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/main/images/float_grey.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/main/images/float_white.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/main/main.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/main/scrollbar.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/refresh_view/images/refresh.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/refresh_view/refresh_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/screen_search_view/images/close.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/screen_search_view/screen_search_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/search_view/images/arrow.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/search_view/images/home.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/search_view/images/search.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/search_view/search_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/startscreen/github_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/startscreen/patreon_icon.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/startscreen/startscreen.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/statusbar_view/dot.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/statusbar_view/loader.gif</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/tabbed_view/arrow_down.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/tabbed_view/arrow_up.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/tabbed_view/tabbed_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/tabs_view/images/add.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/tabs_view/images/close.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/tabs_view/tabs_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/tooltip_view/tooltip_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/undoredo_view/images/arrow_left.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/undoredo_view/images/arrow_right.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/undoredo_view/images/history.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/undoredo_view/undoredo_view.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/dots.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/dots_hover.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/help.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/help_hover.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/listbox.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/logo.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/minus.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/minus_hover.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/plus.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/plus_hover.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/refresh.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/refresh_hover.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/size_grip_black.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/size_grip_white.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/source_group_add.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/source_group_add_hover.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/source_group_copy.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/source_group_copy_hover.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/source_group_delete.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/source_group_delete_hover.png</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/gui/window/window.css</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/gradle/init.gradle</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/gradle-tooling-api-4.2.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/java-indexer.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.core.commands-3.9.500.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.core.contenttype-3.7.400.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.core.expressions-3.6.500.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.core.filesystem-1.7.500.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.core.jobs-3.10.500.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.core.resources-3.13.500.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.core.runtime-3.16.0.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.equinox.app-1.4.300.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.equinox.common-3.10.500.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.equinox.preferences-3.7.500.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.equinox.registry-3.8.500.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.jdt.core-3.19.0.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.osgi-3.15.0.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/org.eclipse.text-3.9.0.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/slf4j-api-1.7.10.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/java/lib/slf4j-simple-1.7.10.jar</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_boost.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_catch.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_clang.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_cpp_sqlite.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_eclipse.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_gradle.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_openssl.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_qt.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/license/3rd_party_licenses/license_tinyxml.txt</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/python</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/syntax_highlighting_rules/cpp.rules</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/syntax_highlighting_rules/java.rules</li>
+            
+              <li style="list-style: none;">/opt/sourcetrail/share/data/syntax_highlighting_rules/python.rules</li>
+            
+              <li style="list-style: none;">/share/applications/sourcetrail.desktop</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/128x128/apps/sourcetrail.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/256x256/apps/sourcetrail.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/48x48/apps/sourcetrail.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/512x512/apps/sourcetrail.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/64x64/apps/sourcetrail.png</li>
+            
+              <li style="list-style: none;">/share/mime/packages/sourcetrail-mime.xml</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2020.2.43</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06749ba321ee3f284df74ab848985106eea52c13">
+            06749ba3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2020.2.43</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f2fd5fb9f7def14154a7b80e7676e641dd56f9">
+            06f2fd5f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0096eb9274b430c8cf1a699c68054972c1845291">
+            0096eb92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02885ae8e207c5c4c1d2f3e7ac02f7e72c99d13e">
+            02885ae8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afc85506c30cd901509aa825e6abf9ed702401">
+            00afc855
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2020.2.43</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0722158dba9c401354a53bb618e6e2b1903c7ea7">
+            0722158d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07dfadc89c47b6de05f8cd8d9a659b47f635f571">
+            07dfadc8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2020.2.43</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05d4955a96608ce8309124140360cee4c9a1390c">
+            05d4955a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03df9f54fc54a29d14a614bd29323076b5259588">
+            03df9f54
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00251c0689046f194551ba509ef4249f8e1f50d3">
+            00251c06
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00251c0689046f194551ba509ef4249f8e1f50d3">
+            00251c06
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2020.2.43</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045c2abdfafaab8b7e080439cbd6c50c9c74bd49">
+            045c2abd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06d328c3460bc07db4271bc3e63481c5ec1b45cf">
+            06d328c3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fa0f1a2ec5ad455e16a72bdb304f7c0e098b76">
+            05fa0f1a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fa0f1a2ec5ad455e16a72bdb304f7c0e098b76">
+            05fa0f1a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2020.2.43</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00213ef17f8bc35aae3227012256713d17b1d0d8">
+            00213ef1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00213ef17f8bc35aae3227012256713d17b1d0d8">
+            00213ef1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050aad187bc99f45328b2c5abf3c0ab29cbbe254">
+            050aad18
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050aad187bc99f45328b2c5abf3c0ab29cbbe254">
+            050aad18
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2020.2.43</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05659a44ceb009f9c0c7060c3c1456276a2b3472">
+            05659a44
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/038497d3b3fee1121c155c2787830e55c8559847">
+            038497d3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e485c189e4815fbb463c7dc0dfbfa7b1e4686">
+            069e485c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e485c189e4815fbb463c7dc0dfbfa7b1e4686">
+            069e485c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2020.2.43</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/023abd4ffbb123961d355c79105a91652933ac97">
+            023abd4f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/019fa5f6086b2744c5c0f3ce6a756f9a8aa70e74">
+            019fa5f6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0218f30af58b9081f477504edd2b3ae19d3da9b5">
+            0218f30a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02796d77f8e7357863577583c3da52119b822e92">
+            02796d77
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.1.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0634484a53b548d4fc109a9f5e400e1d8fb2f55f">
+            0634484a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00610756df9a235f2de907a18cd8fded638d24e0">
+            00610756
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036cef94733d2af03f3732eb8673cf0744303972">
+            036cef94
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/010d2f4aa29448b1908b954006484cfbbf7e7d50">
+            010d2f4a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02f869ff30a3d0f3a431b49a3e0e0469cf7e50cd">
+            02f869ff
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/016111e839ec15e23c080da8ff955a548155202c">
+            016111e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f3bc518e8fc12946e1a54aaa33c4e5d58519d3">
+            04f3bc51
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f3bc518e8fc12946e1a54aaa33c4e5d58519d3">
+            04f3bc51
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0646b9f7c39776a3ec8e4f3f6c60bd6e735d5b88">
+            0646b9f7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069364f34897be82c193dcd3501ab99f4e46cdc0">
+            069364f3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e9fd44928de4235b0a01dd0207fdd9b5b5359">
+            069e9fd4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e9fd44928de4235b0a01dd0207fdd9b5b5359">
+            069e9fd4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/053168d47004e9a29d4c3fbb6b905a320a0edb1b">
+            053168d4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03941c1e673289dbc732da059d6edd7b61b8fde0">
+            03941c1e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cb05d20c780f0cbe76eca6dfc2f08e741a1660">
+            04cb05d2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cb05d20c780f0cbe76eca6dfc2f08e741a1660">
+            04cb05d2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e78496b6ff3dd0524422de0fe8864fb22896e2">
+            03e78496
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e6ca15e205bf892eac08a5f561c3a16284c90a">
+            03e6ca15
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c5e811e6e0244a8e5a9645fd8347c719aab228">
+            06c5e811
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c5e811e6e0244a8e5a9645fd8347c719aab228">
+            06c5e811
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/061838aa44e2b4ff5c3d3a5acea132dcfe1e85a0">
+            061838aa
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b407743de858d8b0b4be1ce23ae2fa018f8d89">
+            07b40774
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00633a3e1399674083e1cf6d96ed52340dd462d0">
+            00633a3e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00633a3e1399674083e1cf6d96ed52340dd462d0">
+            00633a3e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0002a7d9ee08b26c0f6ff267d8f024cc4aee9a5c">
+            0002a7d9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04d5ccc234a709b1147483f597fb9f7af63f44fe">
+            04d5ccc2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06b4f4d46f849b533f5171222814b90b8533b9e6">
+            06b4f4d4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06b4f4d46f849b533f5171222814b90b8533b9e6">
+            06b4f4d4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.3.46</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06041fd174fe53b2db7c487cbad0acfe10ffdaef">
+            06041fd1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f71c2f8ff6d594d34cf147153e7a5226eb1ff3">
+            04f71c2f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0281599ad26471b328fe98c3f8d202d97a3f9544">
+            0281599a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b726c032af4c2a8ba9fe0113ff8b25da308b72">
+            04b726c0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.1.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/071a4db33e46766f8d7dd9243f44cc33256ab04f">
+            071a4db3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/071a4db33e46766f8d7dd9243f44cc33256ab04f">
+            071a4db3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/046390bf97cd52b28b96b476688ff97e1cf9e5c4">
+            046390bf
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0732203c3b63c95d80a1d23f40363e804e05662a">
+            0732203c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.1.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02d79ced9016ec67f3bfd3928a5c2969b25e2188">
+            02d79ced
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02d79ced9016ec67f3bfd3928a5c2969b25e2188">
+            02d79ced
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ee2ee2ba5b1d4763c77a6ed46523c17df97167">
+            01ee2ee2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03d3ed3eb089f83286b72465fa2a4fe23867eb70">
+            03d3ed3e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.1.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076c10183622115c38936382f41a9d2ec865e71f">
+            076c1018
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076c10183622115c38936382f41a9d2ec865e71f">
+            076c1018
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.2.39</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044bf77593eebd2384bf323909950f74c24f5012">
+            044bf775
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044bf77593eebd2384bf323909950f74c24f5012">
+            044bf775
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.1.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00263c9306107f3ff79ecd185d7e0712fb0560d8">
+            00263c93
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031c6151dd282572bdf3fb3a8c2a5af677c83d7b">
+            031c6151
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2018.3.55</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00a52224997a32cd95a43c40e94e20d53bb52628">
+            00a52224
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00a52224997a32cd95a43c40e94e20d53bb52628">
+            00a52224
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.1.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cc8385233bdb0d63b19cdc13a61a23af10b4f4">
+            04cc8385
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02ea1812c85033386f06ddac2796e75cdb608281">
+            02ea1812
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2018.3.55</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0045164b1517419fdfbd3c5cec2eadb7aae9088a">
+            0045164b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0045164b1517419fdfbd3c5cec2eadb7aae9088a">
+            0045164b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.1.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0754f1b37116156d940c7c24fe8d176979dfa303">
+            0754f1b3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06fad89bd6069b82fdd5a74103142e32d004640c">
+            06fad89b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2018.3.55</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/051c9ccf469374b0100159f03a9b181542883c63">
+            051c9ccf
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/051c9ccf469374b0100159f03a9b181542883c63">
+            051c9ccf
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2019.1.11</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037e1e8ea8ea233108f75996e19f5485166e4a52">
+            037e1e8e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/027e6dd510f8b5f0e3113a52bf04fd90c2ffe51e">
+            027e6dd5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2018.3.55</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045e1332d97d0db7c09265d2c2041fbca906286c">
+            045e1332
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01bca861c2f5741de50f8ec966167101e957b5d4">
+            01bca861
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

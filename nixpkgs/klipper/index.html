@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package klipper on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / klipper
+    </dfn>
+    -
+    
+      The Klipper 3D printer firmware
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://github.com/KevinOConnor/klipper" rel="noopener" target="_blank">
+        https://github.com/KevinOConnor/klipper
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-3.0-only
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:meurerbernardo@gmail.com">
+                Bernardo Meurer
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:hello@zhaofeng.li">
+                Zhaofeng Li
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/lib/klipper/chelper/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/c_helper.so</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/compiler.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/itersolve.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/itersolve.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_cartesian.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_corexy.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_corexz.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_delta.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_extruder.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_polar.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_rotary_delta.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_shaper.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/kin_winch.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/list.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/msgblock.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/msgblock.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/pollreactor.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/pollreactor.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/pyhelper.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/pyhelper.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/serialqueue.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/serialqueue.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/stepcompress.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/stepcompress.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/trapq.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/trapq.h</li>
+            
+              <li style="list-style: none;">/lib/klipper/chelper/trdispatch.c</li>
+            
+              <li style="list-style: none;">/lib/klipper/clocksync.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/configfile.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/console.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/ad5206.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/adc_scaled.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/adc_temperature.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/adxl345.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/bed_mesh.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/bed_screws.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/bed_tilt.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/bltouch.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/bme280.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/board_pins.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/bus.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/buttons.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/canbus_ids.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/controller_fan.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/delayed_gcode.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/delta_calibrate.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/display.cfg</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/display.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/font8x14.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/hd44780.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/hd44780_spi.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/menu.cfg</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/menu.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/menu_keys.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/st7920.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display/uc1701.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/display_status.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/dotstar.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/ds18b20.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/duplicate_pin_override.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/endstop_phase.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/extruder_stepper.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/fan.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/fan_generic.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/filament_motion_sensor.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/filament_switch_sensor.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/firmware_retraction.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/force_move.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/gcode_arcs.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/gcode_button.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/gcode_macro.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/gcode_move.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/hall_filament_width_sensor.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/heater_bed.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/heater_fan.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/heater_generic.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/heaters.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/homing.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/homing_heaters.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/homing_override.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/htu21d.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/idle_timeout.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/input_shaper.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/lm75.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/manual_probe.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/manual_stepper.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/mcp4018.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/mcp4451.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/mcp4728.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/motion_report.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/multi_pin.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/neopixel.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/output_pin.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/palette2.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/pause_resume.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/pca9533.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/pid_calibrate.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/print_stats.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/probe.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/pulse_counter.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/quad_gantry_level.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/query_adc.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/query_endstops.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/replicape.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/resonance_tester.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/respond.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/safe_z_home.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/samd_sercom.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/save_variables.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/screws_tilt_adjust.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/sdcard_loop.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/servo.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/shaper_calibrate.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/skew_correction.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/spi_temperature.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/static_digital_output.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/statistics.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/stepper_enable.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/sx1509.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/temperature_fan.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/temperature_host.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/temperature_mcu.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/temperature_sensor.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/thermistor.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tmc.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tmc2130.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tmc2208.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tmc2209.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tmc2660.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tmc5160.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tmc_uart.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tsl1401cl_filament_width_sensor.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/tuning_tower.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/verify_heater.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/virtual_sdcard.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/extras/z_tilt.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/gcode.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/cartesian.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/corexy.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/corexz.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/delta.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/extruder.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/hybrid_corexy.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/hybrid_corexz.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/idex_modes.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/none.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/polar.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/rotary_delta.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/kinematics/winch.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/klippy.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/mathutil.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/mcu.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/msgproto.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/parsedump.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/pins.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/queuelogger.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/reactor.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/serialhdl.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/stepper.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/toolhead.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/util.py</li>
+            
+              <li style="list-style: none;">/lib/klipper/webhooks.py</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-09-21</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-09-03</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-09-21</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e0891d170e18c35452fcda220db11beafb6ae2">
+            07e0891d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/021410c0021749930a91278156057c0b2e8c2b77">
+            021410c0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-09-03</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/059a86bbceda8817869c313ecb1b1ce112c067da">
+            059a86bb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/076563ebac229d5070b1148faf5a633bc3071804">
+            076563eb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-07-15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06a91dda9cae112c32177f64df4ebfc01be934e3">
+            06a91dda
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06a91dda9cae112c32177f64df4ebfc01be934e3">
+            06a91dda
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-09-03</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/046258528b0bd55910df2c2396059bf9488219b0">
+            04625852
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/046f81842fbe326713ba53131260d2315dcfdf75">
+            046f8184
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-07-15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03111112cc69ed3a90d5b538c5c73d3f565da247">
+            03111112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03111112cc69ed3a90d5b538c5c73d3f565da247">
+            03111112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-09-03</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06971f9777d3355b8942459babe59a7be6a64a3b">
+            06971f97
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00727874f77a2ef2baad4179cd66de5ae64a72e0">
+            00727874
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-07-15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044da009d172482fc8b748bcc92cced3c915bb0e">
+            044da009
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b"></span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-07-15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0649d2c8a1a4cc1bb1145c77b805cf456f2ce514">
+            0649d2c8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b"></span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f7d4c1d084691fa61fe6028809929763dfd1b0">
+            06f7d4c1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/005c8088e1c8af388d20f5abc21f227cd621825a">
+            005c8088
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-07-15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04855119e9a334cdae57e9c7708d566cf4f0f6b9">
+            04855119
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/035dcc0e7ea6a59990fe9bc350115df94aa61564">
+            035dcc0e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b"></span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-07-15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04de1306ba22e1b2147c4a8028e9209ffcd8884c">
+            04de1306
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04de1306ba22e1b2147c4a8028e9209ffcd8884c">
+            04de1306
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b"></span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07811f56c5b4bd6981ed8f632e5445a8552b518f">
+            07811f56
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07811f56c5b4bd6981ed8f632e5445a8552b518f">
+            07811f56
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-07-15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/073b8ce7388a5a6eb0b6a1f6e2597511167585d2">
+            073b8ce7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03507abd3d3f0896a23fb01b7159e1d2427c0cd0">
+            03507abd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b"></span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0708fe494be218d06141a1269c89077de61cbea7">
+            0708fe49
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0708fe494be218d06141a1269c89077de61cbea7">
+            0708fe49
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2021-07-15</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0066d898c91758f514599ab97ce8478336579448">
+            0066d898
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f50b6164fc9a1216d1e2008d5b2bfc2bee5fe3">
+            00f50b61
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b"></span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0367125b170df2a2999537ffbb083583617ad8e4">
+            0367125b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03100da5a714a2b6c5210ceb6af092073ba4fce5">
+            03100da5
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

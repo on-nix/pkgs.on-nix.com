@@ -1,0 +1,1267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package shorewall on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / shorewall
+    </dfn>
+    -
+    
+      Shorewall is a high-level tool for configuring Netfilter. You describe your
+firewall/gateway requirements using entries in a set of configuration
+files. Shorewall reads those configuration files and with the help of the
+iptables, iptables-restore, ip and tc utilities, Shorewall configures
+Netfilter and the Linux networking subsystem to match your requirements.
+Shorewall can be used on a dedicated firewall system, a multi-function
+gateway/router/server or on a standalone GNU/Linux system. Shorewall does
+not use Netfilter&#39;s ipchains compatibility mode and can thus take
+advantage of Netfilter&#39;s connection state tracking capabilities.
+
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="http://www.shorewall.net/" rel="noopener" target="_blank">
+        http://www.shorewall.net/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-2.0-or-later
+      </p>
+    
+  
+
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/shorewall</li>
+            
+              <li style="list-style: none;">/bin/shorewall6</li>
+            
+              <li style="list-style: none;">/etc-example/logrotate.d/shorewall</li>
+            
+              <li style="list-style: none;">/etc-example/logrotate.d/shorewall6</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/accounting</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/actions</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/arprules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/blrules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/clear</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/conntrack</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/ecn</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/findgw</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/hosts</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/init</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/initdone</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/interfaces</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/lib.private</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/maclist</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/mangle</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/nat</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/netmap</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/params</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/policy</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/providers</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/proxyarp</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/refresh</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/refreshed</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/restored</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/routes</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/rtrules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/rules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/scfilter</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/secmarks</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/shorewall.conf</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/snat</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/start</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/started</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/stop</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/stopped</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/stoppedrules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/tcclasses</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/tcclear</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/tcdevices</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/tcfilters</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/tcinterfaces</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/tcpri</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/tunnels</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall/zones</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/accounting</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/actions</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/blrules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/clear</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/conntrack</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/findgw</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/hosts</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/init</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/interfaces</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/lib.private</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/maclist</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/mangle</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/nat</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/netmap</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/params</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/policy</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/providers</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/proxyndp</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/refresh</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/refreshed</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/restored</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/routes</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/rtrules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/rules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/scfilter</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/secmarks</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/shorewall6.conf</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/snat</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/start</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/started</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/stop</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/stopped</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/stoppedrules</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/tcclasses</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/tcclear</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/tcdevices</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/tcfilters</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/tcinterfaces</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/tcpri</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/tunnels</li>
+            
+              <li style="list-style: none;">/etc-example/shorewall6/zones</li>
+            
+              <li style="list-style: none;">/sbin</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-accounting.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-actions.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-addresses.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-arprules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-blrules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-conntrack.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-ecn.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-exclusion.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-files.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-hosts.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-interfaces.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-ipsets.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-logging.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-maclist.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-mangle.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-modules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-names.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-nat.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-nesting.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-netmap.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-params.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-policy.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-providers.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-proxyarp.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-proxyndp.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-routes.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-rtrules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-rules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-secmarks.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-snat.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-stoppedrules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-tcclasses.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-tcdevices.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-tcfilters.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-tcinterfaces.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-tcpri.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-tunnels.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-vardir.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall-zones.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall.conf.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-accounting.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-actions.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-blacklist.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-blrules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-conntrack.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-exclusion.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-hosts.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-interfaces.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-ipsets.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-maclist.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-mangle.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-masq.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-modules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-nat.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-nesting.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-netmap.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-params.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-policy.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-providers.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-proxyndp.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-routes.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-routestopped.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-rtrules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-rules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-secmarks.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-snat.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-stoppedrules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-tcclasses.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-tcdevices.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-tcfilters.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-tcinterfaces.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-tcpri.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-tcrules.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-tos.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-tunnels.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-vardir.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6-zones.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man5/shorewall6.conf.5.gz</li>
+            
+              <li style="list-style: none;">/share/man/man8/shorewall-init.8.gz</li>
+            
+              <li style="list-style: none;">/share/man/man8/shorewall.8.gz</li>
+            
+              <li style="list-style: none;">/share/man/man8/shorewall6.8.gz</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/ARP.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Accounting.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Chains.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Compiler.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Config.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/IPAddrs.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Misc.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Nat.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Proc.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Providers.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Proxyarp.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Raw.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Rules.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Tc.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Tunnels.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/Shorewall/Zones.pm</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.A_REJECT</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.A_REJECT!</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.AllowICMPs</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.AutoBL</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.AutoBLL</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.BLACKLIST</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.Broadcast</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.DNSAmp</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.DropDNSrep</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.DropSmurfs</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.Established</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.FIN</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.GlusterFS</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.IfEvent</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.Invalid</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.Limit</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.Multicast</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.New</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.NotSyn</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.RST</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.Related</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.ResetEvent</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.SetEvent</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.TCPFlags</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.Untracked</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.allowBcast</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.allowInvalid</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.allowMcast</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.allowinUPnP</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.dropBcast</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.dropBcasts</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.dropInvalid</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.dropMcast</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.dropNotSyn</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.forwardUPnP</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.mangletemplate</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.rejNotSyn</li>
+            
+              <li style="list-style: none;">/share/shorewall/action.template</li>
+            
+              <li style="list-style: none;">/share/shorewall/actions.std</li>
+            
+              <li style="list-style: none;">/share/shorewall/compiler.pl</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/accounting</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/accounting.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/actions</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/actions.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/arprules</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/arprules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/blrules</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/blrules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/clear</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/conntrack</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/conntrack.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/ecn</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/ecn.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/findgw</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/hosts</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/hosts.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/init</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/initdone</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/interfaces</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/interfaces.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/isusable</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/lib.private</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/maclist</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/maclist.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/mangle</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/mangle.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/nat</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/nat.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/netmap</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/netmap.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/params</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/params.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/policy</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/policy.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/providers</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/providers.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/proxyarp</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/proxyarp.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/refresh</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/refreshed</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/restored</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/routes</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/routes.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/rtrules</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/rtrules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/rules</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/rules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/scfilter</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/secmarks</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/secmarks.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/shorewall.conf</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/shorewall.conf.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/snat</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/snat.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/start</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/started</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/stop</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/stopped</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/stoppedrules</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/stoppedrules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcclasses</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcclasses.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcclear</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcdevices</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcdevices.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcfilters</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcfilters.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcinterfaces</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcinterfaces.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcpri</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tcpri.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tunnels</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/tunnels.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/zones</li>
+            
+              <li style="list-style: none;">/share/shorewall/configfiles/zones.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall/configpath</li>
+            
+              <li style="list-style: none;">/share/shorewall/coreversion</li>
+            
+              <li style="list-style: none;">/share/shorewall/functions</li>
+            
+              <li style="list-style: none;">/share/shorewall/getparams</li>
+            
+              <li style="list-style: none;">/share/shorewall/helpers</li>
+            
+              <li style="list-style: none;">/share/shorewall/lib.base</li>
+            
+              <li style="list-style: none;">/share/shorewall/lib.cli</li>
+            
+              <li style="list-style: none;">/share/shorewall/lib.cli-std</li>
+            
+              <li style="list-style: none;">/share/shorewall/lib.common</li>
+            
+              <li style="list-style: none;">/share/shorewall/lib.core</li>
+            
+              <li style="list-style: none;">/share/shorewall/lib.runtime</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.AMQP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.A_AllowICMPs</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.A_DropDNSrep</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.A_DropUPnP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.ActiveDir</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Amanda</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Apcupsd</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Auth</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.BGP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.BitTorrent</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.BitTorrent32</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Bitcoin</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.BitcoinRPC</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.BitcoinZMQ</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.CVS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Citrix</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Cockpit</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.DAAP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.DCC</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.DHCPfwd</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.DNS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Distcc</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.DropUPnP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Edonkey</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.FTP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Finger</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.FreeIPA</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.GNUnet</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.GRE</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Git</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Gnutella</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Goto-Meeting</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.HKP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.HTTP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.HTTPS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.ICPV2</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.ICQ</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.ILO</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IMAP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IMAPS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPFS-API</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPFS-gateway</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPFS-swarm</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPIP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPMI</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPPbrd</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPPserver</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPsec</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPsecah</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IPsecnat</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.IRC</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.JAP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Jabber</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.JabberPlain</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.JabberSecure</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Jabberd</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Jetdirect</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Kerberos</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Kpasswd</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.L2TP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.LDAP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.LDAPS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.MSA</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.MSNP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.MSSQL</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Mail</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.MongoDB</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Munin</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.MySQL</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.NNTP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.NNTPS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.NTP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.NTPbi</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.NTPbrd</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.ONCRPC</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.OSPF</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.OpenVPN</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.PCA</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.POP3</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.POP3S</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.PPtP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Ping</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.PostgreSQL</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Printer</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Puppet</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.QUIC</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.RDP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.RIPbi</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.RNDC</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Razor</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Rdate</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Redis</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.RedisCluster</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.RedisSecure</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.RedisSentinel</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Rfc1918</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Rsync</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Rwhois</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SANE</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SIP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SMB</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SMBBI</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SMBswat</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SMTP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SMTPS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SNMP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SNMPtrap</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SPAMD</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SSDP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SSDPserver</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SSH</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SVN</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Sieve</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.SixXS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Squid</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Submission</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Syslog</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.TFTP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Telnet</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Telnets</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Teredo</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Time</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Tinc</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Tor</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.TorBrowserBundle</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.TorControl</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.TorDirectory</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.TorSocks</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Trcrt</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.VNC</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.VNCL</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.VRRP</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.WUDO</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Web</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Webcache</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Webmin</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Whois</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Xymon</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.Zabbix</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.mDNS</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.mDNSbi</li>
+            
+              <li style="list-style: none;">/share/shorewall/macro.template</li>
+            
+              <li style="list-style: none;">/share/shorewall/prog.footer</li>
+            
+              <li style="list-style: none;">/share/shorewall/shorewallrc</li>
+            
+              <li style="list-style: none;">/share/shorewall/version</li>
+            
+              <li style="list-style: none;">/share/shorewall/wait4ifup</li>
+            
+              <li style="list-style: none;">/share/shorewall6/action.mangletemplate</li>
+            
+              <li style="list-style: none;">/share/shorewall6/action.template</li>
+            
+              <li style="list-style: none;">/share/shorewall6/actions.std</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/accounting</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/accounting.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/actions</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/actions.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/blrules</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/blrules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/clear</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/conntrack</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/conntrack.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/findgw</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/hosts</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/hosts.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/init</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/interfaces</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/interfaces.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/isusable</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/lib.private</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/maclist</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/maclist.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/mangle</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/mangle.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/nat</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/nat.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/netmap</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/netmap.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/params</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/params.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/policy</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/policy.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/providers</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/providers.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/proxyndp</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/proxyndp.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/refresh</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/refreshed</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/restored</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/routes</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/routes.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/rtrules</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/rtrules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/rules</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/rules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/scfilter</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/secmarks</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/secmarks.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/shorewall6.conf</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/snat</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/snat.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/start</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/started</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/stop</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/stopped</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/stoppedrules</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/stoppedrules.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcclasses</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcclasses.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcclear</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcdevices</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcdevices.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcfilters</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcfilters.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcinterfaces</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcinterfaces.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcpri</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tcpri.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tunnels</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/tunnels.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/zones</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configfiles/zones.annotated</li>
+            
+              <li style="list-style: none;">/share/shorewall6/configpath</li>
+            
+              <li style="list-style: none;">/share/shorewall6/functions</li>
+            
+              <li style="list-style: none;">/share/shorewall6/helpers</li>
+            
+              <li style="list-style: none;">/share/shorewall6/lib.base</li>
+            
+              <li style="list-style: none;">/share/shorewall6/macro.Ping</li>
+            
+              <li style="list-style: none;">/share/shorewall6/macro.Trcrt</li>
+            
+              <li style="list-style: none;">/share/shorewall6/macro.mDNS</li>
+            
+              <li style="list-style: none;">/share/shorewall6/macro.mDNSbi</li>
+            
+              <li style="list-style: none;">/share/shorewall6/version</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2.3.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/072cdcb265123b40e507c427ba99f907929c6f79">
+            072cdcb2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package clean on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / clean
+    </dfn>
+    -
+    
+      Clean is a general purpose, state-of-the-art, pure and lazy functional
+programming language designed for making real-world applications. Some
+of its most notable language features are uniqueness typing, dynamic typing,
+and generic functions.
+
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="http://wiki.clean.cs.ru.nl/Clean" rel="noopener" target="_blank">
+        http://wiki.clean.cs.ru.nl/Clean
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - BSD-2-Clause
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:erin@erinvanderveen.nl">
+                Erin van der Veen
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/BatchBuild</li>
+            
+              <li style="list-style: none;">/bin/clm</li>
+            
+              <li style="list-style: none;">/bin/htoclean</li>
+            
+              <li style="list-style: none;">/lib/ArgEnv/ArgEnv.dcl</li>
+            
+              <li style="list-style: none;">/lib/ArgEnv/ArgEnv.icl</li>
+            
+              <li style="list-style: none;">/lib/ArgEnv/ArgEnvC.c</li>
+            
+              <li style="list-style: none;">/lib/ArgEnv/ArgEnvC.o</li>
+            
+              <li style="list-style: none;">/lib/ArgEnv/Clean System Files/ArgEnvC.o</li>
+            
+              <li style="list-style: none;">/lib/ArgEnv/Makefile</li>
+            
+              <li style="list-style: none;">/lib/ArgEnv/README</li>
+            
+              <li style="list-style: none;">/lib/ArgEnv/printenv.icl</li>
+            
+              <li style="list-style: none;">/lib/Directory/Changes.txt</li>
+            
+              <li style="list-style: none;">/lib/Directory/Clean System Files/Clean.h</li>
+            
+              <li style="list-style: none;">/lib/Directory/Clean System Files/cDirectory.c</li>
+            
+              <li style="list-style: none;">/lib/Directory/Clean System Files/cDirectory.o</li>
+            
+              <li style="list-style: none;">/lib/Directory/Directory.dcl</li>
+            
+              <li style="list-style: none;">/lib/Directory/Directory.icl</li>
+            
+              <li style="list-style: none;">/lib/Directory/Readme.txt</li>
+            
+              <li style="list-style: none;">/lib/Dynamics/StdCleanTypes.dcl</li>
+            
+              <li style="list-style: none;">/lib/Dynamics/StdCleanTypes.icl</li>
+            
+              <li style="list-style: none;">/lib/Dynamics/StdDynamic.dcl</li>
+            
+              <li style="list-style: none;">/lib/Dynamics/StdDynamic.icl</li>
+            
+              <li style="list-style: none;">/lib/Dynamics/_SystemDynamic.dcl</li>
+            
+              <li style="list-style: none;">/lib/Dynamics/_SystemDynamic.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenBimap.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenBimap.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenCompress.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenCompress.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenDefault.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenDefault.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenEq.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenEq.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenFMap.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenFMap.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenHylo.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenHylo.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenLexOrd.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenLexOrd.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenLib.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenLib.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenMap.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenMap.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenMapSt.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenMapSt.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenMonad.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenMonad.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenParse.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenParse.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenPrint.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenPrint.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenReduce.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenReduce.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenZip.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/GenZip.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/_Array.dcl</li>
+            
+              <li style="list-style: none;">/lib/Generics/_Array.icl</li>
+            
+              <li style="list-style: none;">/lib/Generics/gentest.icl</li>
+            
+              <li style="list-style: none;">/lib/MersenneTwister/00history.txt</li>
+            
+              <li style="list-style: none;">/lib/MersenneTwister/MersenneTwister.dcl</li>
+            
+              <li style="list-style: none;">/lib/MersenneTwister/MersenneTwister.icl</li>
+            
+              <li style="list-style: none;">/lib/MersenneTwister/testMersenneTwister.icl</li>
+            
+              <li style="list-style: none;">/lib/MersenneTwister/testMersenneTwister.prj</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdArray.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdArray.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdBool.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdBool.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdChar.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdChar.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdCharList.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdCharList.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdClass.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdClass.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdDebug.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdDebug.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdEnum.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdEnum.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdEnv.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdEnv.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdFile.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdFile.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdFunc.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdFunc.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdFunctions.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdFunctions.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdGeneric.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdGeneric.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdInt.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdInt.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdList.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdList.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdMaybe.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdMaybe.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdMisc.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdMisc.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdOrdList.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdOrdList.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdOverloaded.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdOverloaded.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdOverloadedList.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdOverloadedList.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdReal.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdReal.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdStrictLists.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdStrictLists.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdString.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdString.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdTuple.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/StdTuple.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_SystemArray.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_SystemArray.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_SystemEnum.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_SystemEnum.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_SystemEnumStrict.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_SystemEnumStrict.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_SystemStrictLists.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_SystemStrictLists.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_startup.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_startupProfile.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_startupTrace.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_system.abc</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/Clean System Files/_system.o</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdArray.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdArray.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdBool.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdChar.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdCharList.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdCharList.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdClass.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdClass.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdDebug.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdDebug.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdEnum.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdEnum.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdEnv.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdEnv.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdFile.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdFunc.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdFunc.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdFunctions.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdFunctions.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdGeneric.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdGeneric.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdInt.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdList.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdList.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdMaybe.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdMaybe.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdMisc.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdOrdList.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdOrdList.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdOverloaded.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdOverloaded.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdOverloadedList.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdOverloadedList.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdReal.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdStrictLists.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdStrictLists.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdString.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdTuple.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/StdTuple.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_SystemArray.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_SystemArray.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_SystemEnum.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_SystemEnum.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_SystemEnumStrict.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_SystemEnumStrict.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_SystemStrictLists.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_SystemStrictLists.icl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_startup.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_startupProfile.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_startupTrace.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdEnv/_system.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdLib/StdArrayExtensions.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdLib/StdArrayExtensions.icl</li>
+            
+              <li style="list-style: none;">/lib/StdLib/StdLib.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdLib/StdLib.icl</li>
+            
+              <li style="list-style: none;">/lib/StdLib/StdLibMisc.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdLib/StdLibMisc.icl</li>
+            
+              <li style="list-style: none;">/lib/StdLib/StdListExtensions.dcl</li>
+            
+              <li style="list-style: none;">/lib/StdLib/StdListExtensions.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/Clean System Files/cTCP_121.c</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/Clean System Files/cTCP_121.h</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/Clean System Files/cTCP_121.o</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPChannelClass.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPChannelClass.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPChannels.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPChannels.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPDef.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPDef.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPEvent.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPEvent.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPIP.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPIP.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPStringChannels.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPStringChannels.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPStringChannelsInternal.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/TCPStringChannelsInternal.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/ostcp.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/ostcp.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/tcp.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/tcp.icl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/tcp_bytestreams.dcl</li>
+            
+              <li style="list-style: none;">/lib/TCPIP/tcp_bytestreams.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/CallingCFromClean.html</li>
+            
+              <li style="list-style: none;">/lib/doc/Clean.h</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2.css</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_0.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_1.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_10.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_11.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_12.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_13.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_14.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_15.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_16.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_17.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_2.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_3.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_4.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_5.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_6.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_7.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_8.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_9.htm</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image001.jpg</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image002.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image003.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image004.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image005.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image006.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image007.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image008.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image009.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image010.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image011.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image012.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image013.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image014.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image015.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image016.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image017.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image018.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image019.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image020.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image021.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image022.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image023.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image024.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image025.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image026.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image027.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image028.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image029.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image030.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image031.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image032.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image033.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image034.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image035.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image036.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/CleanRep.2.2_files/image037.gif</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep/square_8.png</li>
+            
+              <li style="list-style: none;">/lib/doc/CleanLangRep.2.2.pdf</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/Clean.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_array1.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_array1.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_array1.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_array1_c.c</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_array1_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_array1_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_const1.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_const1.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_const1.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_const1_c.c</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_const1_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_const1_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_enum1.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_enum1.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_enum1.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_enum1_c.c</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_enum1_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_enum1_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int1.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int1.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int1.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int1_c.c</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int1_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int1_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int2.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int2.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int2.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int2_c.c</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int2_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int2_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int3.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int3.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int3.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int3_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int3_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int4.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int4.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int4.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int4_c.c</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int4_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_int4_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_string1.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_string1.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_string1.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_string1_c.c</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_string1_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_string1_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_tuple1.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_tuple1.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_tuple1.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_tuple1_c.c</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_tuple1_main.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_tuple1_main.prj</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_type1.dcl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_type1.h</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/example_type1.icl</li>
+            
+              <li style="list-style: none;">/lib/doc/Examples/make.bat</li>
+            
+              <li style="list-style: none;">/lib/exe/cg</li>
+            
+              <li style="list-style: none;">/lib/exe/cocl</li>
+            
+              <li style="list-style: none;">/lib/exe/linker</li>
+            
+              <li style="list-style: none;">/share/man/man1/clm.1.gz</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07a6bc6ab21a9708ff6bd684aa9f9a0375d32f6b">
+            07a6bc6a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0289f4adf032d402d95a438ed18a966eeffda5cd">
+            0289f4ad
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0289f4adf032d402d95a438ed18a966eeffda5cd">
+            0289f4ad
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/050dad2901375c1d6a21d7c8c019ce47fd1a4edf">
+            050dad29
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00005ce0bdbc3c13804adc9a7fd71a02cc0b8db2">
+            00005ce0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0009c1f650ba619de97df36322fbd0346db0c099">
+            0009c1f6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024ad6c4d5899bbbd2841a7b41e9c2f81719badf">
+            024ad6c4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/056394c0f275aa7e478fdc389568cfdd45031a89">
+            056394c0
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06d7dce3e0ed727558f19fe287cf1852737778b7">
+            06d7dce3
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

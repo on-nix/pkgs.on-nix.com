@@ -1,0 +1,1524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package yacas on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / yacas
+    </dfn>
+    -
+    
+      Easy to use, general purpose Computer Algebra System
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="http://www.yacas.org/" rel="noopener" target="_blank">
+        http://www.yacas.org/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-2.0-or-later
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:viric@viric.name">
+                Lluís Batlle i Rossell
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/yacas</li>
+            
+              <li style="list-style: none;">/include/yacas/GPL_stuff.h</li>
+            
+              <li style="list-style: none;">/include/yacas/anumber.h</li>
+            
+              <li style="list-style: none;">/include/yacas/anumber.inl</li>
+            
+              <li style="list-style: none;">/include/yacas/arggetter.h</li>
+            
+              <li style="list-style: none;">/include/yacas/arrayclass.h</li>
+            
+              <li style="list-style: none;">/include/yacas/associationclass.h</li>
+            
+              <li style="list-style: none;">/include/yacas/corefunctions.h</li>
+            
+              <li style="list-style: none;">/include/yacas/deffile.h</li>
+            
+              <li style="list-style: none;">/include/yacas/errors.h</li>
+            
+              <li style="list-style: none;">/include/yacas/evalfunc.h</li>
+            
+              <li style="list-style: none;">/include/yacas/genericobject.h</li>
+            
+              <li style="list-style: none;">/include/yacas/infixparser.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispatom.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispenvironment.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lisperror.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispeval.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispevalhash.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispglobals.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lisphash.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispio.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispobject.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispoperator.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispparser.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispstring.h</li>
+            
+              <li style="list-style: none;">/include/yacas/lispuserfunc.h</li>
+            
+              <li style="list-style: none;">/include/yacas/mathcommands.h</li>
+            
+              <li style="list-style: none;">/include/yacas/mathuserfunc.h</li>
+            
+              <li style="list-style: none;">/include/yacas/mempool.h</li>
+            
+              <li style="list-style: none;">/include/yacas/mp/nn.hpp</li>
+            
+              <li style="list-style: none;">/include/yacas/mp/zz.hpp</li>
+            
+              <li style="list-style: none;">/include/yacas/noncopyable.h</li>
+            
+              <li style="list-style: none;">/include/yacas/numbers.h</li>
+            
+              <li style="list-style: none;">/include/yacas/patcher.h</li>
+            
+              <li style="list-style: none;">/include/yacas/patternclass.h</li>
+            
+              <li style="list-style: none;">/include/yacas/patterns.h</li>
+            
+              <li style="list-style: none;">/include/yacas/platfileio.h</li>
+            
+              <li style="list-style: none;">/include/yacas/platmath.h</li>
+            
+              <li style="list-style: none;">/include/yacas/refcount.h</li>
+            
+              <li style="list-style: none;">/include/yacas/standard.h</li>
+            
+              <li style="list-style: none;">/include/yacas/standard.inl</li>
+            
+              <li style="list-style: none;">/include/yacas/string_utils.h</li>
+            
+              <li style="list-style: none;">/include/yacas/stringio.h</li>
+            
+              <li style="list-style: none;">/include/yacas/substitute.h</li>
+            
+              <li style="list-style: none;">/include/yacas/tokenizer.h</li>
+            
+              <li style="list-style: none;">/include/yacas/utf8/checked.h</li>
+            
+              <li style="list-style: none;">/include/yacas/utf8/core.h</li>
+            
+              <li style="list-style: none;">/include/yacas/utf8/cpp11.h</li>
+            
+              <li style="list-style: none;">/include/yacas/utf8/unchecked.h</li>
+            
+              <li style="list-style: none;">/include/yacas/utf8.h</li>
+            
+              <li style="list-style: none;">/include/yacas/xmltokenizer.h</li>
+            
+              <li style="list-style: none;">/include/yacas/yacas.h</li>
+            
+              <li style="list-style: none;">/include/yacas/yacas_version.h</li>
+            
+              <li style="list-style: none;">/lib/libyacas.a</li>
+            
+              <li style="list-style: none;">/lib/libyacas_mp.a</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/array.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/array.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/assoc.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/assoc.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/base.rep/math.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/base.rep/math.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/c_form.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/c_form.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/calendar.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/calendar.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/complex.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/complex.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/complex.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/constants.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/constants.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/constants.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/controlflow.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/controlflow.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/cse.rep/cse.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/cse.rep/cse.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/debug.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/debug.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/deffunc.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/deffunc.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/deriv.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/deriv.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/example.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/example.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/ABIN.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/MinimumSpanningTree.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/benchbuild.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/benchmark.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/benchmark2.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/findsum.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/goldbach.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/pi.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/queens.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/series.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/examples/wordproblems.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/factors.rep/binaryfactors.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/factors.rep/binaryfactors.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/factors.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/factors.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/functional.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/functional.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/functional.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/graph.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/graph.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/html.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/html.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/integrate.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/integrate.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/integrate.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/io.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/io.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/io.rep/defaultprint.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/io.rep/defaultprint.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/io.rep/errors.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/io.rep/formula.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/io.rep/print.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/limit.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/limit.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/limit.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/linalg.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/linalg.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/lists.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/lists.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/lists.rep/scopestack.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/lists.rep/scopestack.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/localrules.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/localrules.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/logic.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/logic.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/logic.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/multivar.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/multivar.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/multivar.rep/makemulti.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/multivar.rep/sparsenomial.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/multivar.rep/sparsetree.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/multivar.rep/sparsetree.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/newly.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/newly.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/nintegrate.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/nintegrate.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/GaussianIntegers.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/GaussianIntegers.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/NumberTheory.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/NumberTheory.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/nthroot.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/nthroot.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/numbers.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/odesolver.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/odesolver.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/openmath.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/openmath.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/orthopoly.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/orthopoly.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/packages.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/padic.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/padic.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/patterns.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/patterns.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/physics.rep/quantum/clebsch-gordan.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/physics.rep/quantum/clebsch-gordan.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/plots.rep/backends-2d.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/plots.rep/backends-3d.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/plots.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/plots.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/plots.rep/plot2d.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/plots.rep/plot2d.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/plots.rep/plot3d.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/plots.rep/plot3d.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/predicates.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/predicates.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/probability.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/probability.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/products.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/products.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/pslq.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/pslq.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/r_form.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/r_form.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/rabinmiller.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/rabinmiller.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/radsimp.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/radsimp.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/random.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/random.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/rational.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/rational.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/simplify.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/simplify.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/simplify.rep/factorial.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/simplify.rep/factorial.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/solve.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/solve.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/solve.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/bernou.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/bernou.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/bessel.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/bessel.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/gamma.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/gamma.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/gammaconst.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/gammaconst.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/zeta.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/specfunc.rep/zeta.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/standard.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/standard.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/distributions.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/distributions.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/hypothesystest.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/hypothesystest.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/incompletegamma.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/incompletegamma.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/randomtest.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/regression.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/regression.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/statistics.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/statistics.rep/statistics.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stats.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stats.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdarith.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdarith.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/elemfuncs.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/elemfuncs.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/numerical.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/numerical.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/nummethods.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/nummethods.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdfuncs.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stdopers.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stubs.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stubs.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/stubs.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/substitute.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/substitute.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/sums.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/sums.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/sums.rep/om.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/sums.rep/taylor.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/sums.rep/taylor.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/sums.rep/taylor3.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/sums.rep/taylor3.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/tensor.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/tensor.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/testers.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/testers.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/texform.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/texform.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/transforms.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/transforms.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/trigsimp.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/trigsimp.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/univar.rep/Cyclotomic.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/univar.rep/Cyclotomic.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/univar.rep/code.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/univar.rep/code.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/univar.rep/sparse.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/univar.rep/sparse.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/univar.rep/sturm.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/univar.rep/sturm.ys.def</li>
+            
+              <li style="list-style: none;">/share/yacas/scripts/yacasinit.ys</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/GaussianIntegers.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/arithmetic.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/association.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/binaryfactors.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/bitops.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/c_tex_form.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/calculus.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/calendar.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/canprove.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/comments.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/complex.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/cyclotomic.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/deriv.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/dimensions.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/dot.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/graphs.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/integrate.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/io.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/journal.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/linalg.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/lists.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/logic_simplify_test.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/macro.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/matrixpower.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/multivar.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/newly.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/nthroot.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/numbers.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/numerics.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/nummethods.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/ode.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/openmath.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/orthopoly.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/outer.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/padic.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/physics.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/plots.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/poly.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/predicates.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/products.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/programming.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/radsimp.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/rational.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/regress.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/scopestack.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/simplify.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/solve.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/sturm.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/sums.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/tensors.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/tr.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/trace.yts</li>
+            
+              <li style="list-style: none;">/share/yacas/tests/transforms.yts</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06749ba321ee3f284df74ab848985106eea52c13">
+            06749ba3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/066544a7eb38a4886a619a9a6dfd26e474c7f7a6">
+            066544a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0096eb9274b430c8cf1a699c68054972c1845291">
+            0096eb92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0684065e76f57fe41439043971faec9e8a22b8fa">
+            0684065e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0456d939a1ba4ae7df54c84cf873086d32679839">
+            0456d939
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07076e9fe015489fcd1c67f37c0d750442c6f975">
+            07076e9f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031cc88afc4bff97d949747d486ffb1a1e7a25ca">
+            031cc88a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026b4eb3ae4f23a45a411d4238e796ab3a3eb036">
+            026b4eb3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0410f5dff9ff952bfe129e522933c4c4ef6b3815">
+            0410f5df
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0269421b7b63157a6414cd64e1a4a0b4dd44abe8">
+            0269421b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0269421b7b63157a6414cd64e1a4a0b4dd44abe8">
+            0269421b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00915d4e6d832b620489b72e828a40f3a57acf00">
+            00915d4e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00e56c1d535cb9dd4857b538b4844b537052ecf9">
+            00e56c1d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01cb371c67c10ab747f2dff8252e1de939bb670c">
+            01cb371c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01cb371c67c10ab747f2dff8252e1de939bb670c">
+            01cb371c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05c65878bad487dddf90342797df804ce57e7fa5">
+            05c65878
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0260f04fe257f56b7221dccc427dc104de1e6d77">
+            0260f04f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/017f120e5042b7303b86d31110f242080856f9ef">
+            017f120e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/017f120e5042b7303b86d31110f242080856f9ef">
+            017f120e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.9.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a50430663c1d289cd5de4065aa387123bf363d">
+            05a50430
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0416089dc694e0930fb8a7e0130f022e8c62c713">
+            0416089d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0218f30af58b9081f477504edd2b3ae19d3da9b5">
+            0218f30a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02591d02a910b3b92092153c5f3419a8d696aa1d">
+            02591d02
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0634484a53b548d4fc109a9f5e400e1d8fb2f55f">
+            0634484a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00610756df9a235f2de907a18cd8fded638d24e0">
+            00610756
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036cef94733d2af03f3732eb8673cf0744303972">
+            036cef94
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/010d2f4aa29448b1908b954006484cfbbf7e7d50">
+            010d2f4a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02f869ff30a3d0f3a431b49a3e0e0469cf7e50cd">
+            02f869ff
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/016111e839ec15e23c080da8ff955a548155202c">
+            016111e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f3bc518e8fc12946e1a54aaa33c4e5d58519d3">
+            04f3bc51
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f3bc518e8fc12946e1a54aaa33c4e5d58519d3">
+            04f3bc51
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0646b9f7c39776a3ec8e4f3f6c60bd6e735d5b88">
+            0646b9f7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069364f34897be82c193dcd3501ab99f4e46cdc0">
+            069364f3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e9fd44928de4235b0a01dd0207fdd9b5b5359">
+            069e9fd4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/069e9fd44928de4235b0a01dd0207fdd9b5b5359">
+            069e9fd4
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/053168d47004e9a29d4c3fbb6b905a320a0edb1b">
+            053168d4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03941c1e673289dbc732da059d6edd7b61b8fde0">
+            03941c1e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cb05d20c780f0cbe76eca6dfc2f08e741a1660">
+            04cb05d2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04cb05d20c780f0cbe76eca6dfc2f08e741a1660">
+            04cb05d2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e78496b6ff3dd0524422de0fe8864fb22896e2">
+            03e78496
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e6ca15e205bf892eac08a5f561c3a16284c90a">
+            03e6ca15
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c5e811e6e0244a8e5a9645fd8347c719aab228">
+            06c5e811
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c5e811e6e0244a8e5a9645fd8347c719aab228">
+            06c5e811
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/060f3125fcf34c116e50f98ec12c1f813043050c">
+            060f3125
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b407743de858d8b0b4be1ce23ae2fa018f8d89">
+            07b40774
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00c0eb0026ad5db1fe70cff119509c728a489dc5">
+            00c0eb00
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00c0eb0026ad5db1fe70cff119509c728a489dc5">
+            00c0eb00
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02dc6ff5bccfcecd78da039e53e2b3ea8f420390">
+            02dc6ff5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01f79dfc9e2e132479ff053ed79ead82731327b7">
+            01f79dfc
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f7753a8906f15f0b2323d63625d3c162b163be">
+            03f7753a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/079849e096549763dbde1fb27db32427f6f0f76d">
+            079849e0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.8.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/014970bc17d6cb7718737041e1c4a8a10ef56503">
+            014970bc
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/014970bc17d6cb7718737041e1c4a8a10ef56503">
+            014970bc
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0607adde1a5d4c933986c6a7a169c44ee9ef3469">
+            0607adde
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04f0961627034f47939d99ac00e9d1afab2ebc68">
+            04f09616
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a3726a1256fa0e144c302537c8b0876bfee77f">
+            02a3726a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a3726a1256fa0e144c302537c8b0876bfee77f">
+            02a3726a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075e4883e0abea400aecb886e6244a6c2acf7bd8">
+            075e4883
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0111c7d8515d229cc19b487bb0c2e62571413e3c">
+            0111c7d8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044ceae2806480555a44c91c386546cffb46ba74">
+            044ceae2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/044ceae2806480555a44c91c386546cffb46ba74">
+            044ceae2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0163b98641be7a143a0d794c9f44fe1a11250fcb">
+            0163b986
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0560caa57893a3c8dd11aeece110672c720c9496">
+            0560caa5
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03872eb10782e187141c5404ed835787c311634b">
+            03872eb1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03872eb10782e187141c5404ed835787c311634b">
+            03872eb1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/053d1e033968c6c835246cf295e363431be4b06e">
+            053d1e03
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04e5cf666511d6d84d20814557a04f2392fa4a83">
+            04e5cf66
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0764d5992c0caf539fc3abe711a6f8c5a50d8c4e">
+            0764d599
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0764d5992c0caf539fc3abe711a6f8c5a50d8c4e">
+            0764d599
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03d4694e6110fa9c16e88ee74085ea2068c27494">
+            03d4694e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03318efe0937a8070ae9b02051cd04aca3770017">
+            03318efe
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024efc950923730bc3e7e05a87b90c157324e912">
+            024efc95
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/024efc950923730bc3e7e05a87b90c157324e912">
+            024efc95
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.6.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01b274ce0d9923eb960b1a55e13527545f381f41">
+            01b274ce
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/032c04ebd7ba9f45ea0ce402ee00deb055653029">
+            032c04eb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.2.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01cf8db4dabb9f370077b507b41a3485410b1cb7">
+            01cf8db4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06e394bbb451d7cd35dd3576216a8f2fb5cfdbf4">
+            06e394bb
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

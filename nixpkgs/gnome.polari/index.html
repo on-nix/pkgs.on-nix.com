@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package gnome.polari on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / gnome.polari
+    </dfn>
+    -
+    
+      IRC chat client designed to integrate with the GNOME desktop
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://wiki.gnome.org/Apps/Polari" rel="noopener" target="_blank">
+        https://wiki.gnome.org/Apps/Polari
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - GPL-2.0
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:torhedinbronner@gmail.com">
+                Tor Hedin Brønner
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:jtojnar@gmail.com">
+                Jan Tojnar
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:daniel@serbanescu.dk">
+                Daniel Șerbănescu
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:maxeaubrey@gmail.com">
+                Maxine Aubrey
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/.polari-wrapped</li>
+            
+              <li style="list-style: none;">/bin/polari</li>
+            
+              <li style="list-style: none;">/lib/polari/girepository-1.0/Polari-1.0.typelib</li>
+            
+              <li style="list-style: none;">/lib/polari/libpolari-1.0.so</li>
+            
+              <li style="list-style: none;">/nix-support/propagated-user-env-packages</li>
+            
+              <li style="list-style: none;">/share/applications/org.gnome.Polari.desktop</li>
+            
+              <li style="list-style: none;">/share/dbus-1/services/org.freedesktop.Telepathy.Client.Polari.service</li>
+            
+              <li style="list-style: none;">/share/dbus-1/services/org.gnome.Polari.service</li>
+            
+              <li style="list-style: none;">/share/gsettings-schemas/polari-41.0/glib-2.0/schemas/gschemas.compiled</li>
+            
+              <li style="list-style: none;">/share/gsettings-schemas/polari-41.0/glib-2.0/schemas/org.gnome.Polari.gschema.xml</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/C/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/ca/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/cs/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/da/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/de/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/el/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/es/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/eu/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/fr/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/hu/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/id/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/nl/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/pl/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/pt_BR/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/sv/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/images/Polari.png</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/images/polari-paste.png</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/images/polari-screenshot.png</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/index.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/introduction.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/irc-commands.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/irc-join-room.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/irc-nick-password.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/irc-start-conversation.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/legal.xml</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/network-connect.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/overview.page</li>
+            
+              <li style="list-style: none;">/share/help/uk/polari/sharing.page</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/scalable/apps/org.gnome.Polari.Devel.svg</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/scalable/apps/org.gnome.Polari.svg</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/symbolic/apps/org.gnome.Polari-symbolic.svg</li>
+            
+              <li style="list-style: none;">/share/locale/af/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ar/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/as/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/be/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bs/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ca/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ca@valencia/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ckb/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/cs/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/da/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/de/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/el/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/en_GB/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/eo/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/es/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/et/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/eu/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fa/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fi/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fr/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fur/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/gl/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/he/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hr/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hu/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/id/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/it/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ja/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/kk/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ko/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/lo/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/lt/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/lv/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ml/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ms/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nb/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ne/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nl/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/oc/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pa/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pl/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pt/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pt_BR/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ro/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ru/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sk/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sl/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sr/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sr@latin/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sv/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/te/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/tg/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/tr/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/uk/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/vi/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_CN/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_HK/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_TW/LC_MESSAGES/polari.mo</li>
+            
+              <li style="list-style: none;">/share/metainfo/org.gnome.Polari.appdata.xml</li>
+            
+              <li style="list-style: none;">/share/polari/.thumbnailer.js-wrapped</li>
+            
+              <li style="list-style: none;">/share/polari/gir-1.0/Polari-1.0.gir</li>
+            
+              <li style="list-style: none;">/share/polari/thumbnailer.js</li>
+            
+              <li style="list-style: none;">/share/telepathy/clients/Polari.client</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.38.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/039e37580aa9e64424028d0c943697b343149f9b">
+            039e3758
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00f7e1e88a995ef7dc83c80b531ea1b4eba2b621">
+            00f7e1e8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/021410c0021749930a91278156057c0b2e8c2b77">
+            021410c0
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.38.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0757207f330252d2882934d0ecb0fb65a399eafd">
+            0757207f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0757207f330252d2882934d0ecb0fb65a399eafd">
+            0757207f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/016b0a423aea9a789d1327dff3fd10b908bd1e91">
+            016b0a42
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0615bf0751f32449b7f7060cae4371d542cd6800">
+            0615bf07
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.38.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c691cf3f066da10ad4222c5f55f9976ae0a0ce">
+            06c691cf
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c691cf3f066da10ad4222c5f55f9976ae0a0ce">
+            06c691cf
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00caba5a1f5b7f3c2dba38eb379fd9835bf72b61">
+            00caba5a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04e1d2483b15a79937e50cafcc92e2278887c3a7">
+            04e1d248
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.38.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/052b553a7959007ff41a81ce48e4d7bb9ede4103">
+            052b553a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a1a2b3c81a8a93bbc75046804cfe4e90f1bced">
+            02a1a2b3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">41.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0438f3d8c520e390c832a8a733413f73ebf6e49e">
+            0438f3d8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01d15b12ec666cad5b5eba5443b8b6389b3dbead">
+            01d15b12
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.38.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06efb08ec4377a9b6ecd0e22ba7b4b929fbcb533">
+            06efb08e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0001d341acaa9243e00cc0e7639eb8085ac08a97">
+            0001d341
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

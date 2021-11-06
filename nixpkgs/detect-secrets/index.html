@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package detect-secrets on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / detect-secrets
+    </dfn>
+    -
+    
+      An enterprise friendly way of detecting and preventing secrets in code
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://github.com/Yelp/detect-secrets" rel="noopener" target="_blank">
+        https://github.com/Yelp/detect-secrets
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - Apache-2.0
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:marsam@users.noreply.github.com">
+                Mario Rodas
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/.detect-secrets-hook-wrapped</li>
+            
+              <li style="list-style: none;">/bin/.detect-secrets-wrapped</li>
+            
+              <li style="list-style: none;">/bin/detect-secrets</li>
+            
+              <li style="list-style: none;">/bin/detect-secrets-hook</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__main__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/__main__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/__version__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/constants.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/exceptions.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/main.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/pre_commit_hook.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/settings.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__pycache__/types.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/__version__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__pycache__/analytics.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__pycache__/audit.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__pycache__/common.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__pycache__/compare.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__pycache__/io.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__pycache__/iterator.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/__pycache__/report.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/analytics.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/audit.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/common.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/compare.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/io.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/iterator.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/audit/report.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/constants.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/__pycache__/baseline.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/__pycache__/log.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/__pycache__/potential_secret.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/__pycache__/scan.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/__pycache__/secrets_collection.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/baseline.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/log.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/plugins/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/plugins/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/plugins/__pycache__/initialize.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/plugins/__pycache__/util.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/plugins/initialize.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/plugins/util.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/potential_secret.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/scan.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/secrets_collection.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/upgrades/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/upgrades/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/upgrades/__pycache__/v0_12.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/upgrades/__pycache__/v1_0.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/upgrades/__pycache__/v1_1.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/upgrades/v0_12.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/upgrades/v1_0.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/upgrades/v1_1.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/__pycache__/audit.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/__pycache__/baseline.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/__pycache__/common.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/__pycache__/filters.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/__pycache__/plugins.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/__pycache__/scan.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/audit.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/baseline.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/common.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/filters.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/plugins.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/core/usage/scan.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/exceptions.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/__pycache__/allowlist.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/__pycache__/common.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/__pycache__/heuristic.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/__pycache__/regex.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/__pycache__/util.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/__pycache__/wordlist.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/allowlist.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/common.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/gibberish/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/gibberish/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/gibberish/rfc.model</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/heuristic.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/regex.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/util.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/filters/wordlist.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/main.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/artifactory.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/aws.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/azure_storage_key.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/base.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/basic_auth.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/cloudant.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/high_entropy_strings.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/ibm_cloud_iam.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/ibm_cos_hmac.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/jwt.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/keyword.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/mailchimp.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/npm.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/private_key.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/slack.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/softlayer.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/square_oauth.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/stripe.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/__pycache__/twilio.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/artifactory.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/aws.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/azure_storage_key.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/base.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/basic_auth.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/cloudant.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/high_entropy_strings.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/ibm_cloud_iam.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/ibm_cos_hmac.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/jwt.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/keyword.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/mailchimp.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/npm.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/private_key.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/slack.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/softlayer.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/square_oauth.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/stripe.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/plugins/twilio.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/pre_commit_hook.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/settings.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/__pycache__/base.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/__pycache__/config.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/__pycache__/exceptions.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/__pycache__/yaml.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/base.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/config.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/exceptions.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/transformers/yaml.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/types.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/code_snippet.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/color.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/filetype.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/git.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/importlib.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/inject.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/path.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/__pycache__/semver.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/code_snippet.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/color.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/filetype.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/git.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/importlib.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/inject.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/path.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets/util/semver.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/INSTALLER</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/LICENSE</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/METADATA</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/RECORD</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/REQUESTED</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/WHEEL</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/direct_url.json</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/entry_points.txt</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/detect_secrets-1.1.0.dist-info/top_level.txt</li>
+            
+              <li style="list-style: none;">/nix-support/propagated-build-inputs</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.14.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04855119e9a334cdae57e9c7708d566cf4f0f6b9">
+            04855119
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.14.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0548185f5b1c20c6d2ebb2fe1e266a36c0c81366">
+            0548185f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04de1306ba22e1b2147c4a8028e9209ffcd8884c">
+            04de1306
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.14.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0044356dc7b53fbafb78ceb17cec05e293c70940">
+            0044356d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0044356dc7b53fbafb78ceb17cec05e293c70940">
+            0044356d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.1.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05f7b916ae1c6c1b7898999303e26c63e0047a8e">
+            05f7b916
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/021bc5b92920d4675e88228b3dfe41d525c42432">
+            021bc5b9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.14.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f23ba5501ba58aa25c9b5c7f5d140381449b3a">
+            06f23ba5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c4f46a1abf2ce528a34a947e1e6eb6657af537">
+            06c4f46a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.12.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00138204d098f186682e46c4f3ccb76f763a33ae">
+            00138204
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00138204d098f186682e46c4f3ccb76f763a33ae">
+            00138204
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.14.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02924cf9514f1bb4cf8d82f80fba64c830afe54d">
+            02924cf9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0449f1e8f2e48ff2fc0170ea0a468b567153d450">
+            0449f1e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.12.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03ef0aae0a16f989228dc36ee3d4e25b511be87b">
+            03ef0aae
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03ef0aae0a16f989228dc36ee3d4e25b511be87b">
+            03ef0aae
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.14.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0378fedc17a8e359650d6dce5d9839621b09f102">
+            0378fedc
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/057017ee8673a217da3b7530b298fbd0b974000f">
+            057017ee
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.12.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015414235082f6232794cf42581fdfe9e28d7ec7">
+            01541423
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015414235082f6232794cf42581fdfe9e28d7ec7">
+            01541423
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.14.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02380d7d7c89f3577ebb26b95af8dff0ed93d577">
+            02380d7d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02380d7d7c89f3577ebb26b95af8dff0ed93d577">
+            02380d7d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.12.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0218f30af58b9081f477504edd2b3ae19d3da9b5">
+            0218f30a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04eab02b16a1d4631113e8de9c4b22a1f36ae446">
+            04eab02b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0767de3dc840352ba6d334d6320ce89ef832410e">
+            0767de3d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.12.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07b6eb696285159a79d797c397b44710a208a331">
+            07b6eb69
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00610756df9a235f2de907a18cd8fded638d24e0">
+            00610756
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0073c1fb0b4d230a305f703f2e2056b432c64cf6">
+            0073c1fb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0073c1fb0b4d230a305f703f2e2056b432c64cf6">
+            0073c1fb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.12.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/003b42f33241229dc9094d713f4e88bff9d72d14">
+            003b42f3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02ea0d3959ba5a8f2108d3bc8f5a57635d758713">
+            02ea0d39
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/057016a2c569b2a15980664e13a286f93b6b0da0">
+            057016a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/057016a2c569b2a15980664e13a286f93b6b0da0">
+            057016a2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.12.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02e6a5fd123f53d856b7e403c286f30df95ccba7">
+            02e6a5fd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0512f90e7e333eef1e73cbc3516798253e565c97">
+            0512f90e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04469284cefc648b9e8e818e1a4ee656ec519fe0">
+            04469284
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04c9866b6e29428ca3710523e04b420a72eea192">
+            04c9866b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0590170c799d5f2b67d674c64dc48052f1bcd882">
+            0590170c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0590170c799d5f2b67d674c64dc48052f1bcd882">
+            0590170c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/052db93d8f02f8393085409d96ee94ef938cfbd8">
+            052db93d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026ec75df522411cf963ba56d619d0072c645557">
+            026ec75d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ee1015bbbe38124444bf9de22523aaf2821998">
+            05ee1015
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05232abbbc6574b31a714bc34d9639676b83c1a8">
+            05232abb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0065df21f4ed46eb5049fc161616d0645d59c8b5">
+            0065df21
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/034e4a0f5666a2be6058eb7ff819b51ec5389bc3">
+            034e4a0f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">0.11.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/070254317e419d8b2b2efa839a9e645d69c3963d">
+            07025431
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/036ee02fa38ee4100019e574986bc0704afc5312">
+            036ee02f
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

@@ -1,0 +1,2564 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package mitmproxy on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / mitmproxy
+    </dfn>
+    -
+    
+      Man-in-the-middle proxy
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://mitmproxy.org/" rel="noopener" target="_blank">
+        https://mitmproxy.org/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - MIT
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:fpletz@fnordicwalking.de">
+                Franz Pletz
+              </a>
+            
+          
+        
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:kamil.chm@gmail.com">
+                Kamil Chmielewski
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/.mitmdump-wrapped</li>
+            
+              <li style="list-style: none;">/bin/.mitmproxy-wrapped</li>
+            
+              <li style="list-style: none;">/bin/.mitmweb-wrapped</li>
+            
+              <li style="list-style: none;">/bin/mitmdump</li>
+            
+              <li style="list-style: none;">/bin/mitmproxy</li>
+            
+              <li style="list-style: none;">/bin/mitmweb</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/addonmanager.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/certs.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/command.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/command_lexer.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/connection.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/controller.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/ctx.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/eventsequence.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/exceptions.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/flow.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/flowfilter.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/hooks.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/http.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/log.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/master.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/options.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/optmanager.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/stateobject.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/tcp.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/types.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/version.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/__pycache__/websocket.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addonmanager.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/anticache.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/anticomp.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/asgiapp.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/block.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/blocklist.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/browser.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/clientplayback.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/command_history.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/comment.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/core.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/cut.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/disable_h2c.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/dumper.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/eventstore.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/export.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/intercept.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/keepserving.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/maplocal.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/mapremote.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/modifybody.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/modifyheaders.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/next_layer.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/onboarding.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/proxyauth.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/proxyserver.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/readfile.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/save.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/script.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/serverplayback.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/stickyauth.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/stickycookie.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/termlog.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/tlsconfig.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/upstream_auth.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/__pycache__/view.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/anticache.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/anticomp.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/asgiapp.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/block.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/blocklist.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/browser.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/clientplayback.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/command_history.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/comment.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/core.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/cut.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/disable_h2c.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/dumper.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/eventstore.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/export.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/intercept.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/keepserving.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/maplocal.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/mapremote.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/modifybody.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/modifyheaders.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/next_layer.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboarding.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/static/bootstrap.min.css</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/static/images/favicon.ico</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/static/images/mitmproxy-long.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/static/mitmproxy.css</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/templates/icons/android-brands.svg</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/templates/icons/apple-brands.svg</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/templates/icons/certificate-solid.svg</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/templates/icons/firefox-browser-brands.svg</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/templates/icons/linux-brands.svg</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/templates/icons/windows-brands.svg</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/templates/index.html</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/onboardingapp/templates/layout.html</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/proxyauth.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/proxyserver.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/readfile.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/save.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/script.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/serverplayback.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/stickyauth.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/stickycookie.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/termlog.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/tlsconfig.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/upstream_auth.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/addons/view.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/certs.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/command.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/command_lexer.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/connection.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/auto.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/base.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/css.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/graphql.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/hex.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/javascript.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/json.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/msgpack.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/multipart.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/protobuf.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/query.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/raw.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/urlencoded.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/wbxml.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/__pycache__/xml_html.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/auto.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/base.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/css.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/graphql.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/hex.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/image/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/image/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/image/__pycache__/image_parser.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/image/__pycache__/view.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/image/image_parser.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/image/view.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/javascript.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/json.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/msgpack.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/multipart.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/protobuf.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/query.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/raw.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/urlencoded.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/wbxml.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contentviews/xml_html.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/README</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/exif.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/exif_be.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/exif_le.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/gif.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/google_protobuf.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/ico.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/jpeg.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/png.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/tls_client_hello.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/__pycache__/vlq_base128_le.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/exif.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/exif_be.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/exif_le.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/gif.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/google_protobuf.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/ico.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/jpeg.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/make.sh</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/png.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/tls_client_hello.ksy</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/tls_client_hello.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/kaitaistruct/vlq_base128_le.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/urwid/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/urwid/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/urwid/__pycache__/raw_display.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/urwid/__pycache__/win32.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/urwid/raw_display.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/urwid/win32.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/ASCommandResponse.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/ASWBXML.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/ASWBXMLByteQueue.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/ASWBXMLCodePage.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/GlobalTokens.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/InvalidDataException.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/__pycache__/ASCommandResponse.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/__pycache__/ASWBXML.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/__pycache__/ASWBXMLByteQueue.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/__pycache__/ASWBXMLCodePage.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/__pycache__/GlobalTokens.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/__pycache__/InvalidDataException.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/contrib/wbxml/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/controller.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/__pycache__/basethread.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/__pycache__/bidi.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/__pycache__/multidict.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/__pycache__/serializable.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/basethread.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/bidi.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/multidict.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/coretypes/serializable.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/ctx.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/eventsequence.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/exceptions.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/flow.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/flowfilter.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/hooks.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/http.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/io/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/io/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/io/__pycache__/compat.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/io/__pycache__/io.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/io/__pycache__/tnetstring.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/io/compat.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/io/io.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/io/tnetstring.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/log.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/master.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/__pycache__/check.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/__pycache__/encoding.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/__pycache__/server_spec.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/__pycache__/tls.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/check.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/encoding.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/__pycache__/cookies.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/__pycache__/headers.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/__pycache__/multipart.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/__pycache__/status_codes.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/__pycache__/url.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/__pycache__/user_agents.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/cookies.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/headers.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/http1/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/http1/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/http1/__pycache__/assemble.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/http1/__pycache__/read.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/http1/assemble.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/http1/read.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/multipart.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/status_codes.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/url.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/http/user_agents.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/server_spec.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/net/tls.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/options.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/optmanager.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/__pycache__/linux.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/__pycache__/openbsd.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/__pycache__/osx.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/__pycache__/pf.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/__pycache__/windows.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/linux.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/openbsd.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/osx.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/pf.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/platform/windows.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/commands.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/context.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/events.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/layer.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/server.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/server_hooks.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/tunnel.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/__pycache__/utils.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/commands.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/context.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/events.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layer.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/__pycache__/modes.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/__pycache__/tcp.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/__pycache__/tls.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/__pycache__/websocket.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__pycache__/_base.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__pycache__/_events.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__pycache__/_hooks.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__pycache__/_http1.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__pycache__/_http2.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__pycache__/_http_h2.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/__pycache__/_upstream_proxy.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/_base.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/_events.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/_hooks.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/_http1.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/_http2.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/_http_h2.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/http/_upstream_proxy.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/modes.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/tcp.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/tls.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/layers/websocket.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/server.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/server_hooks.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/tunnel.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/proxy/utils.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/py.typed</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/script/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/script/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/script/__pycache__/concurrent.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/script/concurrent.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/stateobject.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tcp.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/test/__pycache__/taddons.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/test/__pycache__/tflow.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/test/__pycache__/tutils.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/test/taddons.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/test/tflow.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/test/tutils.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/__pycache__/cmdline.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/__pycache__/dump.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/__pycache__/main.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/cmdline.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/commandexecutor.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/commands.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/common.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/consoleaddons.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/defaultkeys.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/eventlog.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/flowdetailview.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/flowlist.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/flowview.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/help.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/keybindings.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/keymap.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/layoutwidget.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/master.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/options.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/overlay.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/palettes.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/searchable.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/signals.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/statusbar.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/tabs.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/__pycache__/window.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/commander/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/commander/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/commander/__pycache__/commander.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/commander/commander.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/commandexecutor.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/commands.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/common.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/consoleaddons.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/defaultkeys.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/eventlog.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/flowdetailview.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/flowlist.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/flowview.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/__pycache__/base.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/__pycache__/col_bytes.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/__pycache__/col_subgrid.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/__pycache__/col_text.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/__pycache__/col_viewany.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/__pycache__/editors.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/base.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/col_bytes.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/col_subgrid.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/col_text.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/col_viewany.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/grideditor/editors.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/help.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/keybindings.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/keymap.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/layoutwidget.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/master.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/options.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/overlay.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/palettes.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/searchable.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/signals.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/statusbar.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/tabs.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/console/window.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/dump.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/main.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/__pycache__/app.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/__pycache__/master.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/__pycache__/static_viewer.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/__pycache__/webaddons.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/app.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/master.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/app.css</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/app.js</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/fonts/fontawesome-webfont.eot</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/fonts/fontawesome-webfont.svg</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/fonts/fontawesome-webfont.ttf</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/fonts/fontawesome-webfont.woff</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/chrome-devtools/LICENSE</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/chrome-devtools/resourceCSSIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/chrome-devtools/resourceDocumentIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/chrome-devtools/resourceJSIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/chrome-devtools/resourcePlainIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/favicon.ico</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/resourceExecutableIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/resourceFlashIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/resourceImageIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/resourceJavaIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/resourceNotModifiedIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/images/resourceRedirectIcon.png</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/static.js</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/vendor.css</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static/vendor.js</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/static_viewer.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/templates/index.html</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/tools/web/webaddons.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/types.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__init__.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/__init__.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/arg_check.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/asyncio_utils.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/bits.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/data.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/debug.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/emoji.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/human.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/sliding_window.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/spec.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/strutils.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/__pycache__/typecheck.cpython-39.pyc</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/arg_check.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/asyncio_utils.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/bits.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/data.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/debug.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/emoji.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/human.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/sliding_window.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/spec.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/strutils.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/utils/typecheck.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/version.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy/websocket.py</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/INSTALLER</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/LICENSE</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/METADATA</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/RECORD</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/REQUESTED</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/WHEEL</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/direct_url.json</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/entry_points.txt</li>
+            
+              <li style="list-style: none;">/lib/python3.9/site-packages/mitmproxy-7.0.4.dist-info/top_level.txt</li>
+            
+              <li style="list-style: none;">/nix-support/propagated-build-inputs</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0543f2d2f62dcc3d5e917f34d3c0526d0548473f">
+            0543f2d2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01cc988d9669f29855d82175a4614d90aa4bfe75">
+            01cc988d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01cc988d9669f29855d82175a4614d90aa4bfe75">
+            01cc988d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0280f0990add14411bf9f9b722727f2c8b6fdce7">
+            0280f099
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03171ae31abf0427467fea968c3fa465338535f3">
+            03171ae3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b176df0093e4764cfddb87ff0e6c1de89312ec">
+            04b176df
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020e88bf7a46a089b94cc6ae962d5bada7233341">
+            020e88bf
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0695f657678893d9cca657491a46c68a2adcf541">
+            0695f657
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b8e12ec7686657d409d3be573c0b85012f7a3b">
+            04b8e12e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/059a86bbceda8817869c313ecb1b1ce112c067da">
+            059a86bb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00a66c45e59ad9fa5cc7a37c31fc0245c09cb630">
+            00a66c45
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06a91dda9cae112c32177f64df4ebfc01be934e3">
+            06a91dda
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06a91dda9cae112c32177f64df4ebfc01be934e3">
+            06a91dda
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/046f81842fbe326713ba53131260d2315dcfdf75">
+            046f8184
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/046f81842fbe326713ba53131260d2315dcfdf75">
+            046f8184
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0379ff190e3ac1419f47153a2d1127ca620a2912">
+            0379ff19
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0379ff190e3ac1419f47153a2d1127ca620a2912">
+            0379ff19
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.3</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0243f3264b524358d9c58da621e46f3438378cb3">
+            0243f326
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0366acbcd54e2e27d3a96c4cadd8aaf2f2ce12bf">
+            0366acbc
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/046258528b0bd55910df2c2396059bf9488219b0">
+            04625852
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0597172c121a1d63d4fab62b52136b4bcb490a32">
+            0597172c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03111112cc69ed3a90d5b538c5c73d3f565da247">
+            03111112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03111112cc69ed3a90d5b538c5c73d3f565da247">
+            03111112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ab36d8752c2efe901136f19c18ea309b995ac0">
+            01ab36d8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00727874f77a2ef2baad4179cd66de5ae64a72e0">
+            00727874
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/001598d43431dd79c235b4f65dfdc971e38030ac">
+            001598d4
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03d20cbced6d28aa299c280d42147af434b19ad7">
+            03d20cbc
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02633095e3c292cedf8ea35a3e55cbd2cbd4cb37">
+            02633095
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02633095e3c292cedf8ea35a3e55cbd2cbd4cb37">
+            02633095
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05cb210e9fa637a3926caa230b3b2800489d630a">
+            05cb210e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06ceba58df885a6c2d92bcd3f9324247725c5101">
+            06ceba58
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03637fe5869c1f854ad05c6d301812eda3ac1761">
+            03637fe5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/010096974f03009d221b533dd5c16c3d8b794ba1">
+            01009697
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/010096974f03009d221b533dd5c16c3d8b794ba1">
+            01009697
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063fde88482a8c78205e16f8dc4d29b3f98857dd">
+            063fde88
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0771461dbaace819bbd694181319cce47a6c3355">
+            0771461d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ba299e537601230e46100bec1cd465e0ee7052">
+            01ba299e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01ba299e537601230e46100bec1cd465e0ee7052">
+            01ba299e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a5144fa9032018b9aac3a5aaf9c368b8347a4f">
+            05a5144f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06dbc404f02dea00871e954c10ec2eac1cbea6a8">
+            06dbc404
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">7.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/078b98a190377c7864c74a1c10ab3834c728b5c0">
+            078b98a1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0295502aae4364b3f226ede7211ccb04e5dfdbc0">
+            0295502a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03e50cf1392623f410a5e8847500d78ec8a5ef5d">
+            03e50cf1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/029f84c37fdd41cd0abb569d62272ae0943c75d4">
+            029f84c3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064e0af80b574bfe96540f17ddd35d6e0b1d5c71">
+            064e0af8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064e0af80b574bfe96540f17ddd35d6e0b1d5c71">
+            064e0af8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06dee38345cbad53ddfa7616a962be49777b1a72">
+            06dee383
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0139874db9bca4be6f54c52f2da40e8ac7c5237b">
+            0139874d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064b446fc0c7b79f05c6fac6b8da23eb18340d50">
+            064b446f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/064b446fc0c7b79f05c6fac6b8da23eb18340d50">
+            064b446f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/078c2a734110b80195781442b2c227b3027a734f">
+            078c2a73
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/031da799889d0037e480a6171ba221fa79c9ddfd">
+            031da799
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045e01aae6adaf512b370bd046c5f1ae7ba8909a">
+            045e01aa
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045e01aae6adaf512b370bd046c5f1ae7ba8909a">
+            045e01aa
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0540dad5e18536b263bdccf349b0a3e8b7ee8fd7">
+            0540dad5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/062e1ffa1ba918c2c94a5988c60765247c0aa95c">
+            062e1ffa
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0140b2811c049b6c875b763bf171d568f76f6168">
+            0140b281
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0140b2811c049b6c875b763bf171d568f76f6168">
+            0140b281
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03831816d88c7c6dbe25b762493765f5ee77a148">
+            03831816
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00210fcf0d7066c772a6cbe9d4668e6d0bc13f0e">
+            00210fcf
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0090fbbda5a546b67d1917288f2e533f15198e36">
+            0090fbbd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/002fe4f19dcf14993dd850be100865b63bc97b80">
+            002fe4f1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0355cd98e86e662474cd1c315cfe7777cbaaeacb">
+            0355cd98
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03f27fd63bcb16e5d01e6a574c57dac434a571bf">
+            03f27fd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/035438a26b45f5152ca1533dd8790203a4d51360">
+            035438a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06e40b3caf0c9f2acf18ae1705fa1434f7f0474e">
+            06e40b3c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">6.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015ce9d3b6b60077080654d1e1c9ee92f22ae69d">
+            015ce9d3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07999ac6ea27ec1b180cb74a23faa25149c06398">
+            07999ac6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ca995e31230a28306bf7d2f33ece4e538e7ca7">
+            05ca995e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07a9dcf3e2ec47ae4daed11924aec8bb26dacd64">
+            07a9dcf3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c0f165556950665b83e41209f611ddeed4de26">
+            06c0f165
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c0f165556950665b83e41209f611ddeed4de26">
+            06c0f165
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06749ba321ee3f284df74ab848985106eea52c13">
+            06749ba3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075da3928b5eee0c672c60e9e5ba81d3a3c90766">
+            075da392
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05fe6112c99d2b93b15dafc32bfc43993c6b8bc4">
+            05fe6112
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f2fd5fb9f7def14154a7b80e7676e641dd56f9">
+            06f2fd5f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0096eb9274b430c8cf1a699c68054972c1845291">
+            0096eb92
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afc85506c30cd901509aa825e6abf9ed702401">
+            00afc855
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00afc85506c30cd901509aa825e6abf9ed702401">
+            00afc855
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02885ae8e207c5c4c1d2f3e7ac02f7e72c99d13e">
+            02885ae8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07e49512aa1bea7730ebca10aa4a50a33cae34cd">
+            07e49512
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0722158dba9c401354a53bb618e6e2b1903c7ea7">
+            0722158d
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07dfadc89c47b6de05f8cd8d9a659b47f635f571">
+            07dfadc8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04b7c0aff7c28aaddaba28f54614946e8ac7c3b2">
+            04b7c0af
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.3.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/032bd0fd13a1e055c90cd8b3860cd2f6011f1396">
+            032bd0fd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03df9f54fc54a29d14a614bd29323076b5259588">
+            03df9f54
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015c5a2be650acf9db46c3c25012e5023319625b">
+            015c5a2b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/045f6ba1b358c0a3e6618064ac502c1e9769d2d5">
+            045f6ba1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00347e9537d6e6ddef599094429a1ac5392d6f28">
+            00347e95
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00347e9537d6e6ddef599094429a1ac5392d6f28">
+            00347e95
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/063c756b33f69a787d6fda77bb293ca022d5d922">
+            063c756b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00946dc283ad0b3018490331802b77e16731a1f1">
+            00946dc2
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00d8c11a5702868c0cf80ffc97cc896070bd3538">
+            00d8c11a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/040059b5d5b6db5def40be2d797188c89bd585b6">
+            040059b5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03197f94ce2d4b0feb673840d30f602e93357040">
+            03197f94
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074e05c6d8be92dca22a9096890bdb89cedbc6e8">
+            074e05c6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074e05c6d8be92dca22a9096890bdb89cedbc6e8">
+            074e05c6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05104cc10467442362a824dcb1aa9e532211a469">
+            05104cc1
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05104cc10467442362a824dcb1aa9e532211a469">
+            05104cc1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/073e9b2aed0f855ce26bd3a26dab044c0c17c817">
+            073e9b2a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05e4d371ef5c3819b969d34eb76ed7e4b3c99027">
+            05e4d371
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04111cb35689939bfd782243e2f92d873f25db5b">
+            04111cb3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0596ac5105166bd5b927cd6aa2882269f46b90b0">
+            0596ac51
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05b209347e31036fa0289d3076c39f82a6860536">
+            05b20934
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ac40f3013c90450cb584a2bcedeb3a4f77cd3a">
+            05ac40f3
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00e0bdf938e131cfadefa7193b384d03a489dd60">
+            00e0bdf9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00e0bdf938e131cfadefa7193b384d03a489dd60">
+            00e0bdf9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/066544a7eb38a4886a619a9a6dfd26e474c7f7a6">
+            066544a7
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/053b05d14d2fa31750d0aafb8fa92cff512750e8">
+            053b05d1
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a16be9c5ab7190c440b5c875fb71ca083ed5bb">
+            05a16be9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">5.1.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0481e09ad3bace6dc0c93791f031b62316041f4f">
+            0481e09a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0456d939a1ba4ae7df54c84cf873086d32679839">
+            0456d939
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0607adde1a5d4c933986c6a7a169c44ee9ef3469">
+            0607adde
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0228046eec7ce930d6532e205ad92435a2983f98">
+            0228046e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a3726a1256fa0e144c302537c8b0876bfee77f">
+            02a3726a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02a3726a1256fa0e144c302537c8b0876bfee77f">
+            02a3726a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07a3f3fbb79bf06b3fae5d45ceba35c84a8a494b">
+            07a3f3fb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0111c7d8515d229cc19b487bb0c2e62571413e3c">
+            0111c7d8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/028164ef057119ee37c99bcb98224672441d2d81">
+            028164ef
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/028164ef057119ee37c99bcb98224672441d2d81">
+            028164ef
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00c7f76c849ff1a6e23fdcc1c599ae2a1edce0e9">
+            00c7f76c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02602b2c15eaccf80490168591cf289ac81cc9d5">
+            02602b2c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04d8e267b7069c07491e8934d7911cd2a18c8c21">
+            04d8e267
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c63123ccfbe3fa21b74819050281c6394ae6eb">
+            06c63123
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">4.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049b3a6cc2fb271b0ad9f611be02f4728f6eeeca">
+            049b3a6c
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00ed6a6b30d8a9dca57d4b230d540d52eb5656cf">
+            00ed6a6b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00528006cfc998db81abb77d5aebe7115bbd664f">
+            00528006
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0052a756d29cb1803bdd667abe991ff0fc75abef">
+            0052a756
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/077811ebe37fd1c5ff75fec40f89111db15214c4">
+            077811eb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/077811ebe37fd1c5ff75fec40f89111db15214c4">
+            077811eb
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04113fb8647c526101cb8685f9adedd79dec154c">
+            04113fb8
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04e13de94f1909afc4711a92cf83d5969afa0981">
+            04e13de9
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03cf4bf6d0a7d3e9ec8428357685140f74a291c0">
+            03cf4bf6
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01e1722e8fe932106d65bc87b83e5684534fa6e6">
+            01e1722e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037e5d863b6797270607cd7e148bff71e6eb384e">
+            037e5d86
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/037e5d863b6797270607cd7e148bff71e6eb384e">
+            037e5d86
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0215ae062dae0ff712b659de88f63bdfd3e8edcb">
+            0215ae06
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0288f77c300f4e2cfa87bae31217cfbf95c584f9">
+            0288f77c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.4</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026f65273c0bba3139be8407ac5a29d0c6de4ab8">
+            026f6527
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/026f65273c0bba3139be8407ac5a29d0c6de4ab8">
+            026f6527
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0652ed17d01f25b41af13ad6e5008eaa66060857">
+            0652ed17
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/051d649b23d9fd2158e8e8fcfe5c4dabc0b2d6f6">
+            051d649b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2017-10-31</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0364cf6620ef356198307d2048e35def1bc1af9c">
+            0364cf66
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00b24f7a69fd7bc8c76b9298ceafc7bddb29929b">
+            00b24f7a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05f96bf376bc04bb7cc447150b8cb182af84b35b">
+            05f96bf3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05f9a3661253c657b156cd3459e99b7c27807829">
+            05f9a366
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2017-10-31</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0433604f51966bc43ffdbb6d741665a5738c6b7d">
+            0433604f
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0433604f51966bc43ffdbb6d741665a5738c6b7d">
+            0433604f
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05a1a2a2d3733415593d6e0525404cc937545165">
+            05a1a2a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/054baf2cbe2dcab905e221b45fdbbb2fe794fc10">
+            054baf2c
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.0.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0641253ae66d748b5ff0562c4edba3f9502a38e3">
+            0641253a
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0641253ae66d748b5ff0562c4edba3f9502a38e3">
+            0641253a
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05cb49625d1712a3ee7658a2c59d12a5fc87ebcc">
+            05cb4962
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0040dbaf692ec18f1323db6abe577cf5983a6971">
+            0040dbaf
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.0.0</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04283047a5d9d8b06c3a0c43678e0ffe24a5049f">
+            04283047
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0335b93284b156291d77ff121ea51a01c07527c5">
+            0335b932
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">1.0.2</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0761b0bc5b8d8c579fa929a698c584a2e67431f3">
+            0761b0bc
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0297fdc76495ce1b9301ab49fe2281a20e13174c">
+            0297fdc7
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

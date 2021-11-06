@@ -1,0 +1,2559 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package libvlc on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / libvlc
+    </dfn>
+    -
+    
+      Cross-platform media player and streaming server
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="http://www.videolan.org/vlc/" rel="noopener" target="_blank">
+        http://www.videolan.org/vlc/
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - LGPL-2.1-or-later
+      </p>
+    
+  
+
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/include/vlc/deprecated.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_dialog.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_events.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_media.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_media_discoverer.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_media_library.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_media_list.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_media_list_player.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_media_player.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_renderer_discoverer.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_version.h</li>
+            
+              <li style="list-style: none;">/include/vlc/libvlc_vlm.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_about.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_access.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_actions.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_addons.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_aout.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_aout_volume.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_arrays.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_atomic.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_avcodec.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_bits.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_block.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_block_helper.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_boxes.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_charset.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_codec.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_common.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_config.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_config_cat.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_configuration.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_cpu.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_demux.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_dialog.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_epg.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_es.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_es_out.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_events.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_filter.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_fingerprinter.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_fourcc.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_fs.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_gcrypt.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_http.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_httpd.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_image.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_inhibit.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_input.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_input_item.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_interface.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_interrupt.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_keystore.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_main.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_md5.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_media_library.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_memstream.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_messages.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_meta.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_meta_fetcher.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_mime.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_modules.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_mouse.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_mtime.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_network.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_objects.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_opengl.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_picture.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_picture_fifo.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_picture_pool.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_playlist.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_plugin.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_probe.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_rand.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_renderer_discovery.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_services_discovery.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_sout.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_spu.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_stream.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_stream_extractor.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_strings.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_subpicture.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_text_style.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_threads.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_timestamp_helper.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_tls.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_url.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_variables.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_video_splitter.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_viewpoint.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_vlm.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_vout.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_vout_display.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_vout_osd.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_vout_window.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_xlib.h</li>
+            
+              <li style="list-style: none;">/include/vlc/plugins/vlc_xml.h</li>
+            
+              <li style="list-style: none;">/include/vlc/vlc.h</li>
+            
+              <li style="list-style: none;">/lib/libvlc.la</li>
+            
+              <li style="list-style: none;">/lib/libvlc.so</li>
+            
+              <li style="list-style: none;">/lib/libvlc.so.5</li>
+            
+              <li style="list-style: none;">/lib/libvlc.so.5.6.0</li>
+            
+              <li style="list-style: none;">/lib/libvlccore.la</li>
+            
+              <li style="list-style: none;">/lib/libvlccore.so</li>
+            
+              <li style="list-style: none;">/lib/libvlccore.so.9</li>
+            
+              <li style="list-style: none;">/lib/libvlccore.so.9.0.0</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/libvlc.pc</li>
+            
+              <li style="list-style: none;">/lib/pkgconfig/vlc-plugin.pc</li>
+            
+              <li style="list-style: none;">/lib/vlc/libcompat.a</li>
+            
+              <li style="list-style: none;">/lib/vlc/libcompat.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_pulse.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_pulse.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_pulse.so.0</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_pulse.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_vdpau.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_vdpau.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_vdpau.so.0</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_vdpau.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_xcb_events.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_xcb_events.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_xcb_events.so.0</li>
+            
+              <li style="list-style: none;">/lib/vlc/libvlc_xcb_events.so.0.0.0</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/extensions/VLSub.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/intf/cli.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/intf/dummy.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/intf/dumpmeta.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/intf/http.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/intf/luac.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/intf/modules/host.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/intf/modules/httprequests.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/intf/telnet.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/meta/art/00_musicbrainz.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/meta/art/01_googleimage.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/meta/art/02_frenchtv.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/meta/art/03_lastfm.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/meta/reader/filename.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/modules/common.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/modules/dkjson.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/modules/sandbox.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/modules/simplexml.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/anevia_streams.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/anevia_xml.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/appletrailers.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/bbc_co_uk.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/cue.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/dailymotion.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/jamendo.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/koreus.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/liveleak.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/newgrounds.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/rockbox_fm_presets.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/soundcloud.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/twitch.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/vimeo.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/vocaroo.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/playlist/youtube.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/sd/icecast.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/lua/sd/jamendo.luac</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_alsa_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_alsa_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_concat_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_concat_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_imem_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_imem_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_mms_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_mms_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_mtp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_mtp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_srt_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libaccess_srt_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libattachment_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libattachment_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libavio_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libavio_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libcdda_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libcdda_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdc1394_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdc1394_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdtv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdtv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdvb_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdvb_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdvdnav_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdvdnav_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdvdread_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libdvdread_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libfilesystem_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libfilesystem_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libftp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libftp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libhttp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libhttp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libhttps_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libhttps_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libidummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libidummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libimem_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libimem_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/liblibbluray_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/liblibbluray_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/liblinsys_hdsdi_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/liblinsys_hdsdi_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/liblive555_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/liblive555_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libpulsesrc_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libpulsesrc_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/librist_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/librist_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/librtp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/librtp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libsatip_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libsatip_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libsdp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libsdp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libsftp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libsftp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libshm_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libshm_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libsmb_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libsmb_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libtcp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libtcp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libtimecode_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libtimecode_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libudp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libudp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libv4l2_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libv4l2_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libvcd_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libvcd_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libvdr_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libvdr_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libxcb_screen_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access/libxcb_screen_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_dummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_dummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_file_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_file_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_http_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_http_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_livehttp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_livehttp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_rist_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_rist_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_srt_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_srt_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_udp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/access_output/libaccess_output_udp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libaudio_format_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libaudio_format_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libaudiobargraph_a_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libaudiobargraph_a_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libchorus_flanger_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libchorus_flanger_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libcompressor_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libcompressor_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libdolby_surround_decoder_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libdolby_surround_decoder_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libequalizer_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libequalizer_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libgain_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libgain_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libheadphone_channel_mixer_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libheadphone_channel_mixer_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libkaraoke_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libkaraoke_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libmad_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libmad_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libmono_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libmono_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libnormvol_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libnormvol_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libparam_eq_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libparam_eq_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libremap_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libremap_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libsamplerate_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libsamplerate_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libscaletempo_pitch_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libscaletempo_pitch_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libscaletempo_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libscaletempo_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libsimple_channel_mixer_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libsimple_channel_mixer_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libspatializer_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libspatializer_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libspeex_resampler_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libspeex_resampler_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libstereo_widen_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libstereo_widen_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libtospdif_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libtospdif_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libtrivial_channel_mixer_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libtrivial_channel_mixer_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libugly_resampler_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_filter/libugly_resampler_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_mixer/libfloat_mixer_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_mixer/libfloat_mixer_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_mixer/libinteger_mixer_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_mixer/libinteger_mixer_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libadummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libadummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libafile_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libafile_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libalsa_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libalsa_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libamem_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libamem_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libpulse_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/audio_output/libpulse_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liba52_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liba52_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libadpcm_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libadpcm_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libaes3_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libaes3_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libaraw_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libaraw_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libavcodec_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libavcodec_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libcc_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libcc_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libcdg_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libcdg_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libcvdsub_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libcvdsub_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libddummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libddummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libdvbsub_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libdvbsub_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libedummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libedummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libfaad_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libfaad_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libflac_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libflac_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libfluidsynth_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libfluidsynth_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libg711_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libg711_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libjpeg_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libjpeg_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libkate_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libkate_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liblibass_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liblibass_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liblibmpeg2_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liblibmpeg2_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liblpcm_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liblpcm_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liboggspots_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/liboggspots_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libopus_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libopus_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libpng_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libpng_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/librawvideo_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/librawvideo_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/librtpvideo_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/librtpvideo_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libschroedinger_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libschroedinger_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libscte18_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libscte18_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libscte27_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libscte27_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsdl_image_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsdl_image_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libspdif_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libspdif_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libspeex_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libspeex_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libspudec_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libspudec_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libstl_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libstl_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsubsdec_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsubsdec_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsubstx3g_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsubstx3g_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsubsusf_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsubsusf_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsvcdsub_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsvcdsub_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsvgdec_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libsvgdec_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libt140_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libt140_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libtelx_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libtelx_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libtextst_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libtextst_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libtheora_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libtheora_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libttml_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libttml_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libuleaddvaudio_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libuleaddvaudio_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libvaapi_drm_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libvaapi_drm_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libvaapi_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libvaapi_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libvorbis_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libvorbis_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libwebvtt_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libwebvtt_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libxwd_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/codec/libxwd_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libdbus_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libdbus_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libdummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libdummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libgestures_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libgestures_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libhotkeys_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libhotkeys_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libmotion_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libmotion_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libnetsync_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libnetsync_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/liboldrc_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/liboldrc_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libxcb_hotkeys_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/control/libxcb_hotkeys_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libadaptive_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libadaptive_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libaiff_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libaiff_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libasf_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libasf_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libau_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libau_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libavformat_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libavformat_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libavi_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libavi_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libcaf_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libcaf_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdemux_cdg_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdemux_cdg_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdemux_chromecast_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdemux_chromecast_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdemux_stl_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdemux_stl_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdemuxdump_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdemuxdump_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdiracsys_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdiracsys_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdirectory_demux_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libdirectory_demux_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libes_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libes_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libflacsys_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libflacsys_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libh26x_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libh26x_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libimage_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libimage_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libmjpeg_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libmjpeg_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libmkv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libmkv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libmp4_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libmp4_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libmpgv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libmpgv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libnoseek_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libnoseek_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libnsc_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libnsc_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libnsv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libnsv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libnuv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libnuv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libogg_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libogg_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libplaylist_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libplaylist_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libps_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libps_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libpva_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libpva_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/librawaud_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/librawaud_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/librawdv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/librawdv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/librawvid_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/librawvid_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libreal_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libreal_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libsmf_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libsmf_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libsubtitle_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libsubtitle_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libts_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libts_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libtta_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libtta_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libty_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libty_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libvc1_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libvc1_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libvobsub_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libvobsub_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libvoc_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libvoc_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libwav_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libwav_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libxa_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/demux/libxa_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/gui/libncurses_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/gui/libncurses_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/keystore/libfile_keystore_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/keystore/libfile_keystore_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/keystore/libkwallet_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/keystore/libkwallet_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/keystore/libmemory_keystore_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/keystore/libmemory_keystore_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/logger/libconsole_logger_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/logger/libconsole_logger_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/logger/libfile_logger_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/logger/libfile_logger_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/logger/libsd_journal_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/logger/libsd_journal_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/logger/libsyslog_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/logger/libsyslog_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/lua/liblua_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/lua/liblua_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/meta_engine/libfolder_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/meta_engine/libfolder_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/meta_engine/libtaglib_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/meta_engine/libtaglib_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libaddonsfsstorage_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libaddonsfsstorage_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libaddonsvorepository_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libaddonsvorepository_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libaudioscrobbler_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libaudioscrobbler_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libdbus_screensaver_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libdbus_screensaver_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libexport_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libexport_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libfingerprinter_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libfingerprinter_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libgnutls_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libgnutls_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/liblogger_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/liblogger_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libstats_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libstats_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libvod_rtsp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libvod_rtsp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libxdg_screensaver_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libxdg_screensaver_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libxml_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/misc/libxml_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_asf_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_asf_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_avi_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_avi_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_dummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_dummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_mp4_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_mp4_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_mpjpeg_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_mpjpeg_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_ogg_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_ogg_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_ps_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_ps_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_ts_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_ts_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_wav_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/mux/libmux_wav_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_a52_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_a52_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_av1_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_av1_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_avparser_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_avparser_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_copy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_copy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_dirac_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_dirac_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_dts_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_dts_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_flac_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_flac_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_h264_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_h264_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_hevc_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_hevc_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mlp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mlp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mpeg4audio_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mpeg4audio_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mpeg4video_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mpeg4video_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mpegaudio_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mpegaudio_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mpegvideo_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_mpegvideo_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_vc1_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/packetizer/libpacketizer_vc1_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/plugins.dat</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libavahi_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libavahi_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libmediadirs_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libmediadirs_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libmicrodns_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libmicrodns_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libmtp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libmtp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libpodcast_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libpodcast_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libpulselist_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libpulselist_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libsap_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libsap_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libudev_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libudev_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libupnp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libupnp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libxcb_apps_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/services_discovery/libxcb_apps_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libaudiobargraph_v_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libaudiobargraph_v_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libdynamicoverlay_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libdynamicoverlay_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/liblogo_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/liblogo_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libmarq_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libmarq_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libmosaic_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libmosaic_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libremoteosd_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libremoteosd_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/librss_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/librss_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libsubsdelay_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/spu/libsubsdelay_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_extractor/libarchive_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_extractor/libarchive_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libadf_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libadf_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libcache_block_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libcache_block_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libcache_read_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libcache_read_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libdecomp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libdecomp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libhds_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libhds_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libinflate_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libinflate_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libprefetch_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libprefetch_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/librecord_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/librecord_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libskiptags_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_filter/libskiptags_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_autodel_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_autodel_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_bridge_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_bridge_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_chromecast_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_chromecast_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_cycle_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_cycle_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_delay_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_delay_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_description_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_description_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_display_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_display_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_dummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_dummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_duplicate_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_duplicate_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_es_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_es_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_gather_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_gather_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_mosaic_bridge_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_mosaic_bridge_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_record_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_record_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_rtp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_rtp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_setid_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_setid_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_smem_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_smem_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_standard_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_standard_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_stats_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_stats_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_transcode_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/stream_out/libstream_out_transcode_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/text_renderer/libfreetype_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/text_renderer/libfreetype_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/text_renderer/libsvg_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/text_renderer/libsvg_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/text_renderer/libtdummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/text_renderer/libtdummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vaapi/libvaapi_filters_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vaapi/libvaapi_filters_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_adjust_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_adjust_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_avcodec_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_avcodec_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_chroma_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_chroma_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_deinterlace_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_deinterlace_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_display_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_display_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_sharpen_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/vdpau/libvdpau_sharpen_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libchain_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libchain_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libgrey_yuv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libgrey_yuv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_10_p010_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_10_p010_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_nv12_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_nv12_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_rgb_mmx_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_rgb_mmx_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_rgb_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_rgb_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_rgb_sse2_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_rgb_sse2_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_yuy2_mmx_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_yuy2_mmx_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_yuy2_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_yuy2_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_yuy2_sse2_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi420_yuy2_sse2_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi422_i420_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi422_i420_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi422_yuy2_mmx_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi422_yuy2_mmx_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi422_yuy2_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi422_yuy2_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi422_yuy2_sse2_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libi422_yuy2_sse2_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/librv32_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/librv32_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libswscale_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libswscale_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libyuvp_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libyuvp_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libyuy2_i420_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libyuy2_i420_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libyuy2_i422_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_chroma/libyuy2_i422_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libadjust_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libadjust_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libalphamask_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libalphamask_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libanaglyph_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libanaglyph_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libantiflicker_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libantiflicker_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libball_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libball_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libblend_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libblend_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libblendbench_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libblendbench_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libbluescreen_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libbluescreen_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libcanvas_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libcanvas_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libcolorthres_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libcolorthres_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libcroppadd_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libcroppadd_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libdeinterlace_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libdeinterlace_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libedgedetection_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libedgedetection_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/liberase_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/liberase_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libextract_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libextract_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libfps_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libfps_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libfreeze_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libfreeze_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libgaussianblur_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libgaussianblur_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libgradfun_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libgradfun_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libgradient_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libgradient_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libgrain_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libgrain_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libhqdn3d_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libhqdn3d_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libinvert_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libinvert_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libmagnify_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libmagnify_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libmirror_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libmirror_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libmotionblur_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libmotionblur_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libmotiondetect_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libmotiondetect_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/liboldmovie_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/liboldmovie_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libposterize_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libposterize_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libpostproc_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libpostproc_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libpsychedelic_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libpsychedelic_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libpuzzle_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libpuzzle_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libripple_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libripple_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/librotate_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/librotate_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libscale_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libscale_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libscene_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libscene_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libsepia_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libsepia_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libsharpen_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libsharpen_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libtransform_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libtransform_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libvhs_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libvhs_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libwave_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_filter/libwave_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libcaca_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libcaca_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libegl_x11_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libegl_x11_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libfb_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libfb_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libflaschen_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libflaschen_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libgl_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libgl_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libglconv_vaapi_drm_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libglconv_vaapi_drm_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libglconv_vaapi_x11_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libglconv_vaapi_x11_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libglconv_vdpau_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libglconv_vdpau_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libglx_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libglx_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libvdummy_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libvdummy_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libvmem_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libvmem_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libxcb_window_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libxcb_window_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libxcb_x11_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libxcb_x11_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libxcb_xv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libxcb_xv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libyuv_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_output/libyuv_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_splitter/libclone_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_splitter/libclone_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_splitter/libpanoramix_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_splitter/libpanoramix_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_splitter/libwall_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/video_splitter/libwall_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/visualization/libglspectrum_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/visualization/libglspectrum_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/visualization/libvisual_plugin.la</li>
+            
+              <li style="list-style: none;">/lib/vlc/plugins/visualization/libvisual_plugin.so</li>
+            
+              <li style="list-style: none;">/lib/vlc/vlc-cache-gen</li>
+            
+              <li style="list-style: none;">/share/applications/vlc.desktop</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/fortunes.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/QtPlayer/LICENSE</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/QtPlayer/QtVLC.pro</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/QtPlayer/main.cpp</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/QtPlayer/player.cpp</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/QtPlayer/player.h</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/gtk_player.c</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/libvlc_DVD_ripper.c</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/vlc-thumb.c</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/libvlc/wx_player.cpp</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/extensions/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/http/requests/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/intf/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/intf/dumpmeta.lua</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/meta/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/meta/art/01_googleimage.lua</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/meta/art/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/meta/fetcher/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/meta/reader/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/meta/reader/filename.lua</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/playlist/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/playlist/liveleak.lua</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/playlist/youtube.lua</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/sd/README.txt</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/sd/icast.lua</li>
+            
+              <li style="list-style: none;">/share/doc/vlc/lua/sd/icecast.lua</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/128x128/apps/vlc-kb.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/128x128/apps/vlc-xmas.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/128x128/apps/vlc.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/16x16/apps/vlc.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/16x16/apps/vlc.xpm</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/256x256/apps/vlc.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/32x32/apps/vlc-xmas.xpm</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/32x32/apps/vlc.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/32x32/apps/vlc.xpm</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/48x48/apps/vlc-xmas.png</li>
+            
+              <li style="list-style: none;">/share/icons/hicolor/48x48/apps/vlc.png</li>
+            
+              <li style="list-style: none;">/share/locale/ach/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/af/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/am/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/am_ET/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/an/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ar/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/as_IN/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ast/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/be/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bg/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bn/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bn_IN/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/br/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/brx/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/bs/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ca/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ca@valencia/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/cgg/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/co/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/cs/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/cy/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/da/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/de/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/el/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/en_GB/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/es/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/es_MX/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/et/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/eu/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fa/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ff/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fi/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fr/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fur/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/fy/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ga/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/gd/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/gl/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/gu/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/he/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hi/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hr/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hu/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/hy/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/id/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/is/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/it/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ja/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ka/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/kab/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/kk/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/km/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/kn/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ko/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ks_IN/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ku_IQ/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ky/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/lg/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/lt/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/lv/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/mai/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ml/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/mn/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/mr/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ms/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nb/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ne/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nl/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/nn/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/oc/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pa/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pl/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ps/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pt_BR/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/pt_PT/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ro/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ru/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/si/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sk/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sl/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sq/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sr/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/sv/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ta/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/te/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/th/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/tr/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/tt/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/ug/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/uk/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/uz/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/vi/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/wa/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_CN/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zh_TW/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/locale/zu/LC_MESSAGES/vlc.mo</li>
+            
+              <li style="list-style: none;">/share/man/man1/vlc-wrapper.1.gz</li>
+            
+              <li style="list-style: none;">/share/man/man1/vlc.1.gz</li>
+            
+              <li style="list-style: none;">/share/metainfo/vlc.appdata.xml</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/main.css</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/mobile.css</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_flat_10_000000_40x100.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_glass_100_f6f6f6_1x400.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_glass_100_fdf5ce_1x400.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_glass_65_ffffff_1x400.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-icons_222222_256x240.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-icons_228ef1_256x240.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-icons_ef8c08_256x240.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-icons_ffd27a_256x240.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/images/ui-icons_ffffff_256x240.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/css/ui-lightness/jquery-ui-1.8.13.custom.css</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/custom.lua</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/batch_window.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/browse_window.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/create_stream.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/equalizer_window.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/error_window.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/mosaic_window.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/offset_window.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/stream_config_window.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/dialogs/stream_window.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/favicon.ico</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/Audio-48.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/Back-48.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/Folder-48.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/Other-48.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/Video-48.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/buttons.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/speaker-32.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/vlc-48.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/images/vlc16x16.png</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/index.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/js/common.js</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/js/controllers.js</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/js/jquery.jstree.js</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/js/ui.js</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/mobile.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/mobile_browse.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/mobile_equalizer.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/mobile_view.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/README.txt</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/browse.json</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/browse.xml</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/playlist.json</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/playlist.xml</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/playlist_jstree.xml</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/status.json</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/status.xml</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/vlm.xml</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/requests/vlm_cmd.xml</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/view.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/vlm.html</li>
+            
+              <li style="list-style: none;">/share/vlc/lua/http/vlm_export.html</li>
+            
+              <li style="list-style: none;">/share/vlc/utils/audio-vlc-default.sh</li>
+            
+              <li style="list-style: none;">/share/vlc/utils/gnome-vlc-default.sh</li>
+            
+              <li style="list-style: none;">/share/vlc/utils/video-vlc-default.sh</li>
+            
+              <li style="list-style: none;">/share/vlc/vlc.ico</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.16</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02c142a2dd6925fdaaccb11e64f0ff60fe436b70">
+            02c142a2
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/074ef76e99b3d54ef4804bbc1f37122721cd2b18">
+            074ef76e
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.16</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04855119e9a334cdae57e9c7708d566cf4f0f6b9">
+            04855119
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07557e3b49e77c42fc3e51e9e95451187dcd2d33">
+            07557e3b
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/065a8102c9867e85e47af0d94596a5ff24b9257d">
+            065a8102
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.16</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/035ba51146398b4ada9a89bd6246cd35e14b837e">
+            035ba511
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04de1306ba22e1b2147c4a8028e9209ffcd8884c">
+            04de1306
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06fb9a942131c7b8a16ba2e4607b0ae8233a09a3">
+            06fb9a94
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06fb9a942131c7b8a16ba2e4607b0ae8233a09a3">
+            06fb9a94
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.16</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/073329ebd87cb65aeeb6fae83f24c48bdb5eee6c">
+            073329eb
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/070ff032a227ef302949eef375cf7561899ad7e5">
+            070ff032
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06f23ba5501ba58aa25c9b5c7f5d140381449b3a">
+            06f23ba5
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/020db0535b2ad9fb9b9a37fb62639bf34f6d0492">
+            020db053
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.11.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00138204d098f186682e46c4f3ccb76f763a33ae">
+            00138204
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00138204d098f186682e46c4f3ccb76f763a33ae">
+            00138204
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0378fedc17a8e359650d6dce5d9839621b09f102">
+            0378fedc
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/0449f1e8f2e48ff2fc0170ea0a468b567153d450">
+            0449f1e8
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.11.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015414235082f6232794cf42581fdfe9e28d7ec7">
+            01541423
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/015414235082f6232794cf42581fdfe9e28d7ec7">
+            01541423
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.12</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04eab02b16a1d4631113e8de9c4b22a1f36ae446">
+            04eab02b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/02380d7d7c89f3577ebb26b95af8dff0ed93d577">
+            02380d7d
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.0.11.1</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06697c7e29b98e8d65565182fb9b112d0e2ed044">
+            06697c7e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03ef3681b5dbb3964096e5afc767f4fbb464f9c7">
+            03ef3681
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">2.1.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/07bf146b301a3b5ee03e3d9c76c3e310b66da8f5">
+            07bf146b
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/01d274e7bd75a485519d066ffd7bb0608e4344a4">
+            01d274e7
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>

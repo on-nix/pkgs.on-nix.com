@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://unpkg.com">
+
+    <link rel="preload" as="style" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="preload" as="style" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+
+    <link rel="stylesheet" type="text/css"
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+    >
+    <link rel="stylesheet" type="text/css"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    >
+    <link rel="shortcut icon"
+      href="https://raw.githubusercontent.com/on-nix/artwork/8981511eb429c4fe2d772347cd3efe493ef7f670/logo/favicon.ico"
+    />
+
+    <style>
+      :root {
+        --prim: #292929;
+        --prim-d: #000000;
+        --prim-l: #515151;
+        --sec: #76ffff;
+        --sec-d: #0288d1;
+        --sec-l: #ffffff;
+      }
+
+       
+      .bg-prim { background-color: var(--prim); }
+      .bg-prim-d { background-color: var(--prim-d); }
+      .bg-prim-l { background-color: var(--prim-l); }
+      .bg-sec { background-color: var(--sec); }
+      .bg-sec-d { background-color: var(--sec-d); }
+      .bg-sec-l { background-color: var(--sec-l); }
+
+      .b--prim { border-color: var(--prim); }
+      .b--prim-d { border-color: var(--prim-d); }
+      .b--prim-l { border-color: var(--prim-l); }
+      .b--sec { border-color: var(--sec); }
+      .b--sec-d { border-color: var(--sec-d); }
+      .b--sec-l { border-color: var(--sec-l); }
+
+      .prim { color: var(--prim); }
+      .prim-d { color: var(--prim-d); }
+      .prim-l { color: var(--prim-l); }
+      .sec { color: var(--sec); }
+      .sec-d { color: var(--sec-d); }
+      .sec-l { color: var(--sec-l); }
+
+       
+      a:link { text-decoration: none; }
+      a:visited { text-decoration: none; }
+      a:hover { text-decoration: none; }
+    </style>
+
+    <title>
+  Package colmap on Nix
+</title>
+  </head>
+  <body class="f4 lh-copy" style="font-family: Raleway;">
+
+    <nav class="bg-prim-d pa0 w-100">
+      <p class="b f2 ma0 pv0 pl2">
+        <a class="sec-l" href="/">
+  Pkgs on Nix
+</a>
+      </p>
+    </nav>
+
+    <nav class="bg-sec pa0 shadow-1 w-100">
+      <p class="prim-d ma0 pv0 pl2">
+  Curated information about every package on Nix!
+</p>
+    </nav>
+
+    <div class="pa1">
+  
+  
+  
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">
+      nixpkgs / colmap
+    </dfn>
+    -
+    
+      COLMAP is a general-purpose Structure-from-Motion (SfM) and Multi-View Stereo (MVS) pipeline
+with a graphical and command-line interface.
+
+    
+  </p>
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Homepage</dfn>
+      -
+      <a class="sec-d" href="https://colmap.github.io/index.html" rel="noopener" target="_blank">
+        https://colmap.github.io/index.html
+      </a>
+    </p>
+  
+
+  
+    
+      <p class="mv0 pv2">
+        <dfn class="b fs-normal">License</dfn>
+        - BSD-2-Clause
+      </p>
+    
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Maintainers</dfn>
+      
+        
+          
+            
+              - <a class="sec-d" href="mailto:lebastr@gmail.com">
+                Alexander Lebedev
+              </a>
+            
+          
+        
+      
+    </p>
+  
+
+  
+    <p class="mv0 pv2">
+      <dfn class="b fs-normal">Outputs</dfn>
+      
+        <details class="pl4">
+          <summary>
+            <span class="b">out</span>
+            <span class="fs-normal sec-d"> (expand/collapse)</span>
+          </summary>
+          <ul class="ma0 pl4">
+            
+              <li style="list-style: none;">/bin/.colmap-wrapped</li>
+            
+              <li style="list-style: none;">/bin/colmap</li>
+            
+              <li style="list-style: none;">/include/colmap/base/camera.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/camera_database.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/camera_models.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/camera_rig.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/correspondence_graph.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/cost_functions.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/database.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/database_cache.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/essential_matrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/gps.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/graph_cut.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/homography_matrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/image.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/image_reader.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/line.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/point2d.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/point3d.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/polynomial.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/pose.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/projection.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/reconstruction.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/reconstruction_manager.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/scene_clustering.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/similarity_transform.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/track.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/triangulation.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/undistortion.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/visibility_pyramid.h</li>
+            
+              <li style="list-style: none;">/include/colmap/base/warp.h</li>
+            
+              <li style="list-style: none;">/include/colmap/controllers/automatic_reconstruction.h</li>
+            
+              <li style="list-style: none;">/include/colmap/controllers/bundle_adjustment.h</li>
+            
+              <li style="list-style: none;">/include/colmap/controllers/hierarchical_mapper.h</li>
+            
+              <li style="list-style: none;">/include/colmap/controllers/incremental_mapper.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/absolute_pose.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/affine_transform.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/coordinate_frame.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/essential_matrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/essential_matrix_coeffs.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/essential_matrix_poly.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/euclidean_transform.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/fundamental_matrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/generalized_absolute_pose.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/generalized_absolute_pose_coeffs.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/generalized_relative_pose.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/homography_matrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/pose.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/similarity_transform.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/translation_transform.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/triangulation.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/two_view_geometry.h</li>
+            
+              <li style="list-style: none;">/include/colmap/estimators/utils.h</li>
+            
+              <li style="list-style: none;">/include/colmap/feature/extraction.h</li>
+            
+              <li style="list-style: none;">/include/colmap/feature/matching.h</li>
+            
+              <li style="list-style: none;">/include/colmap/feature/sift.h</li>
+            
+              <li style="list-style: none;">/include/colmap/feature/types.h</li>
+            
+              <li style="list-style: none;">/include/colmap/feature/utils.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/all_indices.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/autotuned_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/center_chooser.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/composite_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/dist.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/hierarchical_clustering_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/kdtree_cuda_3d_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/kdtree_cuda_builder.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/kdtree_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/kdtree_single_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/kmeans_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/linear_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/lsh_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/algorithms/nn_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/config.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/config.h.in</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/defines.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/ext/lz4.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/ext/lz4hc.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/flann.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/flann.hpp</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/general.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/io/hdf5.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/mpi/client.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/mpi/index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/mpi/matrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/mpi/queries.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/mpi/server.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/nn/ground_truth.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/nn/index_testing.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/nn/simplex_downhill.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/allocator.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/any.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/cuda/heap.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/cuda/result_set.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/cutil_math.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/dynamic_bitset.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/heap.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/logger.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/lsh_table.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/matrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/object_factory.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/params.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/random.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/result_set.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/sampling.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/saving.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/serialization.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/FLANN/util/timer.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/Graclus/metisLib/defs.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/Graclus/metisLib/macros.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/Graclus/metisLib/metis.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/Graclus/metisLib/proto.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/Graclus/metisLib/rename.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/Graclus/metisLib/struct.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/LSD/lsd.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PBA/ConfigBA.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PBA/CuTexImage.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PBA/DataInterface.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PBA/ProgramCU.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PBA/SparseBundleCPU.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PBA/SparseBundleCU.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PBA/pba.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PBA/util.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Allocator.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Array.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Array.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/BSplineData.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/BSplineData.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/BinaryNode.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/CmdLineParser.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/CmdLineParser.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Factor.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/FunctionData.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/FunctionData.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Geometry.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Geometry.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Hash.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MAT.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MAT.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MarchingCubes.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MemoryUsage.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MultiGridOctreeData.Evaluation.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MultiGridOctreeData.IsoSurface.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MultiGridOctreeData.SortedTreeNodes.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MultiGridOctreeData.System.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MultiGridOctreeData.WeightedSamples.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MultiGridOctreeData.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MultiGridOctreeData.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/MyTime.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Octree.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Octree.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/PPolynomial.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/PPolynomial.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Ply.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/PointStream.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/PointStream.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/PoissonRecon.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Polynomial.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/Polynomial.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/SparseMatrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/SparseMatrix.inl</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/PoissonRecon/SurfaceTrimmer.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SQLite/sqlite3.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SQLite/sqlite3ext.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/CLTexImage.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/CuTexImage.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/FrameBufferObject.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/GLTexImage.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/GlobalUtil.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/LiteWindow.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/ProgramCG.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/ProgramCL.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/ProgramCU.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/ProgramGLSL.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/ProgramGPU.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/PyramidCL.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/PyramidCU.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/PyramidGL.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/ShaderMan.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/SiftGPU.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/SiftMatch.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/SiftMatchCU.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/SiftGPU/SiftPyramid.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/aib.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/array.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/covdet.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/dsift.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/fisher.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/float.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/generic.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/getopt_long.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/gmm.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/heap-def.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/hikmeans.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/hog.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/homkermap.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/host.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/ikmeans.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/imopv.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/imopv_sse2.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/kdtree.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/kmeans.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/lbp.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/liop.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/mathop.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/mathop_avx.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/mathop_sse2.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/mser.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/pgm.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/qsort-def.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/quickshift.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/random.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/rodrigues.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/scalespace.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/shuffle-def.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/sift.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/slic.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/stringop.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/svm.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/svmdataset.h</li>
+            
+              <li style="list-style: none;">/include/colmap/lib/VLFeat/vlad.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/consistency_graph.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/cuda_array_wrapper.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/cuda_flip.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/cuda_rotate.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/cuda_transpose.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/depth_map.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/fusion.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/gpu_mat.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/gpu_mat_prng.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/gpu_mat_ref_image.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/image.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/mat.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/meshing.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/model.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/normal_map.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/patch_match.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/patch_match_cuda.h</li>
+            
+              <li style="list-style: none;">/include/colmap/mvs/workspace.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/bundle_adjustment.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/combination_sampler.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/least_absolute_deviations.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/loransac.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/progressive_sampler.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/random_sampler.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/ransac.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/sampler.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/sprt.h</li>
+            
+              <li style="list-style: none;">/include/colmap/optim/support_measurement.h</li>
+            
+              <li style="list-style: none;">/include/colmap/retrieval/geometry.h</li>
+            
+              <li style="list-style: none;">/include/colmap/retrieval/inverted_file.h</li>
+            
+              <li style="list-style: none;">/include/colmap/retrieval/inverted_file_entry.h</li>
+            
+              <li style="list-style: none;">/include/colmap/retrieval/inverted_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/retrieval/utils.h</li>
+            
+              <li style="list-style: none;">/include/colmap/retrieval/visual_index.h</li>
+            
+              <li style="list-style: none;">/include/colmap/retrieval/vote_and_verify.h</li>
+            
+              <li style="list-style: none;">/include/colmap/sfm/incremental_mapper.h</li>
+            
+              <li style="list-style: none;">/include/colmap/sfm/incremental_triangulator.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/automatic_reconstruction_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/bundle_adjustment_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/colormaps.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/database_management_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/dense_reconstruction_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/feature_extraction_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/feature_matching_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/image_viewer_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/license_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/line_painter.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/log_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/main_window.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/match_matrix_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/model_viewer_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/movie_grabber_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/options_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/point_painter.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/point_viewer_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/project_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/qt_utils.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/reconstruction_manager_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/reconstruction_options_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/reconstruction_stats_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/render_options.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/render_options_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/thread_control_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/triangle_painter.h</li>
+            
+              <li style="list-style: none;">/include/colmap/ui/undistortion_widget.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/alignment.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/bitmap.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/cache.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/camera_specs.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/cuda.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/cudacc.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/endian.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/logging.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/math.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/matrix.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/misc.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/opengl_utils.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/option_manager.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/ply.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/random.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/sqlite3_utils.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/string.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/testing.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/threading.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/timer.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/types.h</li>
+            
+              <li style="list-style: none;">/include/colmap/util/version.h</li>
+            
+              <li style="list-style: none;">/lib/colmap/libcolmap.a</li>
+            
+              <li style="list-style: none;">/lib/colmap/libflann.a</li>
+            
+              <li style="list-style: none;">/lib/colmap/libgraclus.a</li>
+            
+              <li style="list-style: none;">/lib/colmap/liblsd.a</li>
+            
+              <li style="list-style: none;">/lib/colmap/libpba.a</li>
+            
+              <li style="list-style: none;">/lib/colmap/libpoisson_recon.a</li>
+            
+              <li style="list-style: none;">/lib/colmap/libsift_gpu.a</li>
+            
+              <li style="list-style: none;">/lib/colmap/libsqlite3.a</li>
+            
+              <li style="list-style: none;">/lib/colmap/libvlfeat.a</li>
+            
+              <li style="list-style: none;">/share/applications/COLMAP.desktop</li>
+            
+              <li style="list-style: none;">/share/colmap/COLMAPConfig.cmake</li>
+            
+              <li style="list-style: none;">/share/colmap/COLMAPConfigVersion.cmake</li>
+            
+              <li style="list-style: none;">/share/colmap/cmake/FindEigen3.cmake</li>
+            
+              <li style="list-style: none;">/share/colmap/cmake/FindFreeImage.cmake</li>
+            
+              <li style="list-style: none;">/share/colmap/cmake/FindGlew.cmake</li>
+            
+              <li style="list-style: none;">/share/colmap/cmake/FindGlog.cmake</li>
+            
+          </ul>
+        </details>
+      
+    </p>
+  
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/033208fd46e03178655f3c4a59add1d9dbf57731">
+            033208fd
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00460bd6e2c89f3b76dcb42032194e6eed0616d2">
+            00460bd6
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04946f42468a8698c0c42aad9086c4671949916a">
+            04946f42
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/04946f42468a8698c0c42aad9086c4671949916a">
+            04946f42
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/05ca995e31230a28306bf7d2f33ece4e538e7ca7">
+            05ca995e
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06623ebd6eeb5fab054e74d09eef33e033e813e7">
+            06623ebd
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c0f165556950665b83e41209f611ddeed4de26">
+            06c0f165
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/06c0f165556950665b83e41209f611ddeed4de26">
+            06c0f165
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.6</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/049311bc4b84e499ada0cdf07a1b34184e5e6a92">
+            049311bc
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/075da3928b5eee0c672c60e9e5ba81d3a3c90766">
+            075da392
+          </a>
+        </div>
+      </details>
+    
+      <details class="pl4">
+        <summary>
+          <span class="b">3.5</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/03391cd336b128a1639c648baf0f6c1a1271e0d2">
+            03391cd3
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/00a90e9cf8a02541dd09ed07f0ec3bc9aee0f482">
+            00a90e9c
+          </a>
+        </div>
+      </details>
+    
+  </p>
+
+</div>
+
+    <div class="pv3"></div>
+
+    <div class="bt">
+      <div class="cf">
+        <div class="fl pb4 ph4 pt1 w-100 w-50-ns w-50-m w-25-l">
+          <p class="b bb">On Nix</p>
+          <a class="db sec-d" href="https://on-nix.com">Home</a>
+          <a class="db sec-d" href="https://pkgs.on-nix.com">Packages</a>
+          <a class="db sec-d" href="https://python.on-nix.com">Python</a>
+        </div>
+      </div>
+    </div>
+
+    <div style="height: 50px"></div>
+  </body>
+</html>
