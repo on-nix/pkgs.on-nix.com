@@ -1,28 +1,28 @@
-{{ define "title" }}
+{{- define "title" -}}
   Pkgs on Nix: Curated information about every package on Nix!
-{{ end }}
+{{- end -}}
 
-{{ define "nav-title"}}
+{{- define "nav-title"}}
   Pkgs on Nix
-{{ end }}
+{{- end -}}
 
-{{ define "nav-subtitle"}}
+{{- define "nav-subtitle"}}
   Curated information about every package on Nix!
-{{ end }}
+{{- end -}}
 
-{{ define "main" }}
-  {{ $countPkgs := 0 }}
-  {{ $countVersions := 0 }}
-  {{ $countOutputFiles := 0 }}
-  {{ range $set, $_ := $.Site.Data }}
-    {{ range $attr, $attrData := index $.Site.Data $set }}
-      {{ $countPkgs = add $countPkgs 1 }}
-      {{ $countVersions = add $countVersions (len $attrData.versions) }}
-      {{ range $output, $output_files := $attrData.outputs }}
-        {{ $countOutputFiles = add $countOutputFiles (len $output_files)}}
-      {{ end }}
-    {{ end }}
-  {{ end }}
+{{- define "main" -}}
+  {{- $countPkgs := 0 -}}
+  {{- $countVersions := 0 -}}
+  {{- $countOutputFiles := 0 -}}
+  {{- range $set, $_ := $.Site.Data -}}
+    {{- range $attr, $attrData := index $.Site.Data $set -}}
+      {{- $countPkgs = add $countPkgs 1 -}}
+      {{- $countVersions = add $countVersions (len $attrData.versions) -}}
+      {{- range $output, $output_files := $attrData.outputs -}}
+        {{- $countOutputFiles = add $countOutputFiles (len $output_files)}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
 
   <div class="pa2">
     <fieldset class="ba b--prim ma0 ph2">
@@ -86,43 +86,47 @@
   <div class="pa2" id="search-results"></div>
 
   <div style="display: none">
-    {{ range $set, $_ := $.Site.Data }}
-      {{ range $attr, $_ := index $.Site.Data $set }}
-        <p class="ma0 pa0" id="{{ $set }}-{{ $attr }}">
+    {{- range $set, $_ := $.Site.Data -}}
+      {{- range $attr, $_ := index $.Site.Data $set -}}
+        <p class="ma0 pa0" id="{{- $set -}}-{{- $attr -}}">
           <dfn class="b fs-normal">
-            <a class="b sec-d" href="/nixpkgs/{{ lower $attr }}/">
+            <a class="b sec-d" href="/nixpkgs/{{- lower $attr -}}/">
               nixpkgs / {{ $attr }}
             </a>
           </dfn>
-          {{ $data := index $.Site.Data $set $attr }}
-          {{ if $data.meta.desc }}
+          {{- $data := index $.Site.Data $set $attr -}}
+          {{- if $data.meta.desc -}}
             - {{ $data.meta.desc }}
-          {{ end }}
+          {{- end -}}
         </p>
-      {{ end }}
-    {{ end }}
+      {{- end -}}
+    {{- end -}}
   </div>
 
   <script src="https://unpkg.com/fuse.js@6.4.6/dist/fuse.min.js"></script>
   <script>
     const searchEngineIndex = [
-      {{ range $set, $_ := $.Site.Data }}
-        {{ range $attr, $attrData := index $.Site.Data $set }}
-          {{ $data := index $.Site.Data $set $attr }}
+      {{- range $set, $_ := $.Site.Data -}}
+        {{- range $attr, $attrData := index $.Site.Data $set -}}
+          {{- $data := index $.Site.Data $set $attr -}}
           {
             "set": "{{ $set }}",
             "attr": "{{ $attr }}",
             "desc": "{{ $data.meta.desc }}",
             "outputs": [
-              {{ range $_, $outputFiles := $attrData.outputs }}
-                {{ range $outputFile := $outputFiles }}
-                  "{{ $outputFile }}",
-                {{ end }}
-              {{ end }}
+              {{- range $_, $outputFiles := $attrData.outputs -}}
+                {{- range $outputFile := $outputFiles -}}
+                  {{- range $prefix := slice "/bin" "/lib" -}}
+                    {{- if hasPrefix $outputFile $prefix -}}
+                      "{{ $outputFile }}",
+                    {{- end -}}
+                  {{- end -}}
+                {{- end -}}
+              {{- end -}}
             ],
           },
-        {{ end }}
-      {{ end }}
+        {{- end -}}
+      {{- end -}}
     ];
 
     const searchButton = document.querySelector("#search-button");
@@ -177,4 +181,4 @@
       };
     };
   </script>
-{{ end }}
+{{- end -}}
