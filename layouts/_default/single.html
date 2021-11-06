@@ -66,37 +66,6 @@
     </p>
   {{ end }}
 
-  <details class="mt0 pv2">
-    <summary style="list-style: none;">
-      <span class="b">Releases</span>
-      <span class="fs-normal sec-d"> (expand/collapse)</span>
-    </summary>
-    <table>
-      <thead>
-        <tr>
-          <th class="bb fw4">Version</th>
-          <th class="bb fw4">Commit range</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{ range $version := $data.versions }}
-          <tr>
-            <td class="ph3">{{ $version.name }}</td>
-            <td class="ph3">
-              <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
-                {{ substr $version.first 0 8 }}
-              </a>
-              ->
-              <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
-                {{ substr $version.last 0 8 }}
-              </a>
-            </td>
-          </tr>
-        {{ end }}
-      </tbody>
-    </table>
-  </details>
-
   {{ if $data.outputs }}
     <p class="mv0 pv2">
       <dfn class="b fs-normal">Outputs</dfn>
@@ -106,7 +75,7 @@
             <span class="b">{{ $output }}</span>
             <span class="fs-normal sec-d"> (expand/collapse)</span>
           </summary>
-          <ul>
+          <ul class="ma0 pl4">
             {{ range $file := $files }}
               <li style="list-style: none;">{{ $file }}</li>
             {{ end }}
@@ -115,5 +84,27 @@
       {{ end }}
     </p>
   {{ end }}
+
+  <p class="mv0 pv2">
+    <dfn class="b fs-normal">Releases</dfn>
+    {{ range $version := $data.versions }}
+      <details class="pl4">
+        <summary>
+          <span class="b">{{ $version.name }}</span>
+          <span class="fs-normal sec-d"> (expand/collapse)</span>
+        </summary>
+        <div class="ma0 pl4">
+          From commit
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
+            {{ substr $version.first 0 8 }}
+          </a>
+          to
+          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
+            {{ substr $version.last 0 8 }}
+          </a>
+        </div>
+      </details>
+    {{ end }}
+  </p>
 
 {{ end }}
