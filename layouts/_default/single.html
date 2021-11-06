@@ -94,14 +94,22 @@
           <span class="fs-normal sec-d"> (expand/collapse)</span>
         </summary>
         <div class="ma0 pl4">
-          From commit
-          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.first }}">
-            {{ substr $version.first 0 8 }}
-          </a>
-          to
-          <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $version.last }}">
-            {{ substr $version.last 0 8 }}
-          </a>
+          <ul class="ma0 pl4">
+            Commits:
+            {{ range $commits := $version.commits }}
+              <li>
+                [
+                <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $commits.first }}">
+                  {{ substr $commits.first 0 8 }}
+                </a>
+                ,
+                <a class="sec-d" href="https://github.com/NixOS/nixpkgs/commit/{{ $commits.last }}">
+                  {{ substr $commits.last 0 8 }}
+                </a>
+                ]
+              </li>
+            {{ end }}
+          </ul>
         </div>
       </details>
     {{ end }}
