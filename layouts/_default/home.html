@@ -13,14 +13,10 @@
 {{- define "main" -}}
   {{- $countPkgs := 0 -}}
   {{- $countVersions := 0 -}}
-  {{- $countOutputFiles := 0 -}}
   {{- range $set, $_ := $.Site.Data -}}
     {{- range $attr, $attrData := index $.Site.Data $set -}}
       {{- $countPkgs = add $countPkgs 1 -}}
       {{- $countVersions = add $countVersions (len $attrData.versions) -}}
-      {{- range $output, $output_files := $attrData.outputs -}}
-        {{- $countOutputFiles = add $countOutputFiles (len $output_files)}}
-      {{- end -}}
     {{- end -}}
   {{- end -}}
 
@@ -28,8 +24,7 @@
     <fieldset class="ba b--prim ma0 ph2">
       <legend class="db pa2">
         Search from {{ $countPkgs }} packages
-        , {{ $countVersions }} versions
-        and {{ $countOutputFiles }} files
+        and {{ $countVersions }} versions
       </legend>
       <div class="flex">
         <button id="search-button" type="button">🔎</button>
@@ -49,8 +44,6 @@
         Package names<br/>
         <input type="checkbox" id="search-results-in-pkg-descs" checked>
         Package descriptions<br/>
-        <input type="checkbox" id="search-results-in-pkg-files">
-        Package files<br/>
       </div>
     </fieldset>
     <fieldset class="ba b--prim pv2">
@@ -71,14 +64,6 @@
       <li><span class="sec-d">!windows</span>: Exclude windows from the results</li>
       <li><span class="sec-d">^python</span>: Search packages starting with Python</li>
       <li><span class="sec-d">rust$</span>: Search packages ending with Rust</li>
-    </ul>
-
-    If searching in <b>package files</b> is enabled:
-
-    <ul>
-      <li><span class="sec-d">=/lib/libstdc++.so</span>: Search packages that contain /lib/libstdc++.so</li>
-      <li><span class="sec-d">^/lib/ld-linux-x86-64</span>: Search packages that contain outputs starting with /lib/ld-linux-x86-64</li>
-      <li><span class="sec-d">/bin/nix-build</span>: Search packages that contain something close to /bin/nix-build</li>
     </ul>
 
     Search is case insensitive.
@@ -113,17 +98,6 @@
             "set": "{{ $set }}",
             "attr": "{{ $attr }}",
             "desc": "{{ $data.meta.desc }}",
-            "outputs": [
-              {{- range $_, $outputFiles := $attrData.outputs -}}
-                {{- range $outputFile := $outputFiles -}}
-                  {{- range $prefix := slice "/bin" "/lib" -}}
-                    {{- if hasPrefix $outputFile $prefix -}}
-                      "{{ $outputFile }}",
-                    {{- end -}}
-                  {{- end -}}
-                {{- end -}}
-              {{- end -}}
-            ],
           },
         {{- end -}}
       {{- end -}}
@@ -137,7 +111,6 @@
     const searchMaxResults = document.querySelector("#search-max-results");
     const searchInPkgNames = document.querySelector("#search-results-in-pkg-names");
     const searchInPkgDescriptions = document.querySelector("#search-results-in-pkg-descs");
-    const searchInPkgFiles = document.querySelector("#search-results-in-pkg-files");
 
     searchButton.addEventListener('click', search);
     searchInput.addEventListener('input', showInstructionsIfEmpty);
@@ -156,7 +129,6 @@
       const keys = [];
       if (searchInPkgNames.checked) keys.push({ name: 'attr', weight: 1});
       if (searchInPkgDescriptions.checked) keys.push({ name: 'desc', weight: 1});
-      if (searchInPkgFiles.checked) keys.push({ name: 'outputs', weight: 1});
 
       const results = new Fuse(searchEngineIndex, {
         keys,
